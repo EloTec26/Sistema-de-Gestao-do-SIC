@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1272F3E9-0054-49FF-9941-D5E0CF5FDEA3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Capa_Dominio</RootNamespace>
+    <AssemblyName>Capa_Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dominio_afastamentos.cs" />
+    <Compile Include="dominio_bairro_rua.cs" />
+    <Compile Include="dominio_beneficos.cs" />
+    <Compile Include="dominio_beneficos_Investigadores.cs" />
+    <Compile Include="dominio_cargos.cs" />
+    <Compile Include="dominio_cargos_investigadores.cs" />
+    <Compile Include="dominio_casos.cs" />
+    <Compile Include="dominio_continentes.cs" />
+    <Compile Include="dominio_cursos.cs" />
+    <Compile Include="Dominio_Dashboard\dominio_Dashboard.cs" />
+    <Compile Include="Dominio_Dashboard\dominio_painel_administrativo.cs" />
+    <Compile Include="dominio_departamentos.cs" />
+    <Compile Include="dominio_departamentos_investigadores.cs" />
+    <Compile Include="dominio_especialidades.cs" />
+    <Compile Include="dominio_evidencias.cs" />
+    <Compile Include="dominio_eventos_casos.cs" />
+    <Compile Include="dominio_faltas.cs" />
+    <Compile Include="dominio_ferias.cs" />
+    <Compile Include="dominio_horas_extras.cs" />
+    <Compile Include="dominio_investigadores.cs" />
+    <Compile Include="dominio_municipios.cs" />
+    <Compile Include="dominio_niveis_academicos.cs" />
+    <Compile Include="dominio_paises.cs" />
+    <Compile Include="dominio_patentes.cs" />
+    <Compile Include="Dominio_Permissoes\dominio_permissoes_usuario.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_afastamentos.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_bairro_ruas.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_beneficios.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_beneficios_investigadores.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_cargos.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_cargos_investigadores.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_casos.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_cursos.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_departamentos.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_departamentos_investigadores.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_especialidades.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_eventos_casos.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_evidencias.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_faltas.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_ferias.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_horas_extras.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_investigadores.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_municipios.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_niveis_academicos.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_paises.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_patentes.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_provincias.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_suspeitos.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_tarefas.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_testemunhas.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_usuarios.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_vitimas.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_continentes.cs" />
+    <Compile Include="dominio_provincias.cs" />
+    <Compile Include="dominio_suspeitos.cs" />
+    <Compile Include="dominio_testemunhas.cs" />
+    <Compile Include="dominio_treinamentos.cs" />
+    <Compile Include="dominio_usuarios.cs" />
+    <Compile Include="dominio_vitimas.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validacoes_campos\dominio_validacoes_letras.cs" />
+    <Compile Include="Validacoes_campos\dominio_validacoes_numeros.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Comum\Capa_Comum.csproj">
+      <Project>{9a70de84-9051-4540-8976-0fc87558d808}</Project>
+      <Name>Capa_Comum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Dados\Capa_Dados.csproj">
+      <Project>{f5a18ac1-1d22-4914-b854-0993a99d505b}</Project>
+      <Name>Capa_Dados</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

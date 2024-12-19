@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A70DE84-9051-4540-8976-0FC87558D808}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Capa_Comum</RootNamespace>
+    <AssemblyName>Capa_Comum</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Comum_Permissoes\Cache\comum_cache_funcoes_usuarios.cs" />
+    <Compile Include="Comum_Permissoes\Cache\comum_cache_permissoes_usuarios.cs" />
+    <Compile Include="Entidades\e_comum_afastamentos.cs" />
+    <Compile Include="Entidades\e_comum_bairro_rua.cs" />
+    <Compile Include="Entidades\e_comum_beneficios.cs" />
+    <Compile Include="Entidades\e_comum_beneficios_investigadores.cs" />
+    <Compile Include="Entidades\e_comum_cargos.cs" />
+    <Compile Include="Entidades\e_comum_cargos_investigadores.cs" />
+    <Compile Include="Entidades\e_comum_casos.cs" />
+    <Compile Include="Entidades\e_comum_continentes.cs" />
+    <Compile Include="Entidades\e_comum_cursos.cs" />
+    <Compile Include="Entidades\e_comum_departamentos.cs" />
+    <Compile Include="Entidades\e_comum_departamentos_investigadores.cs" />
+    <Compile Include="Entidades\e_comum_especialidades.cs" />
+    <Compile Include="Entidades\e_comum_eventos_casos.cs" />
+    <Compile Include="Entidades\e_comum_evidencias.cs" />
+    <Compile Include="Entidades\e_comum_faltas.cs" />
+    <Compile Include="Entidades\e_comum_ferias.cs" />
+    <Compile Include="Entidades\e_comum_investigadores.cs" />
+    <Compile Include="Entidades\e_comum_municipios.cs" />
+    <Compile Include="Entidades\e_comum_nivel_academicos.cs" />
+    <Compile Include="Entidades\e_comum_paises.cs" />
+    <Compile Include="Entidades\e_comum_patentes.cs" />
+    <Compile Include="Entidades\e_comum_provincias.cs" />
+    <Compile Include="Entidades\e_comum_suspeitos.cs" />
+    <Compile Include="Entidades\e_comum_testemunhas.cs" />
+    <Compile Include="Entidades\e_comum_treinamentos.cs" />
+    <Compile Include="Entidades\e_comum_usuarios.cs" />
+    <Compile Include="Entidades\e_comum_vitimas.cs" />
+    <Compile Include="Entidades\e_comum_horas_extras.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

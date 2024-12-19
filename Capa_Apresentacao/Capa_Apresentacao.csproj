@@ -1,0 +1,709 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{84A34C25-6F75-4280-8267-D88E2284843B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Capa_Apresentacao</RootNamespace>
+    <AssemblyName>Capa_Apresentacao</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\SERAFIM\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <TargetCulture>pt-AO</TargetCulture>
+    <ProductName>SIC</ProductName>
+    <PublisherName>SIC</PublisherName>
+    <SuiteName>SCI</SuiteName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D5B4E57ECB93EDCC97F54985021FB93CE0516298</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Capa_Apresentacao_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>baixados.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Formularios\Formulario_Dashboard\Form_Painel_Administrativo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formulario_Dashboard\Form_Painel_Administrativo.Designer.cs">
+      <DependentUpon>Form_Painel_Administrativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Formulario_Dashboard\Form_Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formulario_Dashboard\Form_Dashboard.Designer.cs">
+      <DependentUpon>Form_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Form_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Form_Principal.designer.cs">
+      <DependentUpon>Form_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Alterar_perfil_usuario\Form_Perfil_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Alterar_perfil_usuario\Form_Perfil_Usuario.Designer.cs">
+      <DependentUpon>Form_Perfil_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Beneficios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Beneficios.Designer.cs">
+      <DependentUpon>Form_Listas_Beneficios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Cargos_Investigadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Cargos_Investigadores.Designer.cs">
+      <DependentUpon>Form_Listas_Cargos_Investigadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Afastamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Afastamentos.Designer.cs">
+      <DependentUpon>Form_Lista_Afastamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Beneficios_Investigadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Beneficios_Investigadores.Designer.cs">
+      <DependentUpon>Form_Lista_Beneficios_Investigadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Cargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Cargos.Designer.cs">
+      <DependentUpon>Form_Lista_Cargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Eventos_Casos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Eventos_Casos.Designer.cs">
+      <DependentUpon>Form_Listas_Eventos_Casos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Casos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Casos.Designer.cs">
+      <DependentUpon>Form_Lista_Casos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Cursos.Designer.cs">
+      <DependentUpon>Form_Lista_Cursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Departamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Departamentos.Designer.cs">
+      <DependentUpon>Form_Lista_Departamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Departamentos_Investigadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Departamentos_Investigadores.Designer.cs">
+      <DependentUpon>Form_Lista_Departamentos_Investigadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Especialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Especialidades.Designer.cs">
+      <DependentUpon>Form_Lista_Especialidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Evidencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Evidencias.Designer.cs">
+      <DependentUpon>Form_Lista_Evidencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Faltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Faltas.Designer.cs">
+      <DependentUpon>Form_Lista_Faltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Continentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Continentes.Designer.cs">
+      <DependentUpon>Form_Listas_Continentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Ferias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Ferias.Designer.cs">
+      <DependentUpon>Form_Listas_Ferias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Vitimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Vitimas.Designer.cs">
+      <DependentUpon>Form_Listas_Vitimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Bairros_Ruas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Bairros_Ruas.Designer.cs">
+      <DependentUpon>Form_Lista_Bairros_Ruas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Horas_Extras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Horas_Extras.Designer.cs">
+      <DependentUpon>Form_Lista_Horas_Extras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Investigadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Investigadores.Designer.cs">
+      <DependentUpon>Form_Lista_Investigadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Niveis_Academicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Niveis_Academicos.Designer.cs">
+      <DependentUpon>Form_Lista_Niveis_Academicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Paises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Paises.Designer.cs">
+      <DependentUpon>Form_Lista_Paises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Patentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Patentes.Designer.cs">
+      <DependentUpon>Form_Lista_Patentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Provincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Provincia.Designer.cs">
+      <DependentUpon>Form_Lista_Provincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Municipios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Listas_Municipios.Designer.cs">
+      <DependentUpon>Form_Listas_Municipios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Suspeitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Suspeitos.Designer.cs">
+      <DependentUpon>Form_Lista_Suspeitos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Testemunhas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Testemunhas.Designer.cs">
+      <DependentUpon>Form_Lista_Testemunhas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Treinamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Treinamentos.Designer.cs">
+      <DependentUpon>Form_Lista_Treinamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Lista_Formularios\Form_Lista_Usuarios.Designer.cs">
+      <DependentUpon>Form_Lista_Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Afastamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Afastamentos.Designer.cs">
+      <DependentUpon>Form_Modulo_Afastamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Bairro_Rua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Bairro_Rua.Designer.cs">
+      <DependentUpon>Form_Modulo_Bairro_Rua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Beneficios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Beneficios.Designer.cs">
+      <DependentUpon>Form_Modulo_Beneficios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Beneficios_Investigadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Beneficios_Investigadores.Designer.cs">
+      <DependentUpon>Form_Modulo_Beneficios_Investigadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Cargos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Cargos.Designer.cs">
+      <DependentUpon>Form_Modulo_Cargos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Cargos_Investigadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Cargos_Investigadores.Designer.cs">
+      <DependentUpon>Form_Modulo_Cargos_Investigadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Casos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Casos.Designer.cs">
+      <DependentUpon>Form_Modulo_Casos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Continente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Continente.Designer.cs">
+      <DependentUpon>Form_Modulo_Continente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Cursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Cursos.Designer.cs">
+      <DependentUpon>Form_Modulo_Cursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Departamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Departamentos.Designer.cs">
+      <DependentUpon>Form_Modulo_Departamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Departamento_Investigadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Departamento_Investigadores.Designer.cs">
+      <DependentUpon>Form_Modulo_Departamento_Investigadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Especialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Especialidades.Designer.cs">
+      <DependentUpon>Form_Modulo_Especialidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Eventos_Casos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Eventos_Casos.Designer.cs">
+      <DependentUpon>Form_Modulo_Eventos_Casos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Evidencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Evidencias.Designer.cs">
+      <DependentUpon>Form_Modulo_Evidencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Faltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Faltas.Designer.cs">
+      <DependentUpon>Form_Modulo_Faltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Ferias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Ferias.Designer.cs">
+      <DependentUpon>Form_Modulo_Ferias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Horas_Extras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Horas_Extras.Designer.cs">
+      <DependentUpon>Form_Modulo_Horas_Extras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Investigadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Investigadores.Designer.cs">
+      <DependentUpon>Form_Modulo_Investigadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Municipios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Municipios.Designer.cs">
+      <DependentUpon>Form_Modulo_Municipios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Niveis_Academicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Niveis_Academicos.Designer.cs">
+      <DependentUpon>Form_Modulo_Niveis_Academicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Paises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Paises.Designer.cs">
+      <DependentUpon>Form_Modulo_Paises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Patentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Patentes.Designer.cs">
+      <DependentUpon>Form_Modulo_Patentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Provincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Provincia.Designer.cs">
+      <DependentUpon>Form_Modulo_Provincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Suspeitos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Suspeitos.Designer.cs">
+      <DependentUpon>Form_Modulo_Suspeitos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Testemunhas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Testemunhas.Designer.cs">
+      <DependentUpon>Form_Modulo_Testemunhas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Treinamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Treinamentos.Designer.cs">
+      <DependentUpon>Form_Modulo_Treinamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Usuarios.Designer.cs">
+      <DependentUpon>Form_Modulo_Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Vitimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Form_Modulo_Vitimas.Designer.cs">
+      <DependentUpon>Form_Modulo_Vitimas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Modulos\Validacao_Campos_Formularios\validacao_campos_formularios.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Formulario_Dashboard\Form_Painel_Administrativo.resx">
+      <DependentUpon>Form_Painel_Administrativo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Formulario_Dashboard\Form_Dashboard.resx">
+      <DependentUpon>Form_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Form_Principal.resx">
+      <DependentUpon>Form_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Alterar_perfil_usuario\Form_Perfil_Usuario.resx">
+      <DependentUpon>Form_Perfil_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Listas_Beneficios.resx">
+      <DependentUpon>Form_Listas_Beneficios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Listas_Cargos_Investigadores.resx">
+      <DependentUpon>Form_Listas_Cargos_Investigadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Listas_Continentes.resx">
+      <DependentUpon>Form_Listas_Continentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Listas_Eventos_Casos.resx">
+      <DependentUpon>Form_Listas_Eventos_Casos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Listas_Ferias.resx">
+      <DependentUpon>Form_Listas_Ferias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Listas_Vitimas.resx">
+      <DependentUpon>Form_Listas_Vitimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Afastamentos.resx">
+      <DependentUpon>Form_Lista_Afastamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Bairros_Ruas.resx">
+      <DependentUpon>Form_Lista_Bairros_Ruas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Beneficios_Investigadores.resx">
+      <DependentUpon>Form_Lista_Beneficios_Investigadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Cargos.resx">
+      <DependentUpon>Form_Lista_Cargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Casos.resx">
+      <DependentUpon>Form_Lista_Casos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Cursos.resx">
+      <DependentUpon>Form_Lista_Cursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Departamentos.resx">
+      <DependentUpon>Form_Lista_Departamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Departamentos_Investigadores.resx">
+      <DependentUpon>Form_Lista_Departamentos_Investigadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Especialidades.resx">
+      <DependentUpon>Form_Lista_Especialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Evidencias.resx">
+      <DependentUpon>Form_Lista_Evidencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Faltas.resx">
+      <DependentUpon>Form_Lista_Faltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Horas_Extras.resx">
+      <DependentUpon>Form_Lista_Horas_Extras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Investigadores.resx">
+      <DependentUpon>Form_Lista_Investigadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Niveis_Academicos.resx">
+      <DependentUpon>Form_Lista_Niveis_Academicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Paises.resx">
+      <DependentUpon>Form_Lista_Paises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Patentes.resx">
+      <DependentUpon>Form_Lista_Patentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Provincia.resx">
+      <DependentUpon>Form_Lista_Provincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Listas_Municipios.resx">
+      <DependentUpon>Form_Listas_Municipios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Suspeitos.resx">
+      <DependentUpon>Form_Lista_Suspeitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Testemunhas.resx">
+      <DependentUpon>Form_Lista_Testemunhas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Treinamentos.resx">
+      <DependentUpon>Form_Lista_Treinamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Lista_Formularios\Form_Lista_Usuarios.resx">
+      <DependentUpon>Form_Lista_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Afastamentos.resx">
+      <DependentUpon>Form_Modulo_Afastamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Bairro_Rua.resx">
+      <DependentUpon>Form_Modulo_Bairro_Rua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Beneficios.resx">
+      <DependentUpon>Form_Modulo_Beneficios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Beneficios_Investigadores.resx">
+      <DependentUpon>Form_Modulo_Beneficios_Investigadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Cargos.resx">
+      <DependentUpon>Form_Modulo_Cargos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Cargos_Investigadores.resx">
+      <DependentUpon>Form_Modulo_Cargos_Investigadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Casos.resx">
+      <DependentUpon>Form_Modulo_Casos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Continente.resx">
+      <DependentUpon>Form_Modulo_Continente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Cursos.resx">
+      <DependentUpon>Form_Modulo_Cursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Departamentos.resx">
+      <DependentUpon>Form_Modulo_Departamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Departamento_Investigadores.resx">
+      <DependentUpon>Form_Modulo_Departamento_Investigadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Especialidades.resx">
+      <DependentUpon>Form_Modulo_Especialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Eventos_Casos.resx">
+      <DependentUpon>Form_Modulo_Eventos_Casos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Evidencias.resx">
+      <DependentUpon>Form_Modulo_Evidencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Faltas.resx">
+      <DependentUpon>Form_Modulo_Faltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Ferias.resx">
+      <DependentUpon>Form_Modulo_Ferias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Horas_Extras.resx">
+      <DependentUpon>Form_Modulo_Horas_Extras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Investigadores.resx">
+      <DependentUpon>Form_Modulo_Investigadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Municipios.resx">
+      <DependentUpon>Form_Modulo_Municipios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Niveis_Academicos.resx">
+      <DependentUpon>Form_Modulo_Niveis_Academicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Paises.resx">
+      <DependentUpon>Form_Modulo_Paises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Patentes.resx">
+      <DependentUpon>Form_Modulo_Patentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Provincia.resx">
+      <DependentUpon>Form_Modulo_Provincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Suspeitos.resx">
+      <DependentUpon>Form_Modulo_Suspeitos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Testemunhas.resx">
+      <DependentUpon>Form_Modulo_Testemunhas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Treinamentos.resx">
+      <DependentUpon>Form_Modulo_Treinamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Usuarios.resx">
+      <DependentUpon>Form_Modulo_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Modulos\Form_Modulo_Vitimas.resx">
+      <DependentUpon>Form_Modulo_Vitimas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Capa_Apresentacao_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp">
+      <Version>6.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="Guna.UI2.WinForms">
+      <Version>2.0.4.6</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms">
+      <Version>150.1652.0</Version>
+    </PackageReference>
+    <PackageReference Include="RJCodeAdvance.RJControl2s">
+      <Version>1.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Formularios\Formularios_Relatorios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Capa_Comum\Capa_Comum.csproj">
+      <Project>{9a70de84-9051-4540-8976-0fc87558d808}</Project>
+      <Name>Capa_Comum</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Dados\Capa_Dados.csproj">
+      <Project>{f5a18ac1-1d22-4914-b854-0993a99d505b}</Project>
+      <Name>Capa_Dados</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Capa_Dominio\Capa_Dominio.csproj">
+      <Project>{1272f3e9-0054-49ff-9941-d5e0cf5fdea3}</Project>
+      <Name>Capa_Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="baixados.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

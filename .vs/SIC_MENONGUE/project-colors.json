@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "84a34c25-6f75-4280-8267-d88e2284843b": {
+      "ProjectGuid": "84a34c25-6f75-4280-8267-d88e2284843b",
+      "DisplayName": "Capa_Apresentacao",
+      "ColorIndex": 0
+    },
+    "f5a18ac1-1d22-4914-b854-0993a99d505b": {
+      "ProjectGuid": "f5a18ac1-1d22-4914-b854-0993a99d505b",
+      "DisplayName": "Capa_Dados",
+      "ColorIndex": 1
+    },
+    "9a70de84-9051-4540-8976-0fc87558d808": {
+      "ProjectGuid": "9a70de84-9051-4540-8976-0fc87558d808",
+      "DisplayName": "Capa_Comum",
+      "ColorIndex": 2
+    },
+    "1272f3e9-0054-49ff-9941-d5e0cf5fdea3": {
+      "ProjectGuid": "1272f3e9-0054-49ff-9941-d5e0cf5fdea3",
+      "DisplayName": "Capa_Dominio",
+      "ColorIndex": 3
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 4
+}
