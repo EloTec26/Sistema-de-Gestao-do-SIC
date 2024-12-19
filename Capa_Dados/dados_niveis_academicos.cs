@@ -88,7 +88,6 @@ namespace Capa_Dados
 
                     cmd.Parameters.AddWithValue("@id_nivel_academico", nivel_Academicos.id_nivel_academico);
                     cmd.Parameters.AddWithValue("@nome", nivel_Academicos.nome);
-                    cmd.Parameters.AddWithValue("@data_registro", nivel_Academicos.data_registro);
                     cmd.Parameters.AddWithValue("@data_atualizacao", nivel_Academicos.data_atualizacao);
 
 

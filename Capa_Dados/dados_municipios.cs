@@ -16,7 +16,7 @@ namespace Capa_Dados
         #region Selecionar os municipios para o comboBox
         public DataTable selecionar_municipios_combobox_filtro(int idProvincia)
         {
-            using (var connection = conectar())
+            using (var connection = conectar()) 
             {
                 connection.Open();
                 using (DataTable dt = new DataTable())
@@ -111,7 +111,6 @@ namespace Capa_Dados
                     cmd.Parameters.AddWithValue("@id_municipio", municipios.id_municipio);
                     cmd.Parameters.AddWithValue("@id_provincia", municipios.id_provincia);
                     cmd.Parameters.AddWithValue("@nome", municipios.nome);
-                    cmd.Parameters.AddWithValue("@data_registro", municipios.data_registro);
                     cmd.Parameters.AddWithValue("@data_atualizacao", municipios.data_atualizacao);
 
                     cmd.ExecuteNonQuery();

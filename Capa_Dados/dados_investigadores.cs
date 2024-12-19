@@ -127,7 +127,6 @@ namespace Capa_Dados
                     cmd.Parameters.AddWithValue("@e_mail", investigadores.e_mail);
                     cmd.Parameters.AddWithValue("@data_inicio_contrato", investigadores.data_inicio_contrato);
                     cmd.Parameters.AddWithValue("@data_fim_contrato", investigadores.data_fim_contrato);
-                    cmd.Parameters.AddWithValue("@data_registro", investigadores.data_registro);
                     cmd.Parameters.AddWithValue("@data_atualizacao", investigadores.data_atualizacao);
 
                     cmd.ExecuteNonQuery();

@@ -113,7 +113,6 @@ namespace Capa_Dados
                     cmd.Parameters.AddWithValue("@id_pais", paises.id_pais);
                     cmd.Parameters.AddWithValue("@id_continente", paises.id_continente);
                     cmd.Parameters.AddWithValue("@nome", paises.nome);
-                    cmd.Parameters.AddWithValue("@data_registro", paises.data_registro);
                     cmd.Parameters.AddWithValue("@data_atualizacao", paises.data_atualizacao);
 
                     cmd.ExecuteNonQuery();

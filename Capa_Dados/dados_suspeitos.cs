@@ -112,7 +112,6 @@ namespace Capa_Dados
                     cmd.Parameters.AddWithValue("@telefone2", suspeitos.telefone2);
                     cmd.Parameters.AddWithValue("@e_mail", suspeitos.e_mail);
                     cmd.Parameters.AddWithValue("@descricao", suspeitos.descricao);
-                    cmd.Parameters.AddWithValue("@data_registro", suspeitos.data_registro);
                     cmd.Parameters.AddWithValue("@data_atualizacao", suspeitos.data_atualizacao);
 
                     cmd.ExecuteNonQuery();

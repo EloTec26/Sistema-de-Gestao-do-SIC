@@ -85,7 +85,6 @@ namespace Capa_Dados
                     cmd.Parameters.AddWithValue("@id_usuario", patentes.id_usuario);
                     cmd.Parameters.AddWithValue("@nome", patentes.nome);
                     cmd.Parameters.AddWithValue("@descricao", patentes.descricao);
-                    cmd.Parameters.AddWithValue("@data_registro", patentes.data_registro);
                     cmd.Parameters.AddWithValue("@data_atualizacao", patentes.data_atualizacao);
 
                     cmd.ExecuteNonQuery();

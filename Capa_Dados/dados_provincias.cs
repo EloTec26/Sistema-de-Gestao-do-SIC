@@ -102,7 +102,6 @@ namespace Capa_Dados
                     cmd.Parameters.AddWithValue("@id_provincia", provincias.id_provincia);
                     cmd.Parameters.AddWithValue("@id_pais", provincias.id_pais);
                     cmd.Parameters.AddWithValue("@nome", provincias.nome);
-                    cmd.Parameters.AddWithValue("@data_registro", provincias.data_registro);
                     cmd.Parameters.AddWithValue("@data_atualizacao", provincias.data_atualizacao);
 
                     cmd.ExecuteNonQuery();
