@@ -44,11 +44,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 MessageDialog_Error.Show("A data do 'inicío do treinamento' não pode ser uma data passada nem futura.", "Erro de seleção da data inicial");
                 return false;
             }
-            //if (text_data_final_treinamento.Value == DateTime.Now.Date)
-            //{
-            //    MessageDialog_Error.Show("A data 'final do treinamento' não pode ser uma data presente.", "Erro de seleção da data inicial");
-            //    return false;
-            //}
             else return true;
         }
         public void capturar_dados_formulario()
@@ -134,17 +129,14 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_data_inicial_treinamento.Value = DateTime.Now;
             text_data_final_treinamento.Value = DateTime.Now;
         }
-
         private void btn_Fechar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void text_titulo_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_titulo, label_msg_titulo, "Apenas letras são permitidas!");
         }
-
         private void text_descricao_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_descricao, label_msg_descricao, "Apenas letras são permitidas!");

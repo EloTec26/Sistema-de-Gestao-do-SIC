@@ -43,8 +43,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Formularios.Modulos.Form_Modulo_Casos modulo_Casos = new Modulos.Form_Modulo_Casos();
                 modulo_Casos.FormClosed += Modulo_Casos_FormClosed;
 
-                Program.AJUDA = 1;
-
+               
                 modulo_Casos.label_id.Text = dgv_casos.CurrentRow.Cells[0].Value.ToString();
                 modulo_Casos.text_titulo.Text = dgv_casos.CurrentRow.Cells[1].Value.ToString();
                 modulo_Casos.text_investigador.Text = dgv_casos.CurrentRow.Cells[2].Value.ToString();
@@ -53,7 +52,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 modulo_Casos.text_data_fechamento.Text = dgv_casos.CurrentRow.Cells[5].Value.ToString();
                 modulo_Casos.text_estado.Text = dgv_casos.CurrentRow.Cells[6].Value.ToString();
                 modulo_Casos.text_descricao.Text = dgv_casos.CurrentRow.Cells[7].Value.ToString();
-                modulo_Casos.text_data_registro.Text = dgv_casos.CurrentRow.Cells[9].Value.ToString();
+               
 
                 modulo_Casos.label5.Text = "Atualizar caso";
                 modulo_Casos.btn_salvar.Visible = false;

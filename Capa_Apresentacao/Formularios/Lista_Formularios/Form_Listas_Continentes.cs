@@ -31,7 +31,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         private void Form_Listas_Continentes_Load(object sender, EventArgs e)
         {
             listar_continentes();
-            titulos();
         }
         public void listar_continentes()
         {
@@ -64,17 +63,14 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Form_Modulo_Continente formulario = new Form_Modulo_Continente();
                 formulario.FormClosed += Formulario_FormClosed;
 
-                Program.AJUDA = 1;
                 formulario.label_id.Text = dgv_continentes.CurrentRow.Cells[0].Value.ToString();
                 formulario.text_continentes.Text = dgv_continentes.CurrentRow.Cells[1].Value.ToString();
-                formulario.text_data_registro.Text = dgv_continentes.CurrentRow.Cells[2].Value.ToString();
 
-                formulario.btn_salvar.Text = "Atualizar";
+                formulario.btn_salvar.Visible = false;
+                formulario.btn_Atualizar.Visible = true;
                 formulario.label_titulo.Text = "Atualizar continente";
-                formulario.btn_salvar.FillColor = Color.SeaGreen;
 
                 formulario.Show();
-
             }
             else
             {
@@ -89,14 +85,12 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Form_Modulo_Continente formulario = new Form_Modulo_Continente();
                 formulario.FormClosed += Formulario_FormClosed;
 
-                Program.AJUDA = 1;
                 formulario.label_id.Text = dgv_continentes.CurrentRow.Cells[0].Value.ToString();
                 formulario.text_continentes.Text = dgv_continentes.CurrentRow.Cells[1].Value.ToString();
-                formulario.text_data_registro.Text = dgv_continentes.CurrentRow.Cells[2].Value.ToString();
 
-                formulario.btn_salvar.Text = "Atualizar";
+                formulario.btn_salvar.Visible = false;
+                formulario.btn_Atualizar.Visible = true;
                 formulario.label_titulo.Text = "Atualizar continente";
-                formulario.btn_salvar.FillColor = Color.SeaGreen;
 
                 formulario.Show();
             }
@@ -136,16 +130,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 MessageDialog_Error.Show("Por favor, selecione o continente que pretende eliminar e tente novamente!", "Alerta");
             }
-        }
-        #endregion
-
-        #region Método para reescrever os titulos
-        private void titulos()
-        {
-            dgv_continentes.Columns[0].HeaderText = "Id";
-            dgv_continentes.Columns[1].HeaderText = "Nome";
-            dgv_continentes.Columns[2].HeaderText = "Data de registro";
-            dgv_continentes.Columns[3].HeaderText = "Data de atualização";
         }
         #endregion
 

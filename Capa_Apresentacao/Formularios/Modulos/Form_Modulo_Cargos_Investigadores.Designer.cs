@@ -36,6 +36,7 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btn_Atualizar = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Fechar = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.btn_Atualizar = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -155,6 +155,27 @@
             this.label6.TabIndex = 124;
             this.label6.Text = ") são de preenchimento obrigatório.";
             // 
+            // btn_Atualizar
+            // 
+            this.btn_Atualizar.Animated = true;
+            this.btn_Atualizar.AnimatedGIF = true;
+            this.btn_Atualizar.BorderRadius = 4;
+            this.btn_Atualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Atualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Atualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Atualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Atualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Atualizar.FillColor = System.Drawing.Color.SeaGreen;
+            this.btn_Atualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Atualizar.ForeColor = System.Drawing.Color.White;
+            this.btn_Atualizar.Location = new System.Drawing.Point(22, 44);
+            this.btn_Atualizar.Name = "btn_Atualizar";
+            this.btn_Atualizar.Size = new System.Drawing.Size(146, 45);
+            this.btn_Atualizar.TabIndex = 200;
+            this.btn_Atualizar.Text = "Atualizar";
+            this.btn_Atualizar.Visible = false;
+            this.btn_Atualizar.Click += new System.EventHandler(this.btn_Atualizar_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
@@ -171,8 +192,8 @@
             this.btn_Fechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Fechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Fechar.FlatAppearance.BorderSize = 0;
-            this.btn_Fechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btn_Fechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Fechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato;
+            this.btn_Fechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
             this.btn_Fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
@@ -323,27 +344,6 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.9D;
             this.guna2BorderlessForm1.DragStartTransparencyValue = 1D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // btn_Atualizar
-            // 
-            this.btn_Atualizar.Animated = true;
-            this.btn_Atualizar.AnimatedGIF = true;
-            this.btn_Atualizar.BorderRadius = 4;
-            this.btn_Atualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Atualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Atualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Atualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Atualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Atualizar.FillColor = System.Drawing.Color.SeaGreen;
-            this.btn_Atualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Atualizar.ForeColor = System.Drawing.Color.White;
-            this.btn_Atualizar.Location = new System.Drawing.Point(22, 44);
-            this.btn_Atualizar.Name = "btn_Atualizar";
-            this.btn_Atualizar.Size = new System.Drawing.Size(146, 45);
-            this.btn_Atualizar.TabIndex = 200;
-            this.btn_Atualizar.Text = "Atualizar";
-            this.btn_Atualizar.Visible = false;
-            this.btn_Atualizar.Click += new System.EventHandler(this.btn_Atualizar_Click);
             // 
             // Form_Modulo_Cargos_Investigadores
             // 

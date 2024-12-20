@@ -28,47 +28,37 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             this.Close();
         }
-        private void btn_salvar_Click_1(object sender, EventArgs e)
+        private void CapturarDados()
+        {
+            // Capturar os dados digitados no formulário
+            string nome = text_provincia.Text;
+            int pais = Convert.ToInt32(text_paises.SelectedValue);
+            // Registrar os dados capturados
+            c_provincias.nome = nome;
+            c_provincias.id_pais = pais;
+        }
+        private bool VerificarCampos()
         {
             if (text_provincia.Text == String.Empty || text_paises.Text == "")
             {
                 MessageDialog_Error.Show($"Os campos com (*) são de preenchimento obrigatório!\n" +
                     $"Por favor, preencha-os e tente novamente.", "Erro de cadastro");
-                return;
+                return false;
             }
-            try
+            return true;
+        }
+        private void btn_salvar_Click_1(object sender, EventArgs e)
+        {
+            if (VerificarCampos())
             {
-                // Capturar os dados digitados no formulário
-                string nome = text_provincia.Text;
-                int pais = Convert.ToInt32(text_paises.SelectedValue);
-                DateTime data_registro = text_data_registro.Value;
-                DateTime data_atualizacao = DateTime.Now;
-                // Registrar os dados capturados
-                c_provincias.nome = nome;
-                c_provincias.id_pais = pais;
-                c_provincias.data_registro = data_registro;
-                c_provincias.data_atualizacao = data_atualizacao;
-
-                // Verificar se é um novo registro ou atualização
-                bool Atualizacao = Program.AJUDA != 0;
-                if (Atualizacao)
+                try
                 {
-                    c_provincias.id_provincia = Convert.ToInt32(label_id.Text);
-                }
-                // Mensagem de confirmação
-                string accao = Atualizacao ? "atualizar" : "registrar";
-                if (guna2MessageDialog_Confirm.Show($"Tens a certeza de {accao} esta província?", $"Mensagem de {accao}") == DialogResult.Yes)
-                {
-                    Program.AJUDA = 0;
-                    // atualizar os dados
-                    if (Atualizacao)
-                    {
-                        d_provincias.atualizar_provincias(c_provincias);
-                        guna2MessageDialog_Inform.Show($"A província foi atualizada com sucesso!", "Atualização bem sucedida");
-                        // Fecha o formulário depois da atualização.
-                        this.Close();
-                    }
-                    else
+                    DateTime data_registro = DateTime.Now;
+                    DateTime data_atualizacao = DateTime.Now;
+                    c_provincias.data_registro = data_registro;
+                    c_provincias.data_atualizacao = data_atualizacao;
+                    CapturarDados();
+                    if (guna2MessageDialog_Confirm.Show($"Tens a certeza de registrar esta província?", $"Mensagem de registro") == DialogResult.Yes)
                     {
                         //Registrar
                         d_provincias.registrar_provincias(c_provincias);
@@ -77,10 +67,34 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         Limpar();
                     }
                 }
+                catch (Exception Ex)
+                {
+                    MessageDialog_Error.Show("Não possível registrar esta província!", Ex.Message);
+                }
             }
-            catch (Exception Ex)
+        }
+        private void btn_Atualizar_Click(object sender, EventArgs e)
+        {
+            if (VerificarCampos())
             {
-                MessageDialog_Error.Show("Não possível registrar esta província!", Ex.Message);
+                try
+                {
+                    DateTime data_atualizacao = DateTime.Now;
+                    c_provincias.data_atualizacao = data_atualizacao;
+                    c_provincias.id_provincia = Convert.ToInt32(label_id.Text);
+                    CapturarDados();
+                    if (guna2MessageDialog_Confirm.Show($"Tens a certeza de atualizar esta província?", $"Mensagem de atualização") == DialogResult.Yes)
+                    {
+                        d_provincias.registrar_provincias(c_provincias);
+                        guna2MessageDialog_Inform.Show($"A província foi atualizada com sucesso!", "Atualização bem sucedida");
+                        Limpar();
+                        this.Close();
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    MessageDialog_Error.Show("Não possível atualizar esta província!", Ex.Message);
+                }
             }
         }
         private void btn_Limpar_Click_1(object sender, EventArgs e)
@@ -94,7 +108,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_provincia.Clear();
             text_paises.SelectedIndex = -1;
         }
-
         private void text_provincia_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_provincia, label_msg_provincia, "Apenas letras são permitidas!");

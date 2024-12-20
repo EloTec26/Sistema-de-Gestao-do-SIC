@@ -54,9 +54,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.text_data_fechamento = new CustomBox.RJControls.RJDatePicker();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.text_data_registro = new CustomBox.RJControls.RJDatePicker();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.text_departamento = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -292,9 +289,6 @@
             this.panel_formulario.Controls.Add(this.label17);
             this.panel_formulario.Controls.Add(this.label18);
             this.panel_formulario.Controls.Add(this.text_data_fechamento);
-            this.panel_formulario.Controls.Add(this.label15);
-            this.panel_formulario.Controls.Add(this.label16);
-            this.panel_formulario.Controls.Add(this.text_data_registro);
             this.panel_formulario.Controls.Add(this.label13);
             this.panel_formulario.Controls.Add(this.label14);
             this.panel_formulario.Controls.Add(this.text_departamento);
@@ -422,42 +416,6 @@
             this.text_data_fechamento.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             this.text_data_fechamento.TabIndex = 168;
             this.text_data_fechamento.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.Tomato;
-            this.label15.Location = new System.Drawing.Point(157, 580);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(16, 21);
-            this.label15.TabIndex = 167;
-            this.label15.Text = "*";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label16.Location = new System.Drawing.Point(21, 580);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(141, 21);
-            this.label16.TabIndex = 166;
-            this.label16.Text = "Data de registro:";
-            // 
-            // text_data_registro
-            // 
-            this.text_data_registro.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.text_data_registro.BorderSize = 0;
-            this.text_data_registro.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_data_registro.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_data_registro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_data_registro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.text_data_registro.Location = new System.Drawing.Point(21, 604);
-            this.text_data_registro.MinimumSize = new System.Drawing.Size(4, 35);
-            this.text_data_registro.Name = "text_data_registro";
-            this.text_data_registro.Size = new System.Drawing.Size(463, 35);
-            this.text_data_registro.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_data_registro.TabIndex = 165;
-            this.text_data_registro.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             // 
             // label13
             // 
@@ -707,9 +665,6 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         public CustomBox.RJControls.RJDatePicker text_data_fechamento;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        public CustomBox.RJControls.RJDatePicker text_data_registro;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         public Guna.UI2.WinForms.Guna2ComboBox text_departamento;

@@ -48,11 +48,8 @@
             this.label_msg_ultimo_nome = new System.Windows.Forms.Label();
             this.label_msg_nome_meio = new System.Windows.Forms.Label();
             this.label_msg_primeiro_nome = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
             this.text_patente = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label37 = new System.Windows.Forms.Label();
-            this.text_data_registro = new CustomBox.RJControls.RJDatePicker();
-            this.label40 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.text_nivel_academico = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label34 = new System.Windows.Forms.Label();
@@ -288,11 +285,8 @@
             this.panel3.Controls.Add(this.label_msg_ultimo_nome);
             this.panel3.Controls.Add(this.label_msg_nome_meio);
             this.panel3.Controls.Add(this.label_msg_primeiro_nome);
-            this.panel3.Controls.Add(this.label39);
             this.panel3.Controls.Add(this.text_patente);
             this.panel3.Controls.Add(this.label37);
-            this.panel3.Controls.Add(this.text_data_registro);
-            this.panel3.Controls.Add(this.label40);
             this.panel3.Controls.Add(this.label38);
             this.panel3.Controls.Add(this.text_nivel_academico);
             this.panel3.Controls.Add(this.label34);
@@ -441,16 +435,6 @@
             this.label_msg_primeiro_nome.Text = "mensagem de erro";
             this.label_msg_primeiro_nome.Visible = false;
             // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.ForeColor = System.Drawing.Color.Tomato;
-            this.label39.Location = new System.Drawing.Point(738, 513);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(16, 21);
-            this.label39.TabIndex = 191;
-            this.label39.Text = "*";
-            // 
             // text_patente
             // 
             this.text_patente.BackColor = System.Drawing.Color.Transparent;
@@ -481,32 +465,6 @@
             this.label37.Size = new System.Drawing.Size(16, 21);
             this.label37.TabIndex = 187;
             this.label37.Text = "*";
-            // 
-            // text_data_registro
-            // 
-            this.text_data_registro.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.text_data_registro.BorderSize = 0;
-            this.text_data_registro.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_data_registro.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_data_registro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_data_registro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.text_data_registro.Location = new System.Drawing.Point(600, 539);
-            this.text_data_registro.MinimumSize = new System.Drawing.Size(4, 35);
-            this.text_data_registro.Name = "text_data_registro";
-            this.text_data_registro.Size = new System.Drawing.Size(266, 35);
-            this.text_data_registro.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_data_registro.TabIndex = 189;
-            this.text_data_registro.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label40.Location = new System.Drawing.Point(599, 511);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(141, 21);
-            this.label40.TabIndex = 190;
-            this.label40.Text = "Data de registro:";
             // 
             // label38
             // 
@@ -1420,9 +1378,6 @@
         private System.Windows.Forms.Label label3;
         public CustomBox.RJControls.RJDatePicker text_data_inicio_contrato;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label39;
-        public CustomBox.RJControls.RJDatePicker text_data_registro;
-        private System.Windows.Forms.Label label40;
         public Guna.UI2.WinForms.Guna2ComboBox text_patente;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;

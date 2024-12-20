@@ -48,9 +48,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.text_descricao = new Guna.UI2.WinForms.Guna2TextBox();
-            this.text_Data_Registro = new CustomBox.RJControls.RJDatePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Limpar = new Guna.UI2.WinForms.Guna2Button();
             this.btn_salvar = new Guna.UI2.WinForms.Guna2Button();
@@ -62,6 +59,7 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.btn_Atualizar = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -103,9 +101,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label5.Location = new System.Drawing.Point(12, 4);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 19);
+            this.label5.Size = new System.Drawing.Size(118, 19);
             this.label5.TabIndex = 70;
-            this.label5.Text = "Registrar";
+            this.label5.Text = "Registrar férias";
             // 
             // text_estado_feria
             // 
@@ -322,42 +320,6 @@
             this.text_descricao.Size = new System.Drawing.Size(487, 82);
             this.text_descricao.TabIndex = 193;
             // 
-            // text_Data_Registro
-            // 
-            this.text_Data_Registro.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.text_Data_Registro.BorderSize = 0;
-            this.text_Data_Registro.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_Data_Registro.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_Data_Registro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_Data_Registro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.text_Data_Registro.Location = new System.Drawing.Point(16, 399);
-            this.text_Data_Registro.MinimumSize = new System.Drawing.Size(4, 35);
-            this.text_Data_Registro.Name = "text_Data_Registro";
-            this.text_Data_Registro.Size = new System.Drawing.Size(487, 35);
-            this.text_Data_Registro.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_Data_Registro.TabIndex = 190;
-            this.text_Data_Registro.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Tomato;
-            this.label8.Location = new System.Drawing.Point(148, 375);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 21);
-            this.label8.TabIndex = 192;
-            this.label8.Text = "*";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label7.Location = new System.Drawing.Point(12, 375);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 21);
-            this.label7.TabIndex = 191;
-            this.label7.Text = "Data de registro:";
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.btn_Limpar);
@@ -366,10 +328,11 @@
             this.panel2.Controls.Add(this.guna2Separator1);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.label16);
+            this.panel2.Controls.Add(this.btn_Atualizar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 440);
+            this.panel2.Location = new System.Drawing.Point(0, 378);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(522, 90);
+            this.panel2.Size = new System.Drawing.Size(522, 96);
             this.panel2.TabIndex = 196;
             // 
             // btn_Limpar
@@ -426,7 +389,7 @@
             // 
             this.guna2Separator1.Location = new System.Drawing.Point(14, 26);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(489, 21);
+            this.guna2Separator1.Size = new System.Drawing.Size(489, 10);
             this.guna2Separator1.TabIndex = 143;
             // 
             // label15
@@ -487,19 +450,37 @@
             this.guna2MessageDialog_Inform.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.guna2MessageDialog_Inform.Text = null;
             // 
+            // btn_Atualizar
+            // 
+            this.btn_Atualizar.Animated = true;
+            this.btn_Atualizar.AnimatedGIF = true;
+            this.btn_Atualizar.BorderRadius = 4;
+            this.btn_Atualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Atualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Atualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Atualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Atualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Atualizar.FillColor = System.Drawing.Color.SeaGreen;
+            this.btn_Atualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Atualizar.ForeColor = System.Drawing.Color.White;
+            this.btn_Atualizar.Location = new System.Drawing.Point(15, 42);
+            this.btn_Atualizar.Name = "btn_Atualizar";
+            this.btn_Atualizar.Size = new System.Drawing.Size(146, 45);
+            this.btn_Atualizar.TabIndex = 203;
+            this.btn_Atualizar.Text = "Atualizar";
+            this.btn_Atualizar.Visible = false;
+            this.btn_Atualizar.Click += new System.EventHandler(this.btn_Atualizar_Click);
+            // 
             // Form_Modulo_Ferias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            this.ClientSize = new System.Drawing.Size(522, 530);
+            this.ClientSize = new System.Drawing.Size(522, 474);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.text_descricao);
-            this.Controls.Add(this.text_Data_Registro);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.text_data_final);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -550,9 +531,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         public Guna.UI2.WinForms.Guna2TextBox text_descricao;
-        public CustomBox.RJControls.RJDatePicker text_Data_Registro;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btn_Limpar;
         public Guna.UI2.WinForms.Guna2Button btn_salvar;
@@ -564,5 +542,6 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog_Confirm;
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog_Inform;
+        public Guna.UI2.WinForms.Guna2Button btn_Atualizar;
     }
 }

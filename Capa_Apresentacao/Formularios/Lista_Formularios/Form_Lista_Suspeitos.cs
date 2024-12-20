@@ -51,8 +51,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Modulos.Form_Modulo_Suspeitos modulo_Suspeitos = new Modulos.Form_Modulo_Suspeitos();
                 modulo_Suspeitos.FormClosed += Modulo_Suspeitos_FormClosed;
 
-                Program.AJUDA = 1;
-
                 modulo_Suspeitos.label_id.Text = dgv_suspeitos.CurrentRow.Cells[0].Value.ToString();
                 modulo_Suspeitos.text_primeiro_nome.Text = dgv_suspeitos.CurrentRow.Cells[1].Value.ToString();
                 modulo_Suspeitos.text_nome_meio.Text = dgv_suspeitos.CurrentRow.Cells[2].Value.ToString();
@@ -71,8 +69,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 modulo_Suspeitos.text_provincias.Text = dgv_suspeitos.CurrentRow.Cells[16].Value.ToString();
                 modulo_Suspeitos.text_municipio.Text = dgv_suspeitos.CurrentRow.Cells[17].Value.ToString();
                 modulo_Suspeitos.text_bairro_rua.Text = dgv_suspeitos.CurrentRow.Cells[18].Value.ToString();
-                modulo_Suspeitos.text_data_registro.Text = dgv_suspeitos.CurrentRow.Cells[20].Value.ToString();
-
+            
                 modulo_Suspeitos.label5.Text = "Atualizar suspeito";
                 modulo_Suspeitos.btn_salvar.Visible = false;
                 modulo_Suspeitos.btn_Atualizar.Visible = true;

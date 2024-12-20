@@ -50,7 +50,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 // Registrar os dados capturados
                 if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este cargo?", "Mensagem de registro") == DialogResult.Yes)
                 {
-                    Program.AJUDA = 0;
                     d_Cargos.inserir_Cargos(c_Cargos);
                     guna2MessageDialog_Inform.Show($"O cargo {text_Cargo.Text} foi registrado com sucesso!", "Registro bem sucedido");
                     Limpar_Campos();
@@ -88,7 +87,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 // Registrar os dados capturados
                 if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar este cargo?", "Mensagem de atualização") == DialogResult.Yes)
                 {
-                    Program.AJUDA = 0;
                     d_Cargos.atualizar_Cargos(c_Cargos);
                     guna2MessageDialog_Inform.Show($"O cargo {text_Cargo.Text} foi atualizado com sucesso!", "Atualização bem sucedida");
                     this.Close();

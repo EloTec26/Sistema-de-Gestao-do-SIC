@@ -45,13 +45,10 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 Formularios.Modulos.Form_Modulo_Especialidades especialidades = new Modulos.Form_Modulo_Especialidades();
                 especialidades.FormClosed += Especialidades_FormClosed;
-                Program.AJUDA = 1;
-
                 especialidades.label_id.Text = dgv_especialidades.CurrentRow.Cells[0].Value.ToString();
                 especialidades.text_curso.Text = dgv_especialidades.CurrentRow.Cells[1].Value.ToString();
                 especialidades.text_Especialidades.Text = dgv_especialidades.CurrentRow.Cells[2].Value.ToString();
-                especialidades.text_Data_Registro.Text = dgv_especialidades.CurrentRow.Cells[3].Value.ToString();
-
+              
                 especialidades.label5.Text = "Atualizar especialidade";
                 especialidades.btn_Atualizar.Visible = true;
                 especialidades.btn_salvar.Visible = false;
@@ -97,7 +94,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 MessageDialog_Error.Show("Por favor, selecione a especialidade que pretende atualizar e tente novamente!", "Erro de atualização");
             }
         }
-
         private void text_pesquisar_TextChanged(object sender, EventArgs e)
         {
             pesquisar_Especialidades();

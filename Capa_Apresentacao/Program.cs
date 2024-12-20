@@ -16,15 +16,13 @@ namespace Capa_Apresentacao
         /// The main entry point for the application.
         /// </summary>
         /// 
-        #region Método que nos vai ajudar a inserir e a atualizar um registro
-        public static int AJUDA;
-        #endregion
+      
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Principal());
+            Application.Run(new Form_Login());
         }
     }
 }

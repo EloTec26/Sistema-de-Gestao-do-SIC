@@ -50,8 +50,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Modulos.Form_Modulo_Beneficios beneficios = new Modulos.Form_Modulo_Beneficios();
                 beneficios.FormClosed += Beneficios_FormClosed;
 
-                Program.AJUDA = 1;
-
                 beneficios.label_id.Text = dgv_beneficios.CurrentRow.Cells[0].Value.ToString();
                 beneficios.text_beneficio.Text = dgv_beneficios.CurrentRow.Cells[1].Value.ToString();
                 beneficios.text_descricao.Text = dgv_beneficios.CurrentRow.Cells[2].Value.ToString();
@@ -74,8 +72,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 Modulos.Form_Modulo_Beneficios beneficios = new Modulos.Form_Modulo_Beneficios();
                 beneficios.FormClosed += Beneficios_FormClosed;
-
-                Program.AJUDA = 1;
 
                 beneficios.label_id.Text = dgv_beneficios.CurrentRow.Cells[0].Value.ToString();
                 beneficios.text_beneficio.Text = dgv_beneficios.CurrentRow.Cells[1].Value.ToString();

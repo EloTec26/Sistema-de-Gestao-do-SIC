@@ -23,12 +23,10 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             //
             string nivel_Academico = text_Nivel_Academico.Text;
-            DateTime data_Registro = text_Data_Registro.Value;
-            DateTime data_atualizacao = DateTime.Now;
+           
             //
             c_Nivel_Academicos.nome = nivel_Academico;
-            c_Nivel_Academicos.data_registro = data_Registro;
-            c_Nivel_Academicos.data_atualizacao = data_atualizacao;
+           
         }
         private void btn_salvar_Click(object sender, EventArgs e)
         {
@@ -41,10 +39,13 @@ namespace Capa_Apresentacao.Formularios.Modulos
             try
             {
                 CapturarDadosFormulario();
+                DateTime data_Registro = DateTime.Now;
+                DateTime data_atualizacao = DateTime.Now;
+                c_Nivel_Academicos.data_registro = data_Registro;
+                c_Nivel_Academicos.data_atualizacao = data_atualizacao;
                 //
                 if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este nível acadêmico?", "Mensagem de registro") == DialogResult.Yes)
                 {
-                    Program.AJUDA = 0;
                     d_Niveis_Academicos.inserir_niveis_academicos(c_Nivel_Academicos);
                     guna2MessageDialog_Inform.Show($"O nível acadêmico {text_Nivel_Academico.Text}, foi registrado com  sucesso", "Registro bem sucedido");
                     limpar_Campos();
@@ -74,12 +75,13 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 int id_Nivel_Academico = Convert.ToInt32(label_id.Text);
                 //
                 CapturarDadosFormulario();
+                DateTime data_atualizacao = DateTime.Now;
+                c_Nivel_Academicos.data_atualizacao = data_atualizacao;
                 c_Nivel_Academicos.id_nivel_academico = id_Nivel_Academico;
 
                 //
                 if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar este nível acadêmico?", "Mensagem de atualização") == DialogResult.Yes)
                 {
-                    Program.AJUDA = 0;
                     d_Niveis_Academicos.atualizar_niveis_academicos(c_Nivel_Academicos);
                     guna2MessageDialog_Inform.Show($"O nível acadêmico {text_Nivel_Academico.Text}, foi atualizado com  sucesso!", "Atualização bem sucedida");
                     limpar_Campos();

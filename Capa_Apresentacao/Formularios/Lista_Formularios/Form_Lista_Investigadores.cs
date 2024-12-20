@@ -50,8 +50,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Modulos.Form_Modulo_Investigadores investigadores = new Modulos.Form_Modulo_Investigadores();
                 investigadores.FormClosed += Investigadores_FormClosed;
 
-                Program.AJUDA = 1;
-
                 investigadores.label_id.Text = dgv_investigadores.CurrentRow.Cells[0].Value.ToString();
                 investigadores.text_primeiro_nome.Text = dgv_investigadores.CurrentRow.Cells[1].Value.ToString();
                 investigadores.text_nome_meio.Text = dgv_investigadores.CurrentRow.Cells[2].Value.ToString();
@@ -73,8 +71,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 investigadores.text_provincias.Text = dgv_investigadores.CurrentRow.Cells[19].Value.ToString();
                 investigadores.text_municipio.Text = dgv_investigadores.CurrentRow.Cells[20].Value.ToString();
                 investigadores.text_bairro_rua.Text = dgv_investigadores.CurrentRow.Cells[21].Value.ToString();
-                investigadores.text_data_registro.Text = dgv_investigadores.CurrentRow.Cells[23].Value.ToString();
-
+              
                 investigadores.btn_salvar.Visible = false;
                 investigadores.btn_Atualizar.Visible = true;
                 investigadores.label5.Text = "Atualizar funcionário";
@@ -94,7 +91,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Modulos.Form_Modulo_Investigadores investigadores = new Modulos.Form_Modulo_Investigadores();
                 investigadores.FormClosed += Investigadores_FormClosed;
 
-                Program.AJUDA = 1;
 
                 investigadores.label_id.Text = dgv_investigadores.CurrentRow.Cells[0].Value.ToString();
                 investigadores.text_primeiro_nome.Text = dgv_investigadores.CurrentRow.Cells[1].Value.ToString();
@@ -117,8 +113,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 investigadores.text_provincias.Text = dgv_investigadores.CurrentRow.Cells[19].Value.ToString();
                 investigadores.text_municipio.Text = dgv_investigadores.CurrentRow.Cells[20].Value.ToString();
                 investigadores.text_bairro_rua.Text = dgv_investigadores.CurrentRow.Cells[21].Value.ToString();
-                investigadores.text_data_registro.Text = dgv_investigadores.CurrentRow.Cells[23].Value.ToString();
-
+               
                 investigadores.btn_salvar.Visible = false;
                 investigadores.btn_Atualizar.Visible = true;
                 investigadores.label5.Text = "Atualizar funcionário";

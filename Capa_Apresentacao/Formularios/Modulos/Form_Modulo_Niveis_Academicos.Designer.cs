@@ -43,9 +43,6 @@
             this.label_id = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.text_Data_Registro = new CustomBox.RJControls.RJDatePicker();
             this.text_Nivel_Academico = new Guna.UI2.WinForms.Guna2ComboBox();
             this.MessageDialog_Error = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
@@ -106,7 +103,7 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.btn_atualizar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 204);
+            this.panel2.Location = new System.Drawing.Point(0, 110);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(511, 95);
             this.panel2.TabIndex = 116;
@@ -157,13 +154,13 @@
             this.label4.ForeColor = System.Drawing.Color.Tomato;
             this.label4.Location = new System.Drawing.Point(18, 5);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 19);
+            this.label4.Size = new System.Drawing.Size(133, 19);
             this.label4.TabIndex = 116;
-            this.label4.Text = "Os campos com o (";
+            this.label4.Text = "O campo com o (";
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(18, 22);
+            this.guna2Separator1.Location = new System.Drawing.Point(18, 24);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(463, 10);
             this.guna2Separator1.TabIndex = 119;
@@ -186,9 +183,9 @@
             this.label6.ForeColor = System.Drawing.Color.Tomato;
             this.label6.Location = new System.Drawing.Point(168, 5);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(259, 19);
+            this.label6.Size = new System.Drawing.Size(244, 19);
             this.label6.TabIndex = 118;
-            this.label6.Text = ") são de preenchimento obrigatório.";
+            this.label6.Text = ") é de preenchimento obrigatório.";
             // 
             // btn_atualizar
             // 
@@ -241,42 +238,6 @@
             this.label1.Size = new System.Drawing.Size(237, 21);
             this.label1.TabIndex = 118;
             this.label1.Text = "Selecione o nível acadêmico:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Tomato;
-            this.label8.Location = new System.Drawing.Point(163, 126);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 21);
-            this.label8.TabIndex = 123;
-            this.label8.Text = "*";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label7.Location = new System.Drawing.Point(27, 126);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 21);
-            this.label7.TabIndex = 122;
-            this.label7.Text = "Data de registro:";
-            // 
-            // text_Data_Registro
-            // 
-            this.text_Data_Registro.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.text_Data_Registro.BorderSize = 0;
-            this.text_Data_Registro.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_Data_Registro.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_Data_Registro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_Data_Registro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.text_Data_Registro.Location = new System.Drawing.Point(31, 150);
-            this.text_Data_Registro.MinimumSize = new System.Drawing.Size(4, 35);
-            this.text_Data_Registro.Name = "text_Data_Registro";
-            this.text_Data_Registro.Size = new System.Drawing.Size(450, 35);
-            this.text_Data_Registro.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_Data_Registro.TabIndex = 121;
-            this.text_Data_Registro.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             // 
             // text_Nivel_Academico
             // 
@@ -350,11 +311,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            this.ClientSize = new System.Drawing.Size(511, 299);
+            this.ClientSize = new System.Drawing.Size(511, 205);
             this.Controls.Add(this.text_Nivel_Academico);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.text_Data_Registro);
             this.Controls.Add(this.label_id);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -388,9 +346,6 @@
         public System.Windows.Forms.Label label_id;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        public CustomBox.RJControls.RJDatePicker text_Data_Registro;
         public Guna.UI2.WinForms.Guna2ComboBox text_Nivel_Academico;
         private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog_Error;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;

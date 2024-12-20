@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_Fechar = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btn_Limpar = new Guna.UI2.WinForms.Guna2Button();
             this.btn_salvar = new Guna.UI2.WinForms.Guna2Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,9 +39,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btn_Atualizar = new Guna.UI2.WinForms.Guna2Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.text_Data_Registro = new CustomBox.RJControls.RJDatePicker();
             this.text_Curso = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +49,6 @@
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.label_msg_curso = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,21 +92,6 @@
             this.label5.TabIndex = 88;
             this.label5.Text = "Registrar curso";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btn_Limpar);
-            this.panel2.Controls.Add(this.btn_salvar);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.guna2Separator1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.btn_Atualizar);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 191);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(501, 100);
-            this.panel2.TabIndex = 117;
-            // 
             // btn_Limpar
             // 
             this.btn_Limpar.Animated = true;
@@ -125,7 +105,7 @@
             this.btn_Limpar.FillColor = System.Drawing.Color.Tomato;
             this.btn_Limpar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Limpar.ForeColor = System.Drawing.Color.White;
-            this.btn_Limpar.Location = new System.Drawing.Point(176, 44);
+            this.btn_Limpar.Location = new System.Drawing.Point(176, 170);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(146, 45);
             this.btn_Limpar.TabIndex = 127;
@@ -144,7 +124,7 @@
             this.btn_salvar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_salvar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salvar.ForeColor = System.Drawing.Color.White;
-            this.btn_salvar.Location = new System.Drawing.Point(22, 44);
+            this.btn_salvar.Location = new System.Drawing.Point(22, 170);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(146, 45);
             this.btn_salvar.TabIndex = 126;
@@ -156,7 +136,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label4.ForeColor = System.Drawing.Color.Tomato;
-            this.label4.Location = new System.Drawing.Point(22, 11);
+            this.label4.Location = new System.Drawing.Point(22, 133);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(143, 19);
             this.label4.TabIndex = 122;
@@ -164,7 +144,7 @@
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(22, 28);
+            this.guna2Separator1.Location = new System.Drawing.Point(22, 150);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(451, 21);
             this.guna2Separator1.TabIndex = 125;
@@ -174,7 +154,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label3.ForeColor = System.Drawing.Color.Tomato;
-            this.label3.Location = new System.Drawing.Point(161, 13);
+            this.label3.Location = new System.Drawing.Point(161, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(16, 21);
             this.label3.TabIndex = 123;
@@ -185,7 +165,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label6.ForeColor = System.Drawing.Color.Tomato;
-            this.label6.Location = new System.Drawing.Point(172, 11);
+            this.label6.Location = new System.Drawing.Point(172, 133);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(259, 19);
             this.label6.TabIndex = 124;
@@ -204,49 +184,13 @@
             this.btn_Atualizar.FillColor = System.Drawing.Color.SeaGreen;
             this.btn_Atualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Atualizar.ForeColor = System.Drawing.Color.White;
-            this.btn_Atualizar.Location = new System.Drawing.Point(22, 44);
+            this.btn_Atualizar.Location = new System.Drawing.Point(22, 166);
             this.btn_Atualizar.Name = "btn_Atualizar";
             this.btn_Atualizar.Size = new System.Drawing.Size(146, 45);
             this.btn_Atualizar.TabIndex = 201;
             this.btn_Atualizar.Text = "Atualizar";
             this.btn_Atualizar.Visible = false;
             this.btn_Atualizar.Click += new System.EventHandler(this.btn_Atualizar_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Tomato;
-            this.label8.Location = new System.Drawing.Point(159, 131);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 21);
-            this.label8.TabIndex = 126;
-            this.label8.Text = "*";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label7.Location = new System.Drawing.Point(23, 131);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 21);
-            this.label7.TabIndex = 125;
-            this.label7.Text = "Data de registro:";
-            // 
-            // text_Data_Registro
-            // 
-            this.text_Data_Registro.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.text_Data_Registro.BorderSize = 0;
-            this.text_Data_Registro.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_Data_Registro.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_Data_Registro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_Data_Registro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.text_Data_Registro.Location = new System.Drawing.Point(27, 155);
-            this.text_Data_Registro.MinimumSize = new System.Drawing.Size(4, 35);
-            this.text_Data_Registro.Name = "text_Data_Registro";
-            this.text_Data_Registro.Size = new System.Drawing.Size(450, 35);
-            this.text_Data_Registro.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_Data_Registro.TabIndex = 124;
-            this.text_Data_Registro.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             // 
             // text_Curso
             // 
@@ -358,16 +302,19 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            this.ClientSize = new System.Drawing.Size(501, 291);
+            this.ClientSize = new System.Drawing.Size(501, 234);
+            this.Controls.Add(this.btn_Limpar);
+            this.Controls.Add(this.btn_salvar);
             this.Controls.Add(this.label_msg_curso);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label_id);
+            this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.text_Curso);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.text_Data_Registro);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.btn_Atualizar);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -377,8 +324,6 @@
             this.Text = "Form_Modulo_Cursos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,15 +333,11 @@
 
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btn_Fechar;
-        private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2Button btn_Limpar;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        public CustomBox.RJControls.RJDatePicker text_Data_Registro;
         public Guna.UI2.WinForms.Guna2TextBox text_Curso;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

@@ -43,12 +43,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 MessageDialog_Error.Show("Todos os campos com asteríscos(*) são de preenchimento obrigatório!", "Erro ao salvar a falta");
                 return false;
             }
-
-            if (text_Data_Registro.Value.Date > DateTime.Now.Date)
-            {
-                MessageDialog_Error.Show("A [data de registro] selecionada não pode ser uma data futura.", "Erro de seleção de data");
-                return false;
-            }
             return true;
         }
         private void CapturarDadosFormulario()
@@ -58,16 +52,12 @@ namespace Capa_Apresentacao.Formularios.Modulos
             DateTime data_Trablho = text_data_trabalho.Value;
             string horas_Trabalhadas = text_horas_trabalho.Text;
             string tipo_Horas = text_tipo_horas.Text;
-            DateTime data_Registro = text_Data_Registro.Value;
-            DateTime data_Atualizacao = DateTime.Now;
-
+            
             c_Horas_Extras.id_investigador = id_Investigador;
             c_Horas_Extras.id_usuario = comum_cache_permissoes_usuarios.cache_inicio_sessao.id_usuario;
             c_Horas_Extras.data_trabalho = data_Trablho;
             c_Horas_Extras.horas_trabalhadas = horas_Trabalhadas;
             c_Horas_Extras.tipo_horas = tipo_Horas;
-            c_Horas_Extras.data_registro = data_Registro;
-            c_Horas_Extras.data_atualizacao = data_Atualizacao;
         }
         private void btn_salvar_Click(object sender, EventArgs e)
         {
@@ -77,13 +67,16 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 try
                 {
                     CapturarDadosFormulario();
+                    DateTime data_Registro = DateTime.Now;
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Horas_Extras.data_registro = data_Registro;
+                    c_Horas_Extras.data_atualizacao = data_Atualizacao;
                     // Registrar os dados capturados
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar estas horas_extras?", "Mensagem de registro") == DialogResult.Yes)
                     {
                         d_Horas_Extras.inserir_horas_extras(c_Horas_Extras);
                         guna2MessageDialog_Inform.Show("As horas-extras foram registrada com sucesso!", "Registro bem-sucedido");
                         limpar_Campos();
-
                     }
                 }
                 catch (Exception Ex)
@@ -92,7 +85,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 }
             }
         }
-
         private void btn_atualizar_Click(object sender, EventArgs e)
         {
             if (VerficarCamposVazios())
@@ -102,8 +94,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 {
                     // Capturar os dados do formulário
                     int id_Horas_Extras = Convert.ToInt32(label_id.Text);
+                    DateTime data_Atualizacao = DateTime.Now;
+                  
                     CapturarDadosFormulario();
                     c_Horas_Extras.id_hora_extra = id_Horas_Extras;
+                    c_Horas_Extras.data_atualizacao = data_Atualizacao;
                     // Registrar os dados capturados
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar estas horas_extras?", "Mensagem de atualização") == DialogResult.Yes)
                     {
@@ -126,12 +121,10 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_horas_trabalho.Text = "";
             text_tipo_horas.SelectedIndex = -1;
         }
-
         private void btn_Limpar_Click(object sender, EventArgs e)
         {
             limpar_Campos();
         }
-
         private void text_horas_trabalho_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarNumero(e, text_horas_trabalho, label_msg_horas_trabalhadas, "Apenas números são permitidos!");

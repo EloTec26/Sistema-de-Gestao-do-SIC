@@ -26,6 +26,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             InitializeComponent();
             selecionar_dados_comboBoxs();
+            filtrar();
         }
         #region Método para selecionar os dados e trazê-los nos seus respectivos comboBox´s
         private void filtrar()
@@ -127,11 +128,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     "Por favor, preencha-os e tente novamente!", "Ocorreu um erro ao savar os dados");
                 return false;
             }
-            if (text_data_registro.Value < DateTime.Now.Date)
-            {
-                MessageDialog_Error.Show("A data de registro não pode ser uma data passada nem futura.", "Erro de seleção de data");
-                return false;
-            }
             return true;
         }
         private void CapturarDadosDigitadosFormulario()
@@ -155,9 +151,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             string segundo_Numero_Telefone = text_segundo_numero_telefone.Text;
             string E_Mail = text_e_mail.Text;
             string declaracao = text_declaracao.Text;
-            DateTime data_Registro = text_data_registro.Value;
-            DateTime data_Atualizacao = DateTime.Now;
-
             // Salvar os dados capturados
             c_Suspeito.id_caso = id_Caso;
             c_Suspeito.id_continente = id_Continente;
@@ -177,9 +170,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             c_Suspeito.telefone2 = segundo_Numero_Telefone;
             c_Suspeito.e_mail = E_Mail;
             c_Suspeito.descricao = declaracao;
-            c_Suspeito.data_registro = data_Registro;
-            c_Suspeito.data_atualizacao = data_Atualizacao;
-
         }
         private void btn_salvar_Click(object sender, EventArgs e)
         {
@@ -187,6 +177,10 @@ namespace Capa_Apresentacao.Formularios.Modulos
             {
                 try
                 {
+                    DateTime data_Registro = DateTime.Now;
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Suspeito.data_registro = data_Registro;
+                    c_Suspeito.data_atualizacao = data_Atualizacao;
                     CapturarDadosDigitadosFormulario();
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este suspeito?", "Mensagem de registro") == DialogResult.Yes)
                     {
@@ -209,11 +203,12 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 try
                 {
                     int id_Suspeito = Convert.ToInt32(label_id.Text);
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Suspeito.data_atualizacao = data_Atualizacao;
                     CapturarDadosDigitadosFormulario();
                     c_Suspeito.id_suspeito = id_Suspeito;
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar esta vítima?", "Mensagem de atualização") == DialogResult.Yes)
                     {
-                        Program.AJUDA = 0;
                         d_Suspeito.atualizar_suspeitos(c_Suspeito);
                         guna2MessageDialog_Inform.Show($"O suspeito {text_primeiro_nome.Text + " " + text_ultimo_nome.Text} foi atualizado com sucesso!",
                             "Atualização bem sucedida");
@@ -247,44 +242,35 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_segundo_numero_telefone.Text = String.Empty;
             text_e_mail.Text = String.Empty;
             text_declaracao.Text = String.Empty;
-            text_data_registro.Value = DateTime.Now;
         }
-
         private void btn_Limpar_Click(object sender, EventArgs e)
         {
             limpar_Campos();
         }
-
         private void text_primeiro_nome_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_primeiro_nome, label_msg_primeiro_nome, "Apenas letras são permitidas!");
         }
-
         private void text_nome_meio_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_nome_meio, label_msg_nome_meio, "Apenas letras são permitidas!");
         }
-
         private void text_ultimo_nome_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_ultimo_nome, label_msg_ultimo_nome, "Apenas letras são permitidas!");
         }
-
         private void text_primerio_numero_telefone_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarNumero(e, text_primerio_numero_telefone, label_msg_primeiro_telefone, "Apenas números são permitidas!");
         }
-
         private void text_segundo_numero_telefone_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarNumero(e, text_segundo_numero_telefone, label_msg_segundo_telefone, "Apenas números são permitidas!");
         }
-
         private void text_e_mail_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarEmail(text_e_mail, label_msg_email, "Email inválido!");
         }
-
         private void text_declaracao_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_declaracao, label_msg_descricao, "Apenas letras são permitidas!");

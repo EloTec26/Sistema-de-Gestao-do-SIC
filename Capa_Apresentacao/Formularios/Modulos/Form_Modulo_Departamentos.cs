@@ -36,14 +36,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
             // Capturar os dados do formulário
             string departamento = text_departamento.Text;
             string descricao = text_descricao.Text;
-            DateTime data_registro = text_data_registro.Value;
-            DateTime data_atualizacao = DateTime.Now;
+           
             // Salvar os dados capturados
             c_Departamentos.nome = departamento;
             c_Departamentos.descricao = descricao;
-            c_Departamentos.id_usuario = comum_cache_permissoes_usuarios.cache_inicio_sessao.id_usuario;
-            c_Departamentos.data_registro = data_registro;
-            c_Departamentos.data_atualizacao = data_atualizacao;
+            c_Departamentos.id_usuario = comum_cache_permissoes_usuarios.cache_inicio_sessao.id_usuario;           
         }
         private void btn_salvar_Click(object sender, EventArgs e)
         {
@@ -51,6 +48,10 @@ namespace Capa_Apresentacao.Formularios.Modulos
             {
                 try
                 {
+                    DateTime data_registro = DateTime.Now;
+                    DateTime data_atualizacao = DateTime.Now;
+                    c_Departamentos.data_registro = data_registro;
+                    c_Departamentos.data_atualizacao = data_atualizacao;
                     capturar_Dados_Digitados_Formulario();
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este departamento?", "Mensagem de registro") == DialogResult.Yes)
                     {
@@ -72,7 +73,9 @@ namespace Capa_Apresentacao.Formularios.Modulos
             {
                 try
                 {
-                    // Capturar o id
+                    DateTime data_atualizacao = DateTime.Now;
+                    c_Departamentos.data_atualizacao = data_atualizacao;
+
                     int id_departamento = Convert.ToInt32(label_id.Text);
                     capturar_Dados_Digitados_Formulario();
                     // Atualizar os dados capturados

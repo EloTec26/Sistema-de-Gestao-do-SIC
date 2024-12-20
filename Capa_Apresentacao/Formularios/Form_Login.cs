@@ -16,6 +16,8 @@ namespace Capa_Apresentacao
             InitializeComponent();
             InitializeLockoutTimer();
 
+            this.AcceptButton = btn_iniciar_sessao;
+
             toolTip1.SetToolTip(btn_Fechar, "Encerrar");
             toolTip1.SetToolTip(btn_Restaurar, "Restaurar");
             toolTip1.SetToolTip(btn_Maximizar, "Maximizar");

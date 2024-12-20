@@ -149,8 +149,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             string segundo_Numero_Telefone = text_segundo_numero_telefone.Text;
             string E_Mail = text_e_mail.Text;
             string declaracao = text_declaracao.Text;
-            DateTime data_Registro = text_data_registro.Value;
-            DateTime data_Atualizacao = DateTime.Now;
 
             // Salvar os dados capturados
             c_Testemunhas.id_caso = id_Caso;
@@ -171,8 +169,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             c_Testemunhas.telefone2 = segundo_Numero_Telefone;
             c_Testemunhas.e_mail = E_Mail;
             c_Testemunhas.declaracao = declaracao;
-            c_Testemunhas.data_registro = data_Registro;
-            c_Testemunhas.data_atualizacao = data_Atualizacao;
         }
         private void btn_salvar_Click(object sender, EventArgs e)
         {
@@ -181,6 +177,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 try
                 {
                     CapturarDadosDigitadosFormulario();
+
+                    DateTime data_Registro = DateTime.Now;
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Testemunhas.data_registro = data_Registro;
+                    c_Testemunhas.data_atualizacao = data_Atualizacao;
 
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar esta testemunha?", "Mensagem de registro") == DialogResult.Yes)
                     {
@@ -203,11 +204,14 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 try
                 {
                     int id_Testemunha = Convert.ToInt32(label_id.Text);
-                    CapturarDadosDigitadosFormulario();
+                    DateTime data_Atualizacao = DateTime.Now;
+
+                    c_Testemunhas.data_atualizacao = data_Atualizacao;
                     c_Testemunhas.id_testemunha = id_Testemunha;
+
+                    CapturarDadosDigitadosFormulario();
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar esta testemunha?", "Mensagem de atualização") == DialogResult.Yes)
                     {
-                        Program.AJUDA = 0;
                         d_Testemunhas.atualizar_testemunhas(c_Testemunhas);
                         guna2MessageDialog_Inform.Show($"A testemunha {text_primeiro_nome.Text + " " + text_ultimo_nome.Text} foi atualizada com sucesso!",
                             "Atualização bem sucedida");
@@ -241,7 +245,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_segundo_numero_telefone.Text = String.Empty;
             text_e_mail.Text = String.Empty;
             text_declaracao.Text = String.Empty;
-            text_data_registro.Value = DateTime.Now;
         }
 
         private void btn_Limpar_Click(object sender, EventArgs e)

@@ -33,14 +33,10 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             // Capturar os dados digitados no formulário
             string nome_especialidade = text_Especialidades.Text;
-            DateTime data_registro = text_Data_Registro.Value;
-            DateTime data_atualizacao = DateTime.Now;
             int id_curso = Convert.ToInt32(text_curso.SelectedValue);
 
             // Registrar os dados digitados
             c_Especialidades.nome = nome_especialidade;
-            c_Especialidades.data_registro = data_registro;
-            c_Especialidades.data_atualizacao = data_atualizacao;
             c_Especialidades.id_curso = id_curso;
         }
         private bool verificarCamposVazios()
@@ -60,6 +56,10 @@ namespace Capa_Apresentacao.Formularios.Modulos
             {
                 try
                 {
+                    DateTime data_registro = DateTime.Now;
+                    DateTime data_atualizacao = DateTime.Now;
+                    c_Especialidades.data_registro = data_registro;
+                    c_Especialidades.data_atualizacao = data_atualizacao;
                     CapturarDadosFormulario();
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar esta especialidade?", "Mensagem de registro") == DialogResult.Yes)
                     {
@@ -88,6 +88,8 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 try
                 {
                     // Capturar os dados digitados no formulário
+                    DateTime data_atualizacao = DateTime.Now;
+                    c_Especialidades.data_atualizacao = data_atualizacao;
                     int id_especialidade = Convert.ToInt32(label_id.Text);
                     CapturarDadosFormulario();
                     // Atualizar os dados digitados

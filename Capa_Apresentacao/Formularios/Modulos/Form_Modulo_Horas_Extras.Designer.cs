@@ -49,9 +49,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.text_Data_Registro = new CustomBox.RJControls.RJDatePicker();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.text_data_trabalho = new CustomBox.RJControls.RJDatePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.text_horas_trabalho = new Guna.UI2.WinForms.Guna2TextBox();
@@ -117,7 +114,7 @@
             this.btn_Limpar.FillColor = System.Drawing.Color.Tomato;
             this.btn_Limpar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Limpar.ForeColor = System.Drawing.Color.White;
-            this.btn_Limpar.Location = new System.Drawing.Point(174, 350);
+            this.btn_Limpar.Location = new System.Drawing.Point(176, 287);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(146, 45);
             this.btn_Limpar.TabIndex = 145;
@@ -136,7 +133,7 @@
             this.btn_salvar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_salvar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salvar.ForeColor = System.Drawing.Color.White;
-            this.btn_salvar.Location = new System.Drawing.Point(20, 350);
+            this.btn_salvar.Location = new System.Drawing.Point(21, 287);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(146, 45);
             this.btn_salvar.TabIndex = 144;
@@ -148,7 +145,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label4.ForeColor = System.Drawing.Color.Tomato;
-            this.label4.Location = new System.Drawing.Point(20, 312);
+            this.label4.Location = new System.Drawing.Point(22, 249);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(143, 19);
             this.label4.TabIndex = 140;
@@ -156,9 +153,9 @@
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(20, 330);
+            this.guna2Separator1.Location = new System.Drawing.Point(22, 271);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(491, 21);
+            this.guna2Separator1.Size = new System.Drawing.Size(486, 10);
             this.guna2Separator1.TabIndex = 143;
             // 
             // label3
@@ -166,7 +163,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label3.ForeColor = System.Drawing.Color.Tomato;
-            this.label3.Location = new System.Drawing.Point(159, 314);
+            this.label3.Location = new System.Drawing.Point(161, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(16, 21);
             this.label3.TabIndex = 141;
@@ -177,7 +174,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label6.ForeColor = System.Drawing.Color.Tomato;
-            this.label6.Location = new System.Drawing.Point(170, 312);
+            this.label6.Location = new System.Drawing.Point(172, 249);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(259, 19);
             this.label6.TabIndex = 142;
@@ -300,42 +297,6 @@
             this.label12.Size = new System.Drawing.Size(117, 21);
             this.label12.TabIndex = 192;
             this.label12.Text = "Tipo de horas:";
-            // 
-            // text_Data_Registro
-            // 
-            this.text_Data_Registro.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.text_Data_Registro.BorderSize = 0;
-            this.text_Data_Registro.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_Data_Registro.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_Data_Registro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_Data_Registro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.text_Data_Registro.Location = new System.Drawing.Point(21, 273);
-            this.text_Data_Registro.MinimumSize = new System.Drawing.Size(4, 35);
-            this.text_Data_Registro.Name = "text_Data_Registro";
-            this.text_Data_Registro.Size = new System.Drawing.Size(487, 35);
-            this.text_Data_Registro.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_Data_Registro.TabIndex = 195;
-            this.text_Data_Registro.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.Tomato;
-            this.label13.Location = new System.Drawing.Point(153, 249);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(16, 21);
-            this.label13.TabIndex = 197;
-            this.label13.Text = "*";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label14.Location = new System.Drawing.Point(17, 249);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(141, 21);
-            this.label14.TabIndex = 196;
-            this.label14.Text = "Data de registro:";
             // 
             // text_data_trabalho
             // 
@@ -460,7 +421,7 @@
             this.btn_atualizar.FillColor = System.Drawing.Color.SeaGreen;
             this.btn_atualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_atualizar.ForeColor = System.Drawing.Color.White;
-            this.btn_atualizar.Location = new System.Drawing.Point(20, 350);
+            this.btn_atualizar.Location = new System.Drawing.Point(22, 287);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(146, 45);
             this.btn_atualizar.TabIndex = 205;
@@ -473,7 +434,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            this.ClientSize = new System.Drawing.Size(523, 412);
+            this.ClientSize = new System.Drawing.Size(523, 352);
             this.Controls.Add(this.label_msg_horas_trabalhadas);
             this.Controls.Add(this.text_tipo_horas);
             this.Controls.Add(this.label2);
@@ -482,9 +443,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.text_data_trabalho);
             this.Controls.Add(this.label_id);
-            this.Controls.Add(this.text_Data_Registro);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label14);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label8);
@@ -532,9 +490,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label8;
-        public CustomBox.RJControls.RJDatePicker text_Data_Registro;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
         public CustomBox.RJControls.RJDatePicker text_data_trabalho;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

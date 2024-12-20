@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.text_provincias = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -41,7 +39,6 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.text_municipio = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.text_data_registro = new CustomBox.RJControls.RJDatePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -56,26 +53,6 @@
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.Tomato;
-            this.label8.Location = new System.Drawing.Point(153, 219);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 21);
-            this.label8.TabIndex = 104;
-            this.label8.Text = "*";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label7.Location = new System.Drawing.Point(13, 218);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 21);
-            this.label7.TabIndex = 103;
-            this.label7.Text = "Data de registro:";
             // 
             // text_provincias
             // 
@@ -212,28 +189,12 @@
             this.label2.TabIndex = 94;
             this.label2.Text = "*";
             // 
-            // text_data_registro
-            // 
-            this.text_data_registro.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.text_data_registro.BorderSize = 0;
-            this.text_data_registro.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_data_registro.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_data_registro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_data_registro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.text_data_registro.Location = new System.Drawing.Point(12, 243);
-            this.text_data_registro.MinimumSize = new System.Drawing.Size(4, 35);
-            this.text_data_registro.Name = "text_data_registro";
-            this.text_data_registro.Size = new System.Drawing.Size(450, 35);
-            this.text_data_registro.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_data_registro.TabIndex = 102;
-            this.text_data_registro.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label6.ForeColor = System.Drawing.Color.Tomato;
-            this.label6.Location = new System.Drawing.Point(166, 283);
+            this.label6.Location = new System.Drawing.Point(165, 220);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(259, 19);
             this.label6.TabIndex = 97;
@@ -244,7 +205,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label3.ForeColor = System.Drawing.Color.Tomato;
-            this.label3.Location = new System.Drawing.Point(155, 285);
+            this.label3.Location = new System.Drawing.Point(154, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(16, 21);
             this.label3.TabIndex = 96;
@@ -255,7 +216,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label4.ForeColor = System.Drawing.Color.Tomato;
-            this.label4.Location = new System.Drawing.Point(16, 283);
+            this.label4.Location = new System.Drawing.Point(15, 220);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(143, 19);
             this.label4.TabIndex = 95;
@@ -273,9 +234,9 @@
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(17, 309);
+            this.guna2Separator1.Location = new System.Drawing.Point(16, 246);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(445, 21);
+            this.guna2Separator1.Size = new System.Drawing.Size(441, 10);
             this.guna2Separator1.TabIndex = 105;
             // 
             // btn_salvar
@@ -290,7 +251,7 @@
             this.btn_salvar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_salvar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salvar.ForeColor = System.Drawing.Color.White;
-            this.btn_salvar.Location = new System.Drawing.Point(16, 336);
+            this.btn_salvar.Location = new System.Drawing.Point(15, 261);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(146, 45);
             this.btn_salvar.TabIndex = 106;
@@ -310,7 +271,7 @@
             this.btn_Limpar.FillColor = System.Drawing.Color.Tomato;
             this.btn_Limpar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Limpar.ForeColor = System.Drawing.Color.White;
-            this.btn_Limpar.Location = new System.Drawing.Point(170, 336);
+            this.btn_Limpar.Location = new System.Drawing.Point(169, 261);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(146, 45);
             this.btn_Limpar.TabIndex = 107;
@@ -330,7 +291,7 @@
             this.btn_Atualizar.FillColor = System.Drawing.Color.SeaGreen;
             this.btn_Atualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Atualizar.ForeColor = System.Drawing.Color.White;
-            this.btn_Atualizar.Location = new System.Drawing.Point(16, 336);
+            this.btn_Atualizar.Location = new System.Drawing.Point(15, 261);
             this.btn_Atualizar.Name = "btn_Atualizar";
             this.btn_Atualizar.Size = new System.Drawing.Size(146, 45);
             this.btn_Atualizar.TabIndex = 195;
@@ -382,13 +343,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            this.ClientSize = new System.Drawing.Size(479, 403);
+            this.ClientSize = new System.Drawing.Size(479, 323);
             this.Controls.Add(this.label_msg_municipio);
             this.Controls.Add(this.btn_Limpar);
             this.Controls.Add(this.btn_salvar);
             this.Controls.Add(this.guna2Separator1);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.text_provincias);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -396,7 +355,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.text_municipio);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.text_data_registro);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -416,9 +374,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         public Guna.UI2.WinForms.Guna2ComboBox text_provincias;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
@@ -428,7 +383,6 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         public Guna.UI2.WinForms.Guna2TextBox text_municipio;
         private System.Windows.Forms.Label label2;
-        public CustomBox.RJControls.RJDatePicker text_data_registro;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

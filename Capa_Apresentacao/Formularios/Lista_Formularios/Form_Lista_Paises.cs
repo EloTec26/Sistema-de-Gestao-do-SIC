@@ -56,13 +56,11 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
 
                 Form_Modulo_Paises formulario = new Form_Modulo_Paises();
-                Program.AJUDA = 1;
 
                 formulario.FormClosed += Formulario_FormClosed;
                 formulario.label_id.Text = dgv_paises.CurrentRow.Cells[0].Value.ToString();
                 formulario.text_continentes.Text = dgv_paises.CurrentRow.Cells[1].Value.ToString();
                 formulario.text_pais.Text = dgv_paises.CurrentRow.Cells[2].Value.ToString();
-                formulario.text_data_registro.Text = dgv_paises.CurrentRow.Cells[3].Value.ToString();
                 
                 formulario.btn_salvar.Visible = false;
                 formulario.btn_Atualizar.Visible = true;
@@ -80,7 +78,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_paises.SelectedRows.Count > 0)
             {
-                Program.AJUDA = 1;
 
                 Form_Modulo_Paises formulario = new Form_Modulo_Paises();
                 formulario.FormClosed += Formulario_FormClosed;
@@ -88,7 +85,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 formulario.label_id.Text = dgv_paises.CurrentRow.Cells[0].Value.ToString();
                 formulario.text_continentes.Text = dgv_paises.CurrentRow.Cells[1].Value.ToString();
                 formulario.text_pais.Text = dgv_paises.CurrentRow.Cells[2].Value.ToString();
-                formulario.text_data_registro.Text = dgv_paises.CurrentRow.Cells[3].Value.ToString();
 
                 formulario.btn_salvar.Visible = false;
                 formulario.btn_Atualizar.Visible = true;

@@ -68,8 +68,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.text_data_registro = new CustomBox.RJControls.RJDatePicker();
             this.text_municipio = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -340,8 +338,6 @@
             this.panel_Conteudo.Controls.Add(this.label28);
             this.panel_Conteudo.Controls.Add(this.label36);
             this.panel_Conteudo.Controls.Add(this.label35);
-            this.panel_Conteudo.Controls.Add(this.label34);
-            this.panel_Conteudo.Controls.Add(this.text_data_registro);
             this.panel_Conteudo.Controls.Add(this.text_municipio);
             this.panel_Conteudo.Controls.Add(this.label30);
             this.panel_Conteudo.Controls.Add(this.label31);
@@ -675,32 +671,6 @@
             this.label35.Size = new System.Drawing.Size(16, 21);
             this.label35.TabIndex = 177;
             this.label35.Text = "*";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label34.Location = new System.Drawing.Point(20, 558);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(141, 21);
-            this.label34.TabIndex = 176;
-            this.label34.Text = "Data de registro:";
-            // 
-            // text_data_registro
-            // 
-            this.text_data_registro.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.text_data_registro.BorderSize = 0;
-            this.text_data_registro.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_data_registro.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_data_registro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_data_registro.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.text_data_registro.Location = new System.Drawing.Point(24, 584);
-            this.text_data_registro.MinimumSize = new System.Drawing.Size(4, 35);
-            this.text_data_registro.Name = "text_data_registro";
-            this.text_data_registro.Size = new System.Drawing.Size(763, 35);
-            this.text_data_registro.SkinColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_data_registro.TabIndex = 175;
-            this.text_data_registro.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             // 
             // text_municipio
             // 
@@ -1253,8 +1223,6 @@
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
-        public CustomBox.RJControls.RJDatePicker text_data_registro;
         public Guna.UI2.WinForms.Guna2ComboBox text_municipio;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;

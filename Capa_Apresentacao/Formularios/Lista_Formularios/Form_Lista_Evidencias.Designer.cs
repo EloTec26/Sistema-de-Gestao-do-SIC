@@ -34,17 +34,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.text_pesquisar = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_atualizar = new FontAwesome.Sharp.IconButton();
             this.btn_cadastrar = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.text_pesquisar = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.dgv_evidencias = new Guna.UI2.WinForms.Guna2DataGridView();
             this.MessageDialog_Error = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_evidencias)).BeginInit();
@@ -65,14 +67,52 @@
             this.panel1.Size = new System.Drawing.Size(731, 40);
             this.panel1.TabIndex = 13;
             // 
-            // panel2
+            // iconButton3
             // 
-            this.panel2.Controls.Add(this.dgv_evidencias);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 40);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(731, 220);
-            this.panel2.TabIndex = 14;
+            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(225)))));
+            this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(233)))));
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.iconButton3.ForeColor = System.Drawing.Color.White;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconButton3.IconColor = System.Drawing.Color.White;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 30;
+            this.iconButton3.Location = new System.Drawing.Point(460, 1);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(36, 36);
+            this.iconButton3.TabIndex = 56;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            // 
+            // text_pesquisar
+            // 
+            this.text_pesquisar.AcceptsReturn = true;
+            this.text_pesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.text_pesquisar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.text_pesquisar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.text_pesquisar.DefaultText = "";
+            this.text_pesquisar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.text_pesquisar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.text_pesquisar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.text_pesquisar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.text_pesquisar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.text_pesquisar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(223)))));
+            this.text_pesquisar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_pesquisar.ForeColor = System.Drawing.Color.Gainsboro;
+            this.text_pesquisar.Location = new System.Drawing.Point(496, 1);
+            this.text_pesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.text_pesquisar.MaxLength = 5;
+            this.text_pesquisar.Name = "text_pesquisar";
+            this.text_pesquisar.PasswordChar = '\0';
+            this.text_pesquisar.PlaceholderText = "Pesquisar...";
+            this.text_pesquisar.SelectedText = "";
+            this.text_pesquisar.Size = new System.Drawing.Size(235, 36);
+            this.text_pesquisar.TabIndex = 55;
+            this.text_pesquisar.TextChanged += new System.EventHandler(this.text_pesquisar_TextChanged);
             // 
             // btn_eliminar
             // 
@@ -144,52 +184,16 @@
             this.label1.TabIndex = 51;
             this.label1.Text = "Evidências";
             // 
-            // iconButton3
+            // panel2
             // 
-            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.iconButton3.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(225)))));
-            this.iconButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(149)))), ((int)(((byte)(233)))));
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.iconButton3.ForeColor = System.Drawing.Color.White;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 30;
-            this.iconButton3.Location = new System.Drawing.Point(460, 1);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(36, 36);
-            this.iconButton3.TabIndex = 56;
-            this.iconButton3.UseVisualStyleBackColor = false;
-            // 
-            // text_pesquisar
-            // 
-            this.text_pesquisar.AcceptsReturn = true;
-            this.text_pesquisar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.text_pesquisar.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_pesquisar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.text_pesquisar.DefaultText = "";
-            this.text_pesquisar.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.text_pesquisar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.text_pesquisar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.text_pesquisar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.text_pesquisar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_pesquisar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(223)))));
-            this.text_pesquisar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_pesquisar.ForeColor = System.Drawing.Color.Gainsboro;
-            this.text_pesquisar.Location = new System.Drawing.Point(496, 1);
-            this.text_pesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.text_pesquisar.MaxLength = 5;
-            this.text_pesquisar.Name = "text_pesquisar";
-            this.text_pesquisar.PasswordChar = '\0';
-            this.text_pesquisar.PlaceholderText = "Pesquisar...";
-            this.text_pesquisar.SelectedText = "";
-            this.text_pesquisar.Size = new System.Drawing.Size(235, 36);
-            this.text_pesquisar.TabIndex = 55;
-            this.text_pesquisar.TextChanged += new System.EventHandler(this.text_pesquisar_TextChanged);
+            this.panel2.Controls.Add(this.guna2VScrollBar1);
+            this.panel2.Controls.Add(this.guna2HScrollBar1);
+            this.panel2.Controls.Add(this.dgv_evidencias);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 40);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(731, 220);
+            this.panel2.TabIndex = 14;
             // 
             // dgv_evidencias
             // 
@@ -224,7 +228,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_evidencias.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_evidencias.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(222)))));
-            this.dgv_evidencias.Location = new System.Drawing.Point(3, 2);
+            this.dgv_evidencias.Location = new System.Drawing.Point(3, -1);
             this.dgv_evidencias.MultiSelect = false;
             this.dgv_evidencias.Name = "dgv_evidencias";
             this.dgv_evidencias.ReadOnly = true;
@@ -292,6 +296,35 @@
             this.guna2MessageDialog_Inform.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.guna2MessageDialog_Inform.Text = null;
             // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.dgv_evidencias;
+            this.guna2VScrollBar1.BorderRadius = 4;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(713, -1);
+            this.guna2VScrollBar1.Minimum = 1;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 218);
+            this.guna2VScrollBar1.TabIndex = 34;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2VScrollBar1.Value = 1;
+            // 
+            // guna2HScrollBar1
+            // 
+            this.guna2HScrollBar1.BindingContainer = this.dgv_evidencias;
+            this.guna2HScrollBar1.BorderRadius = 4;
+            this.guna2HScrollBar1.InUpdate = false;
+            this.guna2HScrollBar1.LargeChange = 1;
+            this.guna2HScrollBar1.Location = new System.Drawing.Point(3, 199);
+            this.guna2HScrollBar1.Maximum = 1;
+            this.guna2HScrollBar1.Name = "guna2HScrollBar1";
+            this.guna2HScrollBar1.ScrollbarSize = 18;
+            this.guna2HScrollBar1.Size = new System.Drawing.Size(728, 18);
+            this.guna2HScrollBar1.TabIndex = 35;
+            this.guna2HScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            // 
             // Form_Lista_Evidencias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -327,5 +360,7 @@
         private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog_Error;
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog_Confirm;
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog_Inform;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
+        private Guna.UI2.WinForms.Guna2HScrollBar guna2HScrollBar1;
     }
 }

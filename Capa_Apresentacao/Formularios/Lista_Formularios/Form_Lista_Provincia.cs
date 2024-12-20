@@ -66,11 +66,9 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 Modulos.Form_Modulo_Provincia formulario = new Modulos.Form_Modulo_Provincia();
 
-                Program.AJUDA = 1;
                 formulario.label_id.Text = dgv_provincia.CurrentRow.Cells[0].Value.ToString();
                 formulario.text_paises.Text = dgv_provincia.CurrentRow.Cells[1].Value.ToString();
                 formulario.text_provincia.Text = dgv_provincia.CurrentRow.Cells[2].Value.ToString();
-                formulario.text_data_registro.Text = dgv_provincia.CurrentRow.Cells[3].Value.ToString();
 
                 formulario.btn_salvar.FillColor = Color.SeaGreen;
                 formulario.label5.Text = "Atualizar província";
@@ -92,12 +90,9 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 Modulos.Form_Modulo_Provincia formulario = new Modulos.Form_Modulo_Provincia();
 
-                Program.AJUDA = 1;
                 formulario.label_id.Text = dgv_provincia.CurrentRow.Cells[0].Value.ToString();
                 formulario.text_paises.Text = dgv_provincia.CurrentRow.Cells[1].Value.ToString();
                 formulario.text_provincia.Text = dgv_provincia.CurrentRow.Cells[2].Value.ToString();
-                formulario.text_data_registro.Text = dgv_provincia.CurrentRow.Cells[3].Value.ToString();
-
                 formulario.btn_salvar.FillColor = Color.SeaGreen;
                 formulario.label5.Text = "Atualizar província";
                 formulario.btn_salvar.Text = "Atualizar";

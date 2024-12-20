@@ -20,64 +20,73 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             this.Close();
         }
-
-        private void btn_salvar_Click(object sender, EventArgs e)
+        private void CapturarCampos()
+        {
+            // Capturar os dados digitados no formulário
+            string patentes = text_patentes.Text;
+            string descricao = text_descricao.Text;
+           
+            // Definir dados no objecto
+            c_Patentes.nome = patentes;
+            c_Patentes.descricao = descricao;
+            c_Patentes.id_usuario = comum_cache_permissoes_usuarios.cache_inicio_sessao.id_usuario;
+        }
+        private bool VerificarCampos()
         {
             if (text_patentes.Text == String.Empty)
             {
                 MessageDialog_Error.Show("Todos os campos com (*) são de preenchimento obrigatório.\n" +
                     "Por favor, preencha-o e tente novamente!", "Erro ao salvar os dados");
-                return;
+                return false;
             }
-            try
+            return true;
+        }
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            if (VerificarCampos())
             {
-                // Capturar os dados digitados no formulário
-                string patentes = text_patentes.Text;
-                string descricao = text_descricao.Text;
-                DateTime data_Registro = text_data_registro.Value;
-                DateTime data_atualizacao = DateTime.Now;
-                // Definir dados no objecto
-                c_Patentes.nome = patentes;
-                c_Patentes.descricao = descricao;
-                c_Patentes.id_usuario = comum_cache_permissoes_usuarios.cache_inicio_sessao.id_usuario;
-                c_Patentes.data_registro = data_Registro;
-                c_Patentes.data_atualizacao = data_atualizacao;
-
-                // Verificar se é um novo registro ou atualização
-                bool Atualizacao = Program.AJUDA != 0;
-                if (Atualizacao)
+                try
                 {
+                    //Registrar
+                    DateTime data_Registro = DateTime.Now;
+                    DateTime data_atualizacao = DateTime.Now;
+                    c_Patentes.data_registro = data_Registro;
+                    c_Patentes.data_atualizacao = data_atualizacao;
                     c_Patentes.id_patente = Convert.ToInt32(label_id.Text);
+                    CapturarCampos();
+                    d_Patentes.inserir_patentes(c_Patentes);
+                    guna2MessageDialog_Inform.Show($"A patente foi registrada com sucesso!", "Registro bem sucedido");
+                    // Limpa todos os campos depois do registro.
+                    limpar_Campos();
                 }
-                // Mensagem de confirmação
-                string accao = Atualizacao ? "atualizar" : "registrar";
-                if (guna2MessageDialog_Confirm.Show($"Tens a certeza de {accao} este evento caso?", $"Mensagem de {accao}") == DialogResult.Yes)
+                catch (Exception Ex)
                 {
-                    Program.AJUDA = 0;
-                    // atualizar os dados
-                    if (Atualizacao)
-                    {
-                        d_Patentes.atualizar_patentes(c_Patentes);
-                        guna2MessageDialog_Inform.Show($"A patente foi atualizada com sucesso!", "Atualização bem sucedida");
-                        // Fecha o formulário depois da atualização.
-                        this.Close();
-                    }
-                    else
-                    {
-                        //Registrar
-                        d_Patentes.inserir_patentes(c_Patentes);
-                        guna2MessageDialog_Inform.Show($"A patente foi registrada com sucesso!", "Registro bem sucedido");
-                        // Limpa todos os campos depois do registro.
-                        limpar_Campos();
-                    }
+                    MessageDialog_Error.Show("Não foi possível registrar/ Atualizar esta patente!", Ex.Message);
                 }
-            }
-            catch (Exception Ex)
-            {
-                MessageDialog_Error.Show("Não foi possível registrar/ Atualizar esta patente!", Ex.Message);
             }
         }
-
+        private void btn_Atualizar_Click(object sender, EventArgs e)
+        {
+            if (VerificarCampos())
+            {
+                try
+                {
+                    //Atualizar
+                    DateTime data_atualizacao = DateTime.Now;
+                    c_Patentes.data_atualizacao = data_atualizacao;
+                    c_Patentes.id_patente = Convert.ToInt32(label_id.Text);
+                    CapturarCampos();
+                    d_Patentes.atualizar_patentes(c_Patentes);
+                    guna2MessageDialog_Inform.Show($"A patente foi atualizada com sucesso!", "Atualização bem sucedida");
+                    // Limpa todos os campos depois do registro.
+                    limpar_Campos();
+                }
+                catch (Exception Ex)
+                {
+                    MessageDialog_Error.Show("Não foi possível registrar/ Atualizar esta patente!", Ex.Message);
+                }
+            }
+        }
         private void limpar_Campos()
         {
             text_patentes.Clear();

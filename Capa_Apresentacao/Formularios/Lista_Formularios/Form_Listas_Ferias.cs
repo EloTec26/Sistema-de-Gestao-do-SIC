@@ -54,20 +54,16 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Formularios.Modulos.Form_Modulo_Ferias modulo_Ferias = new Modulos.Form_Modulo_Ferias();
                 modulo_Ferias.FormClosed += Modulo_Ferias_FormClosed;
 
-                Program.AJUDA = 1;
-
                 modulo_Ferias.label_id.Text = dgv_ferias.CurrentRow.Cells[0].Value.ToString();
                 modulo_Ferias.text_investigador.Text = dgv_ferias.CurrentRow.Cells[1].Value.ToString();
                 modulo_Ferias.text_data_inicial.Text = dgv_ferias.CurrentRow.Cells[2].Value.ToString();
                 modulo_Ferias.text_data_final.Text = dgv_ferias.CurrentRow.Cells[3].Value.ToString();
                 modulo_Ferias.text_estado_feria.Text = dgv_ferias.CurrentRow.Cells[4].Value.ToString();
                 modulo_Ferias.text_descricao.Text = dgv_ferias.CurrentRow.Cells[5].Value.ToString();
-                modulo_Ferias.text_Data_Registro.Text = dgv_ferias.CurrentRow.Cells[7].Value.ToString();
 
-
-                modulo_Ferias.btn_salvar.Text = "Atualizar";
-                modulo_Ferias.label5.Text = "Atualizar";
-                modulo_Ferias.btn_salvar.FillColor = Color.SeaGreen;
+                modulo_Ferias.btn_salvar.Visible = false;
+                modulo_Ferias.btn_Atualizar.Visible = true;
+                modulo_Ferias.label5.Text = "Atualizar féria";
 
                 modulo_Ferias.ShowDialog();
             }

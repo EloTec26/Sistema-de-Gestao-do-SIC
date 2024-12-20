@@ -1,10 +1,9 @@
 ﻿//-------------------------------
+using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
-using System.Drawing;
 using System.Windows.Forms;
-using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
 
 namespace Capa_Apresentacao.Formularios.Modulos
 {
@@ -25,25 +24,31 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             //
             string curso = text_Curso.Text;
-            DateTime data_Registro = text_Data_Registro.Value;
-            DateTime data_atualizacao = DateTime.Now;
+
             //
             c_Cursos.nome = curso;
-            c_Cursos.data_registro = data_Registro;
-            c_Cursos.data_atualizacao = data_atualizacao;
+
         }
-        private void btn_salvar_Click(object sender, EventArgs e)
+        private bool ValidarCampos()
         {
             if (text_Curso.Text == String.Empty)
             {
                 MessageDialog_Error.Show("Todos os campos com (*) são de preenchimento obrigatório.\n" +
                     "Por favor, preencha-o e tente novamente!", "Erro ao salvar os dados");
-                return;
+                return false;
             }
-            else
+            return true;
+        }
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
             {
                 try
                 {
+                    DateTime data_Registro = DateTime.Now;
+                    DateTime data_atualizacao = DateTime.Now;
+                    c_Cursos.data_registro = data_Registro;
+                    c_Cursos.data_atualizacao = data_atualizacao;
                     capturar_Dados_Digitados_Formulario();
                     //
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este curso?", "Mensagem de registro") == DialogResult.Yes)
@@ -59,28 +64,22 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     if (ex.Message.Contains("O nome do curso já está registrado"))
                     {
                         MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
-                    }else
-                    MessageDialog_Error.Show("Não foi possível salvar este nivel acadêmico", ex.Message);
+                    }
+                    else
+                        MessageDialog_Error.Show("Não foi possível salvar este nivel acadêmico", ex.Message);
                 }
             }
         }
         private void btn_Atualizar_Click(object sender, EventArgs e)
         {
-            if (text_Curso.Text == String.Empty)
-            {
-                MessageDialog_Error.Show("Todos os campos com (*) são de preenchimento obrigatório.\n" +
-                    "Por favor, preencha-o e tente novamente!", "Erro ao salvar os dados");
-                return;
-            }
-            else
+            if (ValidarCampos())
             {
                 try
                 {
                     int id_Curso = Convert.ToInt32(label_id.Text);
                     capturar_Dados_Digitados_Formulario();
-                    string curso = text_Curso.Text;
-                    //
                     c_Cursos.id_curso = id_Curso;
+                    c_Cursos.data_atualizacao = DateTime.Now;
                     //
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar este curso?", "Mensagem de atualização") == DialogResult.Yes)
                     {

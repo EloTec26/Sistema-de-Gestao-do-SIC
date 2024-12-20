@@ -43,11 +43,8 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Modulos.Form_Modulo_Cursos cursos = new Modulos.Form_Modulo_Cursos();
                 cursos.FormClosed += Cursos_FormClosed;
 
-                Program.AJUDA = 1;
                 cursos.label_id.Text = dgv_cursos.CurrentRow.Cells[0].Value.ToString();
                 cursos.text_Curso.Text = dgv_cursos.CurrentRow.Cells[1].Value.ToString();
-                cursos.text_Data_Registro.Text = dgv_cursos.CurrentRow.Cells[2].Value.ToString();
-
 
                 cursos.label5.Text = "Atualizar curso";
                 cursos.btn_salvar.Visible = false;

@@ -46,7 +46,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Formularios.Modulos.Form_Modulo_Eventos_Casos form_Modulo_Eventos = new Modulos.Form_Modulo_Eventos_Casos();
                 form_Modulo_Eventos.FormClosed += Form_Modulo_Eventos_FormClosed;
 
-                Program.AJUDA = 1;
                 form_Modulo_Eventos.label_id.Text = dgv_eventos_casos.CurrentRow.Cells[0].Value.ToString();
                 form_Modulo_Eventos.text_caso.Text = dgv_eventos_casos.CurrentRow.Cells[1].Value.ToString();
                 form_Modulo_Eventos.text_vitima.Text = dgv_eventos_casos.CurrentRow.Cells[2].Value.ToString();
@@ -56,8 +55,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 form_Modulo_Eventos.text_data_evento.Text = dgv_eventos_casos.CurrentRow.Cells[6].Value.ToString();
                 form_Modulo_Eventos.text_tipo_evento.Text = dgv_eventos_casos.CurrentRow.Cells[7].Value.ToString();
                 form_Modulo_Eventos.text_descricao.Text = dgv_eventos_casos.CurrentRow.Cells[8].Value.ToString();
-                form_Modulo_Eventos.text_data_registro.Text = dgv_eventos_casos.CurrentRow.Cells[10].Value.ToString();
-
+               
                 form_Modulo_Eventos.btn_salvar.Text = "Atualizar";
                 form_Modulo_Eventos.label5.Text = "Atualizar";
                 form_Modulo_Eventos.btn_salvar.FillColor = Color.SeaGreen;
@@ -73,7 +71,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Formularios.Modulos.Form_Modulo_Eventos_Casos form_Modulo_Eventos = new Modulos.Form_Modulo_Eventos_Casos();
                 form_Modulo_Eventos.FormClosed += Form_Modulo_Eventos_FormClosed;
 
-                Program.AJUDA = 1;
                 form_Modulo_Eventos.label_id.Text = dgv_eventos_casos.CurrentRow.Cells[0].Value.ToString();
                 form_Modulo_Eventos.text_caso.Text = dgv_eventos_casos.CurrentRow.Cells[1].Value.ToString();
                 form_Modulo_Eventos.text_vitima.Text = dgv_eventos_casos.CurrentRow.Cells[2].Value.ToString();
@@ -83,8 +80,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 form_Modulo_Eventos.text_data_evento.Text = dgv_eventos_casos.CurrentRow.Cells[6].Value.ToString();
                 form_Modulo_Eventos.text_tipo_evento.Text = dgv_eventos_casos.CurrentRow.Cells[7].Value.ToString();
                 form_Modulo_Eventos.text_descricao.Text = dgv_eventos_casos.CurrentRow.Cells[8].Value.ToString();
-                form_Modulo_Eventos.text_data_registro.Text = dgv_eventos_casos.CurrentRow.Cells[10].Value.ToString();
-
+              
                 form_Modulo_Eventos.btn_salvar.Text = "Atualizar";
                 form_Modulo_Eventos.label5.Text = "Atualizar";
                 form_Modulo_Eventos.btn_salvar.FillColor = Color.SeaGreen;

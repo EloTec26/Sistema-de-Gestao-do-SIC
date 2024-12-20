@@ -33,104 +33,98 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             this.Close();
         }
-
-        private void btn_salvar_Click_1(object sender, EventArgs e)
-        { // Verificar a existência de campos vazios
-            if (text_pais.Text == String.Empty || text_continentes.Text == String.Empty)
-            {
-                MessageDialog_Error.Show("Todos os campos com asterísticos(*) são de preenchimento obrigatório!" +
-                              "\nPor favor, preencha-os e tente novamente!", "Alerta");
-                return;
-            }
-            try
-            {
-                // Capturar os dados digitados
-             
-                string nome = text_pais.Text;
-                int continente = Convert.ToInt32(text_continentes.SelectedValue);
-                DateTime data_registro = text_data_registro.Value;
-                DateTime data_atualizacao = DateTime.Now;
-                // Registrar os dados cadastrados
-            
-                c_paises.nome = nome;
-                c_paises.id_continente = continente;
-                c_paises.data_registro = data_registro;
-                c_paises.data_atualizacao = data_atualizacao;
-
-                if (guna2MessageDialog_Confirm.Show($"Tens a certeza de registrar este país?", $"Mensagem de registro") == DialogResult.Yes)
-                {
-                    Program.AJUDA = 0;
-
-                    d_paises.registrar_paises(c_paises);
-                    guna2MessageDialog_Inform.Show($"O país foi registrado com sucesso!", "Registro bem sucedida");
-                    // Fecha o formulário depois da atualização.
-                    this.Close();
-                }
-            }
-            catch (Exception ex)
-            {
-                // capturar a mensagem de exceção personalizada da camada de domínio
-                if (ex.Message.Contains("O nome do país já está registrado"))
-                {
-                    MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
-                }
-                else
-                {
-                MessageDialog_Error.Show("Não foi possível registrar este  país", ex.Message);
-                }
-            }
-        }
-        private void btn_Atualizar_Click(object sender, EventArgs e)
+        private bool VerificarCampos()
         {
             // Verificar a existência de campos vazios
             if (text_pais.Text == String.Empty || text_continentes.Text == String.Empty)
             {
                 MessageDialog_Error.Show("Todos os campos com asterísticos(*) são de preenchimento obrigatório!" +
                               "\nPor favor, preencha-os e tente novamente!", "Alerta");
-                return;
+                return false;
             }
-            try
+            return true;
+        }
+        private void CapturarCampos()
+        {
+            string nome = text_pais.Text;
+            int continente = Convert.ToInt32(text_continentes.SelectedValue);
+
+            c_paises.nome = nome;
+            c_paises.id_continente = continente;
+        }
+        private void btn_salvar_Click_1(object sender, EventArgs e)
+        { 
+            // Verificar a existência de campos vazios
+            if (VerificarCampos())
             {
-                // Capturar os dados digitados
-                int id = Convert.ToInt32(label_id.Text);
-                string nome = text_pais.Text;
-                int continente = Convert.ToInt32(text_continentes.SelectedValue);
-                DateTime data_registro = text_data_registro.Value;
-                DateTime data_atualizacao = DateTime.Now;
-                // Registrar os dados cadastrados
-                c_paises.id_pais = id;
-                c_paises.nome = nome;
-                c_paises.id_continente = continente;
-                c_paises.data_registro = data_registro;
-                c_paises.data_atualizacao = data_atualizacao;
-
-                if (guna2MessageDialog_Confirm.Show($"Tens a certeza de atualizar este país?", $"Mensagem de registro") == DialogResult.Yes)
+                try
                 {
-                    Program.AJUDA = 0;
-
-                    d_paises.atualizar_paises(c_paises);
-                    guna2MessageDialog_Inform.Show($"O país foi atualizado com sucesso!", "Atualização bem sucedida");
-                    // Fecha o formulário depois da atualização.
-                    this.Close();
+                    // Capturar os dados digitados
+                    CapturarCampos();
+                    DateTime data_registro = DateTime.Now;
+                    DateTime data_atualizacao = DateTime.Now;
+                    // Registrar os dados cadastrados
+                    c_paises.data_registro = data_registro;
+                    c_paises.data_atualizacao = data_atualizacao;
+                    if (guna2MessageDialog_Confirm.Show($"Tens a certeza de registrar este país?", $"Mensagem de registro") == DialogResult.Yes)
+                    {
+                        d_paises.registrar_paises(c_paises);
+                        guna2MessageDialog_Inform.Show($"O país foi registrado com sucesso!", "Registro bem sucedida");
+                        // Fecha o formulário depois da atualização.
+                        this.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // capturar a mensagem de exceção personalizada da camada de domínio
+                    if (ex.Message.Contains("O nome do país já está registrado"))
+                    {
+                        MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
+                    }
+                    else
+                    {
+                        MessageDialog_Error.Show("Não foi possível registrar este  país", ex.Message);
+                    }
                 }
             }
-            catch (Exception ex)
+        }
+        private void btn_Atualizar_Click(object sender, EventArgs e)
+        {
+            // Verificar a existência de campos vazios
+            if (VerificarCampos())
             {
-                // capturar a mensagem de exceção personalizada da camada de domínio
-                if (ex.Message.Contains("O nome do país já está registrado"))
+                try
                 {
-                    MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
+                    // Capturar os dados digitados
+                    int id = Convert.ToInt32(label_id.Text);
+                    DateTime data_atualizacao = DateTime.Now;
+                    // Registrar os dados cadastrados
+                    c_paises.id_pais = id;
+                    c_paises.data_atualizacao = data_atualizacao;
+                    CapturarCampos();
+                    if (guna2MessageDialog_Confirm.Show($"Tens a certeza de atualizar este país?", $"Mensagem de registro") == DialogResult.Yes)
+                    {
+                        d_paises.atualizar_paises(c_paises);
+                        guna2MessageDialog_Inform.Show($"O país foi atualizado com sucesso!", "Atualização bem sucedida");
+                        // Fecha o formulário depois da atualização.
+                        this.Close();
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageDialog_Error.Show("Não foi possível atualizar este  país", ex.Message);
+                    // capturar a mensagem de exceção personalizada da camada de domínio
+                    if (ex.Message.Contains("O nome do país já está registrado"))
+                    {
+                        MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
+                    }
+                    else
+                    {
+                        MessageDialog_Error.Show("Não foi possível atualizar este  país", ex.Message);
+                    }
                 }
             }
-
         }
         #region Limpar os campos
-
-
         private void limpar_campos()
         {
             text_pais.Text = "";

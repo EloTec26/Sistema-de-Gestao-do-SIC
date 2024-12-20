@@ -52,8 +52,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
               
                 niveis_Academicos.label_id.Text = dgv_niveis_academicos.CurrentRow.Cells[0].Value.ToString();
                 niveis_Academicos.text_Nivel_Academico.Text = dgv_niveis_academicos.CurrentRow.Cells[1].Value.ToString();
-                niveis_Academicos.text_Data_Registro.Text = dgv_niveis_academicos.CurrentRow.Cells[2].Value.ToString();
-
+              
                 niveis_Academicos.btn_atualizar.Visible = true;
                 niveis_Academicos.btn_salvar.Visible = false;
                 niveis_Academicos.label5.Text = "Atualizar nível acadêmico";

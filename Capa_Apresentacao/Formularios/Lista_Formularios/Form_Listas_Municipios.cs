@@ -55,12 +55,10 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 Form_Modulo_Municipios formulario = new Form_Modulo_Municipios();
                 formulario.FormClosed += Formulario_FormClosed;
-                Program.AJUDA = 1;
 
                 formulario.label_id.Text = dgv_municipios.CurrentRow.Cells[0].Value.ToString();
                 formulario.text_provincias.Text = dgv_municipios.CurrentRow.Cells[1].Value.ToString();
                 formulario.text_municipio.Text = dgv_municipios.CurrentRow.Cells[2].Value.ToString();
-                formulario.text_data_registro.Text = dgv_municipios.CurrentRow.Cells[3].Value.ToString();
 
                 formulario.btn_salvar.Visible = false;
                 formulario.btn_Atualizar.Visible = true;
@@ -80,12 +78,10 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 Form_Modulo_Municipios formulario = new Form_Modulo_Municipios();
                 formulario.FormClosed += Formulario_FormClosed;
-                Program.AJUDA = 1;
 
                 formulario.label_id.Text = dgv_municipios.CurrentRow.Cells[0].Value.ToString();
                 formulario.text_provincias.Text = dgv_municipios.CurrentRow.Cells[1].Value.ToString();
                 formulario.text_municipio.Text = dgv_municipios.CurrentRow.Cells[2].Value.ToString();
-                formulario.text_data_registro.Text = dgv_municipios.CurrentRow.Cells[3].Value.ToString();
               
                 formulario.btn_salvar.Visible = false;
                 formulario.btn_Atualizar.Visible = true;

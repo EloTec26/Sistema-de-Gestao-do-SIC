@@ -50,18 +50,15 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Form_Modulo_Faltas form_Modulo_Faltas = new Form_Modulo_Faltas();
                 form_Modulo_Faltas.FormClosed += Form_Modulo_Faltas_FormClosed;
 
-                Program.AJUDA = 1;
                 form_Modulo_Faltas.label_id.Text = dgv_faltas.CurrentRow.Cells[0].Value.ToString();
                 form_Modulo_Faltas.text_investigador.Text = dgv_faltas.CurrentRow.Cells[1].Value.ToString();
                 form_Modulo_Faltas.text_data_falta.Text = dgv_faltas.CurrentRow.Cells[2].Value.ToString();
                 form_Modulo_Faltas.text_estado_falta.Text = dgv_faltas.CurrentRow.Cells[3].Value.ToString();
                 form_Modulo_Faltas.text_motivos.Text = dgv_faltas.CurrentRow.Cells[4].Value.ToString();
-                form_Modulo_Faltas.text_Data_Registro.Text = dgv_faltas.CurrentRow.Cells[6].Value.ToString();
-
-                form_Modulo_Faltas.btn_salvar.Text = "Atualizar";
-                form_Modulo_Faltas.label5.Text = "Atualizar";
-                form_Modulo_Faltas.btn_salvar.FillColor = Color.SeaGreen;
-
+               
+                form_Modulo_Faltas.btn_salvar.Visible = false;
+                form_Modulo_Faltas.btn_Atualizar.Visible = true;
+                form_Modulo_Faltas.label5.Text = "Atualizar falta";
                 form_Modulo_Faltas.ShowDialog();
             }
             else
@@ -76,18 +73,15 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Form_Modulo_Faltas form_Modulo_Faltas = new Form_Modulo_Faltas();
                 form_Modulo_Faltas.FormClosed += Form_Modulo_Faltas_FormClosed;
 
-                Program.AJUDA = 1;
                 form_Modulo_Faltas.label_id.Text = dgv_faltas.CurrentRow.Cells[0].Value.ToString();
                 form_Modulo_Faltas.text_investigador.Text = dgv_faltas.CurrentRow.Cells[1].Value.ToString();
                 form_Modulo_Faltas.text_data_falta.Text = dgv_faltas.CurrentRow.Cells[2].Value.ToString();
                 form_Modulo_Faltas.text_estado_falta.Text = dgv_faltas.CurrentRow.Cells[3].Value.ToString();
                 form_Modulo_Faltas.text_motivos.Text = dgv_faltas.CurrentRow.Cells[4].Value.ToString();
-                form_Modulo_Faltas.text_Data_Registro.Text = dgv_faltas.CurrentRow.Cells[6].Value.ToString();
 
-                form_Modulo_Faltas.btn_salvar.Text = "Atualizar";
-                form_Modulo_Faltas.label5.Text = "Atualizar";
-                form_Modulo_Faltas.btn_salvar.FillColor = Color.SeaGreen;
-
+                form_Modulo_Faltas.btn_salvar.Visible = false;
+                form_Modulo_Faltas.btn_Atualizar.Visible = true;
+                form_Modulo_Faltas.label5.Text = "Atualizar falta";
                 form_Modulo_Faltas.ShowDialog();
             }
             else

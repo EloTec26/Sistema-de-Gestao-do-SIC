@@ -44,12 +44,9 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Modulos.Form_Modulo_Patentes patentes = new Modulos.Form_Modulo_Patentes();
                 patentes.FormClosed += Patentes_FormClosed;
 
-                Program.AJUDA = 1;
-
                 patentes.label_id.Text = dgv_patentes.CurrentRow.Cells[0].Value.ToString();
                 patentes.text_patentes.Text = dgv_patentes.CurrentRow.Cells[1].Value.ToString();
                 patentes.text_descricao.Text = dgv_patentes.CurrentRow.Cells[2].Value.ToString();
-                patentes.text_data_registro.Text = dgv_patentes.CurrentRow.Cells[4].Value.ToString();
 
                 patentes.btn_salvar.Text = "Atualizar";
                 patentes.label5.Text = "Atualizar";

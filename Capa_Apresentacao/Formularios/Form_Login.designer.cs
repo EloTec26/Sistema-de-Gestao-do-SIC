@@ -241,6 +241,7 @@
             this.text_palavra_passe.MaxLength = 16;
             this.text_palavra_passe.Name = "text_palavra_passe";
             this.text_palavra_passe.PasswordChar = '*';
+            this.text_palavra_passe.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.text_palavra_passe.PlaceholderText = "Insira a sua palavra-passe de início de sessão...";
             this.text_palavra_passe.SelectedText = "";
             this.text_palavra_passe.Size = new System.Drawing.Size(451, 36);

@@ -54,8 +54,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 form_Modulo.text_local_armazenamento.Text = dgv_evidencias.CurrentRow.Cells[4].Value.ToString();
                 form_Modulo.text_descricao.Text = dgv_evidencias.CurrentRow.Cells[5].Value.ToString();
                 form_Modulo.text_investigador.Text = dgv_evidencias.CurrentRow.Cells[6].Value.ToString();
-                form_Modulo.text_data_registro.Text = dgv_evidencias.CurrentRow.Cells[8].Value.ToString();
-
 
                 form_Modulo.btn_Atualizar.Visible = true;
                 form_Modulo.btn_salvar.Visible = false;

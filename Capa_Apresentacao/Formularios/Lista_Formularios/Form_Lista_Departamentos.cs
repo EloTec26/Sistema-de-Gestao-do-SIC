@@ -49,8 +49,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 departamentos.label_id.Text = dgv_departamentos.CurrentRow.Cells[0].Value.ToString();
                 departamentos.text_departamento.Text = dgv_departamentos.CurrentRow.Cells[1].Value.ToString();
                 departamentos.text_descricao.Text = dgv_departamentos.CurrentRow.Cells[2].Value.ToString();
-                departamentos.text_data_registro.Text = dgv_departamentos.CurrentRow.Cells[4].Value.ToString();
-
+              
                 departamentos.btn_Atualizar.Visible = true;
                 departamentos.btn_salvar.Visible = false;
                 departamentos.label5.Text = "Atualizar departamento";

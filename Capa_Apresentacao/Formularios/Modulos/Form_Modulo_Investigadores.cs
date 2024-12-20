@@ -170,8 +170,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             string e_Email = text_e_mail.Text;
             DateTime data_Inicio_Contrato = text_data_inicio_contrato.Value;
             DateTime data_Fim_Contrato = text_data_fim_contrato.Value;
-            DateTime data_Registro = text_data_registro.Value;
-            DateTime data_Atualizacao = DateTime.Now;
 
             // Salvar os dados capturados
             c_Investigadores.id_continente = continente;
@@ -195,8 +193,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             c_Investigadores.e_mail = e_Email;
             c_Investigadores.data_inicio_contrato = data_Inicio_Contrato;
             c_Investigadores.data_fim_contrato = data_Fim_Contrato;
-            c_Investigadores.data_registro = data_Registro;
-            c_Investigadores.data_atualizacao = data_Atualizacao;
         }
         private void btn_salvar_Click(object sender, EventArgs e)
         {
@@ -205,6 +201,10 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 try
                 {
                     CapturarDadosFormulario();
+                    DateTime data_Registro = DateTime.Now;
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Investigadores.data_registro = data_Registro;
+                    c_Investigadores.data_atualizacao = data_Atualizacao;
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este funcinário?", "Mensagem de registro") == DialogResult.Yes)
                     {
                         d_Invstigadores.inserir_investigadores(c_Investigadores);
@@ -230,6 +230,8 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 {
                     // capturar os dados digitados no formulário
                     int id_Investigadores = Convert.ToInt32(label_id.Text);
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Investigadores.data_atualizacao = data_Atualizacao;
                     CapturarDadosFormulario();
                     // atualizar os dados capturados
                     c_Investigadores.id_investigador = id_Investigadores;
@@ -271,42 +273,34 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_segundo_numero_telefone.Text = "";
             text_e_mail.Text = "";
         }
-
         private void btn_Limpar_Click(object sender, EventArgs e)
         {
             limpar_Campos();
         }
-
         private void text_primeiro_nome_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_primeiro_nome, label_msg_primeiro_nome, "Apenas letras são permitidas!");
         }
-
         private void text_nome_meio_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_nome_meio, label_msg_nome_meio, "Apenas letras são permitidas!");
         }
-
         private void text_ultimo_nome_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_ultimo_nome, label_msg_ultimo_nome, "Apenas letras são permitidas!");
         }
-
         private void text_numero_bi_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarBilheteIdentidade(text_numero_bi, label_msg_erro_bi, "Número do BI inválido!");
         }
-
         private void text_primerio_numero_telefone_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarNumero(e, text_primerio_numero_telefone, label_msg_telefone1, "Apenas números são permitidas!");
         }
-
         private void text_segundo_numero_telefone_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarNumero(e, text_segundo_numero_telefone, label_msg_telefone2, "Apenas números são permitidas!");
         }
-
         private void text_e_mail_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarEmail(text_e_mail, label_msg_email, "Email inválido!");

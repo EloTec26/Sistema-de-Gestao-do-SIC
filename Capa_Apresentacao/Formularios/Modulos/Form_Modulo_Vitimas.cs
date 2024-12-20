@@ -1,12 +1,10 @@
-﻿using Capa_Comum.Comum_Permissoes.Cache;
+﻿using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
+using Capa_Comum.Comum_Permissoes.Cache;
 //-----------------------------------------
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
-using System.Drawing;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
 
 namespace Capa_Apresentacao.Formularios.Modulos
 {
@@ -25,11 +23,9 @@ namespace Capa_Apresentacao.Formularios.Modulos
         dominio_cursos d_Curso = new dominio_cursos();
         dominio_casos d_Caso = new dominio_casos();
         #endregion
-
         public Form_Modulo_Vitimas()
         {
             InitializeComponent();
-
             selecionar_dados();
             filtrar();
         }
@@ -85,7 +81,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_curso.ValueMember = "id_curso";
         }
         #endregion
-
         private void text_continente_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (text_continente.SelectedValue is int idPais)
@@ -93,7 +88,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 carregar_Paises(idPais);
             }
         }
-
         private void text_pais_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (text_pais.SelectedValue is int Id_Provincia)
@@ -101,7 +95,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 carregar_Provincias(Id_Provincia);
             }
         }
-
         private void text_provincias_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (text_provincias.SelectedValue is int Id_Municipio)
@@ -132,12 +125,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     "Por favor, preencha-os e tente novamente!", "Ocorreu um erro ao salvar os dados");
                 return false;
             }
-
-            if (text_data_registro.Value < DateTime.Now.Date)
-            {
-                MessageDialog_Error.Show("A data de registro não pode ser uma data passada nem futura.", "Erro de seleção de data");
-                return false;
-            }
             return true;
         }
 
@@ -162,8 +149,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             string segundo_Numero_Telefone = text_segundo_numero_telefone.Text;
             string E_Mail = text_e_mail.Text;
             string declaracao = text_declaracao.Text;
-            DateTime data_Registro = text_data_registro.Value;
-            DateTime data_Atualizacao = DateTime.Now;
 
             // Salvar os dados capturados
             c_Vitimas.id_caso = id_Caso;
@@ -184,9 +169,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             c_Vitimas.telefone2 = segundo_Numero_Telefone;
             c_Vitimas.e_mail = E_Mail;
             c_Vitimas.descricao = declaracao;
-            c_Vitimas.data_registro = data_Registro;
-            c_Vitimas.data_atualizacao = data_Atualizacao;
-
         }
         private void btn_salvar_Click(object sender, EventArgs e)
         {
@@ -194,6 +176,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
             {
                 try
                 {
+                    DateTime data_Registro = DateTime.Now;
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Vitimas.data_registro = data_Registro;
+                    c_Vitimas.data_atualizacao = data_Atualizacao;
+
                     CapturarDadosDigitadosFormulario();
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar esta vítima?", "Mensagem de registro") == DialogResult.Yes)
                     {
@@ -216,6 +203,9 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 try
                 {
                     int id_Vitima = Convert.ToInt32(label_id.Text);
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Vitimas.data_atualizacao = data_Atualizacao;
+
                     CapturarDadosDigitadosFormulario();
                     c_Vitimas.id_vitima = id_Vitima;
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar esta vítima?", "Mensagem de atualização") == DialogResult.Yes)
@@ -256,39 +246,32 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_segundo_numero_telefone.Text = String.Empty;
             text_e_mail.Text = String.Empty;
             text_declaracao.Text = String.Empty;
-            text_data_registro.Value = DateTime.Now;
         }
         #region Validação de campos
         private void text_primeiro_nome_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_primeiro_nome, label_msg_primeiro_nome, "Apenas letras são permitidas!");
         }
-
         private void text_nome_meio_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_nome_meio, label_msg_nome_meio, "Apenas letras são permitidas!");
         }
-
         private void text_ultimo_nome_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_ultimo_nome, label_msg_ultimo_nome, "Apenas letras são permitidas!");
         }
-
         private void text_primerio_numero_telefone_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarNumero(e, text_primerio_numero_telefone, label_msg_telefone1, "Apenas números são permitidos!");
         }
-
         private void text_segundo_numero_telefone_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarNumero(e, text_segundo_numero_telefone, label_msg_telefone2, "Apenas números são permitidos!");
         }
-
         private void text_e_mail_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarEmail(text_e_mail, label_msg_email, "Email inválido!");
         }
-
         private void text_declaracao_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_declaracao, label_msg_erro_descricao, "Apenas letras são permitidas!");

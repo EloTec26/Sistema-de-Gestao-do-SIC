@@ -52,21 +52,16 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Form_Modulo_Departamento_Investigadores departamento_Investigadores = new Form_Modulo_Departamento_Investigadores();
                 departamento_Investigadores.FormClosed += Departamento_Investigadores_FormClosed;
 
-                Program.AJUDA = 1;
-
                 departamento_Investigadores.label_id.Text = dgv_departamentos_investigadores.CurrentRow.Cells[0].Value.ToString();
                 departamento_Investigadores.text_investigador.Text = dgv_departamentos_investigadores.CurrentRow.Cells[1].Value.ToString();
                 departamento_Investigadores.text_departamento.Text = dgv_departamentos_investigadores.CurrentRow.Cells[2].Value.ToString();
-                departamento_Investigadores.text_Data_Registro.Text = dgv_departamentos_investigadores.CurrentRow.Cells[4].Value.ToString();
-               
-                departamento_Investigadores.label5.Text = "Atualizar";
-                departamento_Investigadores.btn_salvar.Text = "Atualizar";
-                departamento_Investigadores.btn_salvar.FillColor = Color.SeaGreen;
+              
+                departamento_Investigadores.label5.Text = "Atualizar a tribuição do func. ao depart.";
+                departamento_Investigadores.btn_salvar.Visible = false;
+                departamento_Investigadores.btn_Atualizar.Visible = true;
                 
                 departamento_Investigadores.ShowDialog();
-                
                 selecionar_Departamentos_Investigadores();
-                
             }
             else
             {

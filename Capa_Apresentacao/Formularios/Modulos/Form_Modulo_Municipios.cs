@@ -28,91 +28,92 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             this.Close();
         }
-        private void btn_salvar_Click_1(object sender, EventArgs e)
+        private void CapturarDados()
         {
-            // Verificar a existência de campos vazios
+            // Capturar os dados digitados no formulário
+            int provincia = Convert.ToInt32(text_provincias.SelectedValue);
+            string nome = text_municipio.Text;
+            c_Municipios.id_provincia = provincia;
+            c_Municipios.nome = nome;
+        }
+        private bool VerificarCampos()
+        {
             if (text_municipio.Text == "" || text_provincias.Text == "")
             {
                 MessageDialog_Error.Show("Todos os campos com (*) são de preenchimento obrigatório.\n" +
                     "Por favor, preencha-o e tente novamente!", "Erro ao salvar os dados");
-                return;
+                return false;
             }
-            try
+            return true;
+        }
+        private void btn_salvar_Click_1(object sender, EventArgs e)
+        {
+            // Verificar a existência de campos vazios
+            if (VerificarCampos())
             {
-                // Capturar os dados digitados no formulário
-                int provincia = Convert.ToInt32(text_provincias.SelectedValue);
-                string nome = text_municipio.Text;
-                DateTime data_registro = text_data_registro.Value;
-                DateTime data_atualizacao = DateTime.Now;
-
-                // Registrar os dados digitados
-                c_Municipios.id_provincia = provincia;
-                c_Municipios.nome = nome;
-                c_Municipios.data_registro = data_registro;
-                c_Municipios.data_atualizacao = data_atualizacao;
-
-                if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este município?", "Mensagem de registro")== DialogResult.Yes)
+                try
                 {
-                    Program.AJUDA = 0;
-                    d_Municipios.registrar_municipios(c_Municipios);
-                    guna2MessageDialog_Inform.Show($"O município {text_municipio.Text}, foi registrado com sucesso!", "Registro bem sucedido");
-                    limpar_Campos();
+                    DateTime data_registro = DateTime.Now;
+                    DateTime data_atualizacao = DateTime.Now;
+
+                    // Registrar os dados digitados
+                    CapturarDados();
+                    c_Municipios.data_registro = data_registro;
+                    c_Municipios.data_atualizacao = data_atualizacao;
+
+                    if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este município?", "Mensagem de registro") == DialogResult.Yes)
+                    {
+                        d_Municipios.registrar_municipios(c_Municipios);
+                        guna2MessageDialog_Inform.Show($"O município {text_municipio.Text}, foi registrado com sucesso!", "Registro bem sucedido");
+                        limpar_Campos();
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                // capturar a mensagem de exceção personalizada da camada de domínio
-                if (ex.Message.Contains("O nome do município já está registrado"))
+                catch (Exception ex)
                 {
-                    MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
-                }else
-                MessageDialog_Error.Show("Não possível salvar este municipio", ex.Message);
+                    // capturar a mensagem de exceção personalizada da camada de domínio
+                    if (ex.Message.Contains("O nome do município já está registrado"))
+                    {
+                        MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
+                    }
+                    else
+                        MessageDialog_Error.Show("Não possível salvar este municipio", ex.Message);
+                }
             }
         }
 
         private void btn_Atualizar_Click(object sender, EventArgs e)
         {
             // Verificar a existência de campos vazios
-            if (text_municipio.Text == "" || text_provincias.Text == "")
+            if (VerificarCampos())
             {
-                MessageDialog_Error.Show("Todos os campos com (*) são de preenchimento obrigatório.\n" +
-                    "Por favor, preencha-o e tente novamente!", "Erro ao salvar os dados");
-                return;
-            }
-            try
-            {
-                // Capturar os dados digitados no formulário
-                int id = Convert.ToInt32(label_id.Text);
-                int provincia = Convert.ToInt32(text_provincias.SelectedValue);
-                string nome = text_municipio.Text;
-                DateTime data_registro = text_data_registro.Value;
-                DateTime data_atualizacao = DateTime.Now;
-
-                // Atualizar os dados digitados
-                c_Municipios.id_municipio = id;
-                c_Municipios.id_provincia = provincia;
-                c_Municipios.nome = nome;
-                c_Municipios.data_registro = data_registro;
-                c_Municipios.data_atualizacao = data_atualizacao;
-
-                if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar este município?", "Mensagem de atualização") == DialogResult.Yes)
+                try
                 {
-                    Program.AJUDA = 0;
-                    d_Municipios.atualizar_municipios(c_Municipios);
-                    guna2MessageDialog_Inform.Show($"O município {text_municipio.Text}, foi atualizado com sucesso!", "Atualização bem sucedida");
-                    this.Close();
-                    limpar_Campos();
+                    // Capturar os dados digitados no formulário
+                    int id = Convert.ToInt32(label_id.Text);
+                    DateTime data_atualizacao = DateTime.Now;
+
+                    // Atualizar os dados digitados
+                    c_Municipios.id_municipio = id;
+                    c_Municipios.data_atualizacao = data_atualizacao;
+
+                    if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar este município?", "Mensagem de atualização") == DialogResult.Yes)
+                    {
+                        d_Municipios.atualizar_municipios(c_Municipios);
+                        guna2MessageDialog_Inform.Show($"O município {text_municipio.Text}, foi atualizado com sucesso!", "Atualização bem sucedida");
+                        this.Close();
+                        limpar_Campos();
+                    }
                 }
-            }
-            catch (Exception ex)
-            {
-                // capturar a mensagem de exceção personalizada da camada de domínio
-                if (ex.Message.Contains("O nome do município já está registrado"))
+                catch (Exception ex)
                 {
-                    MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
+                    // capturar a mensagem de exceção personalizada da camada de domínio
+                    if (ex.Message.Contains("O nome do município já está registrado"))
+                    {
+                        MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
+                    }
+                    else
+                        MessageDialog_Error.Show("Não possível atualizar este municipio", ex.Message);
                 }
-                else
-                    MessageDialog_Error.Show("Não possível atualizar este municipio", ex.Message);
             }
         }
         private void limpar_Campos()

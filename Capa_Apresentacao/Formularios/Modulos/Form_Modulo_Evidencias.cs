@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Capa_Dominio;
+﻿using Capa_Comum.Comum_Permissoes.Cache;
 using Capa_Comum.Entidades;
-using Capa_Comum.Comum_Permissoes.Cache;
+using Capa_Dominio;
+using System;
+using System.Windows.Forms;
 
 namespace Capa_Apresentacao.Formularios.Modulos
 {
@@ -48,8 +41,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             string descricao = text_descricao.Text;
             DateTime data_Coleta = text_data_coleta.Value;
             string local_Armazenamento = text_local_armazenamento.Text;
-            DateTime data_Registro = text_data_registro.Value;
-            DateTime data_Atualizacao = DateTime.Now;
 
             c_Evidencias.id_investigador = id_Funcionario;
             c_Evidencias.id_caso = id_Caso;
@@ -58,60 +49,67 @@ namespace Capa_Apresentacao.Formularios.Modulos
             c_Evidencias.descricao = descricao;
             c_Evidencias.data_coleta = data_Coleta;
             c_Evidencias.local_armazenamento = local_Armazenamento;
-            c_Evidencias.data_registro = data_Registro;
-            c_Evidencias.data_atualizacao = data_Atualizacao;
         }
-        private void btn_salvar_Click(object sender, EventArgs e)
+        private bool VerificarCampos()
         {
             if (text_investigador.Text == "" || text_caso.Text == "" || text_tipo.Text == "" || text_descricao.Text == "" ||
                 text_local_armazenamento.Text == "")
             {
                 MessageDialog_Error.Show("Todos os campos com asteríscos(*), são de preenchimento obrigatório\nPor favor, preencha-os e tente novamente!");
-                return;
+                return false;
             }
-            try
+            return true;
+        }
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            if (VerificarCampos())
             {
-                CapturarDadosFormulario();
-                if(guna2MessageDialog_Confirm.Show("Tens a certeza de registrar esta evidência?", "Mensagem de registro") == DialogResult.Yes)
+                try
                 {
-                    d_Evidencias.inserir_evidencias(c_Evidencias);
-                    guna2MessageDialog_Inform.Show($"A evidência do tipo {text_tipo.Text}, foi registrada com sucesso!", "Registro bem sucedido");
-                    limpar_campos();
+                    DateTime data_Registro = DateTime.Now;
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Evidencias.data_registro = data_Registro;
+                    c_Evidencias.data_atualizacao = data_Atualizacao;
+                    CapturarDadosFormulario();
+                    if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar esta evidência?", "Mensagem de registro") == DialogResult.Yes)
+                    {
+                        d_Evidencias.inserir_evidencias(c_Evidencias);
+                        guna2MessageDialog_Inform.Show($"A evidência do tipo {text_tipo.Text}, foi registrada com sucesso!", "Registro bem sucedido");
+                        limpar_campos();
+                    }
                 }
-            }
-            catch (Exception Ex)
-            {
-                MessageDialog_Error.Show("Não foi possível registrar essa evidência", Ex.Message);
+                catch (Exception Ex)
+                {
+                    MessageDialog_Error.Show("Não foi possível registrar essa evidência", Ex.Message);
+                }
             }
         }
 
         private void btn_Atualizar_Click(object sender, EventArgs e)
         {
-            if (text_investigador.Text == "" || text_caso.Text == "" || text_tipo.Text == "" || text_descricao.Text == "" ||
-              text_local_armazenamento.Text == "")
+            if (VerificarCampos())
             {
-                MessageDialog_Error.Show("Todos os campos com asteríscos(*), são de preenchimento obrigatório\nPor favor, preencha-os e tente novamente!");
-                return;
-            }
-            try
-            {
-                int id_Evidencia = Convert.ToInt32(label_id.Text);
-
-                CapturarDadosFormulario();
-
-                c_Evidencias.id_evidencia = id_Evidencia;
-
-                if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar esta evidência?", "Mensagem de atualização") == DialogResult.Yes)
+                try
                 {
-                    d_Evidencias.atualizar_evidencias(c_Evidencias);
-                    guna2MessageDialog_Inform.Show($"A evidência do tipo {text_tipo.Text}, foi atualizada com sucesso!", "Atualização bem sucedida");
-                    limpar_campos();
-                    this.Close();
+                    int id_Evidencia = Convert.ToInt32(label_id.Text);
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Evidencias.data_atualizacao = data_Atualizacao;
+                    c_Evidencias.id_evidencia = id_Evidencia;
+
+                    CapturarDadosFormulario();
+
+                    if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar esta evidência?", "Mensagem de atualização") == DialogResult.Yes)
+                    {
+                        d_Evidencias.atualizar_evidencias(c_Evidencias);
+                        guna2MessageDialog_Inform.Show($"A evidência do tipo {text_tipo.Text}, foi atualizada com sucesso!", "Atualização bem sucedida");
+                        limpar_campos();
+                        this.Close();
+                    }
                 }
-            }
-            catch (Exception Ex)
-            {
-                MessageDialog_Error.Show("Não foi possível atualizar essa evidência", Ex.Message);
+                catch (Exception Ex)
+                {
+                    MessageDialog_Error.Show("Não foi possível atualizar essa evidência", Ex.Message);
+                }
             }
         }
         private void btn_Limpar_Click(object sender, EventArgs e)
@@ -127,7 +125,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_descricao.Text = "";
             text_local_armazenamento.Text = "";
             text_data_coleta.Value = DateTime.Now;
-            text_data_registro.Value = DateTime.Now;
         }
         private void text_local_armazenamento_KeyPress(object sender, KeyPressEventArgs e)
         {

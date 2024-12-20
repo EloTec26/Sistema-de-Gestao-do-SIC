@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Capa_Comum.Comum_Permissoes.Cache;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
-using Capa_Comum.Comum_Permissoes.Cache;
+using System;
+using System.Windows.Forms;
 
 namespace Capa_Apresentacao.Formularios.Modulos
 {
@@ -39,34 +32,42 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             this.Close();
         }
-
-        private void btn_salvar_Click(object sender, EventArgs e)
+        private void CapturarCampos()
         {
-            if(text_investigador.Text == "" || text_departamento.Text == "")
+            // Capturar os dados digitados no formulário
+            int Id_Investigador = Convert.ToInt32(text_investigador.SelectedValue);
+            int Id_Departamento = Convert.ToInt32(text_departamento.SelectedValue);
+            int Id_Usuario = comum_cache_permissoes_usuarios.cache_inicio_sessao.id_usuario;
+
+            // Salvar os dados capturados
+            c_departamentos_Investigadores.id_investigador = Id_Investigador;
+            c_departamentos_Investigadores.id_departamento = Id_Departamento;
+            c_departamentos_Investigadores.id_usuario = Id_Usuario;
+        }
+        private bool VerificarCampos()
+        {
+            if (text_investigador.Text == "" || text_departamento.Text == "")
             {
                 MessageDialog_Error.Show("Todos os campos com (*) são de preenchimento obrigatório.\nPor favor, preencha-os e tente novamente!");
-                return;
+                return false;
             }
-            // Registrar
-            if(Program.AJUDA == 0)
+            return true;
+        }
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            if (VerificarCampos())
             {
                 try
                 {
-                    // Capturar os dados digitados no formulário
-                    int Id_Investigador = Convert.ToInt32(text_investigador.SelectedValue);
-                    int Id_Departamento = Convert.ToInt32(text_departamento.SelectedValue);
-                    int Id_Usuario = comum_cache_permissoes_usuarios.cache_inicio_sessao.id_usuario;
-                    DateTime Data_Registro = text_Data_Registro.Value;
+                    DateTime Data_Registro = DateTime.Now;
                     DateTime Data_Atualizacao = DateTime.Now;
-                    // Salvar os dados capturados
-                    c_departamentos_Investigadores.id_investigador = Id_Investigador;
-                    c_departamentos_Investigadores.id_departamento = Id_Departamento;
-                    c_departamentos_Investigadores.id_usuario = Id_Usuario;
                     c_departamentos_Investigadores.data_registro = Data_Registro;
                     c_departamentos_Investigadores.data_atualizacao = Data_Atualizacao;
+
+                    CapturarCampos();
+
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar estas informações?", "Mensagem de confirmação") == DialogResult.Yes)
                     {
-                        Program.AJUDA = 0;
                         d_departamentos_Investigadores.inserir_Departamentos_Investigadores(c_departamentos_Investigadores);
                         guna2MessageDialog_Inform.Show("As informações foram registradas com sucesso!", "Registro bem sucedido");
                         limpar_Campos();
@@ -77,31 +78,25 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     MessageBox.Show("Não foi possível salvar os dados!", Ex.Message);
                 }
             }
-            else
+        }
+        private void btn_Atualizar_Click(object sender, EventArgs e)
+        {
+            if (VerificarCampos())
             {
-                // Atualizar
                 try
                 {
-                    // Capturar os dados digitados no formulário
-                    int id_Departamento_Investigador = Convert.ToInt32(label_id.Text);
-                    int Id_Investigador = Convert.ToInt32(text_investigador.SelectedValue);
-                    int Id_Departamento = Convert.ToInt32(text_departamento.SelectedValue);
-                    int Id_Usuario = comum_cache_permissoes_usuarios.cache_inicio_sessao.id_usuario;
-                    DateTime Data_Registro = text_Data_Registro.Value;
                     DateTime Data_Atualizacao = DateTime.Now;
-                    // Atualizar os dados capturados
-                    c_departamentos_Investigadores.id_departamento_investigador = id_Departamento_Investigador;
-                    c_departamentos_Investigadores.id_investigador = Id_Investigador;
-                    c_departamentos_Investigadores.id_departamento = Id_Departamento;
-                    c_departamentos_Investigadores.id_usuario = Id_Usuario;
-                    c_departamentos_Investigadores.data_registro = Data_Registro;
                     c_departamentos_Investigadores.data_atualizacao = Data_Atualizacao;
+
+                    c_departamentos_Investigadores.id_departamento_investigador = Convert.ToInt32(label_id.Text);
+
+                    CapturarCampos();
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar estas informações?", "Mensagem de confirmação") == DialogResult.Yes)
                     {
-                        Program.AJUDA = 0;
                         d_departamentos_Investigadores.atualizar_Departamentos_Investigadores(c_departamentos_Investigadores);
                         guna2MessageDialog_Inform.Show("As informações foram atualizadas com sucesso!", "Atualização bem sucedida");
                         limpar_Campos();
+                        this.Close();
                     }
                 }
                 catch (Exception Ex)
@@ -110,7 +105,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 }
             }
         }
-
         private void btn_Limpar_Click(object sender, EventArgs e)
         {
             limpar_Campos();

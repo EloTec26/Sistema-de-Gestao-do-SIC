@@ -48,65 +48,57 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             this.Close();
         }
+        private void CapturarDados()
+        {
+            // Capturar os dados digitados no formulário
+            int id_Caso = Convert.ToInt32(text_caso.SelectedValue);
+            int id_Investigador = Convert.ToInt32(text_investigador.SelectedValue);
+            int id_Vitima = Convert.ToInt32(text_vitima.SelectedValue);
+            int id_Testemunha = Convert.ToInt32(text_testemunha.SelectedValue);
+            int id_Usuario = comum_cache_permissoes_usuarios.cache_inicio_sessao.id_usuario;
+            DateTime data_Evento = text_data_evento.Value;
+            string tipo_Evento = text_tipo_evento.Text;
+            string descricao = text_descricao.Text;
+            int id_Suspeito = Convert.ToInt32(text_suspeito.SelectedValue);
 
-        private void btn_salvar_Click(object sender, EventArgs e)
+            // Definir dados no objecto
+            c_Evento_Caso.id_caso = id_Caso;
+            c_Evento_Caso.id_investigador = id_Investigador;
+            c_Evento_Caso.id_vitima = id_Vitima;
+            c_Evento_Caso.id_testemunha = id_Testemunha;
+            c_Evento_Caso.id_usuario = id_Usuario;
+            c_Evento_Caso.data_evento = data_Evento;
+            c_Evento_Caso.tipo_evento = tipo_Evento;
+            c_Evento_Caso.descricao = descricao;
+            c_Evento_Caso.id_suspeito = id_Suspeito;
+
+        }
+        private bool VerificarCampos()
         {
             if (string.IsNullOrWhiteSpace(text_caso.Text) || string.IsNullOrWhiteSpace(text_investigador.Text)
-                || string.IsNullOrWhiteSpace(text_vitima.Text) || string.IsNullOrWhiteSpace(text_testemunha.Text)
-                || string.IsNullOrWhiteSpace(text_tipo_evento.Text) || string.IsNullOrWhiteSpace(text_descricao.Text)
-                || string.IsNullOrWhiteSpace(text_suspeito.Text))
+               || string.IsNullOrWhiteSpace(text_vitima.Text) || string.IsNullOrWhiteSpace(text_testemunha.Text)
+               || string.IsNullOrWhiteSpace(text_tipo_evento.Text) || string.IsNullOrWhiteSpace(text_descricao.Text)
+               || string.IsNullOrWhiteSpace(text_suspeito.Text))
             {
                 MessageDialog_Error.Show("Todos os campos com (*) são de preenchimento obrigatório.\nPor favor, preencha-os e tente novamente!", "Erro ao salvar os dados");
-                return;
+                return false;
             }
-            try
+            return true;
+        }
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            if (VerificarCampos())
             {
-                // Capturar os dados digitados no formulário
-                int id_Caso = Convert.ToInt32(text_caso.SelectedValue);
-                int id_Investigador = Convert.ToInt32(text_investigador.SelectedValue);
-                int id_Vitima = Convert.ToInt32(text_vitima.SelectedValue);
-                int id_Testemunha = Convert.ToInt32(text_testemunha.SelectedValue);
-                int id_Usuario = comum_cache_permissoes_usuarios.cache_inicio_sessao.id_usuario;
-                DateTime data_Evento = text_data_evento.Value;
-                string tipo_Evento = text_tipo_evento.Text;
-                string descricao = text_descricao.Text;
-                DateTime data_Registro = text_data_registro.Value;
-                DateTime data_Atualizacao = DateTime.Now;
-                int id_Suspeito = Convert.ToInt32(text_suspeito.SelectedValue);
-
-                // Definir dados no objecto
-                c_Evento_Caso.id_caso = id_Caso;
-                c_Evento_Caso.id_investigador = id_Investigador;
-                c_Evento_Caso.id_vitima = id_Vitima;
-                c_Evento_Caso.id_testemunha = id_Testemunha;
-                c_Evento_Caso.id_usuario = id_Usuario;
-                c_Evento_Caso.data_evento = data_Evento;
-                c_Evento_Caso.tipo_evento = tipo_Evento;
-                c_Evento_Caso.descricao = descricao;
-                c_Evento_Caso.data_registro = data_Registro;
-                c_Evento_Caso.data_atualizacao = data_Atualizacao;
-                c_Evento_Caso.id_suspeito = id_Suspeito;
-
-                // Verificar se é um novo registro ou atualização
-                bool Atualizacao = Program.AJUDA != 0;
-                if (Atualizacao)
+                try
                 {
+                    CapturarDados();
                     c_Evento_Caso.id_evento_caso = Convert.ToInt32(label_id.Text);
-                }
-                // Mensagem de confirmação
-                string accao = Atualizacao ? "atualizar" : "registrar";
-                if (guna2MessageDialog_Confirm.Show($"Tens a certeza de {accao} este evento caso?", $"Mensagem de {accao}") == DialogResult.Yes)
-                {
-                    Program.AJUDA = 0;
-                    // atualizar os dados
-                    if (Atualizacao)
-                    {
-                        d_Evento_Caso.stualizar_Enventos_Casos(c_Evento_Caso);
-                        guna2MessageDialog_Inform.Show($"O evento caso foi atualizado com sucesso!", "Atualização bem sucedida");
-                        // Fecha o formulário depois da atualização.
-                        this.Close();
-                    }
-                    else
+                    DateTime data_Registro = DateTime.Now;
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Evento_Caso.data_registro = data_Registro;
+                    c_Evento_Caso.data_atualizacao = data_Atualizacao;
+
+                    if (guna2MessageDialog_Confirm.Show($"Tens a certeza de registrar este evento caso?", $"Mensagem de registro") == DialogResult.Yes)
                     {
                         //Registrar
                         d_Evento_Caso.inserir_Enventos_Casos(c_Evento_Caso);
@@ -115,14 +107,37 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         limpar_Campos();
                     }
                 }
-            }
-            catch (Exception Ex)
-            {
-
-                MessageDialog_Error.Show("Não foi possível registrar/ Atualizar este evento-caso!", Ex.Message);
+                catch (Exception Ex)
+                {
+                    MessageDialog_Error.Show("Não foi possível registrar/ Atualizar este evento-caso!", Ex.Message);
+                }
             }
         }
-
+        private void btn_Atualizar_Click(object sender, EventArgs e)
+        {
+            if (VerificarCampos())
+            {
+                try
+                {
+                    CapturarDados();
+                    c_Evento_Caso.id_evento_caso = Convert.ToInt32(label_id.Text);
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Evento_Caso.data_atualizacao = data_Atualizacao;
+                    if (guna2MessageDialog_Confirm.Show($"Tens a certeza de atualizar este evento caso?", $"Mensagem de atualização") == DialogResult.Yes)
+                    {
+                        d_Evento_Caso.stualizar_Enventos_Casos(c_Evento_Caso);
+                        guna2MessageDialog_Inform.Show($"O evento caso foi atualizado com sucesso!", "Atualização bem sucedida");
+                        limpar_Campos();
+                        // Fecha o formulário depois da atualização.
+                        this.Close();
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    MessageDialog_Error.Show("Não foi possível registrar/ Atualizar este evento-caso!", Ex.Message);
+                }
+            }
+        }
         private void btn_Limpar_Click(object sender, EventArgs e)
         {
             limpar_Campos();
@@ -138,7 +153,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_descricao.Text = "";
             text_suspeito.SelectedIndex = -1;
             text_data_evento.Value = DateTime.Now;
-            text_data_registro.Value = DateTime.Now;
         }
 
         private void text_descricao_KeyPress(object sender, KeyPressEventArgs e)

@@ -72,8 +72,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 testemunhas.text_provincias.Text = dgv_testemunhas.CurrentRow.Cells[16].Value.ToString();
                 testemunhas.text_municipio.Text = dgv_testemunhas.CurrentRow.Cells[17].Value.ToString();
                 testemunhas.text_bairro_rua.Text = dgv_testemunhas.CurrentRow.Cells[18].Value.ToString();
-                testemunhas.text_data_registro.Text = dgv_testemunhas.CurrentRow.Cells[20].Value.ToString();
-
+              
                 testemunhas.label5.Text = "Atualizar testemunha";
                 testemunhas.btn_salvar.Visible = false;
                 testemunhas.btn_Atualizar.Visible = true;

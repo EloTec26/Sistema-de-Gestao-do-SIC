@@ -43,8 +43,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
             DateTime data_Fechamento = text_data_fechamento.Value;
             string estado = text_estado.Text;
             string descricao = text_descricao.Text;
-            DateTime data_Registro = text_data_registro.Value;
-            DateTime data_Atualizacao = DateTime.Now;
+
             // Salvar os dados capturados
             c_Casos.id_investigador = id_Investigador;
             c_Casos.id_departamento = id_Departamento;
@@ -54,39 +53,40 @@ namespace Capa_Apresentacao.Formularios.Modulos
             c_Casos.data_fechamento = data_Fechamento;
             c_Casos.estado = estado;
             c_Casos.descricao = descricao;
-            c_Casos.data_registro = data_Registro;
-            c_Casos.data_atualizacao = data_Atualizacao;
+
         }
-        private void btn_salvar_Click(object sender, EventArgs e)
+        private bool ValidarCampos()
         {
             if (text_investigador.Text == "" || text_departamento.Text == "" || text_titulo.Text == "" || text_estado.Text == "" || text_descricao.Text == "")
             {
                 MessageDialog_Error.Show("Todos os campos com (*) são de preenchimento obrigatório.\nPor favor, preencha-os e tente novamente!");
-                return;
+                return false;
             }
             if (text_data_abetura.Value < DateTime.Now.Date)
             {
                 MessageDialog_Error.Show("A data de abertura não pode estar numa data passada.", "Erro de seleção da data");
-                return;
+                return false;
             }
             if (text_data_fechamento.Value <= DateTime.Now)
             {
                 MessageDialog_Error.Show("A data de fechamento não pode estar numa data passada ou presente", "Erro de seleção da data");
-                return;
+                return false;
             }
-            if (text_data_registro.Value < DateTime.Now.Date)
-            {
-                MessageDialog_Error.Show("A data de registro não pode estar numa data passada ou futura", "Erro de seleção da data");
-                return;
-            }
-            else
+            return true;
+        }
+        private void btn_salvar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
             {
                 try
                 {
                     capturar_Dados_Digitados_Formulario();
+                    DateTime data_Registro = DateTime.Now;
+                    DateTime data_Atualizacao = DateTime.Now;
+                    c_Casos.data_registro = data_Registro;
+                    c_Casos.data_atualizacao = data_Atualizacao;
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este caso?", "Mensagem de confirmação") == DialogResult.Yes)
                     {
-                        Program.AJUDA = 0;
                         d_Casos.inserir_Casos(c_Casos);
                         guna2MessageDialog_Inform.Show("O caso foi registrado com sucesso!", "Registro bem sucedido");
                         limpar_Campos();
@@ -101,41 +101,22 @@ namespace Capa_Apresentacao.Formularios.Modulos
 
         private void btn_Atualizar_Click(object sender, EventArgs e)
         {
-            if (text_investigador.Text == "" || text_departamento.Text == "" || text_titulo.Text == "" || text_estado.Text == "" || text_descricao.Text == "")
-            {
-                MessageDialog_Error.Show("Todos os campos com (*) são de preenchimento obrigatório.\nPor favor, preencha-os e tente novamente!");
-                return;
-            }
-            if (text_data_abetura.Value < DateTime.Now.Date)
-            {
-                MessageDialog_Error.Show("A data de abertura não pode estar numa data passada.", "Erro de seleção da data");
-                return;
-            }
-            if (text_data_fechamento.Value <= DateTime.Now)
-            {
-                MessageDialog_Error.Show("A data de fechamento não pode estar numa data passada ou presente", "Erro de seleção da data");
-                return;
-            }
-            if (text_data_registro.Value < DateTime.Now.Date)
-            {
-                MessageDialog_Error.Show("A data de registro não pode estar numa data passada ou futura", "Erro de seleção da data");
-                return;
-            }
-            // Atualizar
-            else
+          
+            if(ValidarCampos())
             {
                 try
                 {
                     // Capturar o id 
                     int id_caso = Convert.ToInt32(label_id.Text);
+                    DateTime data_Atualizacao = DateTime.Now;
+                  
                     capturar_Dados_Digitados_Formulario();
                     // ---------------------------------------------------------
                     c_Casos.id_caso = id_caso;
+                    c_Casos.data_atualizacao = data_Atualizacao;
 
                     if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar este casp?", "Mensagem de confirmação") == DialogResult.Yes)
                     {
-                        Program.AJUDA = 0;
-
                         d_Casos.atualizar_Casos(c_Casos);
                         guna2MessageDialog_Inform.Show($"O caso com o título {text_titulo.Text} foi atualizado com sucesso!", "Atualização bem sucedida");
                         limpar_Campos();
@@ -156,7 +137,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_data_fechamento.Value = DateTime.Now;
             text_estado.SelectedIndex = -1;
             text_descricao.Text = "";
-            text_data_registro.Value = DateTime.Now;
         }
 
         private void btn_Limpar_Click(object sender, EventArgs e)
@@ -199,13 +179,13 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 e.KeyChar == '+' || e.KeyChar == '=')
             {
                 e.Handled = false; // Permite a entrada
-                label15.Visible = false; // Oculta o Label se a entrada for válida
+                label_msg_descricao.Visible = false; // Oculta o Label se a entrada for válida
             }
             else if (char.IsDigit(e.KeyChar))
             {
                 // Exibe a mensagem no Label
-                label15.Text = "Apenas letras e alguns caracteres especiais são permitidos!";
-                label15.Visible = true;
+                label_msg_descricao.Text = "Apenas letras e alguns caracteres especiais são permitidos!";
+                label_msg_descricao.Visible = true;
 
                 // Cancela a entrada do número no TextBox
                 e.Handled = true;
@@ -214,7 +194,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
             {
                 // Impede qualquer outra entrada que não seja permitida
                 e.Handled = true;
-                label15.Visible = false; // Opcional: pode manter o Label oculto para outros caracteres
+                label_msg_descricao.Visible = false; // Opcional: pode manter o Label oculto para outros caracteres
             }
         }
     }

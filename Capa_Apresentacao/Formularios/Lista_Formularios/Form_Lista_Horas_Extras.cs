@@ -50,15 +50,12 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Formularios.Modulos.Form_Modulo_Horas_Extras form_Horas_Extras = new Modulos.Form_Modulo_Horas_Extras();
                 form_Horas_Extras.FormClosed += Form_Modulo_Horas_Extras_FormClosed;
 
-                Program.AJUDA = 1;
-
                 form_Horas_Extras.label_id.Text = dgv_horas_extras.CurrentRow.Cells[0].Value.ToString();
                 form_Horas_Extras.text_investigador.Text = dgv_horas_extras.CurrentRow.Cells[1].Value.ToString();
                 form_Horas_Extras.text_data_trabalho.Text = dgv_horas_extras.CurrentRow.Cells[2].Value.ToString();
                 form_Horas_Extras.text_horas_trabalho.Text = dgv_horas_extras.CurrentRow.Cells[3].Value.ToString();
                 form_Horas_Extras.text_tipo_horas.Text = dgv_horas_extras.CurrentRow.Cells[4].Value.ToString();
-                form_Horas_Extras.text_Data_Registro.Text = dgv_horas_extras.CurrentRow.Cells[6].Value.ToString();
-
+       
                 form_Horas_Extras.btn_salvar.Visible = false;
                 form_Horas_Extras.btn_atualizar.Visible = true;
                 form_Horas_Extras.label5.Text = "Atualizar horas-extras";

@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AhXUZ8Qjbn7ecIHHvHIZLRQnXrKVOtGJawciNbYz+Nc=</dsig:DigestValue>
+        <dsig:DigestValue>xyO1nPGoIGJl+6gKrd/r80T9dNRvvNIw8QQ9SsZtJBA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Dados.dll" size="79360">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Dados.dll" size="78848">
       <assemblyIdentity name="Capa_Dados" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yBpcpJFJgz50raCpc3RY01Wu45MCtMvXKW9XWqzkNNA=</dsig:DigestValue>
+        <dsig:DigestValue>4I4zl9dW9WrR27131tqvwls+JMQgRDmxlBJkaTUy7ic=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
