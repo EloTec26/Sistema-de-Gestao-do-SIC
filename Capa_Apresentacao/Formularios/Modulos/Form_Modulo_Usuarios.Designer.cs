@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel_formulario = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label_msg_email = new System.Windows.Forms.Label();
             this.label_msg_bi = new System.Windows.Forms.Label();
             this.label_msg_ultimo_nome = new System.Windows.Forms.Label();
@@ -96,7 +97,6 @@
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel_formulario.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -275,6 +275,16 @@
             this.panel_formulario.Name = "panel_formulario";
             this.panel_formulario.Size = new System.Drawing.Size(705, 467);
             this.panel_formulario.TabIndex = 116;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Tomato;
+            this.label7.Location = new System.Drawing.Point(409, 101);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 21);
+            this.label7.TabIndex = 138;
+            this.label7.Text = "*";
             // 
             // label_msg_email
             // 
@@ -600,14 +610,9 @@
             this.text_tipo_usuario.ItemHeight = 30;
             this.text_tipo_usuario.Items.AddRange(new object[] {
             "Administrador ",
-            "Investigador Chefe",
-            "Investigador",
-            "Analista Forense",
-            "Agente de Campo",
-            "Gerente de TI",
-            "Parceiro Externo",
-            "Consultor Jurídico",
-            "Usuário Auditado"});
+            "Administrativo",
+            "Instrutor Processual",
+            "Investigador"});
             this.text_tipo_usuario.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.text_tipo_usuario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_tipo_usuario.Location = new System.Drawing.Point(18, 555);
@@ -1114,17 +1119,7 @@
             this.guna2VScrollBar1.SmallChange = 5;
             this.guna2VScrollBar1.TabIndex = 122;
             this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2VScrollBar1.Value = 20;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Tomato;
-            this.label7.Location = new System.Drawing.Point(409, 101);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(16, 21);
-            this.label7.TabIndex = 138;
-            this.label7.Text = "*";
+            this.guna2VScrollBar1.Value = 124;
             // 
             // Form_Modulo_Usuarios
             // 

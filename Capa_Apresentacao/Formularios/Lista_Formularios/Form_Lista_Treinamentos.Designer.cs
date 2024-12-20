@@ -43,6 +43,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.dgv_treinamento = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
+            this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.MessageDialog_Error = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_treinamento)).BeginInit();
             this.SuspendLayout();
@@ -253,17 +258,75 @@
             this.dgv_treinamento.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_treinamento.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.dgv_treinamento;
+            this.guna2VScrollBar1.BorderRadius = 4;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(711, 41);
+            this.guna2VScrollBar1.Minimum = 1;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 218);
+            this.guna2VScrollBar1.TabIndex = 35;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2VScrollBar1.Value = 1;
+            // 
+            // guna2HScrollBar1
+            // 
+            this.guna2HScrollBar1.BindingContainer = this.dgv_treinamento;
+            this.guna2HScrollBar1.BorderRadius = 4;
+            this.guna2HScrollBar1.InUpdate = false;
+            this.guna2HScrollBar1.LargeChange = 1;
+            this.guna2HScrollBar1.Location = new System.Drawing.Point(1, 241);
+            this.guna2HScrollBar1.Maximum = 1;
+            this.guna2HScrollBar1.Name = "guna2HScrollBar1";
+            this.guna2HScrollBar1.ScrollbarSize = 18;
+            this.guna2HScrollBar1.Size = new System.Drawing.Size(728, 18);
+            this.guna2HScrollBar1.TabIndex = 36;
+            this.guna2HScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            // 
+            // guna2MessageDialog_Confirm
+            // 
+            this.guna2MessageDialog_Confirm.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
+            this.guna2MessageDialog_Confirm.Caption = null;
+            this.guna2MessageDialog_Confirm.Icon = Guna.UI2.WinForms.MessageDialogIcon.Question;
+            this.guna2MessageDialog_Confirm.Parent = null;
+            this.guna2MessageDialog_Confirm.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.guna2MessageDialog_Confirm.Text = null;
+            // 
+            // guna2MessageDialog_Inform
+            // 
+            this.guna2MessageDialog_Inform.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+            this.guna2MessageDialog_Inform.Caption = null;
+            this.guna2MessageDialog_Inform.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+            this.guna2MessageDialog_Inform.Parent = null;
+            this.guna2MessageDialog_Inform.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.guna2MessageDialog_Inform.Text = null;
+            // 
+            // MessageDialog_Error
+            // 
+            this.MessageDialog_Error.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OKCancel;
+            this.MessageDialog_Error.Caption = null;
+            this.MessageDialog_Error.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+            this.MessageDialog_Error.Parent = null;
+            this.MessageDialog_Error.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
+            this.MessageDialog_Error.Text = null;
+            // 
             // Form_Lista_Treinamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(26)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(731, 260);
+            this.Controls.Add(this.guna2HScrollBar1);
+            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.dgv_treinamento);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form_Lista_Treinamentos";
             this.Text = "Form_Lista_Treinamentos";
             this.panel1.ResumeLayout(false);
@@ -284,5 +347,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolTip toolTip1;
         private Guna.UI2.WinForms.Guna2DataGridView dgv_treinamento;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
+        private Guna.UI2.WinForms.Guna2HScrollBar guna2HScrollBar1;
+        private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog_Confirm;
+        private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog_Inform;
+        private Guna.UI2.WinForms.Guna2MessageDialog MessageDialog_Error;
     }
 }

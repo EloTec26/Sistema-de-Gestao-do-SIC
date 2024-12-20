@@ -92,6 +92,7 @@
     <Compile Include="Dominio_Pesquisas\dominio_pesquisar_suspeitos.cs" />
     <Compile Include="Dominio_Pesquisas\dominio_pesquisar_tarefas.cs" />
     <Compile Include="Dominio_Pesquisas\dominio_pesquisar_testemunhas.cs" />
+    <Compile Include="Dominio_Pesquisas\dominio_pesquisar_treinamentos.cs" />
     <Compile Include="Dominio_Pesquisas\dominio_pesquisar_usuarios.cs" />
     <Compile Include="Dominio_Pesquisas\dominio_pesquisar_vitimas.cs" />
     <Compile Include="Dominio_Pesquisas\dominio_pesquisar_continentes.cs" />
