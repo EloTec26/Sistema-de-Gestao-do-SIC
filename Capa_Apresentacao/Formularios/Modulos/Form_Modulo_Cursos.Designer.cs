@@ -234,9 +234,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label2.Location = new System.Drawing.Point(22, 43);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 21);
+            this.label2.Size = new System.Drawing.Size(113, 21);
             this.label2.TabIndex = 128;
-            this.label2.Text = "Digite o curso:";
+            this.label2.Text = "Insira o curso:";
             // 
             // label_id
             // 

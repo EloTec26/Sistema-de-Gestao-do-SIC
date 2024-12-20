@@ -81,7 +81,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show("Não foi possível registrar estas horas extras!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível registrar estas horas extras!", Ex.Message);
                 }
             }
         }

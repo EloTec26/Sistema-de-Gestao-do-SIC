@@ -2,6 +2,7 @@
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Capa_Apresentacao.Formularios.Modulos
@@ -94,7 +95,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show("Não foi possível salvar este caso!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível registrar este caso!", Ex.Message);
                 }
             }
         }
@@ -125,7 +126,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show("Não foi possível atualizar este caso!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível atualizar este caso!", Ex.Message);
                 }
             }
         }

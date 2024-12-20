@@ -179,7 +179,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Tomato;
-            this.label10.Location = new System.Drawing.Point(217, 48);
+            this.label10.Location = new System.Drawing.Point(205, 48);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(16, 21);
             this.label10.TabIndex = 151;
@@ -191,9 +191,9 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label9.Location = new System.Drawing.Point(15, 48);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(196, 21);
+            this.label9.Size = new System.Drawing.Size(190, 21);
             this.label9.TabIndex = 150;
-            this.label9.Text = "Digite o departamento:";
+            this.label9.Text = "Insira o departamento:";
             // 
             // label_id
             // 
@@ -239,15 +239,15 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(19, 138);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 21);
+            this.label1.Size = new System.Drawing.Size(91, 21);
             this.label1.TabIndex = 147;
-            this.label1.Text = "Digite a descrição:";
+            this.label1.Text = "Descrição:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Tomato;
-            this.label2.Location = new System.Drawing.Point(172, 138);
+            this.label2.Location = new System.Drawing.Point(108, 138);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 21);
             this.label2.TabIndex = 148;

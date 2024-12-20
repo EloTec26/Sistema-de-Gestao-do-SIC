@@ -431,7 +431,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.Tomato;
-            this.label5.Location = new System.Drawing.Point(143, 189);
+            this.label5.Location = new System.Drawing.Point(76, 189);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(16, 21);
             this.label5.TabIndex = 187;
@@ -443,9 +443,9 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label9.Location = new System.Drawing.Point(25, 189);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(118, 21);
+            this.label9.Size = new System.Drawing.Size(55, 21);
             this.label9.TabIndex = 186;
-            this.label9.Text = "Digite o título:";
+            this.label9.Text = "Título:";
             // 
             // label_msg_titulo
             // 
@@ -491,7 +491,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Tomato;
-            this.label10.Location = new System.Drawing.Point(182, 358);
+            this.label10.Location = new System.Drawing.Point(117, 358);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(16, 21);
             this.label10.TabIndex = 191;
@@ -503,9 +503,9 @@
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label11.Location = new System.Drawing.Point(28, 358);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(155, 21);
+            this.label11.Size = new System.Drawing.Size(91, 21);
             this.label11.TabIndex = 190;
-            this.label11.Text = "Digite a descrição:";
+            this.label11.Text = "Descrição:";
             // 
             // MessageDialog_Error
             // 

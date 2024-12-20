@@ -108,9 +108,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(22, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 21);
+            this.label1.Size = new System.Drawing.Size(103, 21);
             this.label1.TabIndex = 55;
-            this.label1.Text = "Insira o nome do país:";
+            this.label1.Text = "Insira o país:";
             // 
             // label_id
             // 
@@ -189,7 +189,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Tomato;
-            this.label4.Location = new System.Drawing.Point(197, 136);
+            this.label4.Location = new System.Drawing.Point(124, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(16, 21);
             this.label4.TabIndex = 68;

@@ -18,7 +18,7 @@ namespace Capa_Dominio
             return d_Dados_Ferias.selecionar_ferias();
         }
         //Validade a quantidade de letras no campo
-        private void validacacoes((e_comum_ferias ferias)
+        private void validacacoes(e_comum_ferias ferias)
         {
             Validadar_Nomes_Gerais(ferias.descricao, "[ERRO] - O campo 'Descrição', deve conter somente letras e ter no mínimo 3 caracteres.");
         }

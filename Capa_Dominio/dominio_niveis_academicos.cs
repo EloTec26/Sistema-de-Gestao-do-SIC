@@ -21,12 +21,13 @@ namespace Capa_Dominio
         //Validade a quantidade de letras no campo
         private void validacacoes(e_comum_nivel_academicos nivel_Academicos)
         {
-            Validadar_Nomes_Gerais(nivel_Academicos.nome, "[ERRO] - O campo 'Digite a patente', deve conter somente letras e ter no mínimo 3 caracteres.");
+            Validadar_Nomes_Gerais(nivel_Academicos.nome, "[ERRO] - O campo 'Selecione o nível acadêmico', deve conter somente letras e ter no mínimo 3 caracteres.");
         }
         public void inserir_niveis_academicos(e_comum_nivel_academicos nivel_Academicos)
         {
             try
             {
+                validacacoes(nivel_Academicos);
                 d_niveis_academicos.inserir_nivel_academicos(nivel_Academicos);
             }
             catch (System.Exception ex)
@@ -45,6 +46,7 @@ namespace Capa_Dominio
         {
             try
             {
+                validacacoes(nivel_Academicos);
                 d_niveis_academicos.atualizar_nivel_academicos(nivel_Academicos);
             }
             catch (Exception ex)

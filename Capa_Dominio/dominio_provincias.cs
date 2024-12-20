@@ -31,7 +31,7 @@ namespace Capa_Dominio
         public void registrar_provincias(e_comum_provincias provincia)
         {
             //Validade a quantidade de letras no campo
-            Validadar_Nomes_Gerais(provincia.nome, "[ERRO] - O campo 'nome do país', deve conter somente letras e ter no mínimo 3 caracteres.");
+            Validadar_Nomes_Gerais(provincia.nome, "[ERRO] - O campo 'Digite a província', deve conter somente letras e ter no mínimo 3 caracteres.");
             //Persistir os dados no banco de dados
             provincias.registrar_provincia(provincia);
         }
@@ -40,6 +40,9 @@ namespace Capa_Dominio
         #region Método para atualizar as provincias
         public void atualizar_provincias(e_comum_provincias provincia)
         {
+            //Validade a quantidade de letras no campo
+            Validadar_Nomes_Gerais(provincia.nome, "[ERRO] - O campo 'Digite a província', deve conter somente letras e ter no mínimo 3 caracteres.");
+
             //Persistir os dados no banco de dados
             provincias.atualizar_provincias(provincia);
         }

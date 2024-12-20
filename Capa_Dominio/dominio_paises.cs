@@ -35,7 +35,7 @@ namespace Capa_Dominio
         //Validade a quantidade de letras no campo
         private void validacacoes(e_comum_paises paises)
         {
-            Validadar_Nomes_Gerais(paises.nome, "[ERRO] - O campo 'Digite a patente', deve conter somente letras e ter no mínimo 3 caracteres.");
+            Validadar_Nomes_Gerais(paises.nome, "[ERRO] - O campo 'Insira o país', deve conter somente letras e ter no mínimo 3 caracteres.");
         }
         #region Registrar os países
         public void registrar_paises (e_comum_paises paises)

@@ -222,9 +222,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label2.Location = new System.Drawing.Point(25, 41);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(189, 21);
+            this.label2.Size = new System.Drawing.Size(183, 21);
             this.label2.TabIndex = 138;
-            this.label2.Text = "Digite a especialidade:";
+            this.label2.Text = "Insira a especialidade:";
             // 
             // text_Especialidades
             // 

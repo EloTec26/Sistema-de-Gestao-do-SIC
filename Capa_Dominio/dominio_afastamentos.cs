@@ -18,7 +18,7 @@ namespace Capa_Dominio
             return d_Afastamentos.selecionar_afastamentos();
         }
         //Validade a quantidade de letras no campo
-        private void validacacoes((e_comum_afastamentos afastamentos)
+        private void validacacoes(e_comum_afastamentos afastamentos)
         {
             Validadar_Nomes_Gerais(afastamentos.descricao, "[ERRO] - O campo 'Descrição', deve conter somente letras e ter no mínimo 3 caracteres.");
         }

@@ -88,7 +88,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show("Não foi possível registrar esta féria!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível registrar esta féria!", Ex.Message);
                 }
             }
         }
