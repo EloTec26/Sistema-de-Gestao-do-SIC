@@ -51,8 +51,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Form_Modulo_Cargos form_Modulo_Cargos = new Form_Modulo_Cargos();
                 form_Modulo_Cargos.FormClosed += Form_Modulo_Cargos_FormClosed;
 
-                Program.AJUDA = 1;
-
                 form_Modulo_Cargos.label_id.Text = dgv_cargos.CurrentRow.Cells[0].Value.ToString();
                 form_Modulo_Cargos.text_Cargo.Text = dgv_cargos.CurrentRow.Cells[1].Value.ToString();
                
@@ -73,8 +71,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 Form_Modulo_Cargos form_Modulo_Cargos = new Form_Modulo_Cargos();
                 form_Modulo_Cargos.FormClosed += Form_Modulo_Cargos_FormClosed;
-
-                Program.AJUDA = 1;
 
                 form_Modulo_Cargos.label_id.Text = dgv_cargos.CurrentRow.Cells[0].Value.ToString();
                 form_Modulo_Cargos.text_Cargo.Text = dgv_cargos.CurrentRow.Cells[1].Value.ToString();

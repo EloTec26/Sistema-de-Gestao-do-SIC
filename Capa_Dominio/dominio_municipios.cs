@@ -1,10 +1,11 @@
 ﻿using Capa_Comum.Entidades;
 using Capa_Dados;
 using System;
+using Capa_Dominio.Dominio_Validacoes;
 
 namespace Capa_Dominio
 {
-    public class dominio_municipios
+    public class dominio_municipios : Validacoes
     {
         #region Instanciar as classes e os métodos
         dados_municipios d_municipios = new dados_municipios();
@@ -26,12 +27,17 @@ namespace Capa_Dominio
             return d_municipios.selecionar_municipios();
         }
         #endregion
-
+        //Validade a quantidade de letras no campo
+        private void validacacoes(e_comum_municipios municipios)
+        {
+            Validadar_Nomes_Gerais(municipios.nome, "[ERRO] - O campo 'Insira município', deve conter somente letras e ter no mínimo 3 caracteres.");
+        }
         #region Registrar municipios
         public void registrar_municipios(e_comum_municipios municipios)
         {
             try
             {
+                validacacoes(municipios);
                 d_municipios.registrar_municipios(municipios);
             }
             catch (Exception ex)
@@ -53,6 +59,7 @@ namespace Capa_Dominio
         {
             try
             {
+                validacacoes(municipios);
                 d_municipios.atualizar_municipios(municipios);
             }
             catch (Exception ex)

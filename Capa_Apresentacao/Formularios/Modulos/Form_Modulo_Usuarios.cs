@@ -3,6 +3,7 @@ using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Capa_Apresentacao.Formularios.Modulos
@@ -62,7 +63,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_bairro_rua.DisplayMember = "nome";
             text_bairro_rua.ValueMember = "id_bairro_rua";
         }
-
         private void text_continente_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (text_continente.SelectedValue is int idPaises)
@@ -70,7 +70,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 carregar_Paises(idPaises);
             }
         }
-
         private void text_pais_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (text_pais.SelectedValue is int Id_Provincia)
@@ -78,7 +77,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 carregar_Provincias(Id_Provincia);
             }
         }
-
         private void text_provincias_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (text_provincias.SelectedValue is int Id_Municipio)
@@ -86,7 +84,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 carregar_Municipios(Id_Municipio);
             }
         }
-
         private void text_municipio_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (text_municipio.SelectedValue is int Id_Bairro_Rua)
@@ -164,9 +161,42 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         limpar_Campos();
                     }
                 }
+                catch (SqlException ex) when (ex.Number == 2627)
+                {
+                    string erro_Duplicacao = ex.Message;
+                    if (erro_Duplicacao.Contains("bi"))
+                    {
+                        MessageDialog_Error.Show("O 'Nº do bilhete de identidade' inserido já existe!\nPor favor, insira um outro 'Nº do bilhete de identidade' e tente novamente!", "Erro de duplicação");
+                        text_primerio_numero_telefone.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("telefone1"))
+                    {
+                        MessageDialog_Error.Show("O 'Nº de telefone' inserido já existe!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação");
+                        text_primerio_numero_telefone.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("telefone2"))
+                    {
+                        MessageDialog_Error.Show("O 'Nº de telefone alternativo' inserido já existe!\nPor favor, insira um outro 'Nº de telefone alternativo' e tente novamente!", "Erro de duplicação");
+                        text_segundo_numero_telefone.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("e_mail"))
+                    {
+                        MessageDialog_Error.Show("O 'E-mail' inserido já existe!\nPor favor, insira um outro 'E-mail' e tente novamente!", "Erro de duplicação");
+                        text_e_mail.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("palavra_passe"))
+                    {
+                        MessageDialog_Error.Show("A 'Palavra-passe' inserida já existe!\nPor favor, insira um outro 'E-mail' e tente novamente!", "Erro de duplicação");
+                        text_palavra_passe.Focus();
+                    }
+                    else
+                    {
+                        MessageDialog_Error.Show("Ocorreu um erro de duplicação de dados.\nVerifique os dados inseridos e tente novamente!", "Erro de duplicação");
+                    }
+                }
                 catch (Exception Ex)
                 {
-                    MessageDialog_Error.Show("Não foi possível salvar este usuário!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível atualizar este usuário!", Ex.Message);
                 }
             }
         }
@@ -189,9 +219,42 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         this.Dispose();
                     }
                 }
+                catch (SqlException ex) when (ex.Number == 2627)
+                {
+                    string erro_Duplicacao = ex.Message;
+                    if (erro_Duplicacao.Contains("bi"))
+                    {
+                        MessageDialog_Error.Show("O 'Nº do bilhete de identidade' inserido já existe!\nPor favor, insira um outro 'Nº do bilhete de identidade' e tente novamente!", "Erro de duplicação");
+                        text_primerio_numero_telefone.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("telefone1"))
+                    {
+                        MessageDialog_Error.Show("O 'Nº de telefone' inserido já existe!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação");
+                        text_primerio_numero_telefone.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("telefone2"))
+                    {
+                        MessageDialog_Error.Show("O 'Nº de telefone alternativo' inserido já existe!\nPor favor, insira um outro 'Nº de telefone alternativo' e tente novamente!", "Erro de duplicação");
+                        text_segundo_numero_telefone.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("e_mail"))
+                    {
+                        MessageDialog_Error.Show("O 'E-mail' inserido já existe!\nPor favor, insira um outro 'E-mail' e tente novamente!", "Erro de duplicação");
+                        text_e_mail.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("palavra_passe"))
+                    {
+                        MessageDialog_Error.Show("A 'Palavra-passe' inserida já existe!\nPor favor, insira um outro 'E-mail' e tente novamente!", "Erro de duplicação");
+                        text_palavra_passe.Focus();
+                    }
+                    else
+                    {
+                        MessageDialog_Error.Show("Ocorreu um erro de duplicação de dados.\nVerifique os dados inseridos e tente novamente!", "Erro de duplicação");
+                    }
+                }
                 catch (Exception Ex)
                 {
-                    MessageDialog_Error.Show("Não foi possível atualizar este usuário", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível atualizar este usuário!", Ex.Message);
                 }
             }
         }

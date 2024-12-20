@@ -45,7 +45,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Modulos.Form_Modulo_Beneficios_Investigadores beneficios_Investigadores = new Modulos.Form_Modulo_Beneficios_Investigadores();
                 beneficios_Investigadores.FormClosed += Beneficios_Investigadores_FormClosed;
 
-                Program.AJUDA = 1;
                 beneficios_Investigadores.label_id.Text = dgv_beneficios_investigadores.CurrentRow.Cells[0].Value.ToString();
                 beneficios_Investigadores.text_beneficio.Text = dgv_beneficios_investigadores.CurrentRow.Cells[1].Value.ToString();
                 beneficios_Investigadores.text_investigador.Text = dgv_beneficios_investigadores.CurrentRow.Cells[2].Value.ToString();

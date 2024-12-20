@@ -96,6 +96,7 @@
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel_formulario.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -219,6 +220,7 @@
             // panel_formulario
             // 
             this.panel_formulario.AutoScroll = true;
+            this.panel_formulario.Controls.Add(this.label7);
             this.panel_formulario.Controls.Add(this.label_msg_email);
             this.panel_formulario.Controls.Add(this.label_msg_bi);
             this.panel_formulario.Controls.Add(this.label_msg_ultimo_nome);
@@ -785,7 +787,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.Tomato;
-            this.label19.Location = new System.Drawing.Point(108, 191);
+            this.label19.Location = new System.Drawing.Point(143, 189);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(16, 21);
             this.label19.TabIndex = 107;
@@ -832,7 +834,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.Tomato;
-            this.label15.Location = new System.Drawing.Point(96, 102);
+            this.label15.Location = new System.Drawing.Point(249, 102);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(16, 21);
             this.label15.TabIndex = 107;
@@ -842,11 +844,11 @@
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label20.Location = new System.Drawing.Point(351, 189);
+            this.label20.Location = new System.Drawing.Point(356, 189);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(93, 21);
+            this.label20.Size = new System.Drawing.Size(217, 21);
             this.label20.TabIndex = 106;
-            this.label20.Text = "Telefone 2:";
+            this.label20.Text = "Nº de telefone alternativo:";
             // 
             // text_ultimo_nome
             // 
@@ -881,9 +883,9 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label18.Location = new System.Drawing.Point(20, 190);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(93, 21);
+            this.label18.Size = new System.Drawing.Size(126, 21);
             this.label18.TabIndex = 106;
-            this.label18.Text = "Telefone 1:";
+            this.label18.Text = "Nº de telefone:";
             // 
             // label14
             // 
@@ -938,9 +940,9 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label12.Location = new System.Drawing.Point(20, 101);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 21);
+            this.label12.Size = new System.Drawing.Size(231, 21);
             this.label12.TabIndex = 106;
-            this.label12.Text = "Nº do B.I:";
+            this.label12.Text = "Nº do Bilhete de Identidade:";
             // 
             // text_primeiro_nome
             // 
@@ -1114,6 +1116,16 @@
             this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2VScrollBar1.Value = 20;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.Tomato;
+            this.label7.Location = new System.Drawing.Point(409, 101);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(16, 21);
+            this.label7.TabIndex = 138;
+            this.label7.Text = "*";
+            // 
             // Form_Modulo_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -1208,5 +1220,6 @@
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog_Inform;
         private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         public Guna.UI2.WinForms.Guna2Button btn_Atualizar;
+        private System.Windows.Forms.Label label7;
     }
 }

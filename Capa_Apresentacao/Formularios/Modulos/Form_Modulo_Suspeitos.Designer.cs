@@ -101,6 +101,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.text_data_nascimento = new CustomBox.RJControls.RJDatePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_Conteudo.SuspendLayout();
@@ -976,7 +977,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.Tomato;
-            this.label19.Location = new System.Drawing.Point(485, 92);
+            this.label19.Location = new System.Drawing.Point(467, 92);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(16, 21);
             this.label19.TabIndex = 153;
@@ -998,9 +999,9 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label20.Location = new System.Drawing.Point(564, 90);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(143, 21);
+            this.label20.Size = new System.Drawing.Size(217, 21);
             this.label20.TabIndex = 152;
-            this.label20.Text = "2º nº de telefone:";
+            this.label20.Text = "Nº de telefone alternativo:";
             // 
             // text_ultimo_nome
             // 
@@ -1034,9 +1035,9 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label18.Location = new System.Drawing.Point(344, 90);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(143, 21);
+            this.label18.Size = new System.Drawing.Size(126, 21);
             this.label18.TabIndex = 151;
-            this.label18.Text = "1º nº de telefone:";
+            this.label18.Text = "Nº de telefone:";
             // 
             // label14
             // 
@@ -1166,12 +1167,28 @@
             this.label1.TabIndex = 147;
             this.label1.Text = "Digite o primeiro  nome:";
             // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.panel_Conteudo;
+            this.guna2VScrollBar1.BorderRadius = 4;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 442;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(804, 34);
+            this.guna2VScrollBar1.Maximum = 557;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 442);
+            this.guna2VScrollBar1.SmallChange = 5;
+            this.guna2VScrollBar1.TabIndex = 199;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            // 
             // Form_Modulo_Suspeitos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(822, 582);
+            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.panel_Conteudo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -1265,5 +1282,6 @@
         private System.Windows.Forms.Label label_msg_nome_meio;
         private System.Windows.Forms.Label label_msg_primeiro_nome;
         public Guna.UI2.WinForms.Guna2Button btn_Atualizar;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
     }
 }

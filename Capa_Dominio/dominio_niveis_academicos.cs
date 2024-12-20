@@ -2,11 +2,12 @@
 using Capa_Comum.Entidades;
 using Capa_Dados;
 using System;
+using Capa_Dominio.Dominio_Validacoes;
 using System.Data;
 
 namespace Capa_Dominio
 {
-    public class dominio_niveis_academicos
+    public class dominio_niveis_academicos : Validacoes
     {
         dados_niveis_academicos d_niveis_academicos = new dados_niveis_academicos();
         public DataTable selecionar_niveis_academicos_combo_box()
@@ -16,6 +17,11 @@ namespace Capa_Dominio
         public DataTable selecionar_niveis_academicos()
         {
             return d_niveis_academicos.selecionar_niveis_academicos();
+        }
+        //Validade a quantidade de letras no campo
+        private void validacacoes(e_comum_nivel_academicos nivel_Academicos)
+        {
+            Validadar_Nomes_Gerais(nivel_Academicos.nome, "[ERRO] - O campo 'Digite a patente', deve conter somente letras e ter no mínimo 3 caracteres.");
         }
         public void inserir_niveis_academicos(e_comum_nivel_academicos nivel_Academicos)
         {

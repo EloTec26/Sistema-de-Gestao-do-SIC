@@ -125,7 +125,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 }
                 catch (System.Data.SqlClient.SqlException Ex)
                 {
-                    if(Ex.Number == 457)
+                    if(Ex.Number == 457 || Ex.Number == 547)
                     {
                         MessageDialog_Error.Show("Não é possível eliminar esta província, pois existem - no sistema-, dados que estão vinculados  à ela.", "Alerta");
                     }

@@ -24,7 +24,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
         #region Carregar os continentes no comboBox
         private void carregar_continentes_combo_box()
         {
-            text_continentes.DataSource = selecionar_continentes.selecionar_continentes();
+            text_continentes.DataSource = selecionar_continentes.selecionar_continentes_combobox();
             text_continentes.DisplayMember = "nome";
             text_continentes.ValueMember = "id_continente";
         }

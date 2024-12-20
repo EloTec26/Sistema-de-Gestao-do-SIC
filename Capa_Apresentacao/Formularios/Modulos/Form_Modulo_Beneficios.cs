@@ -51,7 +51,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
 
                 if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este benefício?", "Mensagem de registro") == DialogResult.Yes)
                 {
-                    Program.AJUDA = 0;
                     d_Beneficios.inserir_Beneficos(c_Beneficios);
                     guna2MessageDialog_Inform.Show($"O benefício {text_beneficio.Text}, foi registrado com sucesso!", "Registro bem sucedido");
                     limpar_Campos();
@@ -91,7 +90,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
 
                 if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar este benefício?", "Mensagem de atualização") == DialogResult.Yes)
                 {
-                    Program.AJUDA = 0;
                     d_Beneficios.atualisar_Beneficos(c_Beneficios);
                     guna2MessageDialog_Inform.Show($"O benefício {text_beneficio.Text}, foi atualizado com sucesso!", "Atualização bem sucedida");
                     limpar_Campos();

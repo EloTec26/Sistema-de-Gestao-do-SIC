@@ -69,7 +69,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 capturar_Dados_Digitados_Formulario();
                 if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este benefício - funcionário?", "Mensagem de registro") == DialogResult.Yes)
                 {
-                    Program.AJUDA = 0;
                     d_Beneficios_Investigadores.inserir_Beneficios_Investigadores(c_Beneficios_Investigadores);
                     guna2MessageDialog_Inform.Show($"O benefício - funcionário {text_beneficio.Text + text_investigador.Text} foi registrado com sucesso!", "Registro bem sucedido");
                     limpar_Campos();
@@ -105,7 +104,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
 
                 if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar este benefício - funcionário?", "Mensagem de atualização") == DialogResult.Yes)
                 {
-                    Program.AJUDA = 0;
                     d_Beneficios_Investigadores.atualizar_Beneficios_Investigadores(c_Beneficios_Investigadores);
                     guna2MessageDialog_Inform.Show($"O benefício - funcionário {text_beneficio.Text + text_investigador.Text} foi atualizado com sucesso!", "Atualização bem sucedida");
                     this.Close();

@@ -7,10 +7,11 @@ using System.Data;
 using Capa_Dados;
 using Capa_Comum.Entidades;
 using System.ComponentModel.DataAnnotations;
+using Capa_Dominio.Dominio_Validacoes;
 
 namespace Capa_Dominio
 {
-    public class dominio_paises
+    public class dominio_paises : Validacoes
     {
         #region Instanciar as classes e os métodos
         dados_paises d_paises = new dados_paises();
@@ -31,12 +32,17 @@ namespace Capa_Dominio
             return d_paises.selecionar_paises();
         }
         #endregion
-
+        //Validade a quantidade de letras no campo
+        private void validacacoes(e_comum_paises paises)
+        {
+            Validadar_Nomes_Gerais(paises.nome, "[ERRO] - O campo 'Digite a patente', deve conter somente letras e ter no mínimo 3 caracteres.");
+        }
         #region Registrar os países
         public void registrar_paises (e_comum_paises paises)
         {
             try
             {
+                validacacoes(paises);
                 d_paises.registrar_paises(paises);
             }
             catch (Exception ex)
@@ -59,6 +65,7 @@ namespace Capa_Dominio
         {
             try
             {
+                validacacoes(paises);
                 d_paises.atualizar_pais(paises);
             }
             catch (Exception ex)

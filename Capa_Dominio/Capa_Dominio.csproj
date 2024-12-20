@@ -102,8 +102,7 @@
     <Compile Include="dominio_usuarios.cs" />
     <Compile Include="dominio_vitimas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Validacoes_campos\dominio_validacoes_letras.cs" />
-    <Compile Include="Validacoes_campos\dominio_validacoes_numeros.cs" />
+    <Compile Include="Validacoes_campos\Validacoes.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Comum\Capa_Comum.csproj">

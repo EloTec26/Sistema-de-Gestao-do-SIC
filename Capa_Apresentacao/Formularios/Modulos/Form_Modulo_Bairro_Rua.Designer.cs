@@ -180,15 +180,15 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(16, 142);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 21);
+            this.label1.Size = new System.Drawing.Size(154, 21);
             this.label1.TabIndex = 74;
-            this.label1.Text = "Insira o nome de um bairro/rua:";
+            this.label1.Text = "Insira o  bairro/rua:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Tomato;
-            this.label2.Location = new System.Drawing.Point(272, 142);
+            this.label2.Location = new System.Drawing.Point(168, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 21);
             this.label2.TabIndex = 76;

@@ -40,7 +40,7 @@
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.btn_Atualizar = new Guna.UI2.WinForms.Guna2Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel_conteudo = new System.Windows.Forms.Panel();
             this.label_msg_erro_bi = new System.Windows.Forms.Label();
             this.label_msg_email = new System.Windows.Forms.Label();
             this.label_msg_telefone2 = new System.Windows.Forms.Label();
@@ -110,9 +110,10 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel_conteudo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -275,81 +276,81 @@
             this.btn_Atualizar.Visible = false;
             this.btn_Atualizar.Click += new System.EventHandler(this.btn_Atualizar_Click);
             // 
-            // panel3
+            // panel_conteudo
             // 
-            this.panel3.AutoScroll = true;
-            this.panel3.Controls.Add(this.label_msg_erro_bi);
-            this.panel3.Controls.Add(this.label_msg_email);
-            this.panel3.Controls.Add(this.label_msg_telefone2);
-            this.panel3.Controls.Add(this.label_msg_telefone1);
-            this.panel3.Controls.Add(this.label_msg_ultimo_nome);
-            this.panel3.Controls.Add(this.label_msg_nome_meio);
-            this.panel3.Controls.Add(this.label_msg_primeiro_nome);
-            this.panel3.Controls.Add(this.text_patente);
-            this.panel3.Controls.Add(this.label37);
-            this.panel3.Controls.Add(this.label38);
-            this.panel3.Controls.Add(this.text_nivel_academico);
-            this.panel3.Controls.Add(this.label34);
-            this.panel3.Controls.Add(this.text_especialidades);
-            this.panel3.Controls.Add(this.label35);
-            this.panel3.Controls.Add(this.label32);
-            this.panel3.Controls.Add(this.label33);
-            this.panel3.Controls.Add(this.text_curso);
-            this.panel3.Controls.Add(this.label26);
-            this.panel3.Controls.Add(this.label27);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.text_data_fim_contrato);
-            this.panel3.Controls.Add(this.label21);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.text_data_inicio_contrato);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.text_data_nascimento);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.text_provincias);
-            this.panel3.Controls.Add(this.label28);
-            this.panel3.Controls.Add(this.label36);
-            this.panel3.Controls.Add(this.text_municipio);
-            this.panel3.Controls.Add(this.label30);
-            this.panel3.Controls.Add(this.label31);
-            this.panel3.Controls.Add(this.text_e_mail);
-            this.panel3.Controls.Add(this.label29);
-            this.panel3.Controls.Add(this.text_sexo);
-            this.panel3.Controls.Add(this.text_pais);
-            this.panel3.Controls.Add(this.label25);
-            this.panel3.Controls.Add(this.text_bairro_rua);
-            this.panel3.Controls.Add(this.label23);
-            this.panel3.Controls.Add(this.label24);
-            this.panel3.Controls.Add(this.text_continente);
-            this.panel3.Controls.Add(this.label22);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.label_id);
-            this.panel3.Controls.Add(this.text_segundo_numero_telefone);
-            this.panel3.Controls.Add(this.text_primerio_numero_telefone);
-            this.panel3.Controls.Add(this.label19);
-            this.panel3.Controls.Add(this.label17);
-            this.panel3.Controls.Add(this.text_numero_bi);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label20);
-            this.panel3.Controls.Add(this.text_ultimo_nome);
-            this.panel3.Controls.Add(this.label18);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.text_nome_meio);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.text_primeiro_nome);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.panel3.Location = new System.Drawing.Point(0, 34);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(909, 412);
-            this.panel3.TabIndex = 117;
+            this.panel_conteudo.AutoScroll = true;
+            this.panel_conteudo.Controls.Add(this.label_msg_erro_bi);
+            this.panel_conteudo.Controls.Add(this.label_msg_email);
+            this.panel_conteudo.Controls.Add(this.label_msg_telefone2);
+            this.panel_conteudo.Controls.Add(this.label_msg_telefone1);
+            this.panel_conteudo.Controls.Add(this.label_msg_ultimo_nome);
+            this.panel_conteudo.Controls.Add(this.label_msg_nome_meio);
+            this.panel_conteudo.Controls.Add(this.label_msg_primeiro_nome);
+            this.panel_conteudo.Controls.Add(this.text_patente);
+            this.panel_conteudo.Controls.Add(this.label37);
+            this.panel_conteudo.Controls.Add(this.label38);
+            this.panel_conteudo.Controls.Add(this.text_nivel_academico);
+            this.panel_conteudo.Controls.Add(this.label34);
+            this.panel_conteudo.Controls.Add(this.text_especialidades);
+            this.panel_conteudo.Controls.Add(this.label35);
+            this.panel_conteudo.Controls.Add(this.label32);
+            this.panel_conteudo.Controls.Add(this.label33);
+            this.panel_conteudo.Controls.Add(this.text_curso);
+            this.panel_conteudo.Controls.Add(this.label26);
+            this.panel_conteudo.Controls.Add(this.label27);
+            this.panel_conteudo.Controls.Add(this.label6);
+            this.panel_conteudo.Controls.Add(this.text_data_fim_contrato);
+            this.panel_conteudo.Controls.Add(this.label21);
+            this.panel_conteudo.Controls.Add(this.label3);
+            this.panel_conteudo.Controls.Add(this.text_data_inicio_contrato);
+            this.panel_conteudo.Controls.Add(this.label4);
+            this.panel_conteudo.Controls.Add(this.label8);
+            this.panel_conteudo.Controls.Add(this.text_data_nascimento);
+            this.panel_conteudo.Controls.Add(this.label7);
+            this.panel_conteudo.Controls.Add(this.text_provincias);
+            this.panel_conteudo.Controls.Add(this.label28);
+            this.panel_conteudo.Controls.Add(this.label36);
+            this.panel_conteudo.Controls.Add(this.text_municipio);
+            this.panel_conteudo.Controls.Add(this.label30);
+            this.panel_conteudo.Controls.Add(this.label31);
+            this.panel_conteudo.Controls.Add(this.text_e_mail);
+            this.panel_conteudo.Controls.Add(this.label29);
+            this.panel_conteudo.Controls.Add(this.text_sexo);
+            this.panel_conteudo.Controls.Add(this.text_pais);
+            this.panel_conteudo.Controls.Add(this.label25);
+            this.panel_conteudo.Controls.Add(this.text_bairro_rua);
+            this.panel_conteudo.Controls.Add(this.label23);
+            this.panel_conteudo.Controls.Add(this.label24);
+            this.panel_conteudo.Controls.Add(this.text_continente);
+            this.panel_conteudo.Controls.Add(this.label22);
+            this.panel_conteudo.Controls.Add(this.label10);
+            this.panel_conteudo.Controls.Add(this.label9);
+            this.panel_conteudo.Controls.Add(this.label_id);
+            this.panel_conteudo.Controls.Add(this.text_segundo_numero_telefone);
+            this.panel_conteudo.Controls.Add(this.text_primerio_numero_telefone);
+            this.panel_conteudo.Controls.Add(this.label19);
+            this.panel_conteudo.Controls.Add(this.label17);
+            this.panel_conteudo.Controls.Add(this.text_numero_bi);
+            this.panel_conteudo.Controls.Add(this.label15);
+            this.panel_conteudo.Controls.Add(this.label20);
+            this.panel_conteudo.Controls.Add(this.text_ultimo_nome);
+            this.panel_conteudo.Controls.Add(this.label18);
+            this.panel_conteudo.Controls.Add(this.label14);
+            this.panel_conteudo.Controls.Add(this.label16);
+            this.panel_conteudo.Controls.Add(this.text_nome_meio);
+            this.panel_conteudo.Controls.Add(this.label12);
+            this.panel_conteudo.Controls.Add(this.text_primeiro_nome);
+            this.panel_conteudo.Controls.Add(this.label13);
+            this.panel_conteudo.Controls.Add(this.label2);
+            this.panel_conteudo.Controls.Add(this.label11);
+            this.panel_conteudo.Controls.Add(this.label1);
+            this.panel_conteudo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_conteudo.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.panel_conteudo.Location = new System.Drawing.Point(0, 34);
+            this.panel_conteudo.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_conteudo.Name = "panel_conteudo";
+            this.panel_conteudo.Size = new System.Drawing.Size(909, 412);
+            this.panel_conteudo.TabIndex = 117;
             // 
             // label_msg_erro_bi
             // 
@@ -1045,7 +1046,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.Tomato;
-            this.label19.Location = new System.Drawing.Point(172, 186);
+            this.label19.Location = new System.Drawing.Point(156, 186);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(16, 21);
             this.label19.TabIndex = 146;
@@ -1091,7 +1092,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.Tomato;
-            this.label15.Location = new System.Drawing.Point(677, 93);
+            this.label15.Location = new System.Drawing.Point(826, 91);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(16, 21);
             this.label15.TabIndex = 144;
@@ -1103,9 +1104,9 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label20.Location = new System.Drawing.Point(309, 186);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(143, 21);
+            this.label20.Size = new System.Drawing.Size(217, 21);
             this.label20.TabIndex = 138;
-            this.label20.Text = "2º nº de telefone:";
+            this.label20.Text = "Nº de telefone alternativo:";
             // 
             // text_ultimo_nome
             // 
@@ -1139,9 +1140,9 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label18.Location = new System.Drawing.Point(31, 186);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(143, 21);
+            this.label18.Size = new System.Drawing.Size(126, 21);
             this.label18.TabIndex = 139;
-            this.label18.Text = "1º nº de telefone:";
+            this.label18.Text = "Nº de telefone:";
             // 
             // label14
             // 
@@ -1195,9 +1196,9 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label12.Location = new System.Drawing.Point(596, 92);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 21);
+            this.label12.Size = new System.Drawing.Size(231, 21);
             this.label12.TabIndex = 141;
-            this.label12.Text = "Nº do B.I:";
+            this.label12.Text = "Nº do Bilhete de Identidade:";
             // 
             // text_primeiro_nome
             // 
@@ -1301,13 +1302,30 @@
             this.guna2MessageDialog_Inform.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.guna2MessageDialog_Inform.Text = null;
             // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.panel_conteudo;
+            this.guna2VScrollBar1.BorderRadius = 4;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 412;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(891, 34);
+            this.guna2VScrollBar1.Maximum = 574;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 412);
+            this.guna2VScrollBar1.SmallChange = 5;
+            this.guna2VScrollBar1.TabIndex = 199;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2VScrollBar1.Value = 49;
+            // 
             // Form_Modulo_Investigadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(909, 538);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.guna2VScrollBar1);
+            this.Controls.Add(this.panel_conteudo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1320,8 +1338,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.panel_conteudo.ResumeLayout(false);
+            this.panel_conteudo.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1331,7 +1349,7 @@
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btn_Fechar;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel_conteudo;
         public Guna.UI2.WinForms.Guna2ComboBox text_provincias;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label36;
@@ -1409,5 +1427,6 @@
         private System.Windows.Forms.Label label_msg_email;
         private System.Windows.Forms.Label label_msg_erro_bi;
         public Guna.UI2.WinForms.Guna2Button btn_Atualizar;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
     }
 }

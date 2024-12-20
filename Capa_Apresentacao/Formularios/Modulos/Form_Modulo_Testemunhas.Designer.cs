@@ -937,7 +937,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.Tomato;
-            this.label19.Location = new System.Drawing.Point(497, 108);
+            this.label19.Location = new System.Drawing.Point(486, 108);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(16, 21);
             this.label19.TabIndex = 107;
@@ -957,11 +957,11 @@
             // 
             this.label20.AutoSize = true;
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label20.Location = new System.Drawing.Point(581, 109);
+            this.label20.Location = new System.Drawing.Point(581, 107);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(143, 21);
+            this.label20.Size = new System.Drawing.Size(176, 21);
             this.label20.TabIndex = 106;
-            this.label20.Text = "2º nº de telefone:";
+            this.label20.Text = "Nº de tel. alternativo:";
             // 
             // text_ultimo_nome
             // 
@@ -993,11 +993,11 @@
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label18.Location = new System.Drawing.Point(352, 108);
+            this.label18.Location = new System.Drawing.Point(360, 109);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(143, 21);
+            this.label18.Size = new System.Drawing.Size(126, 21);
             this.label18.TabIndex = 106;
-            this.label18.Text = "1º nº de telefone:";
+            this.label18.Text = "Nº de telefone:";
             // 
             // label14
             // 

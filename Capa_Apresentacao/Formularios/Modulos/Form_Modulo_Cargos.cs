@@ -101,7 +101,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
                 }
                 else
-                    MessageBox.Show("Não foi possível atualizar 11 este cargo!", ex.Message);
+                    MessageBox.Show("Não foi possível atualizar este cargo!", ex.Message);
             }
         }
         private void btn_Limpar_Click(object sender, EventArgs e)

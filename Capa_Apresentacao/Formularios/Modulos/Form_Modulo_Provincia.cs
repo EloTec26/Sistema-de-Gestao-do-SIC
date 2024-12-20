@@ -3,6 +3,7 @@ using Capa_Dominio;
 using System;
 using System.Windows.Forms;
 using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
+using System.Data.SqlClient;
 
 namespace Capa_Apresentacao.Formularios.Modulos
 {
@@ -67,6 +68,20 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         Limpar();
                     }
                 }
+                catch (SqlException ex) when (ex.Number == 2627)
+                {
+                    string erro_Duplicacao = ex.Message;
+                    if (erro_Duplicacao.Contains("nome"))
+                    {
+                        MessageDialog_Error.Show("Esta província já existe!\nPor favor, insira uma outra província e tente novamente!", "Erro de duplicação");
+                        text_provincia.Focus();
+                    }
+                    else
+                    {
+                        MessageDialog_Error.Show("Esta província já existe!\nPor favor, insira uma outra província e tente novamente!", "Erro de duplicação");
+                        text_provincia.Focus();
+                    }
+                }
                 catch (Exception Ex)
                 {
                     MessageDialog_Error.Show("Não possível registrar esta província!", Ex.Message);
@@ -91,9 +106,23 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         this.Close();
                     }
                 }
+                catch (SqlException ex) when (ex.Number == 2627)
+                {
+                    string erro_Duplicacao = ex.Message;
+                    if (erro_Duplicacao.Contains("nome"))
+                    {
+                        MessageDialog_Error.Show("Esta província já existe!\nPor favor, insira uma outra província e tente novamente!", "Erro de duplicação");
+                        text_provincia.Focus();
+                    }
+                    else
+                    {
+                        MessageDialog_Error.Show("Esta província já existe!\nPor favor, insira uma outra província e tente novamente!", "Erro de duplicação");
+                        text_provincia.Focus();
+                    }
+                }
                 catch (Exception Ex)
                 {
-                    MessageDialog_Error.Show("Não possível atualizar esta província!", Ex.Message);
+                    MessageDialog_Error.Show("Não possível registrar esta província!", Ex.Message);
                 }
             }
         }

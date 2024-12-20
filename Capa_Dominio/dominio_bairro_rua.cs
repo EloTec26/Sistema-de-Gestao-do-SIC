@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using System.Data;
 using Capa_Comum.Entidades;
 using Capa_Dados;
+using Capa_Dominio.Dominio_Validacoes;
 
 namespace Capa_Dominio
 {
-    public class dominio_bairro_rua
+    public class dominio_bairro_rua : Validacoes
     {
         #region Instanciar as classes e métodos
         dados_bairro_rua d_bairro_rua = new dados_bairro_rua();
@@ -30,12 +31,17 @@ namespace Capa_Dominio
             return d_bairro_rua.selecionar_bairro_ruas_combobox();
         }
         #endregion
-
+        //Validade a quantidade de letras no campo
+        private void validacacoes(e_comum_bairro_rua bairro_Rua)
+        {
+            Validadar_Nomes_Gerais(bairro_Rua.nome, "[ERRO] - O campo 'Insira bairro/rua', deve conter somente letras e ter no mínimo 3 caracteres.");
+        }
         #region Registrar os bairros_ruas
         public void registrar_bairros_ruas(e_comum_bairro_rua bairro_Rua)
         {
             try
             {
+                validacacoes(bairro_Rua);
                 d_bairro_rua.registrar_bairros_ruas(bairro_Rua);
             }
             catch (Exception ex)
@@ -57,6 +63,7 @@ namespace Capa_Dominio
         {
             try
             {
+                validacacoes(bairro_Rua);
                 d_bairro_rua.atualizar_bairros_ruas(bairro_Rua);
             }
             catch (Exception ex)

@@ -101,6 +101,7 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_formulario.SuspendLayout();
@@ -333,7 +334,6 @@
             this.panel_formulario.Controls.Add(this.label11);
             this.panel_formulario.Controls.Add(this.text_data_nascimento);
             this.panel_formulario.Controls.Add(this.label1);
-            this.panel_formulario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_formulario.Location = new System.Drawing.Point(0, 28);
             this.panel_formulario.Name = "panel_formulario";
             this.panel_formulario.Size = new System.Drawing.Size(819, 457);
@@ -942,7 +942,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.Tomato;
-            this.label19.Location = new System.Drawing.Point(484, 103);
+            this.label19.Location = new System.Drawing.Point(465, 101);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(16, 21);
             this.label19.TabIndex = 107;
@@ -964,9 +964,9 @@
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label20.Location = new System.Drawing.Point(563, 101);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(143, 21);
+            this.label20.Size = new System.Drawing.Size(217, 21);
             this.label20.TabIndex = 106;
-            this.label20.Text = "2º nº de telefone:";
+            this.label20.Text = "Nº de telefone alternativo:";
             // 
             // text_ultimo_nome
             // 
@@ -1001,9 +1001,9 @@
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label18.Location = new System.Drawing.Point(343, 101);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(143, 21);
+            this.label18.Size = new System.Drawing.Size(126, 21);
             this.label18.TabIndex = 106;
-            this.label18.Text = "1º nº de telefone:";
+            this.label18.Text = "Nº de telefone:";
             // 
             // label14
             // 
@@ -1171,12 +1171,29 @@
             this.guna2MessageDialog_Inform.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.guna2MessageDialog_Inform.Text = null;
             // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.panel_formulario;
+            this.guna2VScrollBar1.BorderRadius = 4;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 457;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(801, 28);
+            this.guna2VScrollBar1.Maximum = 564;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 457);
+            this.guna2VScrollBar1.SmallChange = 5;
+            this.guna2VScrollBar1.TabIndex = 123;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2VScrollBar1.Value = 20;
+            // 
             // Form_Modulo_Vitimas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(819, 582);
+            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.panel_formulario);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -1270,5 +1287,6 @@
         private System.Windows.Forms.Label label_msg_telefone2;
         private System.Windows.Forms.Label label_msg_telefone1;
         private System.Windows.Forms.Label label_msg_erro_descricao;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
     }
 }

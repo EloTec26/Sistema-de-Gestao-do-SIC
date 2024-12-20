@@ -4,6 +4,7 @@ using Capa_Dominio;
 using System;
 using System.Windows.Forms;
 using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
+using System.Data.SqlClient;
 
 namespace Capa_Apresentacao.Formularios.Modulos
 {
@@ -59,9 +60,18 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     // Limpa todos os campos depois do registro.
                     limpar_Campos();
                 }
+                catch (SqlException ex) when (ex.Number == 2627)
+                {
+                    string erro_Duplicacao = ex.Message;
+                    if (erro_Duplicacao.Contains("nome"))
+                    {
+                        MessageDialog_Error.Show("A 'Patente' inserida já existe!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação");
+                        text_patentes.Focus();
+                    }
+                }
                 catch (Exception Ex)
                 {
-                    MessageDialog_Error.Show("Não foi possível registrar/ Atualizar esta patente!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível salvar esta patente!", Ex.Message);
                 }
             }
         }
@@ -81,9 +91,18 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     // Limpa todos os campos depois do registro.
                     limpar_Campos();
                 }
+                catch (SqlException ex) when (ex.Number == 2627)
+                {
+                    string erro_Duplicacao = ex.Message;
+                    if (erro_Duplicacao.Contains("nome"))
+                    {
+                        MessageDialog_Error.Show("A 'Patente' inserida já existe!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação");
+                        text_patentes.Focus();
+                    }
+                }
                 catch (Exception Ex)
                 {
-                    MessageDialog_Error.Show("Não foi possível registrar/ Atualizar esta patente!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível atualizar esta patente!", Ex.Message);
                 }
             }
         }

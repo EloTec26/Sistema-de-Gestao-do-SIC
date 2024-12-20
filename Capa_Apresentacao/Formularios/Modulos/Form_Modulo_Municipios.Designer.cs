@@ -79,7 +79,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Tomato;
-            this.label10.Location = new System.Drawing.Point(188, 42);
+            this.label10.Location = new System.Drawing.Point(185, 42);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(16, 21);
             this.label10.TabIndex = 100;
@@ -183,7 +183,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Tomato;
-            this.label2.Location = new System.Drawing.Point(265, 128);
+            this.label2.Location = new System.Drawing.Point(154, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 21);
             this.label2.TabIndex = 94;
@@ -228,9 +228,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(13, 128);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(250, 21);
+            this.label1.Size = new System.Drawing.Size(147, 21);
             this.label1.TabIndex = 92;
-            this.label1.Text = "Insira o nome de um município:";
+            this.label1.Text = "Insira o município:";
             // 
             // guna2Separator1
             // 

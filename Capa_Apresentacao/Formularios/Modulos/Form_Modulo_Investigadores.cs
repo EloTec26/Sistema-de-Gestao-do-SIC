@@ -4,6 +4,7 @@ using Capa_Comum.Comum_Permissoes.Cache;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Capa_Apresentacao.Formularios.Modulos
@@ -215,12 +216,39 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         limpar_Campos();
                     }
                 }
+                catch (SqlException ex) when (ex.Number == 2627)
+                {
+                    string erro_Duplicacao = ex.Message;
+                    if (erro_Duplicacao.Contains("bi"))
+                    {
+                        MessageDialog_Error.Show("O 'Nº do bilhete de identidade' inserido já existe!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação");
+                        text_primerio_numero_telefone.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("telefone1"))
+                    {
+                        MessageDialog_Error.Show("O 'Nº de telefone' inserido já existe!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação");
+                        text_primerio_numero_telefone.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("telefone2"))
+                    {
+                        MessageDialog_Error.Show("O 'Nº de telefone alternativo' inserido já existe!\nPor favor, insira um outro 'Nº de telefone alternativo' e tente novamente!", "Erro de duplicação");
+                        text_segundo_numero_telefone.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("e_mail"))
+                    {
+                        MessageDialog_Error.Show("O 'E-mail' inserido já existe!\nPor favor, insira um outro 'E-mail' e tente novamente!", "Erro de duplicação");
+                        text_e_mail.Focus();
+                    }
+                    else
+                    {
+                        MessageDialog_Error.Show("Ocorreu um erro de duplicação de dados.\nVerifique os dados inseridos e tente novamente!", "Erro de duplicação");
+                    }
+                }
                 catch (Exception Ex)
                 {
-                    MessageDialog_Error.Show("Não foi possível salvar este funcionário!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível registrar este funcionário!", Ex.Message);
                 }
             }
-
         }
         private void btn_Atualizar_Click(object sender, EventArgs e)
         {
@@ -242,14 +270,41 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         guna2MessageDialog_Inform.Show(
                             $"O funcionário {text_primeiro_nome.Text + " " + text_nome_meio.Text + " " + text_ultimo_nome.Text}" +
                             $" foi atualizado com sucesso!", "Atualização bem sucedida");
-
                         limpar_Campos();
                         this.Close();
                     }
                 }
+                catch (SqlException ex) when (ex.Number == 2627)
+                {
+                    string erro_Duplicacao = ex.Message;
+                    if (erro_Duplicacao.Contains("bi"))
+                    {
+                        MessageDialog_Error.Show("O 'Nº do bilhete de identidade' inserido já existe!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação");
+                        text_primerio_numero_telefone.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("telefone1"))
+                    {
+                        MessageDialog_Error.Show("O 'Nº de telefone' inserido já existe!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação");
+                        text_primerio_numero_telefone.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("telefone2"))
+                    {
+                        MessageDialog_Error.Show("O 'Nº de telefone alternativo' inserido já existe!\nPor favor, insira um outro 'Nº de telefone alternativo' e tente novamente!", "Erro de duplicação");
+                        text_segundo_numero_telefone.Focus();
+                    }
+                    if (erro_Duplicacao.Contains("e_mail"))
+                    {
+                        MessageDialog_Error.Show("O 'E-mail' inserido já existe!\nPor favor, insira um outro 'E-mail' e tente novamente!", "Erro de duplicação");
+                        text_e_mail.Focus();
+                    }
+                    else
+                    {
+                        MessageDialog_Error.Show("Ocorreu um erro de duplicação de dados.\nVerifique os dados inseridos e tente novamente!", "Erro de duplicação");
+                    }
+                }
                 catch (Exception Ex)
                 {
-                    MessageDialog_Error.Show("Não foi possível atualizar este funcinário!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível atualizar este funcionário!", Ex.Message);
                 }
             }
         }

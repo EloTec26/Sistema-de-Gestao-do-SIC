@@ -45,8 +45,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 Form_Modulo_Bairro_Rua formulario = new Form_Modulo_Bairro_Rua();
 
-                Program.AJUDA = 1;
-
                 formulario.label_id.Text = dgv_bairros_ruas.CurrentRow.Cells[0].Value.ToString();
                 formulario.text_municipio.Text = dgv_bairros_ruas.CurrentRow.Cells[1].Value.ToString();
                 formulario.text_bairro_rua.Text = dgv_bairros_ruas.CurrentRow.Cells[2].Value.ToString();
@@ -72,8 +70,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             if (dgv_bairros_ruas.SelectedRows.Count > 0)
             {
                 Form_Modulo_Bairro_Rua formulario = new Form_Modulo_Bairro_Rua();
-
-                Program.AJUDA = 1;
 
                 formulario.label_id.Text = dgv_bairros_ruas.CurrentRow.Cells[0].Value.ToString();
                 formulario.text_municipio.Text = dgv_bairros_ruas.CurrentRow.Cells[1].Value.ToString();

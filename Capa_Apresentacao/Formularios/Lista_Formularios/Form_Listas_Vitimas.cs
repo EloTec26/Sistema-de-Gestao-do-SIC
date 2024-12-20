@@ -50,8 +50,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 Modulos.Form_Modulo_Vitimas modulo_Vitimas = new Modulos.Form_Modulo_Vitimas();
                 modulo_Vitimas.FormClosed += Modulo_Vitimas_FormClosed;
 
-                Program.AJUDA = 1;
-
                 modulo_Vitimas.label_id.Text = dgv_vitimas.CurrentRow.Cells[0].Value.ToString();
                 modulo_Vitimas.text_primeiro_nome.Text = dgv_vitimas.CurrentRow.Cells[1].Value.ToString();
                 modulo_Vitimas.text_nome_meio.Text = dgv_vitimas.CurrentRow.Cells[2].Value.ToString();
@@ -70,8 +68,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 modulo_Vitimas.text_provincias.Text = dgv_vitimas.CurrentRow.Cells[16].Value.ToString();
                 modulo_Vitimas.text_municipio.Text = dgv_vitimas.CurrentRow.Cells[17].Value.ToString();
                 modulo_Vitimas.text_bairro_rua.Text = dgv_vitimas.CurrentRow.Cells[18].Value.ToString();
-                modulo_Vitimas.text_data_registro.Text = dgv_vitimas.CurrentRow.Cells[20].Value.ToString();
-
+               
                 modulo_Vitimas.label5.Text = "Atualizar";
                 modulo_Vitimas.btn_salvar.Text = "Atualizar";
                 modulo_Vitimas.btn_salvar.FillColor = Color.SeaGreen;
