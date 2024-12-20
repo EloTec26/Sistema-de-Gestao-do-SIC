@@ -21,7 +21,6 @@ namespace Capa_Apresentacao.Formularios.Formulario_Dashboard
             InitializeComponent();
             CarregarDashboard();
         }
-        // Método para carregar o número total de dados registrados em cada entidade do banco de dados.
         private void CarregarDashboard()
         {
             label_total_continentes.Text = dados.NumeroContinentes.ToString();
@@ -48,13 +47,7 @@ namespace Capa_Apresentacao.Formularios.Formulario_Dashboard
             label_testemunhas.Text = dados.NumeroTestemunhas.ToString();
             label_total_usuarios.Text = dados.NumeroUsuarios.ToString();
             label_total_vitimas.Text = dados.NumeroVitimas.ToString();
-            
-
-        }
-
-        private void guna2Panel20_Paint(object sender, PaintEventArgs e)
-        {
-
+            label_treinamento.Text = dados.NumeroTreinamento.ToString();
         }
     }
 }

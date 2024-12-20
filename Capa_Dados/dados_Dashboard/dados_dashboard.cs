@@ -31,6 +31,7 @@ namespace Capa_Dados.Dashboard
         public int NumeroTestemunhas { get; private set; }
         public int NumeroUsuarios { get; private set; }
         public int NumeroVitimas { get; private set; }
+        public int NumeroTreinamento { get; private set; }
 
         // Construtor
         public dados_dashboard(){
@@ -149,6 +150,9 @@ namespace Capa_Dados.Dashboard
                     // Quantidade Vítimas
                     cmd.CommandText = "select count(id_vitima)[Vítimas] from vitima_tbl";
                     NumeroVitimas = (int)cmd.ExecuteScalar();
+                    // Quantidade Vítimas
+                    cmd.CommandText = "select count(id_treinamento)[Treinamento] from treinamento_tbl;";
+                    NumeroTreinamento = (int)cmd.ExecuteScalar();
                 }
             }
         }

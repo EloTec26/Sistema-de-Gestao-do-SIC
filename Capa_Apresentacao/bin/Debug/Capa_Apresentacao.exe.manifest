@@ -43,50 +43,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Apresentacao.exe" size="2060224">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Apresentacao.exe" size="2064320">
       <assemblyIdentity name="Capa_Apresentacao" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jn3qYZ0m0XJiRwsoTgmiXtwavoQxYDfO0u58MFQd9y0=</dsig:DigestValue>
+        <dsig:DigestValue>Je30ImVpjvDNhIIaXUsi3ZY3IMUiIiXT71brHcRwT10=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Comum.dll" size="35840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Comum.dll" size="36352">
       <assemblyIdentity name="Capa_Comum" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>epG3bYQypv0C0jjHAai2e8AhuyPCAW+4eSAJp0s/nTw=</dsig:DigestValue>
+        <dsig:DigestValue>SA7x/YjdGoWFdGQ8MxyztKhuSYIEsEEnTiIoNOPEn+s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Dados.dll" size="78848">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Dados.dll" size="79360">
       <assemblyIdentity name="Capa_Dados" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BjoAbfI2x+foPQXz6wC2KyYung32lnkpBGra56kZMWU=</dsig:DigestValue>
+        <dsig:DigestValue>bYaxq/Bo0uIdbkUrkh5k2Ff8OjhpVNXchFB4VOa45cU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Dominio.dll" size="38400">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Dominio.dll" size="38912">
       <assemblyIdentity name="Capa_Dominio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>G/F/EHgxQWR3KUEI1dN4JYej68n5Qv+enheHv1Lg5MI=</dsig:DigestValue>
+        <dsig:DigestValue>osgnu9FqNDmaWHX4p9c+GAmmWdhupktEQS4Gv/8CLO4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

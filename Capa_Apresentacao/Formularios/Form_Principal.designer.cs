@@ -138,7 +138,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(59, 7);
+            this.label1.Location = new System.Drawing.Point(65, 6);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 19);
             this.label1.TabIndex = 22;
@@ -149,10 +149,10 @@
             this.btn_Logo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Logo.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logo.Image")));
             this.btn_Logo.ImageRotate = 0F;
-            this.btn_Logo.Location = new System.Drawing.Point(-12, -5);
+            this.btn_Logo.Location = new System.Drawing.Point(3, 5);
             this.btn_Logo.Name = "btn_Logo";
             this.btn_Logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btn_Logo.Size = new System.Drawing.Size(65, 43);
+            this.btn_Logo.Size = new System.Drawing.Size(28, 27);
             this.btn_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btn_Logo.TabIndex = 21;
             this.btn_Logo.TabStop = false;
@@ -362,7 +362,7 @@
             this.btn_investigadores.Name = "btn_investigadores";
             this.btn_investigadores.Size = new System.Drawing.Size(257, 25);
             this.btn_investigadores.TabIndex = 23;
-            this.btn_investigadores.Text = "         Gerir Funcionários +";
+            this.btn_investigadores.Text = "       Gerir Funcionários ";
             this.btn_investigadores.UseVisualStyleBackColor = false;
             this.btn_investigadores.Click += new System.EventHandler(this.btn_suspeitos_Click);
             // 
@@ -402,7 +402,7 @@
             this.btn_escolaridade.Name = "btn_escolaridade";
             this.btn_escolaridade.Size = new System.Drawing.Size(257, 25);
             this.btn_escolaridade.TabIndex = 23;
-            this.btn_escolaridade.Text = "        Gerir Escolaridade +";
+            this.btn_escolaridade.Text = "       Gerir Escolaridade ";
             this.btn_escolaridade.UseVisualStyleBackColor = false;
             this.btn_escolaridade.Click += new System.EventHandler(this.btn_escolaridade_Click);
             // 
@@ -441,7 +441,7 @@
             this.btn_casos.Name = "btn_casos";
             this.btn_casos.Size = new System.Drawing.Size(256, 25);
             this.btn_casos.TabIndex = 23;
-            this.btn_casos.Text = "               Gerir Casos +";
+            this.btn_casos.Text = "               Gerir Casos";
             this.btn_casos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_casos.UseVisualStyleBackColor = false;
             this.btn_casos.Click += new System.EventHandler(this.btn_casos_Click);
@@ -463,7 +463,7 @@
             this.btn_enderecos_submenu.Name = "btn_enderecos_submenu";
             this.btn_enderecos_submenu.Size = new System.Drawing.Size(257, 25);
             this.btn_enderecos_submenu.TabIndex = 23;
-            this.btn_enderecos_submenu.Text = "    Gerir Endereços +";
+            this.btn_enderecos_submenu.Text = "  Gerir Endereços";
             this.btn_enderecos_submenu.UseVisualStyleBackColor = false;
             this.btn_enderecos_submenu.Click += new System.EventHandler(this.btn_Mais_Opcoes_Click);
             // 
@@ -483,7 +483,7 @@
             this.btn_painel_adimistrativo.Name = "btn_painel_adimistrativo";
             this.btn_painel_adimistrativo.Size = new System.Drawing.Size(257, 25);
             this.btn_painel_adimistrativo.TabIndex = 22;
-            this.btn_painel_adimistrativo.Text = "               Gerir Painel admin";
+            this.btn_painel_adimistrativo.Text = "                Gerir Painel admin";
             this.btn_painel_adimistrativo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_painel_adimistrativo.UseVisualStyleBackColor = false;
             this.btn_painel_adimistrativo.Click += new System.EventHandler(this.btn_painel_adimistrativo_Click);
@@ -504,7 +504,7 @@
             this.btn_relatorios.Name = "btn_relatorios";
             this.btn_relatorios.Size = new System.Drawing.Size(257, 25);
             this.btn_relatorios.TabIndex = 21;
-            this.btn_relatorios.Text = "   Gerir Relatórios +";
+            this.btn_relatorios.Text = " Gerir Relatórios";
             this.btn_relatorios.UseVisualStyleBackColor = false;
             // 
             // panel_menu_btn

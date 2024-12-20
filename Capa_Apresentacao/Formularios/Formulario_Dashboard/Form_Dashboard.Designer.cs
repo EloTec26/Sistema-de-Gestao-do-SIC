@@ -32,6 +32,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.guna2Panel25 = new Guna.UI2.WinForms.Guna2Panel();
+            this.iconButton25 = new FontAwesome.Sharp.IconButton();
+            this.label_treinamento = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.guna2Panel24 = new Guna.UI2.WinForms.Guna2Panel();
             this.iconButton23 = new FontAwesome.Sharp.IconButton();
             this.label_total_vitimas = new System.Windows.Forms.Label();
@@ -130,9 +134,11 @@
             this.label_total_continentes = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_atualizar = new FontAwesome.Sharp.IconButton();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.guna2Panel25.SuspendLayout();
             this.guna2Panel24.SuspendLayout();
             this.guna2Panel23.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
@@ -193,6 +199,8 @@
             // 
             // panel3
             // 
+            this.panel3.AutoScroll = true;
+            this.panel3.Controls.Add(this.guna2Panel25);
             this.panel3.Controls.Add(this.guna2Panel24);
             this.panel3.Controls.Add(this.guna2Panel23);
             this.panel3.Controls.Add(this.guna2Panel10);
@@ -220,8 +228,69 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1094, 451);
+            this.panel3.Size = new System.Drawing.Size(1077, 515);
             this.panel3.TabIndex = 0;
+            // 
+            // guna2Panel25
+            // 
+            this.guna2Panel25.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2Panel25.BorderColor = System.Drawing.Color.Crimson;
+            this.guna2Panel25.BorderRadius = 3;
+            this.guna2Panel25.BorderThickness = 1;
+            this.guna2Panel25.Controls.Add(this.iconButton25);
+            this.guna2Panel25.Controls.Add(this.label_treinamento);
+            this.guna2Panel25.Controls.Add(this.label10);
+            this.guna2Panel25.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
+            this.guna2Panel25.Location = new System.Drawing.Point(29, 459);
+            this.guna2Panel25.Name = "guna2Panel25";
+            this.guna2Panel25.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
+            this.guna2Panel25.Size = new System.Drawing.Size(232, 53);
+            this.guna2Panel25.TabIndex = 43;
+            // 
+            // iconButton25
+            // 
+            this.iconButton25.BackColor = System.Drawing.Color.Transparent;
+            this.iconButton25.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.iconButton25.FlatAppearance.BorderSize = 0;
+            this.iconButton25.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.iconButton25.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.iconButton25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton25.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.iconButton25.ForeColor = System.Drawing.Color.White;
+            this.iconButton25.IconChar = FontAwesome.Sharp.IconChar.ArrowsDownToPeople;
+            this.iconButton25.IconColor = System.Drawing.Color.Crimson;
+            this.iconButton25.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton25.IconSize = 30;
+            this.iconButton25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton25.Location = new System.Drawing.Point(3, 22);
+            this.iconButton25.Name = "iconButton25";
+            this.iconButton25.Size = new System.Drawing.Size(46, 31);
+            this.iconButton25.TabIndex = 42;
+            this.iconButton25.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton25.UseVisualStyleBackColor = false;
+            // 
+            // label_treinamento
+            // 
+            this.label_treinamento.AutoSize = true;
+            this.label_treinamento.BackColor = System.Drawing.Color.Transparent;
+            this.label_treinamento.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label_treinamento.ForeColor = System.Drawing.Color.Crimson;
+            this.label_treinamento.Location = new System.Drawing.Point(66, 32);
+            this.label_treinamento.Name = "label_treinamento";
+            this.label_treinamento.Size = new System.Drawing.Size(44, 17);
+            this.label_treinamento.TabIndex = 1;
+            this.label_treinamento.Text = "Total ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.ForeColor = System.Drawing.Color.Crimson;
+            this.label10.Location = new System.Drawing.Point(33, 4);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(182, 21);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Total de treinamentos";
             // 
             // guna2Panel24
             // 
@@ -233,7 +302,7 @@
             this.guna2Panel24.Controls.Add(this.label_total_vitimas);
             this.guna2Panel24.Controls.Add(this.label36);
             this.guna2Panel24.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel24.Location = new System.Drawing.Point(818, 385);
+            this.guna2Panel24.Location = new System.Drawing.Point(809, 385);
             this.guna2Panel24.Name = "guna2Panel24";
             this.guna2Panel24.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel24.Size = new System.Drawing.Size(232, 53);
@@ -294,7 +363,7 @@
             this.guna2Panel23.Controls.Add(this.label_total_usuarios);
             this.guna2Panel23.Controls.Add(this.label34);
             this.guna2Panel23.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel23.Location = new System.Drawing.Point(561, 385);
+            this.guna2Panel23.Location = new System.Drawing.Point(552, 385);
             this.guna2Panel23.Name = "guna2Panel23";
             this.guna2Panel23.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel23.Size = new System.Drawing.Size(232, 53);
@@ -356,7 +425,7 @@
             this.guna2Panel10.Controls.Add(this.label_total_departamentos);
             this.guna2Panel10.Controls.Add(this.label19);
             this.guna2Panel10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel10.Location = new System.Drawing.Point(818, 154);
+            this.guna2Panel10.Location = new System.Drawing.Point(809, 154);
             this.guna2Panel10.Name = "guna2Panel10";
             this.guna2Panel10.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel10.Size = new System.Drawing.Size(232, 53);
@@ -417,7 +486,7 @@
             this.guna2Panel22.Controls.Add(this.label_total_niveis_academicos);
             this.guna2Panel22.Controls.Add(this.label32);
             this.guna2Panel22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel22.Location = new System.Drawing.Point(818, 309);
+            this.guna2Panel22.Location = new System.Drawing.Point(809, 309);
             this.guna2Panel22.Name = "guna2Panel22";
             this.guna2Panel22.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel22.Size = new System.Drawing.Size(232, 53);
@@ -478,7 +547,7 @@
             this.guna2Panel7.Controls.Add(this.label_total_cursos);
             this.guna2Panel7.Controls.Add(this.label13);
             this.guna2Panel7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel7.Location = new System.Drawing.Point(561, 154);
+            this.guna2Panel7.Location = new System.Drawing.Point(552, 154);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel7.Size = new System.Drawing.Size(232, 53);
@@ -539,7 +608,7 @@
             this.guna2Panel21.Controls.Add(this.label_testemunhas);
             this.guna2Panel21.Controls.Add(this.label30);
             this.guna2Panel21.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel21.Location = new System.Drawing.Point(298, 385);
+            this.guna2Panel21.Location = new System.Drawing.Point(289, 385);
             this.guna2Panel21.Name = "guna2Panel21";
             this.guna2Panel21.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel21.Size = new System.Drawing.Size(232, 53);
@@ -601,7 +670,7 @@
             this.guna2Panel11.Controls.Add(this.label_total_beneficios_funcionarios);
             this.guna2Panel11.Controls.Add(this.label21);
             this.guna2Panel11.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel11.Location = new System.Drawing.Point(818, 80);
+            this.guna2Panel11.Location = new System.Drawing.Point(809, 80);
             this.guna2Panel11.Name = "guna2Panel11";
             this.guna2Panel11.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel11.Size = new System.Drawing.Size(232, 53);
@@ -684,12 +753,11 @@
             this.guna2Panel20.Controls.Add(this.label_faltas);
             this.guna2Panel20.Controls.Add(this.label28);
             this.guna2Panel20.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel20.Location = new System.Drawing.Point(818, 231);
+            this.guna2Panel20.Location = new System.Drawing.Point(809, 231);
             this.guna2Panel20.Name = "guna2Panel20";
             this.guna2Panel20.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel20.Size = new System.Drawing.Size(232, 53);
             this.guna2Panel20.TabIndex = 36;
-            this.guna2Panel20.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel20_Paint);
             // 
             // iconButton20
             // 
@@ -746,7 +814,7 @@
             this.guna2Panel4.Controls.Add(this.label_total_cargos);
             this.guna2Panel4.Controls.Add(this.label7);
             this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel4.Location = new System.Drawing.Point(298, 154);
+            this.guna2Panel4.Location = new System.Drawing.Point(289, 154);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel4.Size = new System.Drawing.Size(232, 53);
@@ -807,7 +875,7 @@
             this.guna2Panel19.Controls.Add(this.label_total_funcionarios);
             this.guna2Panel19.Controls.Add(this.label26);
             this.guna2Panel19.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel19.Location = new System.Drawing.Point(561, 309);
+            this.guna2Panel19.Location = new System.Drawing.Point(552, 309);
             this.guna2Panel19.Name = "guna2Panel19";
             this.guna2Panel19.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel19.Size = new System.Drawing.Size(232, 53);
@@ -868,7 +936,7 @@
             this.guna2Panel12.Controls.Add(this.label_total_municipios);
             this.guna2Panel12.Controls.Add(this.label23);
             this.guna2Panel12.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel12.Location = new System.Drawing.Point(818, 6);
+            this.guna2Panel12.Location = new System.Drawing.Point(809, 6);
             this.guna2Panel12.Name = "guna2Panel12";
             this.guna2Panel12.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel12.Size = new System.Drawing.Size(232, 53);
@@ -930,7 +998,7 @@
             this.guna2Panel18.Controls.Add(this.label_patentes);
             this.guna2Panel18.Controls.Add(this.label24);
             this.guna2Panel18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel18.Location = new System.Drawing.Point(40, 385);
+            this.guna2Panel18.Location = new System.Drawing.Point(31, 385);
             this.guna2Panel18.Name = "guna2Panel18";
             this.guna2Panel18.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel18.Size = new System.Drawing.Size(232, 53);
@@ -991,7 +1059,7 @@
             this.guna2Panel8.Controls.Add(this.label_total_beneficios);
             this.guna2Panel8.Controls.Add(this.label15);
             this.guna2Panel8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel8.Location = new System.Drawing.Point(561, 80);
+            this.guna2Panel8.Location = new System.Drawing.Point(552, 80);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel8.Size = new System.Drawing.Size(232, 53);
@@ -1052,7 +1120,7 @@
             this.guna2Panel17.Controls.Add(this.label_total_evidencias);
             this.guna2Panel17.Controls.Add(this.label20);
             this.guna2Panel17.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel17.Location = new System.Drawing.Point(561, 231);
+            this.guna2Panel17.Location = new System.Drawing.Point(552, 231);
             this.guna2Panel17.Name = "guna2Panel17";
             this.guna2Panel17.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel17.Size = new System.Drawing.Size(232, 53);
@@ -1113,7 +1181,7 @@
             this.guna2Panel3.Controls.Add(this.label_total_casos);
             this.guna2Panel3.Controls.Add(this.label5);
             this.guna2Panel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel3.Location = new System.Drawing.Point(40, 154);
+            this.guna2Panel3.Location = new System.Drawing.Point(31, 154);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel3.Size = new System.Drawing.Size(232, 53);
@@ -1174,7 +1242,7 @@
             this.guna2Panel16.Controls.Add(this.label_total_horas_extras);
             this.guna2Panel16.Controls.Add(this.label16);
             this.guna2Panel16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel16.Location = new System.Drawing.Point(298, 309);
+            this.guna2Panel16.Location = new System.Drawing.Point(289, 309);
             this.guna2Panel16.Name = "guna2Panel16";
             this.guna2Panel16.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel16.Size = new System.Drawing.Size(232, 53);
@@ -1235,7 +1303,7 @@
             this.guna2Panel9.Controls.Add(this.label_total_provincias);
             this.guna2Panel9.Controls.Add(this.label17);
             this.guna2Panel9.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel9.Location = new System.Drawing.Point(561, 6);
+            this.guna2Panel9.Location = new System.Drawing.Point(552, 6);
             this.guna2Panel9.Name = "guna2Panel9";
             this.guna2Panel9.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel9.Size = new System.Drawing.Size(232, 53);
@@ -1297,7 +1365,7 @@
             this.guna2Panel15.Controls.Add(this.label_ferias);
             this.guna2Panel15.Controls.Add(this.label12);
             this.guna2Panel15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel15.Location = new System.Drawing.Point(40, 309);
+            this.guna2Panel15.Location = new System.Drawing.Point(31, 309);
             this.guna2Panel15.Name = "guna2Panel15";
             this.guna2Panel15.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel15.Size = new System.Drawing.Size(232, 53);
@@ -1358,7 +1426,7 @@
             this.guna2Panel5.Controls.Add(this.label_total_afastamentos);
             this.guna2Panel5.Controls.Add(this.label9);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(298, 80);
+            this.guna2Panel5.Location = new System.Drawing.Point(289, 80);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel5.Size = new System.Drawing.Size(232, 53);
@@ -1419,7 +1487,7 @@
             this.guna2Panel14.Controls.Add(this.label_total_especialidades);
             this.guna2Panel14.Controls.Add(this.label8);
             this.guna2Panel14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel14.Location = new System.Drawing.Point(298, 231);
+            this.guna2Panel14.Location = new System.Drawing.Point(289, 231);
             this.guna2Panel14.Name = "guna2Panel14";
             this.guna2Panel14.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel14.Size = new System.Drawing.Size(232, 53);
@@ -1480,7 +1548,7 @@
             this.guna2Panel2.Controls.Add(this.label_total_bairro_ruas);
             this.guna2Panel2.Controls.Add(this.label3);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(40, 80);
+            this.guna2Panel2.Location = new System.Drawing.Point(31, 80);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel2.Size = new System.Drawing.Size(232, 53);
@@ -1543,7 +1611,7 @@
             this.guna2Panel13.Controls.Add(this.label_total_departamentos_funcionarios);
             this.guna2Panel13.Controls.Add(this.label4);
             this.guna2Panel13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel13.Location = new System.Drawing.Point(40, 231);
+            this.guna2Panel13.Location = new System.Drawing.Point(31, 231);
             this.guna2Panel13.Name = "guna2Panel13";
             this.guna2Panel13.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel13.Size = new System.Drawing.Size(232, 53);
@@ -1626,7 +1694,7 @@
             this.guna2Panel6.Controls.Add(this.label_total_paises);
             this.guna2Panel6.Controls.Add(this.label11);
             this.guna2Panel6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel6.Location = new System.Drawing.Point(298, 7);
+            this.guna2Panel6.Location = new System.Drawing.Point(289, 7);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel6.Size = new System.Drawing.Size(232, 53);
@@ -1688,7 +1756,7 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.btn_atualizar);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(10)))), ((int)(((byte)(22)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(40, 7);
+            this.guna2Panel1.Location = new System.Drawing.Point(31, 7);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.Color = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(22)))));
             this.guna2Panel1.Size = new System.Drawing.Size(232, 53);
@@ -1740,12 +1808,28 @@
             this.btn_atualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_atualizar.UseVisualStyleBackColor = false;
             // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.panel2;
+            this.guna2VScrollBar1.BorderRadius = 4;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 452;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(1076, 27);
+            this.guna2VScrollBar1.Maximum = 514;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 452);
+            this.guna2VScrollBar1.SmallChange = 5;
+            this.guna2VScrollBar1.TabIndex = 54;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            // 
             // Form_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(26)))), ((int)(((byte)(41)))));
             this.ClientSize = new System.Drawing.Size(1094, 479);
+            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1757,6 +1841,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.guna2Panel25.ResumeLayout(false);
+            this.guna2Panel25.PerformLayout();
             this.guna2Panel24.ResumeLayout(false);
             this.guna2Panel24.PerformLayout();
             this.guna2Panel23.ResumeLayout(false);
@@ -1913,5 +1999,10 @@
         private FontAwesome.Sharp.IconButton iconButton23;
         private FontAwesome.Sharp.IconButton iconButton5;
         private FontAwesome.Sharp.IconButton iconButton24;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel25;
+        private FontAwesome.Sharp.IconButton iconButton25;
+        private System.Windows.Forms.Label label_treinamento;
+        private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
     }
 }

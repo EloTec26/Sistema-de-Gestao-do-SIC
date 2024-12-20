@@ -25,6 +25,7 @@ namespace Capa_Apresentacao
             toolTip1.SetToolTip(btn_Minimizar, "Minimizar");
             toolTip1.SetToolTip(btn_perfil_cima, "Ocultar perfil");
             toolTip1.SetToolTip(btn_perfil_baixo, "Mostrar perfil");
+            toolTip1.SetToolTip(btn_perfil_usuario, "Dados completos do usuaário");
 
         }
         private void Form_Principal_Load(object sender, EventArgs e)
