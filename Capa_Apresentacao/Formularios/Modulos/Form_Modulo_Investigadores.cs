@@ -36,7 +36,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
         private void filtrar()
         {
             // buscarS continentes
-            text_continente.DataSource = d_Continentes.selecionar_continentes();
+            text_continente.DataSource = d_Continentes.selecionar_continentes_combobox();
             text_continente.DisplayMember = "nome";
             text_continente.ValueMember = "id_continente";
         }
@@ -71,7 +71,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
         private void filtro_curso()
         {
             // buscar cursos
-            text_curso.DataSource = d_Cursos.selecionar_Cursos();
+            text_curso.DataSource = d_Cursos.selecionar_Cursos_Combo_Box();
             text_curso.DisplayMember = "nome";
             text_curso.ValueMember = "id_curso";
         }
@@ -118,11 +118,9 @@ namespace Capa_Apresentacao.Formularios.Modulos
         private void selecionar_dados_comboBoxs()
         {
             // buscar níveis acadêmicos
-            text_nivel_academico.DataSource = d_Niveis_Academicos.selecionar_niveis_academicos();
+            text_nivel_academico.DataSource = d_Niveis_Academicos.selecionar_niveis_academicos_combo_box();
             text_nivel_academico.DisplayMember = "nome";
             text_nivel_academico.ValueMember = "id_nivel_academico";
-
-           
 
             // buscar patentes
             text_patente.DataSource = d_Patentes.selecionar_patentes_combobox();

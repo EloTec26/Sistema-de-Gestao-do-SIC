@@ -209,7 +209,7 @@
             this.panel2.Controls.Add(this.guna2Separator1);
             this.panel2.Controls.Add(this.btn_Atualizar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 476);
+            this.panel2.Location = new System.Drawing.Point(0, 397);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(822, 106);
             this.panel2.TabIndex = 117;
@@ -375,7 +375,7 @@
             this.panel_Conteudo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Conteudo.Location = new System.Drawing.Point(0, 34);
             this.panel_Conteudo.Name = "panel_Conteudo";
-            this.panel_Conteudo.Size = new System.Drawing.Size(822, 442);
+            this.panel_Conteudo.Size = new System.Drawing.Size(822, 363);
             this.panel_Conteudo.TabIndex = 118;
             // 
             // label_msg_descricao
@@ -1172,12 +1172,12 @@
             this.guna2VScrollBar1.BindingContainer = this.panel_Conteudo;
             this.guna2VScrollBar1.BorderRadius = 4;
             this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 442;
+            this.guna2VScrollBar1.LargeChange = 363;
             this.guna2VScrollBar1.Location = new System.Drawing.Point(804, 34);
             this.guna2VScrollBar1.Maximum = 557;
             this.guna2VScrollBar1.Name = "guna2VScrollBar1";
             this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 442);
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 363);
             this.guna2VScrollBar1.SmallChange = 5;
             this.guna2VScrollBar1.TabIndex = 199;
             this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -1187,7 +1187,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            this.ClientSize = new System.Drawing.Size(822, 582);
+            this.ClientSize = new System.Drawing.Size(822, 503);
             this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.panel_Conteudo);
             this.Controls.Add(this.panel2);

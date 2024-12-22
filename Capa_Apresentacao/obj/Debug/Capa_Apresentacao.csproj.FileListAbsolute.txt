@@ -251,3 +251,4 @@ D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Mod
 D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Formulario_Dashboard.Form_Painel_Administrativo.resources
 D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Modulos.Form_Modulo_Treinamentos.resources
 D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Lista_Formularios.Form_Lista_Treinamentos.resources
+D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Formularios_Relatorios.Form_Relatorio_Evento_Casos.resources

@@ -33,7 +33,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
         private void filtrar()
         {
             // buscarS continentes
-            text_continente.DataSource = d_Continentes.selecionar_continentes();
+            text_continente.DataSource = d_Continentes.selecionar_continentes_combobox();
             text_continente.DisplayMember = "nome";
             text_continente.ValueMember = "id_continente";
         }

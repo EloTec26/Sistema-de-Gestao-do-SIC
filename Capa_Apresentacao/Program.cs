@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_Apresentacao.Formularios;
 using Capa_Apresentacao.Formularios.Formulario_Dashboard;
+using Capa_Apresentacao.Formularios.Formularios_Relatorios;
 
 namespace Capa_Apresentacao
 {
@@ -23,6 +24,7 @@ namespace Capa_Apresentacao
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Login());
+            //Application.Run(new Form_Relatorio_Evento_Casos());
         }
     }
 }

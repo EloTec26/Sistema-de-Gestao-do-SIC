@@ -72,6 +72,7 @@
     <Compile Include="Entidades\e_comum_usuarios.cs" />
     <Compile Include="Entidades\e_comum_vitimas.cs" />
     <Compile Include="Entidades\e_comum_horas_extras.cs" />
+    <Compile Include="Entidade_Relatorio\Entidade_Relatorio_Evento_Casos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

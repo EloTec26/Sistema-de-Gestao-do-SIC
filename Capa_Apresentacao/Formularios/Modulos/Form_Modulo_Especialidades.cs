@@ -21,7 +21,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
         }
         private void selecionar_Cursos_Exbir_Combo_Box()
         {
-            text_curso.DataSource = d_Cursos.selecionar_Cursos();
+            text_curso.DataSource = d_Cursos.selecionar_Cursos_Combo_Box();
             text_curso.DisplayMember = "nome";
             text_curso.ValueMember = "id_curso";
         }

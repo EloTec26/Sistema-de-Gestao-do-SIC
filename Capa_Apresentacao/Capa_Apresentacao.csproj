@@ -84,6 +84,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Evento_Casos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Evento_Casos.Designer.cs">
+      <DependentUpon>Form_Relatorio_Evento_Casos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Formulario_Dashboard\Form_Painel_Administrativo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -453,6 +459,10 @@
     <Compile Include="Formularios\Modulos\Validacao_Campos_Formularios\validacao_campos_formularios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Form_Relatorio_Evento_Casos.resx">
+      <DependentUpon>Form_Relatorio_Evento_Casos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report_Evento_Casos.rdlc" />
     <EmbeddedResource Include="Formularios\Formulario_Dashboard\Form_Painel_Administrativo.resx">
       <DependentUpon>Form_Painel_Administrativo.cs</DependentUpon>
     </EmbeddedResource>
@@ -646,6 +656,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Capa_Apresentacao_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Evento_Casos.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -673,9 +684,7 @@
       <Version>1.0.0</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formularios\Formularios_Relatorios\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Capa_Comum\Capa_Comum.csproj">
       <Project>{9a70de84-9051-4540-8976-0fc87558d808}</Project>

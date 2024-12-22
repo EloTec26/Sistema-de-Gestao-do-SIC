@@ -213,7 +213,7 @@
             this.btn_visualizar_palavra_passe.Size = new System.Drawing.Size(227, 23);
             this.btn_visualizar_palavra_passe.TabIndex = 19;
             this.btn_visualizar_palavra_passe.Text = "  Visualizar a palavra-passe...";
-            this.btn_visualizar_palavra_passe.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.btn_visualizar_palavra_passe.UncheckedState.BorderColor = System.Drawing.Color.Gray;
             this.btn_visualizar_palavra_passe.UncheckedState.BorderRadius = 0;
             this.btn_visualizar_palavra_passe.UncheckedState.BorderThickness = 0;
             this.btn_visualizar_palavra_passe.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));

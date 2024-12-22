@@ -24,7 +24,7 @@ namespace Capa_Dominio
             Validadar_Nomes_Gerais(vitimas.primeiro_nome, "[ERRO] - O campo 'Primeiro nome', deve conter somente letras e ter no mínimo 3 caracteres.");
             Validadar_Nomes_Gerais(vitimas.nome_meio, "[ERRO] - O campo 'Nome do meio', deve conter somente letras e ter no mínimo 3 caracteres.");
             Validadar_Nomes_Gerais(vitimas.ultimo_nome, "[ERRO] - O campo 'Último nome', deve conter somente letras e ter no mínimo 3 caracteres.");
-            Validadar_Nomes_Gerais(vitimas.e_mail, "[ERRO] - O campo 'E-mail', deve conter somente letras e ter no mínimo 3 caracteres.");
+            Validar_Email(vitimas.e_mail);
         }
         public void inserir_vitimas(e_comum_vitimas vitimas)
         {

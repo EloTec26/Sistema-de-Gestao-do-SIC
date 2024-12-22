@@ -97,6 +97,7 @@
     <Compile Include="Dominio_Pesquisas\dominio_pesquisar_vitimas.cs" />
     <Compile Include="Dominio_Pesquisas\dominio_pesquisar_continentes.cs" />
     <Compile Include="dominio_provincias.cs" />
+    <Compile Include="Dominio_Relatorio\Dominio_Relatorio_Evento_Casos.cs" />
     <Compile Include="dominio_suspeitos.cs" />
     <Compile Include="dominio_testemunhas.cs" />
     <Compile Include="dominio_treinamentos.cs" />
@@ -114,6 +115,10 @@
       <Project>{f5a18ac1-1d22-4914-b854-0993a99d505b}</Project>
       <Name>Capa_Dados</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\Capa_Comum.Entidade_Relatorio.Entidade_Relatorio_Evento_Casos.datasource" />
+    <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Evento_Casos.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

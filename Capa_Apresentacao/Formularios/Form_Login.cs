@@ -26,7 +26,7 @@ namespace Capa_Apresentacao
         private void InitializeLockoutTimer()
         {
             lockoutTimer = new Timer();
-            lockoutTimer.Interval = 30; // 1 segundo em milissegundos (para contagem regressiva)
+            lockoutTimer.Interval = 70; // 1 segundo em milissegundos (para contagem regressiva)
             lockoutTimer.Tick += LockoutTimer_Tick;
         }
 

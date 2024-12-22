@@ -24,6 +24,7 @@ namespace Capa_Dominio
             Validadar_Telefone(usuarios.telefone2);
             Validar_Bilhete_Identidade(usuarios.bi);
             Validar_Palavra_Passe(usuarios.palavra_passe);
+            Validar_Email(usuarios.e_mail);
         }
         public void inserir_usuarios(e_comum_usuarios usuarios)
         {
