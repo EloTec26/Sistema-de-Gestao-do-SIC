@@ -52,7 +52,6 @@ namespace Capa_Dados
                     cmd.Parameters.AddWithValue("@primeiro_nome", usuarios.primeiro_nome);
                     cmd.Parameters.AddWithValue("@nome_meio", usuarios.nome_meio);
                     cmd.Parameters.AddWithValue("@ultimo_nome", usuarios.ultimo_nome);
-                    //cmd.Parameters.AddWithValue("@data_nascimento", usuarios.data_nascimento);
                     cmd.Parameters.AddWithValue("@bi", usuarios.bi);
                     cmd.Parameters.AddWithValue("@sexo", usuarios.sexo);
                     cmd.Parameters.AddWithValue("@telefone1", usuarios.telefone1);
@@ -60,8 +59,6 @@ namespace Capa_Dados
                     cmd.Parameters.AddWithValue("@e_mail", usuarios.e_mail);
                     cmd.Parameters.AddWithValue("@tipo_usuario", usuarios.tipo_usuario);
                     cmd.Parameters.AddWithValue("@palavra_passe", usuarios.palavra_passe);
-                    //cmd.Parameters.AddWithValue("@data_registro", usuarios.data_registro);
-                    //cmd.Parameters.AddWithValue("@data_atualizacao", usuarios.data_atualizacao);
 
                     cmd.ExecuteNonQuery();
                     
@@ -89,7 +86,6 @@ namespace Capa_Dados
                     cmd.Parameters.AddWithValue("@primeiro_nome", usuarios.primeiro_nome);
                     cmd.Parameters.AddWithValue("@nome_meio", usuarios.nome_meio);
                     cmd.Parameters.AddWithValue("@ultimo_nome", usuarios.ultimo_nome);
-                    //cmd.Parameters.AddWithValue("@data_nascimento", usuarios.data_nascimento);
                     cmd.Parameters.AddWithValue("@bi", usuarios.bi);
                     cmd.Parameters.AddWithValue("@sexo", usuarios.sexo);
                     cmd.Parameters.AddWithValue("@telefone1", usuarios.telefone1);
@@ -97,8 +93,6 @@ namespace Capa_Dados
                     cmd.Parameters.AddWithValue("@e_mail", usuarios.e_mail);
                     cmd.Parameters.AddWithValue("@tipo_usuario", usuarios.tipo_usuario);
                     cmd.Parameters.AddWithValue("@palavra_passe", usuarios.palavra_passe);
-                    //cmd.Parameters.AddWithValue("@data_registro", usuarios.data_registro);
-                    //cmd.Parameters.AddWithValue("@data_atualizacao", usuarios.data_atualizacao);
 
                     cmd.ExecuteNonQuery();
 

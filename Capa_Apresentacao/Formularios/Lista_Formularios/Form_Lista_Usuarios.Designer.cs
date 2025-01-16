@@ -341,6 +341,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "Form_Lista_Usuarios";
             this.Text = "Form_Lista_Usuarios";
+            this.Load += new System.EventHandler(this.Form_Lista_Usuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

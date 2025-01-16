@@ -1,4 +1,5 @@
-﻿using Capa_Comum.Entidades;
+﻿using Capa_Comum.Comum_Permissoes.Cache;
+using Capa_Comum.Entidades;
 using Capa_Dominio;
 using Capa_Dominio.Dominio_Pesquisas;
 using System;
@@ -22,6 +23,18 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_cadastrar, "Cadastrar");
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
+
+            permissoesUsuarios();
+        }
+        //Permissões de usuários
+        private void permissoesUsuarios()
+        {
+            if (comum_cache_permissoes_usuarios.cache_inicio_sessao.tipo_usuario == comum_cache_funcoes_usuarios.Instrutor_Processual)
+            {
+                btn_atualizar.Visible = false;
+                btn_cadastrar.Visible = false;
+                btn_eliminar.Visible = false;
+            }
         }
         private void selecionar_eventos_casos()
         {
@@ -55,7 +68,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 form_Modulo_Eventos.text_data_evento.Text = dgv_eventos_casos.CurrentRow.Cells[6].Value.ToString();
                 form_Modulo_Eventos.text_tipo_evento.Text = dgv_eventos_casos.CurrentRow.Cells[7].Value.ToString();
                 form_Modulo_Eventos.text_descricao.Text = dgv_eventos_casos.CurrentRow.Cells[8].Value.ToString();
-               
+
                 form_Modulo_Eventos.btn_salvar.Text = "Atualizar";
                 form_Modulo_Eventos.label5.Text = "Atualizar";
                 form_Modulo_Eventos.btn_salvar.FillColor = Color.SeaGreen;
@@ -66,26 +79,33 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
 
         private void dgv_eventos_casos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (dgv_eventos_casos.SelectedRows.Count > 0)
+            if (comum_cache_permissoes_usuarios.cache_inicio_sessao.tipo_usuario == comum_cache_funcoes_usuarios.Instrutor_Processual)
             {
-                Formularios.Modulos.Form_Modulo_Eventos_Casos form_Modulo_Eventos = new Modulos.Form_Modulo_Eventos_Casos();
-                form_Modulo_Eventos.FormClosed += Form_Modulo_Eventos_FormClosed;
+                MessageDialog_Error.Show("Erro - Acção negada!", "Um erro ocorreu");
+            }
+            else
+            {
+                if (dgv_eventos_casos.SelectedRows.Count > 0)
+                {
+                    Formularios.Modulos.Form_Modulo_Eventos_Casos form_Modulo_Eventos = new Modulos.Form_Modulo_Eventos_Casos();
+                    form_Modulo_Eventos.FormClosed += Form_Modulo_Eventos_FormClosed;
 
-                form_Modulo_Eventos.label_id.Text = dgv_eventos_casos.CurrentRow.Cells[0].Value.ToString();
-                form_Modulo_Eventos.text_caso.Text = dgv_eventos_casos.CurrentRow.Cells[1].Value.ToString();
-                form_Modulo_Eventos.text_vitima.Text = dgv_eventos_casos.CurrentRow.Cells[2].Value.ToString();
-                form_Modulo_Eventos.text_suspeito.Text = dgv_eventos_casos.CurrentRow.Cells[3].Value.ToString();
-                form_Modulo_Eventos.text_testemunha.Text = dgv_eventos_casos.CurrentRow.Cells[4].Value.ToString();
-                form_Modulo_Eventos.text_investigador.Text = dgv_eventos_casos.CurrentRow.Cells[5].Value.ToString();
-                form_Modulo_Eventos.text_data_evento.Text = dgv_eventos_casos.CurrentRow.Cells[6].Value.ToString();
-                form_Modulo_Eventos.text_tipo_evento.Text = dgv_eventos_casos.CurrentRow.Cells[7].Value.ToString();
-                form_Modulo_Eventos.text_descricao.Text = dgv_eventos_casos.CurrentRow.Cells[8].Value.ToString();
-              
-                form_Modulo_Eventos.btn_salvar.Text = "Atualizar";
-                form_Modulo_Eventos.label5.Text = "Atualizar";
-                form_Modulo_Eventos.btn_salvar.FillColor = Color.SeaGreen;
+                    form_Modulo_Eventos.label_id.Text = dgv_eventos_casos.CurrentRow.Cells[0].Value.ToString();
+                    form_Modulo_Eventos.text_caso.Text = dgv_eventos_casos.CurrentRow.Cells[1].Value.ToString();
+                    form_Modulo_Eventos.text_vitima.Text = dgv_eventos_casos.CurrentRow.Cells[2].Value.ToString();
+                    form_Modulo_Eventos.text_suspeito.Text = dgv_eventos_casos.CurrentRow.Cells[3].Value.ToString();
+                    form_Modulo_Eventos.text_testemunha.Text = dgv_eventos_casos.CurrentRow.Cells[4].Value.ToString();
+                    form_Modulo_Eventos.text_investigador.Text = dgv_eventos_casos.CurrentRow.Cells[5].Value.ToString();
+                    form_Modulo_Eventos.text_data_evento.Text = dgv_eventos_casos.CurrentRow.Cells[6].Value.ToString();
+                    form_Modulo_Eventos.text_tipo_evento.Text = dgv_eventos_casos.CurrentRow.Cells[7].Value.ToString();
+                    form_Modulo_Eventos.text_descricao.Text = dgv_eventos_casos.CurrentRow.Cells[8].Value.ToString();
 
-                form_Modulo_Eventos.ShowDialog();
+                    form_Modulo_Eventos.btn_salvar.Text = "Atualizar";
+                    form_Modulo_Eventos.label5.Text = "Atualizar";
+                    form_Modulo_Eventos.btn_salvar.FillColor = Color.SeaGreen;
+
+                    form_Modulo_Eventos.ShowDialog();
+                }
             }
         }
         private void btn_eliminar_Click(object sender, EventArgs e)

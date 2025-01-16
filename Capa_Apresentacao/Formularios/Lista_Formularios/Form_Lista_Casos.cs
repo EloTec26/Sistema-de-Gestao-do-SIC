@@ -3,6 +3,7 @@ using Capa_Dominio;
 using Capa_Dominio.Dominio_Pesquisas;
 using System;
 using System.Windows.Forms;
+using Capa_Comum.Comum_Permissoes.Cache;
 
 namespace Capa_Apresentacao.Formularios.Lista_Formularios
 {
@@ -18,6 +19,16 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_cadastrar, "Cadastrar");
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
+            permissoesUsuarios();
+        }
+        private void permissoesUsuarios()
+        {
+            if (comum_cache_permissoes_usuarios.cache_inicio_sessao.tipo_usuario == comum_cache_funcoes_usuarios.Instrutor_Processual)
+            {
+                btn_atualizar.Visible = false;
+                btn_cadastrar.Visible = false;
+                btn_eliminar.Visible = false;
+            }
         }
         private void selecionar_Casos()
         {
@@ -37,7 +48,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
 
         private void btn_atualizar_Click(object sender, EventArgs e)
         {
-
             if (dgv_casos.SelectedCells.Count > 0)
             {
                 Formularios.Modulos.Form_Modulo_Casos modulo_Casos = new Modulos.Form_Modulo_Casos();
@@ -66,7 +76,41 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 MessageDialog_Error.Show("Por favor, selecione o usuário que pretende atualizar e tente novamente!", "Falha");
             }
         }
+        private void dgv_casos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(comum_cache_permissoes_usuarios.cache_inicio_sessao.tipo_usuario == comum_cache_funcoes_usuarios.Instrutor_Processual)
+            {
+                MessageDialog_Error.Show("Erro - Acção negada", "Ocorreu um erro");
+            }
+            else
+            {
+                if (dgv_casos.SelectedCells.Count > 0)
+                {
+                    Formularios.Modulos.Form_Modulo_Casos modulo_Casos = new Modulos.Form_Modulo_Casos();
+                    modulo_Casos.FormClosed += Modulo_Casos_FormClosed;
 
+                    modulo_Casos.label_id.Text = dgv_casos.CurrentRow.Cells[0].Value.ToString();
+                    modulo_Casos.text_titulo.Text = dgv_casos.CurrentRow.Cells[1].Value.ToString();
+                    modulo_Casos.text_investigador.Text = dgv_casos.CurrentRow.Cells[2].Value.ToString();
+                    modulo_Casos.text_departamento.Text = dgv_casos.CurrentRow.Cells[3].Value.ToString();
+                    modulo_Casos.text_data_abetura.Text = dgv_casos.CurrentRow.Cells[4].Value.ToString();
+                    modulo_Casos.text_data_fechamento.Text = dgv_casos.CurrentRow.Cells[5].Value.ToString();
+                    modulo_Casos.text_estado.Text = dgv_casos.CurrentRow.Cells[6].Value.ToString();
+                    modulo_Casos.text_descricao.Text = dgv_casos.CurrentRow.Cells[7].Value.ToString();
+
+                    modulo_Casos.label5.Text = "Atualizar caso";
+                    modulo_Casos.btn_salvar.Visible = false;
+                    modulo_Casos.btn_Atualizar.Visible = true;
+
+                    modulo_Casos.ShowDialog();
+                    selecionar_Casos();
+                }
+                else
+                {
+                    MessageDialog_Error.Show("Por favor, selecione o usuário que pretende atualizar e tente novamente!", "Falha");
+                }
+            }
+        }
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             if (dgv_casos.SelectedRows.Count > 0)

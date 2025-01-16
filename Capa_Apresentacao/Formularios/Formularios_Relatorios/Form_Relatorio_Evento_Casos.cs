@@ -42,12 +42,14 @@ namespace Capa_Apresentacao.Formularios.Formularios_Relatorios
                 {
                     codigo = Ler_Lista["codigo"].ToString(),
                     descricao_vitima = Ler_Lista["descricao_vitima"].ToString(),
-                    endereco = Ler_Lista["endereco"].ToString(),
                     inf_caso = Ler_Lista["inf_caso"].ToString(),
                     responsavel = Ler_Lista["responsavel"].ToString(),
                     testemunha = Ler_Lista["testemunha"].ToString(),
-                    suspeito = Ler_Lista["suspeito"].ToString(),
-                    data_registro = Convert.ToDateTime(Ler_Lista["data_registro"].ToString())
+                    endereco = Ler_Lista["endereco"].ToString(),
+                    data_do_evento = Convert.ToDateTime(Ler_Lista["data_do_evento"].ToString()),
+                    total_eventos = Ler_Lista["total_eventos"].ToString(),
+                    total_masculino = Ler_Lista["total_masculino"].ToString(),
+                    total_feminino = Ler_Lista["total_feminino"].ToString()
                 });
             }
             reportViewer1.LocalReport.DataSources.Clear();

@@ -103,6 +103,8 @@
             this.btn_submenu_casos = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_submenu_eventos_casos = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.rjDropdownMenu_Rel_Evento_Caso = new CustomBox.RJControls.RJDropdownMenu(this.components);
+            this.relatórioDeEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Logo)).BeginInit();
             this.panel_menu.SuspendLayout();
@@ -115,6 +117,7 @@
             this.rjDropdownMenu2.SuspendLayout();
             this.rjDropdownMenu_escolaridades.SuspendLayout();
             this.rjDropdownMenu_eventos_casos.SuspendLayout();
+            this.rjDropdownMenu_Rel_Evento_Caso.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -506,6 +509,7 @@
             this.btn_relatorios.TabIndex = 21;
             this.btn_relatorios.Text = " Gerir Relatórios";
             this.btn_relatorios.UseVisualStyleBackColor = false;
+            this.btn_relatorios.Click += new System.EventHandler(this.btn_relatorios_Click);
             // 
             // panel_menu_btn
             // 
@@ -767,6 +771,7 @@
             this.panel_conteudo.Name = "panel_conteudo";
             this.panel_conteudo.Size = new System.Drawing.Size(1065, 484);
             this.panel_conteudo.TabIndex = 12;
+            this.panel_conteudo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_conteudo_Paint);
             // 
             // guna2AnimateWindow1
             // 
@@ -1061,6 +1066,26 @@
             this.btn_submenu_eventos_casos.Text = "Eventos e casos";
             this.btn_submenu_eventos_casos.Click += new System.EventHandler(this.btn_submenu_eventos_casos_Click);
             // 
+            // rjDropdownMenu_Rel_Evento_Caso
+            // 
+            this.rjDropdownMenu_Rel_Evento_Caso.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjDropdownMenu_Rel_Evento_Caso.IsMainMenu = false;
+            this.rjDropdownMenu_Rel_Evento_Caso.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.relatórioDeEventosToolStripMenuItem});
+            this.rjDropdownMenu_Rel_Evento_Caso.MenuItemHeight = 25;
+            this.rjDropdownMenu_Rel_Evento_Caso.MenuItemTextColor = System.Drawing.Color.Empty;
+            this.rjDropdownMenu_Rel_Evento_Caso.Name = "rjDropdownMenu_Rel_Evento_Caso";
+            this.rjDropdownMenu_Rel_Evento_Caso.PrimaryColor = System.Drawing.Color.Empty;
+            this.rjDropdownMenu_Rel_Evento_Caso.Size = new System.Drawing.Size(242, 30);
+            // 
+            // relatórioDeEventosToolStripMenuItem
+            // 
+            this.relatórioDeEventosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.relatórioDeEventosToolStripMenuItem.Name = "relatórioDeEventosToolStripMenuItem";
+            this.relatórioDeEventosToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.relatórioDeEventosToolStripMenuItem.Text = "Relatório de eventos";
+            this.relatórioDeEventosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeEventosToolStripMenuItem_Click);
+            // 
             // Form_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -1096,6 +1121,7 @@
             this.rjDropdownMenu2.ResumeLayout(false);
             this.rjDropdownMenu_escolaridades.ResumeLayout(false);
             this.rjDropdownMenu_eventos_casos.ResumeLayout(false);
+            this.rjDropdownMenu_Rel_Evento_Caso.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1175,5 +1201,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
+        private CustomBox.RJControls.RJDropdownMenu rjDropdownMenu_Rel_Evento_Caso;
+        private System.Windows.Forms.ToolStripMenuItem relatórioDeEventosToolStripMenuItem;
     }
 }

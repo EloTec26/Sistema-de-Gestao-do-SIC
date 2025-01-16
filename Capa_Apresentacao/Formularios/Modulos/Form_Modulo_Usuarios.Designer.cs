@@ -1137,6 +1137,7 @@
             this.Name = "Form_Modulo_Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Modulo_Usuarios";
+            this.Load += new System.EventHandler(this.Form_Modulo_Usuarios_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel_formulario.ResumeLayout(false);

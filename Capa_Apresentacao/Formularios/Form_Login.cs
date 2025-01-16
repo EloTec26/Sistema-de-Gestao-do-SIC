@@ -11,6 +11,7 @@ namespace Capa_Apresentacao
         private int attemptCount = 0;
         private Timer lockoutTimer;
         private int remainingSeconds;
+        private bool bloqueado = false;
         public Form_Login()
         {
             InitializeComponent();
@@ -22,7 +23,10 @@ namespace Capa_Apresentacao
             toolTip1.SetToolTip(btn_Restaurar, "Restaurar");
             toolTip1.SetToolTip(btn_Maximizar, "Maximizar");
             toolTip1.SetToolTip(btn_Minimizar, "Minimizar");
+
+            FormClosing += Form_Login_FormClosing;
         }
+
         private void InitializeLockoutTimer()
         {
             lockoutTimer = new Timer();
@@ -59,8 +63,6 @@ namespace Capa_Apresentacao
             SendMessage(this.Handle, 0x112, 0xf012, 0);
             this.WindowState = FormWindowState.Normal;
         }
-
-
         private void btn_iniciar_sessao_Click_1(object sender, EventArgs e)
         {
             if (text_palavra_passe.Text == "")
@@ -114,6 +116,7 @@ namespace Capa_Apresentacao
                             label_minutos.Text = $"O sistema será desbloquado dentro de {remainingSeconds} segundos.";
                             label_minutos.Visible = true;
                             lockoutTimer.Start();
+                            bloqueado = true;
                             label_erro.Text = "[ERRO] - Excedeste o número máximo de tentativas.\nO sistema foi bloqueado temporariamente.";
                         }
                     }
@@ -131,7 +134,7 @@ namespace Capa_Apresentacao
 
             if (remainingSeconds > 0)
             {
-                label_minutos.Text = $"E será desbloqueado dentro de {remainingSeconds} segundos.";
+                label_minutos.Text = $"Será desbloqueado dentro de {remainingSeconds} segundos.";
                 label_minutos.ForeColor = Color.Tomato;
             }
             else
@@ -149,11 +152,21 @@ namespace Capa_Apresentacao
                 lockoutTimer.Stop(); // Para o temporizador após a reativação do botão
                 attemptCount = 0; // Resetar o contador de tentativas
                 label_minutos.Visible = false;
+                bloqueado = false;
                 label_erro.Text = "O sistema foi desbloqueado. Por favor, tente novamente.";
                 label_erro.ForeColor = Color.Green;
             }
         }
 
+        private void Form_Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (bloqueado)
+            {
+                e.Cancel = true; // Cancela o fechamento do formulário
+                label_erro.Text= "O aplicativo está bloqueado. Você não pode fechá-lo agora.";
+                label_erro.Visible = true;
+            }
+        }
         private void btn_Limpar_Click(object sender, EventArgs e)
         {
             text_palavra_passe.Text = String.Empty;

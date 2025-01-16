@@ -64,11 +64,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label2.Location = new System.Drawing.Point(75, 193);
+            this.label2.Location = new System.Drawing.Point(74, 167);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 19);
+            this.label2.Size = new System.Drawing.Size(303, 19);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Serviço de Investiagação Criminal";
+            this.label2.Text = "SERVIÇOS DE INVESTIGAÇÃO CRIMINAL";
             // 
             // panel1
             // 
@@ -161,10 +161,10 @@
             this.guna2CirclePictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(95, 40);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(146, 51);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(241, 159);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(162, 113);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox1.TabIndex = 20;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -175,7 +175,7 @@
             this.label_erro.AutoSize = true;
             this.label_erro.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label_erro.ForeColor = System.Drawing.Color.Tomato;
-            this.label_erro.Location = new System.Drawing.Point(5, 294);
+            this.label_erro.Location = new System.Drawing.Point(12, 257);
             this.label_erro.Name = "label_erro";
             this.label_erro.Size = new System.Drawing.Size(130, 19);
             this.label_erro.TabIndex = 15;
@@ -208,11 +208,10 @@
             this.btn_visualizar_palavra_passe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_visualizar_palavra_passe.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_visualizar_palavra_passe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_visualizar_palavra_passe.Location = new System.Drawing.Point(10, 268);
+            this.btn_visualizar_palavra_passe.Location = new System.Drawing.Point(442, 209);
             this.btn_visualizar_palavra_passe.Name = "btn_visualizar_palavra_passe";
-            this.btn_visualizar_palavra_passe.Size = new System.Drawing.Size(227, 23);
+            this.btn_visualizar_palavra_passe.Size = new System.Drawing.Size(15, 14);
             this.btn_visualizar_palavra_passe.TabIndex = 19;
-            this.btn_visualizar_palavra_passe.Text = "  Visualizar a palavra-passe...";
             this.btn_visualizar_palavra_passe.UncheckedState.BorderColor = System.Drawing.Color.Gray;
             this.btn_visualizar_palavra_passe.UncheckedState.BorderRadius = 0;
             this.btn_visualizar_palavra_passe.UncheckedState.BorderThickness = 0;
@@ -236,7 +235,7 @@
             this.text_palavra_passe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_palavra_passe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_palavra_passe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_palavra_passe.Location = new System.Drawing.Point(10, 225);
+            this.text_palavra_passe.Location = new System.Drawing.Point(13, 197);
             this.text_palavra_passe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.text_palavra_passe.MaxLength = 16;
             this.text_palavra_passe.Name = "text_palavra_passe";
@@ -259,7 +258,7 @@
             this.btn_Limpar.FillColor = System.Drawing.Color.Tomato;
             this.btn_Limpar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Limpar.ForeColor = System.Drawing.Color.White;
-            this.btn_Limpar.Location = new System.Drawing.Point(162, 375);
+            this.btn_Limpar.Location = new System.Drawing.Point(162, 360);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(146, 45);
             this.btn_Limpar.TabIndex = 130;
@@ -279,7 +278,7 @@
             this.btn_iniciar_sessao.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btn_iniciar_sessao.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_iniciar_sessao.ForeColor = System.Drawing.Color.White;
-            this.btn_iniciar_sessao.Location = new System.Drawing.Point(10, 375);
+            this.btn_iniciar_sessao.Location = new System.Drawing.Point(10, 360);
             this.btn_iniciar_sessao.Name = "btn_iniciar_sessao";
             this.btn_iniciar_sessao.Size = new System.Drawing.Size(146, 45);
             this.btn_iniciar_sessao.TabIndex = 129;
@@ -289,9 +288,9 @@
             // guna2Separator1
             // 
             this.guna2Separator1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Separator1.Location = new System.Drawing.Point(10, 344);
+            this.guna2Separator1.Location = new System.Drawing.Point(13, 337);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(451, 21);
+            this.guna2Separator1.Size = new System.Drawing.Size(451, 10);
             this.guna2Separator1.TabIndex = 128;
             // 
             // label7
@@ -300,7 +299,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(142, 432);
+            this.label7.Location = new System.Drawing.Point(142, 427);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 19);
             this.label7.TabIndex = 134;
@@ -312,7 +311,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(12, 430);
+            this.label6.Location = new System.Drawing.Point(12, 425);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 19);
             this.label6.TabIndex = 133;
@@ -324,7 +323,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(379, 430);
+            this.label3.Location = new System.Drawing.Point(379, 425);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 132;
@@ -336,7 +335,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(92, 432);
+            this.label4.Location = new System.Drawing.Point(92, 427);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 17);
             this.label4.TabIndex = 131;
@@ -348,7 +347,7 @@
             this.label_minutos.AutoSize = true;
             this.label_minutos.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label_minutos.ForeColor = System.Drawing.Color.Tomato;
-            this.label_minutos.Location = new System.Drawing.Point(5, 331);
+            this.label_minutos.Location = new System.Drawing.Point(12, 298);
             this.label_minutos.Name = "label_minutos";
             this.label_minutos.Size = new System.Drawing.Size(130, 19);
             this.label_minutos.TabIndex = 135;
@@ -361,7 +360,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(13, 449);
+            this.label1.Location = new System.Drawing.Point(13, 444);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 17);
             this.label1.TabIndex = 136;
@@ -373,7 +372,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(405, 451);
+            this.label5.Location = new System.Drawing.Point(405, 446);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 16);
             this.label5.TabIndex = 137;
@@ -384,7 +383,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(26)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(476, 476);
+            this.ClientSize = new System.Drawing.Size(476, 471);
+            this.Controls.Add(this.btn_visualizar_palavra_passe);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -395,7 +395,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.text_palavra_passe);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.btn_visualizar_palavra_passe);
             this.Controls.Add(this.btn_Limpar);
             this.Controls.Add(this.label_erro);
             this.Controls.Add(this.btn_iniciar_sessao);

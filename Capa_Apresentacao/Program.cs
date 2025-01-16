@@ -24,7 +24,7 @@ namespace Capa_Apresentacao
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Login());
-            //Application.Run(new Form_Relatorio_Evento_Casos());
+           // Application.Run(new Form_Relatorio_Evento_Casos());
         }
     }
 }

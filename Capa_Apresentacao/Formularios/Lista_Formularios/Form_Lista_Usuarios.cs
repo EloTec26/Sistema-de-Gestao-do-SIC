@@ -23,10 +23,14 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         public Form_Lista_Usuarios()
         {
             InitializeComponent();
-            listar_Usuarios();
+           
             toolTip1.SetToolTip(btn_cadastrar, "Cadastrar");
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
+        }
+        private void Form_Lista_Usuarios_Load(object sender, EventArgs e)
+        {
+            listar_Usuarios();
         }
         private void listar_Usuarios()
         {
@@ -160,7 +164,5 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             dgv_usuarios.DataSource = p_Usuarios.pesquisar_Usuarios(text_pesquisar.Text);
         }
-
-    
     }
 }

@@ -23,9 +23,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
         public Form_Modulo_Usuarios()
         {
             InitializeComponent();
+        }
+        private void Form_Modulo_Usuarios_Load(object sender, EventArgs e)
+        {
             // chamar o método
             filtrar();
-
         }
         #region M´étodo para selecionar os dados e trazê-los nos seus respectivos comboBox´s
         private void filtrar()
@@ -120,7 +122,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
             string primeiro_Nome = text_primeiro_nome.Text;
             string nome_Meio = text_nome_meio.Text;
             string ultimo_nome = text_ultimo_nome.Text;
-            //DateTime data_Nascimento = text_data_nascimento.Value;
             string numero_Bi = text_numero_bi.Text;
             string sexo = text_sexo.Text;
             string primeiro_Numero_Telefone = text_primerio_numero_telefone.Text;
@@ -244,7 +245,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     }
                     if (erro_Duplicacao.Contains("palavra_passe"))
                     {
-                        MessageDialog_Error.Show("A 'Palavra-passe' inserida já existe!\nPor favor, insira um outro 'E-mail' e tente novamente!", "Erro de duplicação");
+                        MessageDialog_Error.Show("A 'Palavra-passe' inserida já existe!\nPor favor, insira uma outra 'Palavra-passe' e tente novamente!", "Erro de duplicação");
                         text_palavra_passe.Focus();
                     }
                     else
@@ -315,8 +316,9 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_ultimo_nome, label_msg_ultimo_nome, "Apenas letras são permitidas!");
         }
+
         #endregion
 
-
+      
     }
 }

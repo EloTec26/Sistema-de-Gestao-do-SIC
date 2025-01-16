@@ -92,7 +92,6 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 try
                 {
                     CapturarDados();
-                    c_Evento_Caso.id_evento_caso = Convert.ToInt32(label_id.Text);
                     DateTime data_Registro = DateTime.Now;
                     DateTime data_Atualizacao = DateTime.Now;
                     c_Evento_Caso.data_registro = data_Registro;
@@ -109,7 +108,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 }
                 catch (Exception Ex)
                 {
-                    MessageDialog_Error.Show("Não foi possível registrar/ Atualizar este evento-caso!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível registrar este evento-caso!", Ex.Message);
                 }
             }
         }
@@ -134,7 +133,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 }
                 catch (Exception Ex)
                 {
-                    MessageDialog_Error.Show("Não foi possível registrar/ Atualizar este evento-caso!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível atualizar este evento-caso!", Ex.Message);
                 }
             }
         }

@@ -18,6 +18,7 @@ namespace Capa_Apresentacao
             rjDropdownMenu2.PrimaryColor = Color.FromArgb(94, 148, 255);
             rjDropdownMenu_escolaridades.PrimaryColor = Color.FromArgb(94, 148, 255);
             rjDropdownMenu_eventos_casos.PrimaryColor = Color.FromArgb(94, 148, 255);
+            rjDropdownMenu_Rel_Evento_Caso.PrimaryColor = Color.FromArgb(94, 148, 255);
 
             toolTip1.SetToolTip(btn_Fechar, "Encerrar");
             toolTip1.SetToolTip(btn_Restaurar, "Restaurar");
@@ -31,7 +32,105 @@ namespace Capa_Apresentacao
         private void Form_Principal_Load(object sender, EventArgs e)
         {
             btn_Logo_Click(e, null);
+            permissoesInstrutorProcessual();
+            permissoesInvestigador();
+            permissoesAdministrativo();
         }
+        #region  //Permissões de usuários - Instrutor processal
+        private void permissoesInstrutorProcessual()
+        {
+            if(comum_cache_permissoes_usuarios.cache_inicio_sessao.tipo_usuario == comum_cache_funcoes_usuarios.Instrutor_Processual)
+            {
+                btn_sbumenu_continentes.Enabled = false;
+                sub_menu_paises.Enabled = false;
+                sub_menu_provincias.Enabled = false;
+                sub_menu_municipios.Enabled = false;
+                sub_menu_bairro_ruas.Enabled = false;
+                benefícosToolStripMenuItem.Enabled = false;
+                benefícosInvestigadoresToolStripMenuItem.Enabled = false;
+                toolStripMenuItem2_afastamentos.Enabled = false;
+                especialidadesToolStripMenuItem.Enabled = false;
+                cursosToolStripMenuItem.Enabled = false;
+                nívelAcadêmicosToolStripMenuItem.Enabled = false;
+                btn_Evidencias.Enabled = false;
+                btn_submenu_investigadores.Enabled = false;
+                toolStripMenuItem2_afastamentos.Enabled = false;
+                departamentosToolStripMenuItem.Enabled = false;
+                departamentosInvestigadoresToolStripMenuItem.Enabled = false;
+                cargosToolStripMenuItem.Enabled = false;
+                cargosInvestigadoresToolStripMenuItem.Enabled = false;
+                faltasToolStripMenuItem1.Enabled = false;
+                fériasToolStripMenuItem1.Enabled = false;
+                horasExtrasToolStripMenuItem1.Enabled = false;
+                patentesToolStripMenuItem1.Enabled = false;
+                btn_suspeitos.Enabled = false;
+                btn_testemunhas.Enabled = false;
+                btn_usuarios.Enabled = false;
+                btn_Vitimas.Enabled = false;
+                btn_painel_adimistrativo.Enabled = false;
+
+                relatórioDeEventosToolStripMenuItem.Visible = false;
+            }
+        }
+        #endregion
+        #region  //Permissões de usuários - Investigador
+        private void permissoesInvestigador()
+        {
+            if (comum_cache_permissoes_usuarios.cache_inicio_sessao.tipo_usuario == comum_cache_funcoes_usuarios.Investigador)
+            {
+                btn_sbumenu_continentes.Enabled = false;
+                sub_menu_paises.Enabled = false;
+                sub_menu_provincias.Enabled = false;
+                sub_menu_municipios.Enabled = false;
+                sub_menu_bairro_ruas.Enabled = false;
+                toolStripMenuItem2_afastamentos.Enabled = false;
+                benefícosToolStripMenuItem.Enabled = false;
+                benefícosInvestigadoresToolStripMenuItem.Enabled = false;
+                cargosToolStripMenuItem.Enabled = false;
+                cargosInvestigadoresToolStripMenuItem.Enabled = false;
+                cursosToolStripMenuItem.Enabled = false;
+                departamentosToolStripMenuItem.Enabled = false;
+                departamentosInvestigadoresToolStripMenuItem.Enabled = false;
+                especialidadesToolStripMenuItem.Enabled = false;
+                faltasToolStripMenuItem1.Enabled = false;
+                fériasToolStripMenuItem1.Enabled = false;
+                horasExtrasToolStripMenuItem1.Enabled = false;
+                patentesToolStripMenuItem1.Enabled = false;
+                treinamentosToolStripMenuItem.Enabled = false;
+                btn_submenu_investigadores.Enabled = false;
+
+                nívelAcadêmicosToolStripMenuItem.Enabled = false;
+                toolStripMenuItem2_afastamentos.Enabled = false;
+                btn_usuarios.Enabled = false;
+                btn_painel_adimistrativo.Enabled = false;
+
+                relatórioDeEventosToolStripMenuItem.Visible = false;
+
+            }
+        }
+        #endregion
+        #region  //Permissões de usuários - Administrativo
+        private void permissoesAdministrativo()
+        {
+            if (comum_cache_permissoes_usuarios.cache_inicio_sessao.tipo_usuario == comum_cache_funcoes_usuarios.Administrativo)
+            {
+                nívelAcadêmicosToolStripMenuItem.Enabled = true;
+                cargosToolStripMenuItem.Enabled = false;
+                cargosInvestigadoresToolStripMenuItem.Enabled = false;
+                btn_Evidencias.Enabled = false;
+                btn_submenu_casos.Enabled = false;
+                btn_submenu_eventos_casos.Enabled = false;
+                btn_suspeitos.Enabled = false;
+                btn_testemunhas.Enabled = false;
+                btn_usuarios.Enabled = false;
+                btn_Vitimas.Enabled = false;
+                treinamentosToolStripMenuItem.Enabled = false;
+                btn_painel_adimistrativo.Enabled = false;
+            }
+        }
+        #endregion
+
+
         // Métodos privados para mover o formulário
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -310,10 +409,19 @@ namespace Capa_Apresentacao
         {
             AbrirPainelConteudo(new Formularios.Lista_Formularios.Form_Lista_Treinamentos());
         }
+
+        private void panel_conteudo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btn_suspeitos_Click(object sender, EventArgs e)
         {
             Abrir_Sub_Menu(rjDropdownMenu2, sender);
         }
+
+      
+
         private void btn_escolaridade_Click(object sender, EventArgs e)
         {
             Abrir_Sub_Menu(rjDropdownMenu_escolaridades, sender);
@@ -321,6 +429,14 @@ namespace Capa_Apresentacao
         private void btn_casos_Click(object sender, EventArgs e)
         {
             Abrir_Sub_Menu(rjDropdownMenu_eventos_casos, sender);
+        }
+        private void btn_relatorios_Click(object sender, EventArgs e)
+        {
+            Abrir_Sub_Menu(rjDropdownMenu_Rel_Evento_Caso, sender);
+        }
+        private void relatórioDeEventosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirPainelConteudo(new Formularios.Formularios_Relatorios.Form_Relatorio_Evento_Casos());
         }
     }
 }
