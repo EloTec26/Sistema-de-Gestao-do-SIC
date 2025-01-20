@@ -9,15 +9,15 @@ namespace Capa_Comum.Entidades
     public class e_comum_vitimas
     {
         public int id_vitima { get; set; }
-        public int id_caso { get; set; }
-        public int id_continente { get; set; }
-        public int id_pais { get; set; }
-        public int id_provincia { get; set; }
-        public int id_municipio { get; set; }
-        public int id_bairro_rua { get; set; }
-        public int id_nivel_academico { get; set; }
-        public int id_curso { get; set; }
-        public int id_usuario { get; set; }
+        public int? id_caso { get; set; }
+        public int? id_continente { get; set; }
+        public int? id_pais { get; set; }
+        public int? id_provincia { get; set; }
+        public int? id_municipio { get; set; }
+        public int? id_bairro_rua { get; set; }
+        public int? id_nivel_academico { get; set; }
+        public int? id_curso { get; set; }
+        public int? id_usuario { get; set; }
         public string primeiro_nome { get; set; }
         public string nome_meio { get; set; }
         public string ultimo_nome { get; set; }

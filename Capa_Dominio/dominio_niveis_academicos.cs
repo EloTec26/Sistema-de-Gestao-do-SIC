@@ -4,6 +4,7 @@ using Capa_Dados;
 using System;
 using Capa_Dominio.Dominio_Validacoes;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace Capa_Dominio
 {
@@ -30,15 +31,15 @@ namespace Capa_Dominio
                 validacacoes(nivel_Academicos);
                 d_niveis_academicos.inserir_nivel_academicos(nivel_Academicos);
             }
-            catch (System.Exception ex)
+            catch (SqlException ex)
             {
                 if (ex.Message.Contains("UNIQUE")) // Verifica se a exceção está relacionada à restrição UNIQUE
                 {
-                    throw new Exception("O nome do nível acadêmico já está registrado. Por favor, insira um nível acadêmico diferente.");
+                    throw new ArgumentException("O nome do nível acadêmico já está registrado. Por favor, insira um nível acadêmico diferente.");
                 }
                 else
                 {
-                    throw; // Se for outro tipo de exceção, relançá-la
+                    throw new ArgumentException("Um erro ocorreu" + ex.Message); // Se for outro tipo de exceção, relançá-la
                 }
             }
         }
@@ -49,21 +50,29 @@ namespace Capa_Dominio
                 validacacoes(nivel_Academicos);
                 d_niveis_academicos.atualizar_nivel_academicos(nivel_Academicos);
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 if (ex.Message.Contains("UNIQUE")) // Verifica se a exceção está relacionada à restrição UNIQUE
                 {
-                    throw new Exception("O nome do nível acadêmico já está registrado. Por favor, insira um nível acadêmico diferente.");
+                    throw new ArgumentException("O nome do nível acadêmico já está registrado. Por favor, insira um nível acadêmico diferente.", "Erro de redudância");
                 }
                 else
                 {
-                    throw; // Se for outro tipo de exceção, relançá-la
+                    throw new ArgumentException("Um erro ocorreu" + ex.Message); // Se for outro tipo de exceção, relançá-la
                 }
             }
         }
         public void eliminar_niveis_academicos(e_comum_nivel_academicos nivel_Academicos)
         {
-            d_niveis_academicos.eliminar_nivel_academicos(nivel_Academicos);
+            try
+            {
+                d_niveis_academicos.eliminar_nivel_academicos(nivel_Academicos);
+            }
+            catch (SqlException ex) when(ex.Number == 457)
+            {
+
+                throw new ArgumentException("Não é possível eliminar este nível acadêmico, pois existem - no sistema -, dados que estão vinculados à ele", "Erro de exclusão");
+            }
         }
     }
 }

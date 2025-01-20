@@ -13,10 +13,10 @@ namespace Capa_Dominio
         #endregion
 
         #region Método para selecionar as provincias
-        public DataTable selecionar_provincias_ComboBox_Filtros(int idPaises)
-        {
-            return provincias.selecionar_provincia_comboBox_filtro(idPaises);
-        }
+        //public DataTable selecionar_provincias_ComboBox_Filtros(int idPaises)
+        //{
+        //    return provincias.selecionar_provincia_comboBox_filtro(idPaises);
+        //}
         public DataTable selecionar_provincias_ComboBox()
         {
             return provincias.selecionar_provincia_comboBox();

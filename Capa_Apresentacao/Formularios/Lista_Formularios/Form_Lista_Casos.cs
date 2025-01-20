@@ -30,13 +30,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 btn_eliminar.Visible = false;
             }
         }
-        private void selecionar_Casos()
+        public void selecionar_Casos()
         {
             dgv_casos.DataSource = d_Casos.selecionar_Casos();
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Formularios.Modulos.Form_Modulo_Casos modulo_Casos = new Modulos.Form_Modulo_Casos();
+            Formularios.Modulos.Form_Modulo_Casos modulo_Casos = new Modulos.Form_Modulo_Casos(this);
             modulo_Casos.FormClosed += Modulo_Casos_FormClosed;
             modulo_Casos.ShowDialog();
         }
@@ -50,7 +50,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_casos.SelectedCells.Count > 0)
             {
-                Formularios.Modulos.Form_Modulo_Casos modulo_Casos = new Modulos.Form_Modulo_Casos();
+                Formularios.Modulos.Form_Modulo_Casos modulo_Casos = new Modulos.Form_Modulo_Casos(this);
                 modulo_Casos.FormClosed += Modulo_Casos_FormClosed;
 
                
@@ -86,7 +86,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 if (dgv_casos.SelectedCells.Count > 0)
                 {
-                    Formularios.Modulos.Form_Modulo_Casos modulo_Casos = new Modulos.Form_Modulo_Casos();
+                    Formularios.Modulos.Form_Modulo_Casos modulo_Casos = new Modulos.Form_Modulo_Casos(this);
                     modulo_Casos.FormClosed += Modulo_Casos_FormClosed;
 
                     modulo_Casos.label_id.Text = dgv_casos.CurrentRow.Cells[0].Value.ToString();

@@ -18,10 +18,7 @@ namespace Capa_Dominio
         #endregion
         #region Selecionar os países 
         #region Selecionar países para o comboBox
-        public DataTable selecionar_paises_comboBox_Filtro(int id_continente)
-        {
-            return d_paises.selecionar_paises_comboBox_filtro(id_continente);
-        }
+       
         public DataTable selecionar_paises_comboBox()
         {
             return d_paises.selecionar_paises_comboBox();

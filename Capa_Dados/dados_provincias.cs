@@ -15,23 +15,23 @@ namespace Capa_Dados
 
         #region Selecionar os dados no banco de dados
         #region Selecionar os dados no banco de dados comboBox
-        public DataTable selecionar_provincia_comboBox_filtro(int idPaises)
-        {
-            DataTable dt = new DataTable();
-            using (var connection = conectar())
-            {
-                connection.Open();
-                using (SqlCommand cmd = new SqlCommand("select id_provincia, nome from provincia_tbl where id_pais=@idPaises", connection))
-                {
-                    cmd.Parameters.AddWithValue("@idPaises", idPaises);
-                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                    {
-                        sda.Fill(dt);
-                    }
-                }
-                return dt;
-            }
-        }
+        //public DataTable selecionar_provincia_comboBox_filtro(int idPaises)
+        //{
+        //    DataTable dt = new DataTable();
+        //    using (var connection = conectar())
+        //    {
+        //        connection.Open();
+        //        using (SqlCommand cmd = new SqlCommand("select id_provincia, nome from provincia_tbl where id_pais=@idPaises", connection))
+        //        {
+        //            cmd.Parameters.AddWithValue("@idPaises", idPaises);
+        //            using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+        //            {
+        //                sda.Fill(dt);
+        //            }
+        //        }
+        //        return dt;
+        //    }
+        //}
         public DataTable selecionar_provincia_comboBox()
         {
             DataTable dt = new DataTable();

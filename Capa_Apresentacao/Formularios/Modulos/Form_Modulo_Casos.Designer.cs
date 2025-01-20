@@ -69,7 +69,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.text_data_abetura = new CustomBox.RJControls.RJDatePicker();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_formulario.SuspendLayout();
@@ -80,11 +79,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
             this.panel1.Controls.Add(this.btn_Fechar);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label_id);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(508, 28);
+            this.panel1.Size = new System.Drawing.Size(508, 22);
             this.panel1.TabIndex = 117;
             // 
             // btn_Fechar
@@ -98,10 +96,10 @@
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
             this.btn_Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Fechar.IconSize = 30;
-            this.btn_Fechar.Location = new System.Drawing.Point(482, 2);
+            this.btn_Fechar.IconSize = 20;
+            this.btn_Fechar.Location = new System.Drawing.Point(488, 2);
             this.btn_Fechar.Name = "btn_Fechar";
-            this.btn_Fechar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Fechar.Size = new System.Drawing.Size(15, 15);
             this.btn_Fechar.TabIndex = 0;
             this.btn_Fechar.UseVisualStyleBackColor = false;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
@@ -109,11 +107,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(6, 5);
+            this.label5.Location = new System.Drawing.Point(6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 19);
+            this.label5.Size = new System.Drawing.Size(102, 17);
             this.label5.TabIndex = 88;
             this.label5.Text = "Registrar caso";
             // 
@@ -121,7 +119,7 @@
             // 
             this.label_id.AutoSize = true;
             this.label_id.ForeColor = System.Drawing.Color.Red;
-            this.label_id.Location = new System.Drawing.Point(394, 9);
+            this.label_id.Location = new System.Drawing.Point(420, 26);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(24, 21);
             this.label_id.TabIndex = 140;
@@ -284,6 +282,7 @@
             this.panel_formulario.AutoScroll = true;
             this.panel_formulario.Controls.Add(this.label_msg_descricao);
             this.panel_formulario.Controls.Add(this.label_msg_casos);
+            this.panel_formulario.Controls.Add(this.label_id);
             this.panel_formulario.Controls.Add(this.label19);
             this.panel_formulario.Controls.Add(this.label20);
             this.panel_formulario.Controls.Add(this.text_descricao);
@@ -306,9 +305,9 @@
             this.panel_formulario.Controls.Add(this.label7);
             this.panel_formulario.Controls.Add(this.text_data_abetura);
             this.panel_formulario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_formulario.Location = new System.Drawing.Point(0, 28);
+            this.panel_formulario.Location = new System.Drawing.Point(0, 22);
             this.panel_formulario.Name = "panel_formulario";
-            this.panel_formulario.Size = new System.Drawing.Size(508, 443);
+            this.panel_formulario.Size = new System.Drawing.Size(508, 449);
             this.panel_formulario.TabIndex = 151;
             // 
             // label_msg_descricao
@@ -467,7 +466,7 @@
             this.text_investigador.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.text_investigador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_investigador.ItemHeight = 30;
-            this.text_investigador.Location = new System.Drawing.Point(23, 37);
+            this.text_investigador.Location = new System.Drawing.Point(23, 53);
             this.text_investigador.Name = "text_investigador";
             this.text_investigador.Size = new System.Drawing.Size(463, 36);
             this.text_investigador.TabIndex = 161;
@@ -476,7 +475,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.Tomato;
-            this.label11.Location = new System.Drawing.Point(218, 13);
+            this.label11.Location = new System.Drawing.Point(218, 29);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(16, 21);
             this.label11.TabIndex = 160;
@@ -486,7 +485,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label12.Location = new System.Drawing.Point(19, 11);
+            this.label12.Location = new System.Drawing.Point(19, 27);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(193, 21);
             this.label12.TabIndex = 159;
@@ -617,29 +616,12 @@
             this.text_data_abetura.TabIndex = 150;
             this.text_data_abetura.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.panel_formulario;
-            this.guna2VScrollBar1.BorderRadius = 4;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 443;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(490, 28);
-            this.guna2VScrollBar1.Maximum = 569;
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 443);
-            this.guna2VScrollBar1.SmallChange = 5;
-            this.guna2VScrollBar1.TabIndex = 152;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2VScrollBar1.Value = 20;
-            // 
             // Form_Modulo_Casos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(508, 566);
-            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.panel_formulario);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -701,6 +683,5 @@
         private System.Windows.Forms.Label label_msg_casos;
         private System.Windows.Forms.Label label_msg_descricao;
         public Guna.UI2.WinForms.Guna2Button btn_Atualizar;
-        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
     }
 }

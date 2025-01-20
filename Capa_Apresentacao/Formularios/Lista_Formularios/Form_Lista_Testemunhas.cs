@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Capa_Apresentacao.Formularios.Modulos;
+﻿using Capa_Apresentacao.Formularios.Modulos;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using Capa_Dominio.Dominio_Pesquisas;
+using System;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Capa_Apresentacao.Formularios.Lista_Formularios
 {
@@ -19,7 +12,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
     {
         e_comum_testemunhas c_Testemunhas = new e_comum_testemunhas();
         dominio_testemunhas d_Testemunhas = new dominio_testemunhas();
-        dominio_pesquisar_testemunhas p_Testemunhas = new dominio_pesquisar_testemunhas(); 
+        dominio_pesquisar_testemunhas p_Testemunhas = new dominio_pesquisar_testemunhas();
         public Form_Lista_Testemunhas()
         {
             InitializeComponent();
@@ -29,28 +22,33 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
-        private void listar_Testemunhas()
+        public void listar_Testemunhas()
         {
-            dgv_testemunhas.DataSource = d_Testemunhas.selecionar_testemunhas();
+            try
+            {
+                dgv_testemunhas.DataSource = d_Testemunhas.selecionar_testemunhas();
+            }
+            catch (Exception ex)
+            {
+                MessageDialog_Error.Show(ex.Message);
+            }
         }
-       
         private void btn_cadastrar_Click_1(object sender, EventArgs e)
         {
-            Form_Modulo_Testemunhas testemunhas = new Form_Modulo_Testemunhas();
+            Form_Modulo_Testemunhas testemunhas = new Form_Modulo_Testemunhas(this);
             testemunhas.FormClosed += Testemunhas_FormClosed;
             testemunhas.ShowDialog();
         }
 
         private void Testemunhas_FormClosed(object sender, FormClosedEventArgs e)
         {
-           listar_Testemunhas();
+            listar_Testemunhas();
         }
-
         private void btn_atualizar_Click(object sender, EventArgs e)
         {
             if (dgv_testemunhas.SelectedCells.Count > 0)
             {
-                Form_Modulo_Testemunhas testemunhas = new Form_Modulo_Testemunhas();
+                Form_Modulo_Testemunhas testemunhas = new Form_Modulo_Testemunhas(this);
                 testemunhas.FormClosed += Testemunhas_FormClosed;
 
 
@@ -72,14 +70,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 testemunhas.text_provincias.Text = dgv_testemunhas.CurrentRow.Cells[16].Value.ToString();
                 testemunhas.text_municipio.Text = dgv_testemunhas.CurrentRow.Cells[17].Value.ToString();
                 testemunhas.text_bairro_rua.Text = dgv_testemunhas.CurrentRow.Cells[18].Value.ToString();
-              
+
                 testemunhas.label5.Text = "Atualizar testemunha";
                 testemunhas.btn_salvar.Visible = false;
                 testemunhas.btn_Atualizar.Visible = true;
 
                 testemunhas.ShowDialog();
                 listar_Testemunhas();
-
             }
             else
             {
@@ -102,11 +99,10 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                         listar_Testemunhas();
                     }
                 }
-                catch (SqlException Ex)
-                {
-                    if (Ex.Number == 547)
-                        MessageDialog_Error.Show("Não é possível eliminar esta testemunha, pois existem - no sistema - dados que estão vinculados à ele!", "Erro de exclusão");
-                }
+                //catch (SqlException Ex)
+                //{
+                //    MessageDialog_Error.Show(Ex.Message);
+                //}
                 catch (Exception Ex)
                 {
                     MessageDialog_Error.Show("Não foi possível eliminar esta testemunha!", Ex.Message);
@@ -123,7 +119,14 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         }
         private void pesquisar_testemunhas()
         {
-            dgv_testemunhas.DataSource = p_Testemunhas.pesquisar_Testemunha(text_pesquisar.Text);
+            try
+            {
+                dgv_testemunhas.DataSource = p_Testemunhas.pesquisar_Testemunha(text_pesquisar.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageDialog_Error.Show("Erro de pesquisa!", "Ups" + ex.Message);
+            }
         }
     }
 }

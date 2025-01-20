@@ -1,7 +1,9 @@
 ﻿//-------------------------------
+using Capa_Apresentacao.Formularios.Lista_Formularios;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Capa_Apresentacao.Formularios.Modulos
@@ -10,9 +12,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
     {
         e_comum_nivel_academicos c_Nivel_Academicos = new e_comum_nivel_academicos();
         dominio_niveis_academicos d_Niveis_Academicos = new dominio_niveis_academicos();
-        public Form_Modulo_Niveis_Academicos()
+        Form_Lista_Niveis_Academicos niveis_Academicos;
+        public Form_Modulo_Niveis_Academicos(Form_Lista_Niveis_Academicos niveis_Academicos)
         {
             InitializeComponent();
+            this.niveis_Academicos = niveis_Academicos;
         }
 
         private void btn_Fechar_Click(object sender, EventArgs e)
@@ -23,10 +27,10 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             //
             string nivel_Academico = text_Nivel_Academico.Text;
-           
+
             //
             c_Nivel_Academicos.nome = nivel_Academico;
-           
+
         }
         private void btn_salvar_Click(object sender, EventArgs e)
         {
@@ -48,18 +52,17 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 {
                     d_Niveis_Academicos.inserir_niveis_academicos(c_Nivel_Academicos);
                     guna2MessageDialog_Inform.Show($"O nível acadêmico {text_Nivel_Academico.Text}, foi registrado com  sucesso", "Registro bem sucedido");
+                    niveis_Academicos.listat_Niveis_Academicos();
                     limpar_Campos();
                 }
             }
-            catch (Exception ex)
+            //catch (ArgumentException ex)
+            //{
+            //    MessageDialog_Error.Show(ex.Message);
+            //}
+            catch(Exception ex)
             {
-                // capturar a mensagem de exceção personalizada da camada de domínio
-                if (ex.Message.Contains("O nome do nivel acadêmico já está registrado"))
-                {
-                    MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
-                }
-                else
-                    MessageDialog_Error.Show("Não foi possível salvar este nivel acadêmico", ex.Message);
+                MessageDialog_Error.Show("Não foi possível registrar este nível acadêmico!" + ex.Message);
             }
         }
         private void btn_atualizar_Click(object sender, EventArgs e)
@@ -85,18 +88,17 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     d_Niveis_Academicos.atualizar_niveis_academicos(c_Nivel_Academicos);
                     guna2MessageDialog_Inform.Show($"O nível acadêmico {text_Nivel_Academico.Text}, foi atualizado com  sucesso!", "Atualização bem sucedida");
                     limpar_Campos();
+                    niveis_Academicos.listat_Niveis_Academicos();
                     this.Close();
                 }
             }
-            catch (Exception ex)
+            //catch (ArgumentException ex)
+            //{              
+            //    MessageDialog_Error.Show(ex.Message);
+            //}
+            catch(Exception ex)
             {
-                // capturar a mensagem de exceção personalizada da camada de domínio
-                if (ex.Message.Contains("O nome do nivel acadêmico já está registrado"))
-                {
-                    MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
-                }
-                else
-                    MessageDialog_Error.Show("Não foi possível atualizar este nível academico!", ex.Message);
+                MessageDialog_Error.Show("Não foi possível atualizar este nível academico!", ex.Message);
             }
         }
         private void btn_Limpar_Click(object sender, EventArgs e)

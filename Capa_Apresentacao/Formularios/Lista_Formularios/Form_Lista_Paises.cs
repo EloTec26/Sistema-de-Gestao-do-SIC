@@ -3,6 +3,7 @@ using Capa_Comum.Entidades;
 using Capa_Dominio;
 using Capa_Dominio.Dominio_Pesquisas;
 using System;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -24,7 +25,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
 
         }
         #region Método para listar os países
-        private void listar_paises()
+        public void listar_paises()
         {
             dgv_paises.DataSource = d_paises.selecionar_paises();
         }
@@ -36,7 +37,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Form_Modulo_Paises formulario = new Form_Modulo_Paises();
+            Form_Modulo_Paises formulario = new Form_Modulo_Paises(this);
             formulario.FormClosed += Formulario_FormClosed;
             formulario.Show();
             listar_paises();
@@ -55,7 +56,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             if (dgv_paises.SelectedRows.Count > 0)
             {
 
-                Form_Modulo_Paises formulario = new Form_Modulo_Paises();
+                Form_Modulo_Paises formulario = new Form_Modulo_Paises(this);
 
                 formulario.FormClosed += Formulario_FormClosed;
                 formulario.label_id.Text = dgv_paises.CurrentRow.Cells[0].Value.ToString();
@@ -79,7 +80,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             if (dgv_paises.SelectedRows.Count > 0)
             {
 
-                Form_Modulo_Paises formulario = new Form_Modulo_Paises();
+                Form_Modulo_Paises formulario = new Form_Modulo_Paises(this);
                 formulario.FormClosed += Formulario_FormClosed;
 
                 formulario.label_id.Text = dgv_paises.CurrentRow.Cells[0].Value.ToString();
@@ -92,8 +93,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
 
                 listar_paises();
                 formulario.Show();
-
-
             }
             else
             {
@@ -104,13 +103,27 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_paises.SelectedRows.Count > 0)
             {
-                if (guna2MessageDialog_Confirm.Show("Tens a certeza de eliminar este país?", "Mensagem de exclusão") == DialogResult.Yes)
+                try
                 {
-                    int _id = Convert.ToInt32(dgv_paises.CurrentRow.Cells[0].Value.ToString());
-                    c_paises.id_pais = _id;
-                    d_paises.eliminar_paises(c_paises);
-                    guna2MessageDialog_Inform.Show($"O país com a identificação {_id} foi eliminada com sucesso!", "Exclusão bem sucedida");
-                    listar_paises();
+                    if (guna2MessageDialog_Confirm.Show("Tens a certeza de eliminar este país?", "Mensagem de exclusão") == DialogResult.Yes)
+                    {
+                        int _id = Convert.ToInt32(dgv_paises.CurrentRow.Cells[0].Value.ToString());
+                        c_paises.id_pais = _id;
+                        d_paises.eliminar_paises(c_paises);
+                        guna2MessageDialog_Inform.Show($"O país com a identificação {_id} foi eliminada com sucesso!", "Exclusão bem sucedida");
+                        listar_paises();
+                    }
+                }
+                catch (SqlException Ex)
+                {
+                    if (Ex.Number == 457 || Ex.Number == 547)
+                    {
+                        MessageDialog_Error.Show("Não é possível eliminar este país, pois existem - no sistema-, dados que estão vinculados  à ela.", "Alerta");
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    MessageDialog_Error.Show("Não foi possível eliminar este país!", Ex.Message);
                 }
             }
             else

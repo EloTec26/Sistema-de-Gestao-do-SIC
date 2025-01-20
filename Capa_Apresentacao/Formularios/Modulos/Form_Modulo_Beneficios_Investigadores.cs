@@ -1,4 +1,5 @@
-﻿using Capa_Comum.Comum_Permissoes.Cache;
+﻿using Capa_Apresentacao.Formularios.Lista_Formularios;
+using Capa_Comum.Comum_Permissoes.Cache;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
@@ -12,10 +13,12 @@ namespace Capa_Apresentacao.Formularios.Modulos
         dominio_beneficos_Investigadores d_Beneficios_Investigadores = new dominio_beneficos_Investigadores();
         dominio_investigadores d_Investigadores = new dominio_investigadores();
         dominio_beneficos d_Beneficios = new dominio_beneficos();
-        public Form_Modulo_Beneficios_Investigadores()
+        Form_Lista_Beneficios_Investigadores Beneficios;
+        public Form_Modulo_Beneficios_Investigadores(Form_Lista_Beneficios_Investigadores Beneficios)
         {
             InitializeComponent();
             listar_Investigadores_Beneficios_Combo_Box();
+            this.Beneficios = Beneficios;
         }
         private void listar_Investigadores_Beneficios_Combo_Box()
         {
@@ -71,6 +74,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 {
                     d_Beneficios_Investigadores.inserir_Beneficios_Investigadores(c_Beneficios_Investigadores);
                     guna2MessageDialog_Inform.Show($"O benefício - funcionário {text_beneficio.Text + text_investigador.Text} foi registrado com sucesso!", "Registro bem sucedido");
+                    Beneficios.listar_Beneficios_Investigadores();
                     limpar_Campos();
                 }
             }
@@ -107,6 +111,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     d_Beneficios_Investigadores.atualizar_Beneficios_Investigadores(c_Beneficios_Investigadores);
                     guna2MessageDialog_Inform.Show($"O benefício - funcionário {text_beneficio.Text + text_investigador.Text} foi atualizado com sucesso!", "Atualização bem sucedida");
                     this.Close();
+                    Beneficios.listar_Beneficios_Investigadores();
                     limpar_Campos();
                 }
             }

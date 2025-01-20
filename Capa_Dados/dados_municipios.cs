@@ -14,26 +14,26 @@ namespace Capa_Dados
     {
         #region Selecionar os municipios
         #region Selecionar os municipios para o comboBox
-        public DataTable selecionar_municipios_combobox_filtro(int idProvincia)
-        {
-            using (var connection = conectar()) 
-            {
-                connection.Open();
-                using (DataTable dt = new DataTable())
-                {
-                    using (SqlCommand cmd = new SqlCommand("select id_municipio, nome from municipio_tbl where id_provincia=@idProvincia", connection))
-                    {
-                        cmd.Parameters.AddWithValue("@idProvincia", idProvincia);
-                        using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                        {
-                            sda.Fill(dt);
+        //public DataTable selecionar_municipios_combobox_filtro(int idProvincia)
+        //{
+        //    using (var connection = conectar()) 
+        //    {
+        //        connection.Open();
+        //        using (DataTable dt = new DataTable())
+        //        {
+        //            using (SqlCommand cmd = new SqlCommand("select id_municipio, nome from municipio_tbl where id_provincia=@idProvincia", connection))
+        //            {
+        //                cmd.Parameters.AddWithValue("@idProvincia", idProvincia);
+        //                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+        //                {
+        //                    sda.Fill(dt);
 
-                            return dt;
-                        }
-                    }
-                }
-            }
-        }
+        //                    return dt;
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
         public DataTable selecionar_municipios_combobox()
         {
             using (var connection = conectar())

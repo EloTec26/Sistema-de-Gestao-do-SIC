@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Capa_Comum.Entidades;
-using Capa_Dominio.Dominio_Pesquisas;
+﻿using Capa_Comum.Entidades;
 using Capa_Dominio;
+using Capa_Dominio.Dominio_Pesquisas;
+using System;
+using System.Windows.Forms;
 
 
 namespace Capa_Apresentacao.Formularios.Lista_Formularios
@@ -27,13 +20,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
-        private void listat_Niveis_Academicos()
+        public void listat_Niveis_Academicos()
         {
             dgv_niveis_academicos.DataSource = d_Niveis_Academicos.selecionar_niveis_academicos();
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Modulos.Form_Modulo_Niveis_Academicos niveis_Academicos = new Modulos.Form_Modulo_Niveis_Academicos();
+            Modulos.Form_Modulo_Niveis_Academicos niveis_Academicos = new Modulos.Form_Modulo_Niveis_Academicos(this);
             niveis_Academicos.FormClosed += Niveis_Academicos_FormClosed;
             niveis_Academicos.ShowDialog();
             listat_Niveis_Academicos();
@@ -47,12 +40,12 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_niveis_academicos.SelectedRows.Count > 0)
             {
-                Modulos.Form_Modulo_Niveis_Academicos niveis_Academicos = new Modulos.Form_Modulo_Niveis_Academicos();
+                Modulos.Form_Modulo_Niveis_Academicos niveis_Academicos = new Modulos.Form_Modulo_Niveis_Academicos(this);
                 niveis_Academicos.FormClosed += Niveis_Academicos_FormClosed;
-              
+
                 niveis_Academicos.label_id.Text = dgv_niveis_academicos.CurrentRow.Cells[0].Value.ToString();
                 niveis_Academicos.text_Nivel_Academico.Text = dgv_niveis_academicos.CurrentRow.Cells[1].Value.ToString();
-              
+
                 niveis_Academicos.btn_atualizar.Visible = true;
                 niveis_Academicos.btn_salvar.Visible = false;
                 niveis_Academicos.label5.Text = "Atualizar nível acadêmico";
@@ -81,13 +74,10 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                         listat_Niveis_Academicos();
                     }
                 }
-                catch (System.Data.SqlClient.SqlException Ex)
-                {
-                    if (Ex.Number == 457)
-                    {
-                        MessageDialog_Error.Show("Não é possível eliminar este nível acadêmico, pois existem - no sistema-, dados que estão vinculados à ele", "Alerta");
-                    }
-                }
+                //catch (System.Data.SqlClient.SqlException Ex)
+                //{
+                //    MessageDialog_Error.Show(Ex.Message);
+                //}
                 catch (Exception Ex)
                 {
                     MessageDialog_Error.Show("Não foi possível eliminar este nível acadêmico.", Ex.Message);

@@ -72,7 +72,6 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -83,11 +82,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
             this.panel1.Controls.Add(this.btn_Fechar);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label_id);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(503, 28);
+            this.panel1.Size = new System.Drawing.Size(503, 21);
             this.panel1.TabIndex = 71;
             // 
             // btn_Fechar
@@ -101,10 +99,10 @@
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
             this.btn_Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Fechar.IconSize = 30;
-            this.btn_Fechar.Location = new System.Drawing.Point(478, 1);
+            this.btn_Fechar.IconSize = 20;
+            this.btn_Fechar.Location = new System.Drawing.Point(485, 2);
             this.btn_Fechar.Name = "btn_Fechar";
-            this.btn_Fechar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Fechar.Size = new System.Drawing.Size(15, 15);
             this.btn_Fechar.TabIndex = 0;
             this.btn_Fechar.UseVisualStyleBackColor = false;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
@@ -112,19 +110,19 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(12, 4);
+            this.label5.Location = new System.Drawing.Point(11, -2);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 19);
+            this.label5.Size = new System.Drawing.Size(174, 17);
             this.label5.TabIndex = 70;
-            this.label5.Text = "Registrar";
+            this.label5.Text = "Registrar eventos - casos";
             // 
             // label_id
             // 
             this.label_id.AutoSize = true;
             this.label_id.ForeColor = System.Drawing.Color.Red;
-            this.label_id.Location = new System.Drawing.Point(343, 7);
+            this.label_id.Location = new System.Drawing.Point(352, 137);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(24, 21);
             this.label_id.TabIndex = 157;
@@ -264,6 +262,7 @@
             this.panel3.AutoScroll = true;
             this.panel3.Controls.Add(this.label23);
             this.panel3.Controls.Add(this.text_tipo_evento);
+            this.panel3.Controls.Add(this.label_id);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.text_data_evento);
@@ -288,9 +287,9 @@
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 28);
+            this.panel3.Location = new System.Drawing.Point(0, 21);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(503, 457);
+            this.panel3.Size = new System.Drawing.Size(503, 464);
             this.panel3.TabIndex = 177;
             // 
             // label23
@@ -695,28 +694,12 @@
             this.guna2MessageDialog_Inform.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.guna2MessageDialog_Inform.Text = null;
             // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.panel3;
-            this.guna2VScrollBar1.BorderRadius = 4;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 457;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(485, 28);
-            this.guna2VScrollBar1.Maximum = 597;
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 457);
-            this.guna2VScrollBar1.SmallChange = 5;
-            this.guna2VScrollBar1.TabIndex = 204;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            // 
             // Form_Modulo_Eventos_Casos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(503, 579);
-            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -781,6 +764,5 @@
         public Guna.UI2.WinForms.Guna2Button btn_salvar;
         private System.Windows.Forms.Label label_msg_primeiro_nome;
         private System.Windows.Forms.Label label23;
-        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
     }
 }

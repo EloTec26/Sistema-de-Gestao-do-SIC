@@ -1,4 +1,5 @@
-﻿using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
+﻿using Capa_Apresentacao.Formularios.Lista_Formularios;
+using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
 using Capa_Comum.Comum_Permissoes.Cache;
 //-----------------------------------------
 using Capa_Comum.Entidades;
@@ -24,13 +25,14 @@ namespace Capa_Apresentacao.Formularios.Modulos
         e_comum_investigadores c_Investigadores = new e_comum_investigadores();
         dominio_investigadores d_Invstigadores = new dominio_investigadores();
         #endregion
-        public Form_Modulo_Investigadores()
+
+        Form_Lista_Investigadores investigadores;
+        public Form_Modulo_Investigadores(Form_Lista_Investigadores investigadores)
         {
             InitializeComponent();
             // Inicialização dos métodos
-            selecionar_dados_comboBoxs();
             filtrar();
-            filtro_curso();
+            this.investigadores = investigadores;
         }
         #region Método para selecionar os dados e trazê-los nos seus respectivos comboBox´s
         private void filtrar()
@@ -39,84 +41,30 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_continente.DataSource = d_Continentes.selecionar_continentes_combobox();
             text_continente.DisplayMember = "nome";
             text_continente.ValueMember = "id_continente";
-        }
-        private void carregar_Paises(int Id_Continente)
-        {
             // buscar paises
-            text_pais.DataSource = d_Paises.selecionar_paises_comboBox_Filtro(Id_Continente);
+            text_pais.DataSource = d_Paises.selecionar_paises_comboBox();
             text_pais.DisplayMember = "nome";
             text_pais.ValueMember = "id_pais";
-        }
-        private void carregar_Provincias(int Id_Provincia)
-        {
             // buscar provincias
-            text_provincias.DataSource = d_Provincias.selecionar_provincias_ComboBox_Filtros(Id_Provincia);
+            text_provincias.DataSource = d_Provincias.selecionar_provincias_ComboBox();
             text_provincias.DisplayMember = "nome";
             text_provincias.ValueMember = "id_provincia";
-        }
-        private void carregar_Municipios(int Id_Municipio)
-        {
             // buscar municipios
-            text_municipio.DataSource = d_Municipios.Selecionar_Municipios_Fitrod(Id_Municipio);
+            text_municipio.DataSource = d_Municipios.selecionar_municipios_comboBox();
             text_municipio.DisplayMember = "nome";
             text_municipio.ValueMember = "id_municipio";
-        }
-        private void carregar_Bairro_Ruas(int Id_Bairro_Rua)
-        {
             // buscar bairros/ruas
-            text_bairro_rua.DataSource = d_Bairro_Ruas.selecionar_bairros_ruas_filtro(Id_Bairro_Rua);
+            text_bairro_rua.DataSource = d_Bairro_Ruas.selecionar_bairros_ruas_combobox();
             text_bairro_rua.DisplayMember = "nome";
             text_bairro_rua.ValueMember = "id_bairro_rua";
-        }
-        private void filtro_curso()
-        {
             // buscar cursos
             text_curso.DataSource = d_Cursos.selecionar_Cursos_Combo_Box();
             text_curso.DisplayMember = "nome";
             text_curso.ValueMember = "id_curso";
-        }
-        private void filtro_especialidade(int IdCurso)
-        {
             // buscar especialidades
-            text_especialidades.DataSource = d_Especialidades.selecionar_Especialidades_Combo_Box_Filtro(IdCurso);
+            text_especialidades.DataSource = d_Especialidades.selecionar_Especialidades_Combo_Box();
             text_especialidades.DisplayMember = "nome";
             text_especialidades.ValueMember = "id_especialidade";
-        }
-        private void text_continente_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (text_continente.SelectedValue is int idPaises)
-            {
-                carregar_Paises(idPaises);
-            }
-        }
-
-        private void text_pais_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (text_pais.SelectedValue is int Id_Provincia)
-            {
-                carregar_Provincias(Id_Provincia);
-            }
-        }
-
-        private void text_provincias_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (text_provincias.SelectedValue is int Id_Municipio)
-            {
-                carregar_Municipios(Id_Municipio);
-            }
-        }
-
-        private void text_municipio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (text_municipio.SelectedValue is int Id_Bairro_Rua)
-                carregar_Bairro_Ruas(Id_Bairro_Rua);
-        }
-        private void text_curso_SelectedIndexChanged(object sender, EventArgs e)
-        {if (text_curso.SelectedValue is int idCurso)
-                filtro_especialidade(idCurso);
-        }
-        private void selecionar_dados_comboBoxs()
-        {
             // buscar níveis acadêmicos
             text_nivel_academico.DataSource = d_Niveis_Academicos.selecionar_niveis_academicos_combo_box();
             text_nivel_academico.DisplayMember = "nome";
@@ -132,23 +80,9 @@ namespace Capa_Apresentacao.Formularios.Modulos
         {
             this.Close();
         }
-        private bool VerificarCamposVazios()
-        {
-            if (text_primeiro_nome.Text == "" || text_ultimo_nome.Text == ""
-              || text_continente.Text == "" || text_pais.Text == "" || text_provincias.Text == "" ||
-              text_municipio.Text == "" || text_bairro_rua.Text == "" || text_nivel_academico.Text == "" ||
-              text_curso.Text == "" || text_especialidades.Text == "" || text_patente.Text == "" ||
-              text_sexo.Text == "" || text_numero_bi.Text == "" || text_primerio_numero_telefone.Text == "")
-            {
-                MessageDialog_Error.Show("Todos os campos com o asterísco(*) são de preenchimento obrigatório. Por favor, preencha-os e tente novamente!", "Erro ao salvar os dados");
-                return false;
-            }
-            return true;
-        }
         private void CapturarDadosFormulario()
         {
             // capturar os dados digitados no formulário
-
             int continente = Convert.ToInt32(text_continente.SelectedValue);
             int pais = Convert.ToInt32(text_pais.SelectedValue);
             int provincia = Convert.ToInt32(text_provincias.SelectedValue);
@@ -195,115 +129,62 @@ namespace Capa_Apresentacao.Formularios.Modulos
         }
         private void btn_salvar_Click(object sender, EventArgs e)
         {
-            if (VerificarCamposVazios())
+            try
             {
-                try
+                CapturarDadosFormulario();
+                DateTime data_Registro = DateTime.Now;
+                DateTime data_Atualizacao = DateTime.Now;
+                c_Investigadores.data_registro = data_Registro;
+                c_Investigadores.data_atualizacao = data_Atualizacao;
+                if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este funcinário?", "Mensagem de registro") == DialogResult.Yes)
                 {
-                    CapturarDadosFormulario();
-                    DateTime data_Registro = DateTime.Now;
-                    DateTime data_Atualizacao = DateTime.Now;
-                    c_Investigadores.data_registro = data_Registro;
-                    c_Investigadores.data_atualizacao = data_Atualizacao;
-                    if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este funcinário?", "Mensagem de registro") == DialogResult.Yes)
-                    {
-                        d_Invstigadores.inserir_investigadores(c_Investigadores);
-                        guna2MessageDialog_Inform.Show(
-                            $"O funcionário {text_primeiro_nome.Text + " " + text_nome_meio.Text + " " + text_ultimo_nome.Text}" +
-                            $" foi registrado com sucesso!", "Registro bem sucedido");
-
-                        limpar_Campos();
-                    }
+                    d_Invstigadores.inserir_investigadores(c_Investigadores);
+                    guna2MessageDialog_Inform.Show(
+                        $"O funcionário {text_primeiro_nome.Text + " " + text_nome_meio.Text + " " + text_ultimo_nome.Text}" +
+                        $" foi registrado com sucesso!", "Registro bem sucedido");
+                    investigadores.listar_Investigadores();
+                    limpar_Campos();
                 }
-                catch (SqlException ex) when (ex.Number == 2627)
-                {
-                    string erro_Duplicacao = ex.Message;
-                    if (erro_Duplicacao.Contains("bi"))
-                    {
-                        MessageDialog_Error.Show("O 'Nº do bilhete de identidade' inserido já existe!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação");
-                        text_primerio_numero_telefone.Focus();
-                    }
-                    if (erro_Duplicacao.Contains("telefone1"))
-                    {
-                        MessageDialog_Error.Show("O 'Nº de telefone' inserido já existe!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação");
-                        text_primerio_numero_telefone.Focus();
-                    }
-                    if (erro_Duplicacao.Contains("telefone2"))
-                    {
-                        MessageDialog_Error.Show("O 'Nº de telefone alternativo' inserido já existe!\nPor favor, insira um outro 'Nº de telefone alternativo' e tente novamente!", "Erro de duplicação");
-                        text_segundo_numero_telefone.Focus();
-                    }
-                    if (erro_Duplicacao.Contains("e_mail"))
-                    {
-                        MessageDialog_Error.Show("O 'E-mail' inserido já existe!\nPor favor, insira um outro 'E-mail' e tente novamente!", "Erro de duplicação");
-                        text_e_mail.Focus();
-                    }
-                    else
-                    {
-                        MessageDialog_Error.Show("Ocorreu um erro de duplicação de dados.\nVerifique os dados inseridos e tente novamente!", "Erro de duplicação");
-                    }
-                }
-                catch (Exception Ex)
-                {
-                    MessageDialog_Error.Show("Não foi possível registrar este funcionário!", Ex.Message);
-                }
+            }
+            //catch (SqlException ex)
+            //{
+            //    MessageDialog_Error.Show(ex.Message);
+            //}
+            catch (Exception Ex)
+            {
+                MessageDialog_Error.Show("Não foi possível registrar este funcionário!", Ex.Message);
             }
         }
         private void btn_Atualizar_Click(object sender, EventArgs e)
         {
-            if (VerificarCamposVazios())
+            try
             {
-                try
-                {
-                    // capturar os dados digitados no formulário
-                    int id_Investigadores = Convert.ToInt32(label_id.Text);
-                    DateTime data_Atualizacao = DateTime.Now;
-                    c_Investigadores.data_atualizacao = data_Atualizacao;
-                    CapturarDadosFormulario();
-                    // atualizar os dados capturados
-                    c_Investigadores.id_investigador = id_Investigadores;
+                // capturar os dados digitados no formulário
+                int id_Investigadores = Convert.ToInt32(label_id.Text);
+                DateTime data_Atualizacao = DateTime.Now;
+                c_Investigadores.data_atualizacao = data_Atualizacao;
+                CapturarDadosFormulario();
+                // atualizar os dados capturados
+                c_Investigadores.id_investigador = id_Investigadores;
 
-                    if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar este funcionário?", "Mensagem de atualização") == DialogResult.Yes)
-                    {
-                        d_Invstigadores.atualizar_investigadores(c_Investigadores);
-                        guna2MessageDialog_Inform.Show(
-                            $"O funcionário {text_primeiro_nome.Text + " " + text_nome_meio.Text + " " + text_ultimo_nome.Text}" +
-                            $" foi atualizado com sucesso!", "Atualização bem sucedida");
-                        limpar_Campos();
-                        this.Close();
-                    }
-                }
-                catch (SqlException ex) when (ex.Number == 2627)
+                if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar este funcionário?", "Mensagem de atualização") == DialogResult.Yes)
                 {
-                    string erro_Duplicacao = ex.Message;
-                    if (erro_Duplicacao.Contains("bi"))
-                    {
-                        MessageDialog_Error.Show("O 'Nº do bilhete de identidade' inserido já existe!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação");
-                        text_primerio_numero_telefone.Focus();
-                    }
-                    if (erro_Duplicacao.Contains("telefone1"))
-                    {
-                        MessageDialog_Error.Show("O 'Nº de telefone' inserido já existe!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação");
-                        text_primerio_numero_telefone.Focus();
-                    }
-                    if (erro_Duplicacao.Contains("telefone2"))
-                    {
-                        MessageDialog_Error.Show("O 'Nº de telefone alternativo' inserido já existe!\nPor favor, insira um outro 'Nº de telefone alternativo' e tente novamente!", "Erro de duplicação");
-                        text_segundo_numero_telefone.Focus();
-                    }
-                    if (erro_Duplicacao.Contains("e_mail"))
-                    {
-                        MessageDialog_Error.Show("O 'E-mail' inserido já existe!\nPor favor, insira um outro 'E-mail' e tente novamente!", "Erro de duplicação");
-                        text_e_mail.Focus();
-                    }
-                    else
-                    {
-                        MessageDialog_Error.Show("Ocorreu um erro de duplicação de dados.\nVerifique os dados inseridos e tente novamente!", "Erro de duplicação");
-                    }
+                    d_Invstigadores.atualizar_investigadores(c_Investigadores);
+                    guna2MessageDialog_Inform.Show(
+                        $"O funcionário {text_primeiro_nome.Text + " " + text_nome_meio.Text + " " + text_ultimo_nome.Text}" +
+                        $" foi atualizado com sucesso!", "Atualização bem sucedida");
+                    investigadores.listar_Investigadores();
+                    limpar_Campos();
+                    this.Close();
                 }
-                catch (Exception Ex)
-                {
-                    MessageDialog_Error.Show("Não foi possível atualizar este funcionário!", Ex.Message);
-                }
+            }
+            //catch (SqlException ex)
+            //{
+            //    MessageDialog_Error.Show(ex.Message);
+            //}
+            catch (Exception Ex)
+            {
+                MessageDialog_Error.Show("Não foi possível atualizar este funcionário!", Ex.Message);
             }
         }
         private void limpar_Campos()

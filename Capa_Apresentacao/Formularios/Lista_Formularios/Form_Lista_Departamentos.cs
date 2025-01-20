@@ -12,7 +12,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         e_comum_departamentos c_Departamentos = new e_comum_departamentos();
         dominio_departamentos d_Departamentos = new dominio_departamentos();
         dominio_pesquisar_departamentos p_Departamentos = new dominio_pesquisar_departamentos();
-        
+
         public Form_Lista_Departamentos()
         {
             InitializeComponent();
@@ -22,13 +22,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
-        private void listar_Departamentos()
+        public void listar_Departamentos()
         {
             dgv_departamentos.DataSource = d_Departamentos.selecionar_Departamentos();
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Modulos.Form_Modulo_Departamentos departamentos = new Modulos.Form_Modulo_Departamentos();
+            Modulos.Form_Modulo_Departamentos departamentos = new Modulos.Form_Modulo_Departamentos(this);
             departamentos.FormClosed += Departamentos_FormClosed;
             departamentos.ShowDialog();
             listar_Departamentos();
@@ -41,15 +41,15 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
 
         private void btn_atualizar_Click(object sender, EventArgs e)
         {
-            if(dgv_departamentos.SelectedRows.Count > 0)
+            if (dgv_departamentos.SelectedRows.Count > 0)
             {
-                Modulos.Form_Modulo_Departamentos departamentos = new Modulos.Form_Modulo_Departamentos();
+                Modulos.Form_Modulo_Departamentos departamentos = new Modulos.Form_Modulo_Departamentos(this);
                 departamentos.FormClosed += Departamentos_FormClosed;
-               
+
                 departamentos.label_id.Text = dgv_departamentos.CurrentRow.Cells[0].Value.ToString();
                 departamentos.text_departamento.Text = dgv_departamentos.CurrentRow.Cells[1].Value.ToString();
                 departamentos.text_descricao.Text = dgv_departamentos.CurrentRow.Cells[2].Value.ToString();
-              
+
                 departamentos.btn_Atualizar.Visible = true;
                 departamentos.btn_salvar.Visible = false;
                 departamentos.label5.Text = "Atualizar departamento";
@@ -65,27 +65,34 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
 
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            try
+            if (dgv_departamentos.SelectedRows.Count > 0)
             {
-                if (dgv_departamentos.SelectedRows.Count > 0)
+                try
                 {
                     int id_departamento = Convert.ToInt32(dgv_departamentos.CurrentRow.Cells[0].Value.ToString());
                     c_Departamentos.id_departamento = id_departamento;
-                    if(guna2MessageDialog_Confirm.Show("Tens a certeza de eliminar este departamento?", "Mensagem de exclusão") == DialogResult.Yes)
+                    if (guna2MessageDialog_Confirm.Show("Tens a certeza de eliminar este departamento?", "Mensagem de exclusão") == DialogResult.Yes)
                     {
                         d_Departamentos.eliminar_Departamentos(c_Departamentos);
                         guna2MessageDialog_Inform.Show($"O departamento com a identificação{id_departamento} foi eliminada com sucesso!", "Exclusão bem sucedida");
                         listar_Departamentos();
                     }
                 }
-                else
+                catch (System.Data.SqlClient.SqlException Ex)
                 {
-                    MessageDialog_Error.Show("Por favor, selecione o departamento que pretendes eliminar e tente novamente!", "Falha");
+                    if (Ex.Number == 457)
+                    {
+                        MessageDialog_Error.Show("Não é possível eliminar esta especialidade, pois existem - no sistema-, dados que estão vinculados  à ela.", "Alerta");
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    MessageDialog_Error.Show("Não foi possível eliminar este departamento!", Ex.Message);
                 }
             }
-            catch (Exception Ex)
+            else
             {
-                MessageDialog_Error.Show("Não foi possível eliminar este departamento!", Ex.Message);
+                MessageDialog_Error.Show("Por favor, selecione o departamento que pretendes eliminar e tente novamente!", "Falha");
             }
         }
 

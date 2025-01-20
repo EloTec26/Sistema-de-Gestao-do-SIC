@@ -24,13 +24,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             InitializeComponent();
             selecionar_Evidencias();
         }
-        private void selecionar_Evidencias()
+        public void selecionar_Evidencias()
         {
             dgv_evidencias.DataSource = d_Evidencias.selecionar_evidencias();
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Formularios.Modulos.Form_Modulo_Evidencias form_Modulo = new Modulos.Form_Modulo_Evidencias();
+            Formularios.Modulos.Form_Modulo_Evidencias form_Modulo = new Modulos.Form_Modulo_Evidencias(this);
             form_Modulo.FormClosed += Form_Modulo_FormClosed;
             form_Modulo.ShowDialog();
         }
@@ -44,7 +44,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if(dgv_evidencias.SelectedRows.Count > 0)
             {
-                Formularios.Modulos.Form_Modulo_Evidencias form_Modulo = new Modulos.Form_Modulo_Evidencias();
+                Formularios.Modulos.Form_Modulo_Evidencias form_Modulo = new Modulos.Form_Modulo_Evidencias(this);
                 form_Modulo.FormClosed += Form_Modulo_FormClosed;
 
                 form_Modulo.label_id.Text = dgv_evidencias.CurrentRow.Cells[0].Value.ToString();

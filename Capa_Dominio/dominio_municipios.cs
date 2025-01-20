@@ -18,10 +18,10 @@ namespace Capa_Dominio
             return d_municipios.selecionar_municipios_combobox();
         }
         #endregion
-        public System.Data.DataTable Selecionar_Municipios_Fitrod(int IdProvincia)
-        {
-            return d_municipios.selecionar_municipios_combobox_filtro(IdProvincia);
-        }
+        //public System.Data.DataTable Selecionar_Municipios_Fitrod(int IdProvincia)
+        //{
+        //    return d_municipios.selecionar_municipios_combobox_filtro(IdProvincia);
+        //}
         public System.Data.DataTable selecionar_municipios()
         {
             return d_municipios.selecionar_municipios();

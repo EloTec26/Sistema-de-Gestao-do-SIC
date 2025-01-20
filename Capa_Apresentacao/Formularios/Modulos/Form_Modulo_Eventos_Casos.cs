@@ -1,4 +1,5 @@
-﻿using Capa_Comum.Comum_Permissoes.Cache;
+﻿using Capa_Apresentacao.Formularios.Lista_Formularios;
+using Capa_Comum.Comum_Permissoes.Cache;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
@@ -16,10 +17,13 @@ namespace Capa_Apresentacao.Formularios.Modulos
         dominio_suspeitos d_Suspeitos = new dominio_suspeitos();
         dominio_eventos_casos d_Evento_Caso = new dominio_eventos_casos();
         e_comum_eventos_casos c_Evento_Caso = new e_comum_eventos_casos();
-        public Form_Modulo_Eventos_Casos()
+
+        Form_Listas_Eventos_Casos eventos_Casos;
+        public Form_Modulo_Eventos_Casos(Form_Listas_Eventos_Casos eventos_Casos)
         {
             InitializeComponent();
             adicionar_Dados_Combo_Box();
+            this.eventos_Casos = eventos_Casos;
         }
         private void adicionar_Dados_Combo_Box()
         {
@@ -103,6 +107,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         d_Evento_Caso.inserir_Enventos_Casos(c_Evento_Caso);
                         guna2MessageDialog_Inform.Show($"O evento caso foi registrado com sucesso!", "Registro bem sucedido");
                         // Limpa todos os campos depois do registro.
+                        eventos_Casos.selecionar_eventos_casos();
                         limpar_Campos();
                     }
                 }
@@ -127,6 +132,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         d_Evento_Caso.stualizar_Enventos_Casos(c_Evento_Caso);
                         guna2MessageDialog_Inform.Show($"O evento caso foi atualizado com sucesso!", "Atualização bem sucedida");
                         limpar_Campos();
+                        eventos_Casos.selecionar_eventos_casos();
                         // Fecha o formulário depois da atualização.
                         this.Close();
                     }

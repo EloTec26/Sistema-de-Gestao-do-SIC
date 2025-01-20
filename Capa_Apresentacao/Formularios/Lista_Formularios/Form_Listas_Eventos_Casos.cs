@@ -36,13 +36,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 btn_eliminar.Visible = false;
             }
         }
-        private void selecionar_eventos_casos()
+        public void selecionar_eventos_casos()
         {
             dgv_eventos_casos.DataSource = d_eventos_casos.selecionar_Eventos_Casos();
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Modulos.Form_Modulo_Eventos_Casos form_Modulo_Eventos = new Modulos.Form_Modulo_Eventos_Casos();
+            Modulos.Form_Modulo_Eventos_Casos form_Modulo_Eventos = new Modulos.Form_Modulo_Eventos_Casos(this);
             form_Modulo_Eventos.FormClosed += Form_Modulo_Eventos_FormClosed;
             form_Modulo_Eventos.ShowDialog();
         }
@@ -51,12 +51,11 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             selecionar_eventos_casos();
         }
-
         private void btn_atualizar_Click(object sender, EventArgs e)
         {
             if (dgv_eventos_casos.SelectedRows.Count > 0)
             {
-                Formularios.Modulos.Form_Modulo_Eventos_Casos form_Modulo_Eventos = new Modulos.Form_Modulo_Eventos_Casos();
+                Formularios.Modulos.Form_Modulo_Eventos_Casos form_Modulo_Eventos = new Modulos.Form_Modulo_Eventos_Casos(this);
                 form_Modulo_Eventos.FormClosed += Form_Modulo_Eventos_FormClosed;
 
                 form_Modulo_Eventos.label_id.Text = dgv_eventos_casos.CurrentRow.Cells[0].Value.ToString();
@@ -87,7 +86,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 if (dgv_eventos_casos.SelectedRows.Count > 0)
                 {
-                    Formularios.Modulos.Form_Modulo_Eventos_Casos form_Modulo_Eventos = new Modulos.Form_Modulo_Eventos_Casos();
+                    Formularios.Modulos.Form_Modulo_Eventos_Casos form_Modulo_Eventos = new Modulos.Form_Modulo_Eventos_Casos(this);
                     form_Modulo_Eventos.FormClosed += Form_Modulo_Eventos_FormClosed;
 
                     form_Modulo_Eventos.label_id.Text = dgv_eventos_casos.CurrentRow.Cells[0].Value.ToString();

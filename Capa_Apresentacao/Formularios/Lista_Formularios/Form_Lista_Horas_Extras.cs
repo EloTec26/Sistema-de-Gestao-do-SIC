@@ -27,13 +27,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
-        private void selecionar_Horas_Extras()
+        public void selecionar_Horas_Extras()
         {
             dgv_horas_extras.DataSource = d_Horas_Extras.selecionar_horas_extras();
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Formularios.Modulos.Form_Modulo_Horas_Extras form_Horas_Extras = new Modulos.Form_Modulo_Horas_Extras();
+            Formularios.Modulos.Form_Modulo_Horas_Extras form_Horas_Extras = new Modulos.Form_Modulo_Horas_Extras(this);
             form_Horas_Extras.FormClosed += Form_Modulo_Horas_Extras_FormClosed;
             form_Horas_Extras.ShowDialog();
         }
@@ -47,7 +47,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if(dgv_horas_extras.SelectedRows.Count > 0)
             {
-                Formularios.Modulos.Form_Modulo_Horas_Extras form_Horas_Extras = new Modulos.Form_Modulo_Horas_Extras();
+                Formularios.Modulos.Form_Modulo_Horas_Extras form_Horas_Extras = new Modulos.Form_Modulo_Horas_Extras(this);
                 form_Horas_Extras.FormClosed += Form_Modulo_Horas_Extras_FormClosed;
 
                 form_Horas_Extras.label_id.Text = dgv_horas_extras.CurrentRow.Cells[0].Value.ToString();

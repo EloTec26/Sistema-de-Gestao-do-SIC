@@ -4,6 +4,7 @@ using Capa_Dominio;
 using System;
 using System.Windows.Forms;
 using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
+using Capa_Apresentacao.Formularios.Lista_Formularios;
 
 namespace Capa_Apresentacao.Formularios.Modulos
 {
@@ -12,9 +13,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
         e_comum_departamentos c_Departamentos = new e_comum_departamentos();
         dominio_departamentos d_Departamentos = new dominio_departamentos();
         //comum_cache_permissoes_usuarios permissoes_Usuarios = new comum_cache_permissoes_usuarios();
-        public Form_Modulo_Departamentos()
+        Form_Lista_Departamentos departamentos;
+        public Form_Modulo_Departamentos(Form_Lista_Departamentos departamentos)
         {
             InitializeComponent();
+            this.departamentos = departamentos;
         }
 
         private void btn_Fechar_Click(object sender, EventArgs e)
@@ -58,6 +61,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         d_Departamentos.inserir_Departamentos(c_Departamentos);
                         guna2MessageDialog_Inform.Show($"O departamento {text_departamento.Text}, foi registrado com sucesso!", "Registro bem sucedido");
                         // Limpar os campos depois de atualizar
+                        departamentos.listar_Departamentos();
                         limpar_Campos();
                     }
                 }
@@ -87,6 +91,8 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         guna2MessageDialog_Inform.Show($"O departamento {text_departamento.Text}, foi atualizado com sucesso!", "Registro bem sucedido");
                         // Limpar os campos depois de atualizar
                         limpar_Campos();
+                        departamentos.listar_Departamentos();
+
                         // fechar o formulário depois de atualizar o departamento
                         this.Close();
                     }

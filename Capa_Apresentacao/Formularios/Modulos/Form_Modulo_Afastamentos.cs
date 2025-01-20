@@ -1,7 +1,9 @@
-﻿using Capa_Comum.Comum_Permissoes.Cache;
+﻿using Capa_Apresentacao.Formularios.Lista_Formularios;
+using Capa_Comum.Comum_Permissoes.Cache;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Capa_Apresentacao.Formularios.Modulos
@@ -11,10 +13,12 @@ namespace Capa_Apresentacao.Formularios.Modulos
         dominio_investigadores d_Investigadores = new dominio_investigadores();
         e_comum_afastamentos c_Afastamentos = new e_comum_afastamentos();
         dominio_afastamentos d_Afastamentos = new dominio_afastamentos();
-        public Form_Modulo_Afastamentos()
+        Form_Lista_Afastamentos afastamentos;
+        public Form_Modulo_Afastamentos(Form_Lista_Afastamentos afastamentos)
         {
             InitializeComponent();
             buscar_Nomes_Investigadores();
+            this.afastamentos = afastamentos;
         }
         private void buscar_Nomes_Investigadores()
         {
@@ -45,69 +49,60 @@ namespace Capa_Apresentacao.Formularios.Modulos
         }
         private void btn_salvar_Click(object sender, EventArgs e)
         {
-            if (text_investigador.Text == String.Empty || text_descricao.Text == String.Empty || text_Estado.Text == String.Empty)
+            try
             {
-                MessageDialog_Error.Show("Todos os campos são de preenchimento obrigatório!" +
-                    "Por favor, preencha-os e tente novamente.", "Erro ao salvar os dados");
-                return;
-            }
-            else
-            {
-                try
-                {
-                    DateTime data_Registro = DateTime.Now;
-                    DateTime data_Atualizacao = DateTime.Now;
-                    c_Afastamentos.data_registro = data_Registro;
-                    c_Afastamentos.data_atualizacao = data_Atualizacao;
+                DateTime data_Registro = DateTime.Now;
+                DateTime data_Atualizacao = DateTime.Now;
+                c_Afastamentos.data_registro = data_Registro;
+                c_Afastamentos.data_atualizacao = data_Atualizacao;
 
-                    capturar_Dados_Digitados_Formulario();
-                    if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este afastamento?", "Mensagem de registro") == DialogResult.Yes)
-                    {
-                        d_Afastamentos.inserir_Afastamentos(c_Afastamentos);
-                        guna2MessageDialog_Inform.Show($"O afastamento foi registrado com sucesso!", "Registro bem sucedido");
-                        Limpar_Campos();
-                    }
-                }
-                catch (Exception Ex)
+                capturar_Dados_Digitados_Formulario();
+                if (guna2MessageDialog_Confirm.Show("Tens a certeza de registrar este afastamento?", "Mensagem de registro") == DialogResult.Yes)
                 {
-                    MessageDialog_Error.Show("Não foi possível salvar esses dados!", Ex.Message);
+                    d_Afastamentos.inserir_Afastamentos(c_Afastamentos);
+                    guna2MessageDialog_Inform.Show($"O afastamento foi registrado com sucesso!", "Registro bem sucedido");
+                    afastamentos.selecionar_afastamentos();
+                    Limpar_Campos();
                 }
+            }
+            //catch (SqlException Ex)
+            //{
+            //    MessageDialog_Error.Show(Ex.Message);
+            //}
+            catch (Exception Ex)
+            {
+                MessageDialog_Error.Show("Não foi possível salvar esses dados!", Ex.Message);
             }
         }
 
         private void btn_Atualizar_Click(object sender, EventArgs e)
         {
-            if (text_investigador.Text == String.Empty || text_descricao.Text == String.Empty || text_Estado.Text == String.Empty)
+            try
             {
-                MessageDialog_Error.Show("Todos os campos são de preenchimento obrigatório!" +
-                    "Por favor, preencha-os e tente novamente.", "Erro ao salvar os dados");
-                return;
+                // Capturar o id.
+                int id_Afastamento = Convert.ToInt32(label_id.Text);
+                DateTime data_Atualizacao = DateTime.Now;
+                c_Afastamentos.data_atualizacao = data_Atualizacao;
+
+                // Atualizar os dados capturados
+                capturar_Dados_Digitados_Formulario();
+                c_Afastamentos.id_afastamento = id_Afastamento;
+                if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar este afastamento?", "Mensagem de atualização") == DialogResult.Yes)
+                {
+                    d_Afastamentos.atualizar_Afastamentos(c_Afastamentos);
+                    guna2MessageDialog_Inform.Show($"O afastamento foi atualizado com sucesso!", "Atualização bem sucedida");
+                    Limpar_Campos();
+                    afastamentos.selecionar_afastamentos();
+                    this.Close();
+                }
             }
-            else
+            //catch (SqlException Ex)
+            //{
+            //    MessageDialog_Error.Show(Ex.Message);
+            //}
+            catch (Exception Ex)
             {
-                try
-                {
-                    // Capturar o id.
-                    int id_Afastamento = Convert.ToInt32(label_id.Text);
-
-                    DateTime data_Atualizacao = DateTime.Now;
-                    c_Afastamentos.data_atualizacao = data_Atualizacao;
-
-                    // Atualizar os dados capturados
-                    capturar_Dados_Digitados_Formulario();
-                    c_Afastamentos.id_afastamento = id_Afastamento;
-                    if (guna2MessageDialog_Confirm.Show("Tens a certeza de atualizar este afastamento?", "Mensagem de atualização") == DialogResult.Yes)
-                    {
-                        d_Afastamentos.atualizar_Afastamentos(c_Afastamentos);
-                        guna2MessageDialog_Inform.Show($"O afastamento foi atualizado com sucesso!", "Atualização bem sucedida");
-                        Limpar_Campos();
-                        this.Close();
-                    }
-                }
-                catch (Exception Ex)
-                {
-                    MessageDialog_Error.Show("Não foi possível atualizar esses dados!", Ex.Message);
-                }
+                MessageDialog_Error.Show("Não foi possível atualizar esses dados!", Ex.Message);
             }
         }
         private void btn_Limpar_Click(object sender, EventArgs e)

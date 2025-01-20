@@ -14,25 +14,25 @@ namespace Capa_Dados
     {
 
         #region Selecionar os bairros_ruas
-        public DataTable selecionar_bairro_ruas_combobox_filtro(int IdMunicipio)
-        {
-            using (var connection = conectar())
-            {
-                connection.Open();
-                using (DataTable dt = new DataTable())
-                {
-                    using (SqlCommand cmd = new SqlCommand("select id_bairro_rua, nome from bairro_rua_tbl where id_municipio=@IdMunicipio", connection))
-                    {
-                        cmd.Parameters.AddWithValue("@IdMunicipio", IdMunicipio);
-                        using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                        {
-                            sda.Fill(dt);
-                            return dt;
-                        }
-                    }
-                }
-            }
-        }
+        //public DataTable selecionar_bairro_ruas_combobox_filtro(int IdMunicipio)
+        //{
+        //    using (var connection = conectar())
+        //    {
+        //        connection.Open();
+        //        using (DataTable dt = new DataTable())
+        //        {
+        //            using (SqlCommand cmd = new SqlCommand("select id_bairro_rua, nome from bairro_rua_tbl where id_municipio=@IdMunicipio", connection))
+        //            {
+        //                cmd.Parameters.AddWithValue("@IdMunicipio", IdMunicipio);
+        //                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+        //                {
+        //                    sda.Fill(dt);
+        //                    return dt;
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
         public DataTable selecionar_bairro_ruas_combobox()
         {
             using (var connection = conectar())

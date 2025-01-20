@@ -101,7 +101,6 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_formulario.SuspendLayout();
@@ -116,7 +115,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(819, 28);
+            this.panel1.Size = new System.Drawing.Size(819, 20);
             this.panel1.TabIndex = 115;
             // 
             // btn_Fechar
@@ -130,10 +129,10 @@
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
             this.btn_Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Fechar.IconSize = 30;
-            this.btn_Fechar.Location = new System.Drawing.Point(793, 2);
+            this.btn_Fechar.IconSize = 20;
+            this.btn_Fechar.Location = new System.Drawing.Point(802, 1);
             this.btn_Fechar.Name = "btn_Fechar";
-            this.btn_Fechar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Fechar.Size = new System.Drawing.Size(15, 15);
             this.btn_Fechar.TabIndex = 0;
             this.btn_Fechar.UseVisualStyleBackColor = false;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
@@ -141,11 +140,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(12, 5);
+            this.label5.Location = new System.Drawing.Point(12, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(126, 19);
+            this.label5.Size = new System.Drawing.Size(110, 17);
             this.label5.TabIndex = 88;
             this.label5.Text = "Registrar vítima";
             // 
@@ -153,7 +152,7 @@
             // 
             this.label_id.AutoSize = true;
             this.label_id.ForeColor = System.Drawing.Color.Red;
-            this.label_id.Location = new System.Drawing.Point(444, 5);
+            this.label_id.Location = new System.Drawing.Point(444, -4);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(24, 21);
             this.label_id.TabIndex = 108;
@@ -170,9 +169,9 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.btn_Atualizar);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 485);
+            this.panel2.Location = new System.Drawing.Point(0, 422);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(819, 97);
+            this.panel2.Size = new System.Drawing.Size(819, 114);
             this.panel2.TabIndex = 116;
             // 
             // btn_Limpar
@@ -334,9 +333,10 @@
             this.panel_formulario.Controls.Add(this.label11);
             this.panel_formulario.Controls.Add(this.text_data_nascimento);
             this.panel_formulario.Controls.Add(this.label1);
-            this.panel_formulario.Location = new System.Drawing.Point(0, 28);
+            this.panel_formulario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_formulario.Location = new System.Drawing.Point(0, 20);
             this.panel_formulario.Name = "panel_formulario";
-            this.panel_formulario.Size = new System.Drawing.Size(819, 457);
+            this.panel_formulario.Size = new System.Drawing.Size(819, 402);
             this.panel_formulario.TabIndex = 117;
             // 
             // label_msg_erro_descricao
@@ -569,7 +569,7 @@
             this.text_declaracao.PasswordChar = '\0';
             this.text_declaracao.PlaceholderText = "";
             this.text_declaracao.SelectedText = "";
-            this.text_declaracao.Size = new System.Drawing.Size(763, 78);
+            this.text_declaracao.Size = new System.Drawing.Size(763, 96);
             this.text_declaracao.TabIndex = 131;
             this.text_declaracao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_declaracao_KeyPress);
             // 
@@ -603,7 +603,6 @@
             this.text_provincias.Name = "text_provincias";
             this.text_provincias.Size = new System.Drawing.Size(237, 36);
             this.text_provincias.TabIndex = 130;
-            this.text_provincias.SelectedIndexChanged += new System.EventHandler(this.text_provincias_SelectedIndexChanged);
             // 
             // label28
             // 
@@ -655,7 +654,6 @@
             this.text_municipio.Name = "text_municipio";
             this.text_municipio.Size = new System.Drawing.Size(245, 36);
             this.text_municipio.TabIndex = 121;
-            this.text_municipio.SelectedIndexChanged += new System.EventHandler(this.text_municipio_SelectedIndexChanged);
             // 
             // label30
             // 
@@ -779,7 +777,6 @@
             this.text_pais.Name = "text_pais";
             this.text_pais.Size = new System.Drawing.Size(245, 36);
             this.text_pais.TabIndex = 111;
-            this.text_pais.SelectedIndexChanged += new System.EventHandler(this.text_pais_SelectedIndexChanged);
             // 
             // label25
             // 
@@ -852,7 +849,6 @@
             this.text_continente.Name = "text_continente";
             this.text_continente.Size = new System.Drawing.Size(245, 36);
             this.text_continente.TabIndex = 111;
-            this.text_continente.SelectedIndexChanged += new System.EventHandler(this.text_continente_SelectedIndexChanged);
             // 
             // label22
             // 
@@ -1171,29 +1167,12 @@
             this.guna2MessageDialog_Inform.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.guna2MessageDialog_Inform.Text = null;
             // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.panel_formulario;
-            this.guna2VScrollBar1.BorderRadius = 4;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 457;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(801, 28);
-            this.guna2VScrollBar1.Maximum = 564;
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 457);
-            this.guna2VScrollBar1.SmallChange = 5;
-            this.guna2VScrollBar1.TabIndex = 123;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2VScrollBar1.Value = 20;
-            // 
             // Form_Modulo_Vitimas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            this.ClientSize = new System.Drawing.Size(819, 582);
-            this.Controls.Add(this.guna2VScrollBar1);
+            this.ClientSize = new System.Drawing.Size(819, 536);
             this.Controls.Add(this.panel_formulario);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -1287,6 +1266,5 @@
         private System.Windows.Forms.Label label_msg_telefone2;
         private System.Windows.Forms.Label label_msg_telefone1;
         private System.Windows.Forms.Label label_msg_erro_descricao;
-        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
     }
 }

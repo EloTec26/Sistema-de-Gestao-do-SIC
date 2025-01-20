@@ -44,18 +44,12 @@ namespace Capa_Dados
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.AddWithValue("@id_continente", usuarios.id_continente);
-                    cmd.Parameters.AddWithValue("@id_pais", usuarios.id_pais);
-                    cmd.Parameters.AddWithValue("@id_provincia", usuarios.id_provincia);
-                    cmd.Parameters.AddWithValue("@id_municipio", usuarios.id_municipio);
-                    cmd.Parameters.AddWithValue("@id_bairro_rua", usuarios.id_bairro_rua);
                     cmd.Parameters.AddWithValue("@primeiro_nome", usuarios.primeiro_nome);
                     cmd.Parameters.AddWithValue("@nome_meio", usuarios.nome_meio);
                     cmd.Parameters.AddWithValue("@ultimo_nome", usuarios.ultimo_nome);
                     cmd.Parameters.AddWithValue("@bi", usuarios.bi);
                     cmd.Parameters.AddWithValue("@sexo", usuarios.sexo);
                     cmd.Parameters.AddWithValue("@telefone1", usuarios.telefone1);
-                    cmd.Parameters.AddWithValue("@telefone2", usuarios.telefone2);
                     cmd.Parameters.AddWithValue("@e_mail", usuarios.e_mail);
                     cmd.Parameters.AddWithValue("@tipo_usuario", usuarios.tipo_usuario);
                     cmd.Parameters.AddWithValue("@palavra_passe", usuarios.palavra_passe);
@@ -78,18 +72,12 @@ namespace Capa_Dados
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@id_usuario", usuarios.id_usuario);
-                    cmd.Parameters.AddWithValue("@id_continente", usuarios.id_continente);
-                    cmd.Parameters.AddWithValue("@id_pais", usuarios.id_pais);
-                    cmd.Parameters.AddWithValue("@id_provincia", usuarios.id_provincia);
-                    cmd.Parameters.AddWithValue("@id_municipio", usuarios.id_municipio);
-                    cmd.Parameters.AddWithValue("@id_bairro_rua", usuarios.id_bairro_rua);
                     cmd.Parameters.AddWithValue("@primeiro_nome", usuarios.primeiro_nome);
                     cmd.Parameters.AddWithValue("@nome_meio", usuarios.nome_meio);
                     cmd.Parameters.AddWithValue("@ultimo_nome", usuarios.ultimo_nome);
                     cmd.Parameters.AddWithValue("@bi", usuarios.bi);
                     cmd.Parameters.AddWithValue("@sexo", usuarios.sexo);
                     cmd.Parameters.AddWithValue("@telefone1", usuarios.telefone1);
-                    cmd.Parameters.AddWithValue("@telefone2", usuarios.telefone2);
                     cmd.Parameters.AddWithValue("@e_mail", usuarios.e_mail);
                     cmd.Parameters.AddWithValue("@tipo_usuario", usuarios.tipo_usuario);
                     cmd.Parameters.AddWithValue("@palavra_passe", usuarios.palavra_passe);

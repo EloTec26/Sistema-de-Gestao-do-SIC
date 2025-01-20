@@ -58,7 +58,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(487, 28);
+            this.panel1.Size = new System.Drawing.Size(487, 20);
             this.panel1.TabIndex = 34;
             // 
             // btn_Fechar
@@ -72,10 +72,10 @@
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
             this.btn_Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Fechar.IconSize = 30;
-            this.btn_Fechar.Location = new System.Drawing.Point(462, 1);
+            this.btn_Fechar.IconSize = 20;
+            this.btn_Fechar.Location = new System.Drawing.Point(470, 1);
             this.btn_Fechar.Name = "btn_Fechar";
-            this.btn_Fechar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Fechar.Size = new System.Drawing.Size(15, 15);
             this.btn_Fechar.TabIndex = 0;
             this.btn_Fechar.UseVisualStyleBackColor = false;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
@@ -83,11 +83,11 @@
             // label_titulo
             // 
             this.label_titulo.AutoSize = true;
-            this.label_titulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label_titulo.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label_titulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label_titulo.Location = new System.Drawing.Point(12, 4);
+            this.label_titulo.Location = new System.Drawing.Point(10, 0);
             this.label_titulo.Name = "label_titulo";
-            this.label_titulo.Size = new System.Drawing.Size(160, 19);
+            this.label_titulo.Size = new System.Drawing.Size(141, 17);
             this.label_titulo.TabIndex = 35;
             this.label_titulo.Text = "Registrar continente";
             // 

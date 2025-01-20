@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
-using Capa_Comum.Entidades;
+﻿using Capa_Comum.Entidades;
 using Capa_Dados;
 using Capa_Dominio.Dominio_Validacoes;
+using System;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Capa_Dominio
 {
@@ -18,13 +15,21 @@ namespace Capa_Dominio
         #endregion
 
         #region Selecionar os bairros_ruas
-        public DataTable selecionar_bairros_ruas_filtro(int IdMunicipio)
-        {
-            return d_bairro_rua.selecionar_bairro_ruas_combobox_filtro(IdMunicipio);
-        }
+        //public DataTable selecionar_bairros_ruas_filtro(int IdMunicipio)
+        //{
+        //    return d_bairro_rua.selecionar_bairro_ruas_combobox_filtro(IdMunicipio);
+        //}
         public DataTable selecionar_bairros_ruas()
         {
-            return d_bairro_rua.selecionar_bairro_ruas();
+            try
+            {
+                return d_bairro_rua.selecionar_bairro_ruas();
+            }
+            catch (SqlException ex)
+            {
+
+                throw new ArgumentException("Erro ao selecionar os bairro/ruas", "Erro de selecção" + ex.Message);
+            }
         }
         public DataTable selecionar_bairros_ruas_combobox()
         {
@@ -44,11 +49,11 @@ namespace Capa_Dominio
                 validacacoes(bairro_Rua);
                 d_bairro_rua.registrar_bairros_ruas(bairro_Rua);
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 if (ex.Message.Contains("UNIQUE")) // Verifica se a exceção está relacionada à restrição UNIQUE
                 {
-                    throw new Exception("O nome do bairro/rua já está registrado. Por favor, insira um bairro/rua diferente.");
+                    throw new ArgumentException("O nome do bairro/rua já está registrado. Por favor, insira um bairro/rua diferente.", "Erro de registro" + ex.Message);
                 }
                 else
                 {
@@ -59,18 +64,18 @@ namespace Capa_Dominio
         #endregion
 
         #region Atualizar os bairros_ruas
-         public void atualizar_bairros_ruas(e_comum_bairro_rua bairro_Rua)
+        public void atualizar_bairros_ruas(e_comum_bairro_rua bairro_Rua)
         {
             try
             {
                 validacacoes(bairro_Rua);
                 d_bairro_rua.atualizar_bairros_ruas(bairro_Rua);
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
                 if (ex.Message.Contains("UNIQUE")) // Verifica se a exceção está relacionada à restrição UNIQUE
                 {
-                    throw new Exception("O nome do bairro/rua já está registrado. Por favor, insira um bairro/rua diferente.");
+                    throw new ArgumentException("O nome do bairro/rua já está registrado. Por favor, insira um bairro/rua diferente.", "Erro de atualização" + ex.Message);
                 }
                 else
                 {
@@ -87,11 +92,11 @@ namespace Capa_Dominio
             {
                 d_bairro_rua.eliminar_bairro_rua(bairro_Rua);
             }
-            catch (System.Data.SqlClient.SqlException Ex)
+            catch (SqlException Ex)
             {
                 if (Ex.Number == 457)
                 {
-                    throw new ArgumentException("Não é possível eliminar este bairro/rua, pois existem - no sistema-, dados que estão vinculados à ele");
+                    throw new ArgumentException("Não é possível eliminar este bairro/rua, pois existem - no sistema-, dados que estão vinculados à ele", "Erro de exclusão" + Ex.Message);
                 }
             }
         }

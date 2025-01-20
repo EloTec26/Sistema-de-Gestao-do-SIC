@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Principal));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btn_Logo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btn_Maximizar = new FontAwesome.Sharp.IconButton();
             this.btn_Restaurar = new FontAwesome.Sharp.IconButton();
@@ -60,8 +59,6 @@
             this.label_cargo = new System.Windows.Forms.Label();
             this.label_email = new System.Windows.Forms.Label();
             this.btn_perfil_usuario = new FontAwesome.Sharp.IconButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_butao_menu = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -97,8 +94,8 @@
             this.treinamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rjDropdownMenu_escolaridades = new CustomBox.RJControls.RJDropdownMenu(this.components);
             this.nívelAcadêmicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.especialidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EspecialidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.CursosProfissonaisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rjDropdownMenu_eventos_casos = new CustomBox.RJControls.RJDropdownMenu(this.components);
             this.btn_submenu_casos = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_submenu_eventos_casos = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,7 +108,6 @@
             this.panel6.SuspendLayout();
             this.panel_menu_btn.SuspendLayout();
             this.panel_panel_perfil.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.btn_Sub_Menu_Enderecos.SuspendLayout();
             this.rjDropdownMenu2.SuspendLayout();
@@ -123,7 +119,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btn_Logo);
             this.panel1.Controls.Add(this.btn_Maximizar);
             this.panel1.Controls.Add(this.btn_Restaurar);
@@ -132,27 +127,16 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1322, 35);
+            this.panel1.Size = new System.Drawing.Size(1322, 26);
             this.panel1.TabIndex = 9;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gainsboro;
-            this.label1.Location = new System.Drawing.Point(65, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 19);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Menu principal";
             // 
             // btn_Logo
             // 
             this.btn_Logo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Logo.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logo.Image")));
             this.btn_Logo.ImageRotate = 0F;
-            this.btn_Logo.Location = new System.Drawing.Point(3, 5);
+            this.btn_Logo.Location = new System.Drawing.Point(3, -1);
             this.btn_Logo.Name = "btn_Logo";
             this.btn_Logo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btn_Logo.Size = new System.Drawing.Size(28, 27);
@@ -170,10 +154,10 @@
             this.btn_Maximizar.IconChar = FontAwesome.Sharp.IconChar.Square;
             this.btn_Maximizar.IconColor = System.Drawing.Color.White;
             this.btn_Maximizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Maximizar.IconSize = 30;
-            this.btn_Maximizar.Location = new System.Drawing.Point(1265, 3);
+            this.btn_Maximizar.IconSize = 20;
+            this.btn_Maximizar.Location = new System.Drawing.Point(1270, 3);
             this.btn_Maximizar.Name = "btn_Maximizar";
-            this.btn_Maximizar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Maximizar.Size = new System.Drawing.Size(20, 20);
             this.btn_Maximizar.TabIndex = 14;
             this.btn_Maximizar.UseVisualStyleBackColor = true;
             this.btn_Maximizar.Click += new System.EventHandler(this.btn_Maximizar_Click);
@@ -187,10 +171,10 @@
             this.btn_Restaurar.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
             this.btn_Restaurar.IconColor = System.Drawing.Color.White;
             this.btn_Restaurar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Restaurar.IconSize = 30;
-            this.btn_Restaurar.Location = new System.Drawing.Point(1265, 3);
+            this.btn_Restaurar.IconSize = 20;
+            this.btn_Restaurar.Location = new System.Drawing.Point(1270, 3);
             this.btn_Restaurar.Name = "btn_Restaurar";
-            this.btn_Restaurar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Restaurar.Size = new System.Drawing.Size(20, 20);
             this.btn_Restaurar.TabIndex = 14;
             this.btn_Restaurar.UseVisualStyleBackColor = true;
             this.btn_Restaurar.Click += new System.EventHandler(this.btn_Restaurar_Click);
@@ -206,10 +190,10 @@
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
             this.btn_Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Fechar.IconSize = 30;
-            this.btn_Fechar.Location = new System.Drawing.Point(1295, 2);
+            this.btn_Fechar.IconSize = 20;
+            this.btn_Fechar.Location = new System.Drawing.Point(1300, 2);
             this.btn_Fechar.Name = "btn_Fechar";
-            this.btn_Fechar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Fechar.Size = new System.Drawing.Size(20, 20);
             this.btn_Fechar.TabIndex = 16;
             this.btn_Fechar.UseVisualStyleBackColor = true;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
@@ -223,11 +207,11 @@
             this.btn_Minimizar.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
             this.btn_Minimizar.IconColor = System.Drawing.Color.White;
             this.btn_Minimizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Minimizar.IconSize = 35;
+            this.btn_Minimizar.IconSize = 20;
             this.btn_Minimizar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_Minimizar.Location = new System.Drawing.Point(1237, 3);
+            this.btn_Minimizar.Location = new System.Drawing.Point(1242, 1);
             this.btn_Minimizar.Name = "btn_Minimizar";
-            this.btn_Minimizar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Minimizar.Size = new System.Drawing.Size(20, 20);
             this.btn_Minimizar.TabIndex = 15;
             this.btn_Minimizar.UseVisualStyleBackColor = true;
             this.btn_Minimizar.Click += new System.EventHandler(this.btn_Minimizar_Click);
@@ -248,7 +232,7 @@
             this.btn_terminar_sessao.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_terminar_sessao.IconSize = 30;
             this.btn_terminar_sessao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_terminar_sessao.Location = new System.Drawing.Point(0, 512);
+            this.btn_terminar_sessao.Location = new System.Drawing.Point(0, 521);
             this.btn_terminar_sessao.Name = "btn_terminar_sessao";
             this.btn_terminar_sessao.Size = new System.Drawing.Size(257, 31);
             this.btn_terminar_sessao.TabIndex = 17;
@@ -264,9 +248,9 @@
             this.panel_menu.Controls.Add(this.panel_panel_perfil);
             this.panel_menu.Controls.Add(this.btn_terminar_sessao);
             this.panel_menu.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_menu.Location = new System.Drawing.Point(0, 35);
+            this.panel_menu.Location = new System.Drawing.Point(0, 26);
             this.panel_menu.Name = "panel_menu";
-            this.panel_menu.Size = new System.Drawing.Size(257, 546);
+            this.panel_menu.Size = new System.Drawing.Size(257, 555);
             this.panel_menu.TabIndex = 10;
             // 
             // panel6
@@ -283,7 +267,7 @@
             this.panel6.Controls.Add(this.btn_painel_adimistrativo);
             this.panel6.Controls.Add(this.btn_relatorios);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 32);
+            this.panel6.Location = new System.Drawing.Point(0, 30);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(257, 332);
             this.panel6.TabIndex = 24;
@@ -516,7 +500,7 @@
             this.panel_menu_btn.Controls.Add(this.btn_perfil_baixo);
             this.panel_menu_btn.Controls.Add(this.btn_perfil_cima);
             this.panel_menu_btn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_menu_btn.Location = new System.Drawing.Point(0, 5);
+            this.panel_menu_btn.Location = new System.Drawing.Point(0, 3);
             this.panel_menu_btn.Name = "panel_menu_btn";
             this.panel_menu_btn.Size = new System.Drawing.Size(257, 27);
             this.panel_menu_btn.TabIndex = 20;
@@ -571,7 +555,7 @@
             this.panel_panel_perfil.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_panel_perfil.Location = new System.Drawing.Point(0, 0);
             this.panel_panel_perfil.Name = "panel_panel_perfil";
-            this.panel_panel_perfil.Size = new System.Drawing.Size(257, 5);
+            this.panel_panel_perfil.Size = new System.Drawing.Size(257, 3);
             this.panel_panel_perfil.TabIndex = 19;
             // 
             // label_telefone
@@ -641,40 +625,6 @@
             this.btn_perfil_usuario.TabIndex = 19;
             this.btn_perfil_usuario.UseVisualStyleBackColor = false;
             this.btn_perfil_usuario.Click += new System.EventHandler(this.btn_perfil_usuario_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(26)))), ((int)(((byte)(41)))));
-            this.panel3.Controls.Add(this.btn_butao_menu);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(257, 35);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1065, 31);
-            this.panel3.TabIndex = 0;
-            // 
-            // btn_butao_menu
-            // 
-            this.btn_butao_menu.BackColor = System.Drawing.Color.Transparent;
-            this.btn_butao_menu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_butao_menu.FlatAppearance.BorderSize = 0;
-            this.btn_butao_menu.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_butao_menu.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_butao_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_butao_menu.ForeColor = System.Drawing.Color.White;
-            this.btn_butao_menu.IconChar = FontAwesome.Sharp.IconChar.AlignLeft;
-            this.btn_butao_menu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.btn_butao_menu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_butao_menu.IconSize = 30;
-            this.btn_butao_menu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_butao_menu.Location = new System.Drawing.Point(3, 2);
-            this.btn_butao_menu.Name = "btn_butao_menu";
-            this.btn_butao_menu.Size = new System.Drawing.Size(51, 28);
-            this.btn_butao_menu.TabIndex = 18;
-            this.btn_butao_menu.UseVisualStyleBackColor = false;
-            this.btn_butao_menu.Visible = false;
-            this.btn_butao_menu.Click += new System.EventHandler(this.btn_butao_menu_Click);
-            this.btn_butao_menu.MouseEnter += new System.EventHandler(this.btn_butao_menu_MouseEnter);
-            this.btn_butao_menu.MouseLeave += new System.EventHandler(this.btn_butao_menu_MouseLeave);
             // 
             // panel2
             // 
@@ -767,9 +717,9 @@
             // 
             this.panel_conteudo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(26)))), ((int)(((byte)(41)))));
             this.panel_conteudo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_conteudo.Location = new System.Drawing.Point(257, 66);
+            this.panel_conteudo.Location = new System.Drawing.Point(257, 26);
             this.panel_conteudo.Name = "panel_conteudo";
-            this.panel_conteudo.Size = new System.Drawing.Size(1065, 484);
+            this.panel_conteudo.Size = new System.Drawing.Size(1065, 524);
             this.panel_conteudo.TabIndex = 12;
             this.panel_conteudo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_conteudo_Paint);
             // 
@@ -1010,34 +960,34 @@
             this.rjDropdownMenu_escolaridades.IsMainMenu = false;
             this.rjDropdownMenu_escolaridades.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nívelAcadêmicosToolStripMenuItem,
-            this.cursosToolStripMenuItem,
-            this.especialidadesToolStripMenuItem});
+            this.EspecialidadesToolStripMenuItem,
+            this.CursosProfissonaisToolStripMenuItem});
             this.rjDropdownMenu_escolaridades.MenuItemHeight = 25;
             this.rjDropdownMenu_escolaridades.MenuItemTextColor = System.Drawing.Color.Empty;
             this.rjDropdownMenu_escolaridades.Name = "rjDropdownMenu_escolaridades";
             this.rjDropdownMenu_escolaridades.PrimaryColor = System.Drawing.Color.Empty;
-            this.rjDropdownMenu_escolaridades.Size = new System.Drawing.Size(220, 82);
+            this.rjDropdownMenu_escolaridades.Size = new System.Drawing.Size(226, 82);
             // 
             // nívelAcadêmicosToolStripMenuItem
             // 
             this.nívelAcadêmicosToolStripMenuItem.Name = "nívelAcadêmicosToolStripMenuItem";
-            this.nívelAcadêmicosToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
-            this.nívelAcadêmicosToolStripMenuItem.Text = "Nível acadêmicos";
+            this.nívelAcadêmicosToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.nívelAcadêmicosToolStripMenuItem.Text = "Níveis acadêmicos";
             this.nívelAcadêmicosToolStripMenuItem.Click += new System.EventHandler(this.nívelAcadêmicosToolStripMenuItem_Click);
             // 
-            // cursosToolStripMenuItem
+            // EspecialidadesToolStripMenuItem
             // 
-            this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
-            this.cursosToolStripMenuItem.Text = "Cursos";
-            this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
+            this.EspecialidadesToolStripMenuItem.Name = "EspecialidadesToolStripMenuItem";
+            this.EspecialidadesToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.EspecialidadesToolStripMenuItem.Text = "Especialidades";
+            this.EspecialidadesToolStripMenuItem.Click += new System.EventHandler(this.EspecialidadesToolStripMenuItem_Click_1);
             // 
-            // especialidadesToolStripMenuItem
+            // CursosProfissonaisToolStripMenuItem
             // 
-            this.especialidadesToolStripMenuItem.Name = "especialidadesToolStripMenuItem";
-            this.especialidadesToolStripMenuItem.Size = new System.Drawing.Size(219, 26);
-            this.especialidadesToolStripMenuItem.Text = "Especialidades";
-            this.especialidadesToolStripMenuItem.Click += new System.EventHandler(this.especialidadesToolStripMenuItem_Click);
+            this.CursosProfissonaisToolStripMenuItem.Name = "CursosProfissonaisToolStripMenuItem";
+            this.CursosProfissonaisToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.CursosProfissonaisToolStripMenuItem.Text = "Cursos profissonais";
+            this.CursosProfissonaisToolStripMenuItem.Click += new System.EventHandler(this.CursosProfissonaisToolStripMenuItem_Click);
             // 
             // rjDropdownMenu_eventos_casos
             // 
@@ -1094,7 +1044,6 @@
             this.ClientSize = new System.Drawing.Size(1322, 581);
             this.Controls.Add(this.panel_conteudo);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel_menu);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1107,14 +1056,12 @@
             this.Text = "Form_Principal";
             this.Load += new System.EventHandler(this.Form_Principal_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Logo)).EndInit();
             this.panel_menu.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel_menu_btn.ResumeLayout(false);
             this.panel_panel_perfil.ResumeLayout(false);
             this.panel_panel_perfil.PerformLayout();
-            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.btn_Sub_Menu_Enderecos.ResumeLayout(false);
@@ -1135,10 +1082,8 @@
         private FontAwesome.Sharp.IconButton btn_Minimizar;
         private FontAwesome.Sharp.IconButton btn_terminar_sessao;
         private System.Windows.Forms.Panel panel_menu;
-        private System.Windows.Forms.Panel panel3;
         private FontAwesome.Sharp.IconButton btn_usuarios;
         private FontAwesome.Sharp.IconButton btn_suspeitos;
-        private FontAwesome.Sharp.IconButton btn_butao_menu;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel_conteudo;
         private FontAwesome.Sharp.IconButton btn_perfil_usuario;
@@ -1170,8 +1115,8 @@
         private System.Windows.Forms.ToolStripMenuItem btn_submenu_investigadores;
         private CustomBox.RJControls.RJDropdownMenu rjDropdownMenu_escolaridades;
         private System.Windows.Forms.ToolStripMenuItem nívelAcadêmicosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem especialidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem EspecialidadesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem CursosProfissonaisToolStripMenuItem;
         private FontAwesome.Sharp.IconButton btn_Vitimas;
         private FontAwesome.Sharp.IconButton btn_testemunhas;
         private CustomBox.RJControls.RJDropdownMenu rjDropdownMenu_eventos_casos;
@@ -1195,7 +1140,6 @@
         private FontAwesome.Sharp.IconButton btn_perfil_cima;
         private FontAwesome.Sharp.IconButton btn_perfil_baixo;
         private System.Windows.Forms.Label label_telefone;
-        private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btn_Evidencias;
         private System.Windows.Forms.ToolStripMenuItem treinamentosToolStripMenuItem;
         private System.Windows.Forms.ToolTip toolTip1;

@@ -31,6 +31,8 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         private void Form_Lista_Usuarios_Load(object sender, EventArgs e)
         {
             listar_Usuarios();
+            
+            dgv_usuarios.Columns[9].Visible = false;
         }
         private void listar_Usuarios()
         {
@@ -64,15 +66,9 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 usuarios.text_numero_bi.Text = dgv_usuarios.CurrentRow.Cells[4].Value.ToString();
                 usuarios.text_sexo.Text = dgv_usuarios.CurrentRow.Cells[5].Value.ToString();
                 usuarios.text_primerio_numero_telefone.Text = dgv_usuarios.CurrentRow.Cells[6].Value.ToString();
-                usuarios.text_segundo_numero_telefone.Text = dgv_usuarios.CurrentRow.Cells[7].Value.ToString();
-                usuarios.text_e_mail.Text = dgv_usuarios.CurrentRow.Cells[8].Value.ToString();
-                usuarios.text_tipo_usuario.Text = dgv_usuarios.CurrentRow.Cells[9].Value.ToString();
-                usuarios.text_palavra_passe.Text = dgv_usuarios.CurrentRow.Cells[10].Value.ToString();
-                usuarios.text_continente.Text = dgv_usuarios.CurrentRow.Cells[11].Value.ToString();
-                usuarios.text_pais.Text = dgv_usuarios.CurrentRow.Cells[12].Value.ToString();
-                usuarios.text_provincias.Text = dgv_usuarios.CurrentRow.Cells[13].Value.ToString();
-                usuarios.text_municipio.Text = dgv_usuarios.CurrentRow.Cells[14].Value.ToString();
-                usuarios.text_bairro_rua.Text = dgv_usuarios.CurrentRow.Cells[15].Value.ToString();
+               usuarios.text_e_mail.Text = dgv_usuarios.CurrentRow.Cells[7].Value.ToString();
+                usuarios.text_tipo_usuario.Text = dgv_usuarios.CurrentRow.Cells[8].Value.ToString();
+                usuarios.text_palavra_passe.Text = dgv_usuarios.CurrentRow.Cells[9].Value.ToString();
                 
                 usuarios.label5.Text = "Atualizar usuário";
                 usuarios.btn_salvar.Visible = false;
@@ -101,15 +97,10 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 usuarios.text_numero_bi.Text = dgv_usuarios.CurrentRow.Cells[4].Value.ToString();
                 usuarios.text_sexo.Text = dgv_usuarios.CurrentRow.Cells[5].Value.ToString();
                 usuarios.text_primerio_numero_telefone.Text = dgv_usuarios.CurrentRow.Cells[6].Value.ToString();
-                usuarios.text_segundo_numero_telefone.Text = dgv_usuarios.CurrentRow.Cells[7].Value.ToString();
-                usuarios.text_e_mail.Text = dgv_usuarios.CurrentRow.Cells[8].Value.ToString();
-                usuarios.text_tipo_usuario.Text = dgv_usuarios.CurrentRow.Cells[9].Value.ToString();
-                usuarios.text_palavra_passe.Text = dgv_usuarios.CurrentRow.Cells[10].Value.ToString();
-                usuarios.text_continente.Text = dgv_usuarios.CurrentRow.Cells[11].Value.ToString();
-                usuarios.text_pais.Text = dgv_usuarios.CurrentRow.Cells[12].Value.ToString();
-                usuarios.text_provincias.Text = dgv_usuarios.CurrentRow.Cells[13].Value.ToString();
-                usuarios.text_municipio.Text = dgv_usuarios.CurrentRow.Cells[14].Value.ToString();
-                usuarios.text_bairro_rua.Text = dgv_usuarios.CurrentRow.Cells[15].Value.ToString();
+                usuarios.text_e_mail.Text = dgv_usuarios.CurrentRow.Cells[7].Value.ToString();
+                usuarios.text_tipo_usuario.Text = dgv_usuarios.CurrentRow.Cells[8].Value.ToString();
+                usuarios.text_palavra_passe.Text = dgv_usuarios.CurrentRow.Cells[9].Value.ToString();
+               
 
                 usuarios.label5.Text = "Atualizar usuário";
                 usuarios.btn_salvar.Visible = false;
@@ -137,14 +128,12 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                         d_Usuarios.eliminar_usuarios(c_Usuarios);
                         guna2MessageDialog_Inform.Show($"O usuário com o identificador {id_Usuario} foi eliminado com sucesso!", "Exclusão bem sucedida");
                         listar_Usuarios();
-
                     }
                 }
-                catch(SqlException Ex)
-                {
-                    if (Ex.Number == 547)
-                        MessageDialog_Error.Show("Não é possível eliminar este usuário, pois existem - no sistema - dados que estão vinculados à ele!", "Erro de exclusão");
-                }
+                //catch(SqlException Ex)
+                //{
+                //  MessageDialog_Error.Show(Ex.Message);
+                //}
                 catch (Exception Ex)
                 {
 

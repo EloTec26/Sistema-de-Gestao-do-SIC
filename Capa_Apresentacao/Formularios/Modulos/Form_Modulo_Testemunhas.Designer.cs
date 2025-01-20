@@ -111,11 +111,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
             this.panel1.Controls.Add(this.btn_Fechar);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label_id);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(819, 28);
+            this.panel1.Size = new System.Drawing.Size(819, 20);
             this.panel1.TabIndex = 116;
             // 
             // btn_Fechar
@@ -129,10 +128,10 @@
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
             this.btn_Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Fechar.IconSize = 30;
-            this.btn_Fechar.Location = new System.Drawing.Point(793, 2);
+            this.btn_Fechar.IconSize = 20;
+            this.btn_Fechar.Location = new System.Drawing.Point(802, 2);
             this.btn_Fechar.Name = "btn_Fechar";
-            this.btn_Fechar.Size = new System.Drawing.Size(25, 23);
+            this.btn_Fechar.Size = new System.Drawing.Size(15, 15);
             this.btn_Fechar.TabIndex = 0;
             this.btn_Fechar.UseVisualStyleBackColor = false;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
@@ -140,11 +139,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(12, 3);
+            this.label5.Location = new System.Drawing.Point(12, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(169, 19);
+            this.label5.Size = new System.Drawing.Size(148, 17);
             this.label5.TabIndex = 88;
             this.label5.Text = "Registrar testemunha";
             // 
@@ -152,7 +151,7 @@
             // 
             this.label_id.AutoSize = true;
             this.label_id.ForeColor = System.Drawing.Color.Red;
-            this.label_id.Location = new System.Drawing.Point(532, 4);
+            this.label_id.Location = new System.Drawing.Point(505, 16);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(24, 21);
             this.label_id.TabIndex = 108;
@@ -279,6 +278,7 @@
             this.panel_formulario.AutoScroll = true;
             this.panel_formulario.Controls.Add(this.label_msg_descricao);
             this.panel_formulario.Controls.Add(this.label_msg_email);
+            this.panel_formulario.Controls.Add(this.label_id);
             this.panel_formulario.Controls.Add(this.label26);
             this.panel_formulario.Controls.Add(this.label_msg_telefone2);
             this.panel_formulario.Controls.Add(this.label_msg_telefone1);
@@ -333,9 +333,9 @@
             this.panel_formulario.Controls.Add(this.text_data_nascimento);
             this.panel_formulario.Controls.Add(this.label1);
             this.panel_formulario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_formulario.Location = new System.Drawing.Point(0, 28);
+            this.panel_formulario.Location = new System.Drawing.Point(0, 20);
             this.panel_formulario.Name = "panel_formulario";
-            this.panel_formulario.Size = new System.Drawing.Size(819, 454);
+            this.panel_formulario.Size = new System.Drawing.Size(819, 462);
             this.panel_formulario.TabIndex = 118;
             // 
             // label_msg_descricao
@@ -572,6 +572,7 @@
             this.text_declaracao.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_declaracao.Location = new System.Drawing.Point(21, 466);
             this.text_declaracao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.text_declaracao.MaxLength = 1090;
             this.text_declaracao.Multiline = true;
             this.text_declaracao.Name = "text_declaracao";
             this.text_declaracao.PasswordChar = '\0';
@@ -611,7 +612,6 @@
             this.text_provincias.Name = "text_provincias";
             this.text_provincias.Size = new System.Drawing.Size(243, 36);
             this.text_provincias.TabIndex = 130;
-            this.text_provincias.SelectedIndexChanged += new System.EventHandler(this.text_provincias_SelectedIndexChanged);
             // 
             // label28
             // 
@@ -653,7 +653,6 @@
             this.text_municipio.Name = "text_municipio";
             this.text_municipio.Size = new System.Drawing.Size(245, 36);
             this.text_municipio.TabIndex = 121;
-            this.text_municipio.SelectedIndexChanged += new System.EventHandler(this.text_municipio_SelectedIndexChanged);
             // 
             // label30
             // 
@@ -693,6 +692,7 @@
             this.text_e_mail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_e_mail.Location = new System.Drawing.Point(20, 215);
             this.text_e_mail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.text_e_mail.MaxLength = 90;
             this.text_e_mail.Name = "text_e_mail";
             this.text_e_mail.PasswordChar = '\0';
             this.text_e_mail.PlaceholderText = "";
@@ -776,7 +776,6 @@
             this.text_pais.Name = "text_pais";
             this.text_pais.Size = new System.Drawing.Size(250, 36);
             this.text_pais.TabIndex = 111;
-            this.text_pais.SelectedIndexChanged += new System.EventHandler(this.text_pais_SelectedIndexChanged);
             // 
             // label25
             // 
@@ -849,7 +848,6 @@
             this.text_continente.Name = "text_continente";
             this.text_continente.Size = new System.Drawing.Size(250, 36);
             this.text_continente.TabIndex = 111;
-            this.text_continente.SelectedIndexChanged += new System.EventHandler(this.text_continente_SelectedIndexChanged);
             // 
             // label22
             // 
@@ -899,6 +897,7 @@
             this.text_segundo_numero_telefone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_segundo_numero_telefone.Location = new System.Drawing.Point(585, 132);
             this.text_segundo_numero_telefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.text_segundo_numero_telefone.MaxLength = 9;
             this.text_segundo_numero_telefone.Name = "text_segundo_numero_telefone";
             this.text_segundo_numero_telefone.PasswordChar = '\0';
             this.text_segundo_numero_telefone.PlaceholderText = "";
@@ -925,6 +924,7 @@
             this.text_primerio_numero_telefone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_primerio_numero_telefone.Location = new System.Drawing.Point(359, 131);
             this.text_primerio_numero_telefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.text_primerio_numero_telefone.MaxLength = 9;
             this.text_primerio_numero_telefone.Name = "text_primerio_numero_telefone";
             this.text_primerio_numero_telefone.PasswordChar = '\0';
             this.text_primerio_numero_telefone.PlaceholderText = "";
@@ -981,6 +981,7 @@
             this.text_ultimo_nome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_ultimo_nome.Location = new System.Drawing.Point(539, 41);
             this.text_ultimo_nome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.text_ultimo_nome.MaxLength = 20;
             this.text_ultimo_nome.Name = "text_ultimo_nome";
             this.text_ultimo_nome.PasswordChar = '\0';
             this.text_ultimo_nome.PlaceholderText = "";
@@ -1037,6 +1038,7 @@
             this.text_nome_meio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_nome_meio.Location = new System.Drawing.Point(276, 41);
             this.text_nome_meio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.text_nome_meio.MaxLength = 20;
             this.text_nome_meio.Name = "text_nome_meio";
             this.text_nome_meio.PasswordChar = '\0';
             this.text_nome_meio.PlaceholderText = "";
@@ -1063,6 +1065,7 @@
             this.text_primeiro_nome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_primeiro_nome.Location = new System.Drawing.Point(15, 41);
             this.text_primeiro_nome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.text_primeiro_nome.MaxLength = 20;
             this.text_primeiro_nome.Name = "text_primeiro_nome";
             this.text_primeiro_nome.PasswordChar = '\0';
             this.text_primeiro_nome.PlaceholderText = "";

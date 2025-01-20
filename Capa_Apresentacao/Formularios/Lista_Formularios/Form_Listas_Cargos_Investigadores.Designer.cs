@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.text_pesquisar = new Guna.UI2.WinForms.Guna2TextBox();
@@ -42,13 +42,13 @@
             this.btn_cadastrar = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
             this.dgv_cargos_investigadores = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.MessageDialog_Error = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_cargos_investigadores)).BeginInit();
@@ -127,9 +127,8 @@
             this.btn_eliminar.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
             this.btn_eliminar.IconColor = System.Drawing.Color.Tomato;
             this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_eliminar.IconSize = 30;
-            this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_eliminar.Location = new System.Drawing.Point(334, 2);
+            this.btn_eliminar.IconSize = 20;
+            this.btn_eliminar.Location = new System.Drawing.Point(291, 2);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(46, 31);
             this.btn_eliminar.TabIndex = 53;
@@ -148,8 +147,8 @@
             this.btn_atualizar.IconChar = FontAwesome.Sharp.IconChar.PenClip;
             this.btn_atualizar.IconColor = System.Drawing.Color.SeaGreen;
             this.btn_atualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_atualizar.IconSize = 30;
-            this.btn_atualizar.Location = new System.Drawing.Point(277, 3);
+            this.btn_atualizar.IconSize = 20;
+            this.btn_atualizar.Location = new System.Drawing.Point(234, 3);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(51, 31);
             this.btn_atualizar.TabIndex = 52;
@@ -166,8 +165,8 @@
             this.btn_cadastrar.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.btn_cadastrar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btn_cadastrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_cadastrar.IconSize = 30;
-            this.btn_cadastrar.Location = new System.Drawing.Point(220, 4);
+            this.btn_cadastrar.IconSize = 20;
+            this.btn_cadastrar.Location = new System.Drawing.Point(177, 4);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(51, 31);
             this.btn_cadastrar.TabIndex = 51;
@@ -178,11 +177,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 22);
+            this.label1.Size = new System.Drawing.Size(171, 18);
             this.label1.TabIndex = 38;
             this.label1.Text = "Cargos > Funcionários";
             // 
@@ -197,6 +196,20 @@
             this.panel2.Size = new System.Drawing.Size(775, 222);
             this.panel2.TabIndex = 19;
             // 
+            // guna2HScrollBar1
+            // 
+            this.guna2HScrollBar1.BindingContainer = this.dgv_cargos_investigadores;
+            this.guna2HScrollBar1.BorderRadius = 4;
+            this.guna2HScrollBar1.InUpdate = false;
+            this.guna2HScrollBar1.LargeChange = 1;
+            this.guna2HScrollBar1.Location = new System.Drawing.Point(1, 204);
+            this.guna2HScrollBar1.Maximum = 1;
+            this.guna2HScrollBar1.Name = "guna2HScrollBar1";
+            this.guna2HScrollBar1.ScrollbarSize = 18;
+            this.guna2HScrollBar1.Size = new System.Drawing.Size(774, 18);
+            this.guna2HScrollBar1.TabIndex = 34;
+            this.guna2HScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            // 
             // dgv_cargos_investigadores
             // 
             this.dgv_cargos_investigadores.AllowUserToAddRows = false;
@@ -204,48 +217,48 @@
             this.dgv_cargos_investigadores.AllowUserToOrderColumns = true;
             this.dgv_cargos_investigadores.AllowUserToResizeColumns = false;
             this.dgv_cargos_investigadores.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.dgv_cargos_investigadores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            this.dgv_cargos_investigadores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_cargos_investigadores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_cargos_investigadores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_cargos_investigadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_cargos_investigadores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_cargos_investigadores.ColumnHeadersHeight = 35;
             this.dgv_cargos_investigadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_cargos_investigadores.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_cargos_investigadores.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_cargos_investigadores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(222)))));
             this.dgv_cargos_investigadores.Location = new System.Drawing.Point(1, 1);
             this.dgv_cargos_investigadores.MultiSelect = false;
             this.dgv_cargos_investigadores.Name = "dgv_cargos_investigadores";
             this.dgv_cargos_investigadores.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_cargos_investigadores.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_cargos_investigadores.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_cargos_investigadores.RowHeadersVisible = false;
             this.dgv_cargos_investigadores.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            this.dgv_cargos_investigadores.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            this.dgv_cargos_investigadores.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_cargos_investigadores.Size = new System.Drawing.Size(774, 221);
             this.dgv_cargos_investigadores.TabIndex = 33;
             this.dgv_cargos_investigadores.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -270,6 +283,21 @@
             this.dgv_cargos_investigadores.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_cargos_investigadores.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgv_cargos_investigadores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_cargos_investigadores_CellDoubleClick);
+            // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.dgv_cargos_investigadores;
+            this.guna2VScrollBar1.BorderRadius = 4;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(757, 1);
+            this.guna2VScrollBar1.Minimum = 1;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 221);
+            this.guna2VScrollBar1.TabIndex = 33;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2VScrollBar1.Value = 1;
             // 
             // guna2MessageDialog_Inform
             // 
@@ -297,35 +325,6 @@
             this.MessageDialog_Error.Parent = null;
             this.MessageDialog_Error.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.MessageDialog_Error.Text = null;
-            // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.dgv_cargos_investigadores;
-            this.guna2VScrollBar1.BorderRadius = 4;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(757, 1);
-            this.guna2VScrollBar1.Minimum = 1;
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 221);
-            this.guna2VScrollBar1.TabIndex = 33;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2VScrollBar1.Value = 1;
-            // 
-            // guna2HScrollBar1
-            // 
-            this.guna2HScrollBar1.BindingContainer = this.dgv_cargos_investigadores;
-            this.guna2HScrollBar1.BorderRadius = 4;
-            this.guna2HScrollBar1.InUpdate = false;
-            this.guna2HScrollBar1.LargeChange = 1;
-            this.guna2HScrollBar1.Location = new System.Drawing.Point(1, 204);
-            this.guna2HScrollBar1.Maximum = 1;
-            this.guna2HScrollBar1.Name = "guna2HScrollBar1";
-            this.guna2HScrollBar1.ScrollbarSize = 18;
-            this.guna2HScrollBar1.Size = new System.Drawing.Size(774, 18);
-            this.guna2HScrollBar1.TabIndex = 34;
-            this.guna2HScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             // 
             // Form_Listas_Cargos_Investigadores
             // 

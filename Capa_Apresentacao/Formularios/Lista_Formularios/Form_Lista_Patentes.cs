@@ -2,6 +2,7 @@
 using Capa_Dominio;
 using Capa_Dominio.Dominio_Pesquisas;
 using System;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -20,13 +21,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
-        private void listar_Patentes()
+        public void listar_Patentes()
         {
             dgv_patentes.DataSource = d_Patentes.selecionar_patentes();
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Modulos.Form_Modulo_Patentes patentes = new Modulos.Form_Modulo_Patentes();
+            Modulos.Form_Modulo_Patentes patentes = new Modulos.Form_Modulo_Patentes(this);
             patentes.FormClosed += Patentes_FormClosed;
             patentes.ShowDialog();
             listar_Patentes();
@@ -41,7 +42,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_patentes.SelectedRows.Count > 0)
             {
-                Modulos.Form_Modulo_Patentes patentes = new Modulos.Form_Modulo_Patentes();
+                Modulos.Form_Modulo_Patentes patentes = new Modulos.Form_Modulo_Patentes(this);
                 patentes.FormClosed += Patentes_FormClosed;
 
                 patentes.label_id.Text = dgv_patentes.CurrentRow.Cells[0].Value.ToString();
@@ -58,8 +59,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             }
             else
             {
-                MessageBox.Show("Por favor, selecione patente que pretende atualizar e tente novamente!", "Falha",
-                    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                MessageDialog_Error.Show("Por favor, selecione patente que pretende atualizar e tente novamente!", "Falha");
             }
         }
 
@@ -69,26 +69,30 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 try
                 {
-                    if (MessageBox.Show("Tens a certeza de eliminar esta patente?", "Mensagem de exclusão",
-                        MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    if (guna2MessageDialog_Confirm.Show("Tens a certeza de eliminar esta patente?", "Mensagem de exclusão") == DialogResult.Yes)
                     {
                         int id_patentes = Convert.ToInt32(dgv_patentes.CurrentRow.Cells[0].Value.ToString());
                         c_Patentes.id_patente = id_patentes;
                         d_Patentes.eliminar_patentes(c_Patentes);
-                        MessageBox.Show($"A patente com a identificãção {id_patentes}, foi eliminada com sucesso!", "Exclusão bem sucedida",
-                            MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        guna2MessageDialog_Inform.Show($"A patente com a identificãção {id_patentes}, foi eliminada com sucesso!", "Exclusão bem sucedida");
                         listar_Patentes();
+                    }
+                }
+                catch(SqlException Ex)
+                {
+                    if (Ex.Number == 457 || Ex.Number == 547)
+                    {
+                        MessageDialog_Error.Show("Não é possível eliminar esta patente, pois existem - no sistema-, dados que estão vinculados  à ela.", "Alerta");
                     }
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show("Não foi possível eliminar esta patente!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível eliminar esta patente!", Ex.Message);
                 }
             }
             else
             {
-                MessageBox.Show("Por favor, selecione patente que pretende eliminar e tente novamente!", "Falha",
-                    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                MessageDialog_Error.Show("Por favor, selecione patente que pretende eliminar e tente novamente!", "Falha");
             }
         }
         // metodo para pesquisar

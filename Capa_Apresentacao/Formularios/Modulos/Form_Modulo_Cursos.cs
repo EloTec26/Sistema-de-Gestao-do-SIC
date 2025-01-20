@@ -1,4 +1,5 @@
 ﻿//-------------------------------
+using Capa_Apresentacao.Formularios.Lista_Formularios;
 using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
@@ -11,9 +12,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
     {
         e_comum_cursos c_Cursos = new e_comum_cursos();
         dominio_cursos d_Cursos = new dominio_cursos();
-        public Form_Modulo_Cursos()
+        Form_Lista_Cursos cursos;
+        public Form_Modulo_Cursos(Form_Lista_Cursos cursos)
         {
             InitializeComponent();
+            this.cursos = cursos;
         }
         private void btn_Fechar_Click(object sender, EventArgs e)
         {
@@ -55,6 +58,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     {
                         d_Cursos.inserir_Cursos(c_Cursos);
                         guna2MessageDialog_Inform.Show($"O curso {text_Curso.Text}, foi registrado com  sucesso", "Registro bem sucedido");
+                        cursos.listar_Cursos();
                         limpar_Campos();
                     }
                 }
@@ -85,6 +89,8 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     {
                         d_Cursos.atualizar_Cursos(c_Cursos);
                         guna2MessageDialog_Inform.Show($"O curso {text_Curso.Text}, foi atualizado com  sucesso!", "Atualização bem sucedida");
+                        cursos.listar_Cursos();
+                        this.Close();
                         limpar_Campos();
                     }
                 }

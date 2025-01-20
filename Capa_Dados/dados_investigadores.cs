@@ -104,7 +104,6 @@ namespace Capa_Dados
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
-
                     cmd.Parameters.AddWithValue("@id_investigador", investigadores.id_investigador);
                     cmd.Parameters.AddWithValue("@id_continente", investigadores.id_continente);
                     cmd.Parameters.AddWithValue("@id_pais", investigadores.id_pais);
@@ -138,13 +137,10 @@ namespace Capa_Dados
             using (var connection = conectar())
             {
                 connection.Open();
-
                 using (SqlCommand cmd = new SqlCommand("eliminar_investigadores", connection))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@id_investigador", investigadores.id_investigador);
-
-
                     cmd.ExecuteNonQuery();
                 }
             }

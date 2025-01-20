@@ -79,11 +79,10 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                         Carregar_Treinamentos();
                     }
                 }
-                catch (SqlException Ex)
-                {
-                    if (Ex.Number == 547)
-                        MessageDialog_Error.Show("Não é possível eliminar este treinamento, pois existem - no sistema - dados que estão vinculados à ele!", "Erro de exclusão");
-                }
+                //catch (SqlException Ex)
+                //{
+                //        MessageDialog_Error.Show(Ex.Message);
+                //}
                 catch (Exception Ex)
                 {
                     MessageDialog_Error.Show("Não foi possível eliminar este treinamento!", Ex.Message);

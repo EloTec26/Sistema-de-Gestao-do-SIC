@@ -16,8 +16,8 @@ namespace Capa_Apresentacao
         {
             InitializeComponent();
             InitializeLockoutTimer();
-
-            this.AcceptButton = btn_iniciar_sessao;
+            text_palavra_passe.UseSystemPasswordChar = true;
+            //this.AcceptButton = btn_iniciar_sessao;
 
             toolTip1.SetToolTip(btn_Fechar, "Encerrar");
             toolTip1.SetToolTip(btn_Restaurar, "Restaurar");
@@ -26,7 +26,6 @@ namespace Capa_Apresentacao
 
             FormClosing += Form_Login_FormClosing;
         }
-
         private void InitializeLockoutTimer()
         {
             lockoutTimer = new Timer();
@@ -63,8 +62,56 @@ namespace Capa_Apresentacao
             SendMessage(this.Handle, 0x112, 0xf012, 0);
             this.WindowState = FormWindowState.Normal;
         }
+        // Validar senha segura
+        private bool Validar_Senha_Segura(string palavra_passe_segura)
+        {
+            check_caracter_especial.Checked = false;
+            check_letra_maiuscula.Checked = false;
+            check_letra_minuscula.Checked = false;
+            check_numero.Checked = false;
+            check_oito_caracteres.Checked = false;
+            for (int i = 0; i < palavra_passe_segura.Length; i++)
+            {
+                if (palavra_passe_segura.Length >= 8)
+                {
+                    check_oito_caracteres.Checked = true;
+                }
+                if (Char.IsUpper(palavra_passe_segura, i))
+                {
+                    check_letra_maiuscula.Checked = true;
+                }
+                else if (Char.IsLower(palavra_passe_segura, i))
+                {
+                    check_letra_minuscula.Checked = true;
+                }
+                else if (Char.IsDigit(palavra_passe_segura, i))
+                {
+                    check_numero.Checked = true;
+                }
+                else
+                {
+                    check_caracter_especial.Checked = true;
+                }
+            }
+            if (check_caracter_especial.Checked && check_letra_maiuscula.Checked && check_letra_minuscula.Checked && check_numero.Checked && palavra_passe_segura.Length >= 8)
+            {
+                return true;
+            }
+            return false;
+        }
+        private void text_palavra_passe_TextChanged(object sender, EventArgs e)
+        {
+            if (Validar_Senha_Segura(text_palavra_passe.Text))
+            {
+                btn_iniciar_sessao.Enabled = true;
+            }
+            else
+                btn_iniciar_sessao.Enabled = false;
+        }
+        //Fim de validar senha senha
         private void btn_iniciar_sessao_Click_1(object sender, EventArgs e)
         {
+            Validar_Senha_Segura(text_palavra_passe.Text);
             if (text_palavra_passe.Text == "")
             {
                 label_erro.Text = "[ERRO] - Por favor, insira a palavra-passe e tente novamente!";
@@ -72,9 +119,9 @@ namespace Capa_Apresentacao
                 text_palavra_passe.Focus();
                 return;
             }
-            if (text_palavra_passe.Text.Length < 6)
+            if (text_palavra_passe.Text.Length < 8)
             {
-                label_erro.Text = "[ERRO] - A palavra-passe deve ter no mínimo 6 caracteres!";
+                label_erro.Text = "[ERRO] - A palavra-passe deve ter no mínimo 8 caracteres!";
                 label_erro.Visible = true;
                 text_palavra_passe.Focus();
                 return;
@@ -110,7 +157,6 @@ namespace Capa_Apresentacao
                             text_palavra_passe.ForeColor = Color.Tomato;
                             text_palavra_passe.HoverState.BorderColor = Color.Tomato;
                             text_palavra_passe.FocusedState.BorderColor = Color.Tomato;
-
 
                             remainingSeconds = 1000; // Defina o tempo de bloqueio desejado em segundos
                             label_minutos.Text = $"O sistema será desbloquado dentro de {remainingSeconds} segundos.";
@@ -157,13 +203,12 @@ namespace Capa_Apresentacao
                 label_erro.ForeColor = Color.Green;
             }
         }
-
         private void Form_Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (bloqueado)
             {
                 e.Cancel = true; // Cancela o fechamento do formulário
-                label_erro.Text= "O aplicativo está bloqueado. Você não pode fechá-lo agora.";
+                label_erro.Text = "O sistema está bloqueado. Você não pode fechá-lo agora.";
                 label_erro.Visible = true;
             }
         }
@@ -175,11 +220,10 @@ namespace Capa_Apresentacao
         private void btn_visualizar_palavra_passe_CheckedChanged(object sender, EventArgs e)
         {
             if (btn_visualizar_palavra_passe.Checked)
-                text_palavra_passe.PasswordChar = '\0';
+                text_palavra_passe.UseSystemPasswordChar = false;
             else
-                text_palavra_passe.PasswordChar = '*';
+                text_palavra_passe.UseSystemPasswordChar = true;
         }
-
         private void btn_Restaurar_Click(object sender, EventArgs e)
         {
             //this.WindowState = FormWindowState.Normal;

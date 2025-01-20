@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using Capa_Comum.Comum_Permissoes.Cache;
+using Capa_Apresentacao.Formularios.Lista_Formularios;
 
 namespace Capa_Apresentacao.Formularios.Modulos
 {
@@ -18,10 +19,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
         e_comum_faltas c_Faltas = new e_comum_faltas();
         dominio_faltas d_Faltas = new dominio_faltas();
         dominio_investigadores d_Investigador = new dominio_investigadores();
-        public Form_Modulo_Faltas()
+        Form_Lista_Faltas faltas;
+        public Form_Modulo_Faltas(Form_Lista_Faltas faltas)
         {
             InitializeComponent();
-
+            this.faltas = faltas;
             carregar_Investigadores_Combo_Box();
         }
         private void carregar_Investigadores_Combo_Box()
@@ -83,6 +85,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         d_Faltas.inserir_Faltas(c_Faltas);
 
                         guna2MessageDialog_Inform.Show("A falta foi registrada com sucesso!", "Registro bem-sucedido");
+                        faltas.selecionar_Faltas();
                         limpar_Campos();
                     }
                 }
@@ -111,6 +114,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
 
                         guna2MessageDialog_Inform.Show("A falta foi atualizada com sucesso!", "Atualização bem-sucedida");
                         limpar_Campos();
+                        faltas.selecionar_Faltas();
                         this.Close();
                     }
                 }

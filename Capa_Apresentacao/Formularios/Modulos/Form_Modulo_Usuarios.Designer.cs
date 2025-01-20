@@ -46,37 +46,20 @@
             this.label_msg_primeiro_nome = new System.Windows.Forms.Label();
             this.label_msg_telefone2 = new System.Windows.Forms.Label();
             this.label_msg_telefone1 = new System.Windows.Forms.Label();
-            this.text_provincias = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.text_palavra_passe = new Guna.UI2.WinForms.Guna2TextBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.text_municipio = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.text_e_mail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.text_sexo = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.text_pais = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.text_tipo_usuario = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.text_bairro_rua = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.text_continente = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.text_segundo_numero_telefone = new Guna.UI2.WinForms.Guna2TextBox();
             this.text_primerio_numero_telefone = new Guna.UI2.WinForms.Guna2TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.text_numero_bi = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.text_ultimo_nome = new Guna.UI2.WinForms.Guna2TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -96,7 +79,6 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panel2.SuspendLayout();
             this.panel_formulario.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -112,7 +94,7 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 495);
+            this.panel2.Location = new System.Drawing.Point(0, 373);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(705, 87);
             this.panel2.TabIndex = 115;
@@ -228,37 +210,20 @@
             this.panel_formulario.Controls.Add(this.label_msg_primeiro_nome);
             this.panel_formulario.Controls.Add(this.label_msg_telefone2);
             this.panel_formulario.Controls.Add(this.label_msg_telefone1);
-            this.panel_formulario.Controls.Add(this.text_provincias);
-            this.panel_formulario.Controls.Add(this.label28);
-            this.panel_formulario.Controls.Add(this.label36);
             this.panel_formulario.Controls.Add(this.label33);
             this.panel_formulario.Controls.Add(this.text_palavra_passe);
             this.panel_formulario.Controls.Add(this.label32);
-            this.panel_formulario.Controls.Add(this.text_municipio);
-            this.panel_formulario.Controls.Add(this.label30);
-            this.panel_formulario.Controls.Add(this.label31);
             this.panel_formulario.Controls.Add(this.text_e_mail);
             this.panel_formulario.Controls.Add(this.label29);
             this.panel_formulario.Controls.Add(this.text_sexo);
-            this.panel_formulario.Controls.Add(this.text_pais);
-            this.panel_formulario.Controls.Add(this.label25);
             this.panel_formulario.Controls.Add(this.text_tipo_usuario);
             this.panel_formulario.Controls.Add(this.label27);
-            this.panel_formulario.Controls.Add(this.text_bairro_rua);
-            this.panel_formulario.Controls.Add(this.label23);
-            this.panel_formulario.Controls.Add(this.label24);
             this.panel_formulario.Controls.Add(this.label26);
-            this.panel_formulario.Controls.Add(this.text_continente);
-            this.panel_formulario.Controls.Add(this.label22);
-            this.panel_formulario.Controls.Add(this.label10);
-            this.panel_formulario.Controls.Add(this.label9);
-            this.panel_formulario.Controls.Add(this.text_segundo_numero_telefone);
             this.panel_formulario.Controls.Add(this.text_primerio_numero_telefone);
             this.panel_formulario.Controls.Add(this.label19);
             this.panel_formulario.Controls.Add(this.label17);
             this.panel_formulario.Controls.Add(this.text_numero_bi);
             this.panel_formulario.Controls.Add(this.label15);
-            this.panel_formulario.Controls.Add(this.label20);
             this.panel_formulario.Controls.Add(this.text_ultimo_nome);
             this.panel_formulario.Controls.Add(this.label18);
             this.panel_formulario.Controls.Add(this.label14);
@@ -271,16 +236,16 @@
             this.panel_formulario.Controls.Add(this.label11);
             this.panel_formulario.Controls.Add(this.label1);
             this.panel_formulario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_formulario.Location = new System.Drawing.Point(0, 28);
+            this.panel_formulario.Location = new System.Drawing.Point(0, 20);
             this.panel_formulario.Name = "panel_formulario";
-            this.panel_formulario.Size = new System.Drawing.Size(705, 467);
+            this.panel_formulario.Size = new System.Drawing.Size(705, 353);
             this.panel_formulario.TabIndex = 116;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.Tomato;
-            this.label7.Location = new System.Drawing.Point(409, 101);
+            this.label7.Location = new System.Drawing.Point(416, 101);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(16, 21);
             this.label7.TabIndex = 138;
@@ -291,7 +256,7 @@
             this.label_msg_email.AutoSize = true;
             this.label_msg_email.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.label_msg_email.ForeColor = System.Drawing.Color.Tomato;
-            this.label_msg_email.Location = new System.Drawing.Point(359, 165);
+            this.label_msg_email.Location = new System.Drawing.Point(366, 165);
             this.label_msg_email.Name = "label_msg_email";
             this.label_msg_email.Size = new System.Drawing.Size(120, 17);
             this.label_msg_email.TabIndex = 137;
@@ -303,7 +268,7 @@
             this.label_msg_bi.AutoSize = true;
             this.label_msg_bi.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.label_msg_bi.ForeColor = System.Drawing.Color.Tomato;
-            this.label_msg_bi.Location = new System.Drawing.Point(19, 165);
+            this.label_msg_bi.Location = new System.Drawing.Point(26, 165);
             this.label_msg_bi.Name = "label_msg_bi";
             this.label_msg_bi.Size = new System.Drawing.Size(120, 17);
             this.label_msg_bi.TabIndex = 136;
@@ -315,7 +280,7 @@
             this.label_msg_ultimo_nome.AutoSize = true;
             this.label_msg_ultimo_nome.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.label_msg_ultimo_nome.ForeColor = System.Drawing.Color.Tomato;
-            this.label_msg_ultimo_nome.Location = new System.Drawing.Point(475, 80);
+            this.label_msg_ultimo_nome.Location = new System.Drawing.Point(482, 80);
             this.label_msg_ultimo_nome.Name = "label_msg_ultimo_nome";
             this.label_msg_ultimo_nome.Size = new System.Drawing.Size(120, 17);
             this.label_msg_ultimo_nome.TabIndex = 135;
@@ -327,7 +292,7 @@
             this.label_msg_nome_meio.AutoSize = true;
             this.label_msg_nome_meio.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.label_msg_nome_meio.ForeColor = System.Drawing.Color.Tomato;
-            this.label_msg_nome_meio.Location = new System.Drawing.Point(228, 80);
+            this.label_msg_nome_meio.Location = new System.Drawing.Point(235, 80);
             this.label_msg_nome_meio.Name = "label_msg_nome_meio";
             this.label_msg_nome_meio.Size = new System.Drawing.Size(120, 17);
             this.label_msg_nome_meio.TabIndex = 134;
@@ -339,7 +304,7 @@
             this.label_msg_primeiro_nome.AutoSize = true;
             this.label_msg_primeiro_nome.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.label_msg_primeiro_nome.ForeColor = System.Drawing.Color.Tomato;
-            this.label_msg_primeiro_nome.Location = new System.Drawing.Point(21, 80);
+            this.label_msg_primeiro_nome.Location = new System.Drawing.Point(28, 80);
             this.label_msg_primeiro_nome.Name = "label_msg_primeiro_nome";
             this.label_msg_primeiro_nome.Size = new System.Drawing.Size(120, 17);
             this.label_msg_primeiro_nome.TabIndex = 133;
@@ -351,7 +316,7 @@
             this.label_msg_telefone2.AutoSize = true;
             this.label_msg_telefone2.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.label_msg_telefone2.ForeColor = System.Drawing.Color.Tomato;
-            this.label_msg_telefone2.Location = new System.Drawing.Point(357, 252);
+            this.label_msg_telefone2.Location = new System.Drawing.Point(364, 252);
             this.label_msg_telefone2.Name = "label_msg_telefone2";
             this.label_msg_telefone2.Size = new System.Drawing.Size(120, 17);
             this.label_msg_telefone2.TabIndex = 132;
@@ -363,60 +328,18 @@
             this.label_msg_telefone1.AutoSize = true;
             this.label_msg_telefone1.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.label_msg_telefone1.ForeColor = System.Drawing.Color.Tomato;
-            this.label_msg_telefone1.Location = new System.Drawing.Point(19, 252);
+            this.label_msg_telefone1.Location = new System.Drawing.Point(26, 252);
             this.label_msg_telefone1.Name = "label_msg_telefone1";
             this.label_msg_telefone1.Size = new System.Drawing.Size(120, 17);
             this.label_msg_telefone1.TabIndex = 131;
             this.label_msg_telefone1.Text = "mensagem de erro";
             this.label_msg_telefone1.Visible = false;
             // 
-            // text_provincias
-            // 
-            this.text_provincias.BackColor = System.Drawing.Color.Transparent;
-            this.text_provincias.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_provincias.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.text_provincias.DropDownHeight = 250;
-            this.text_provincias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.text_provincias.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_provincias.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_provincias.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_provincias.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.text_provincias.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_provincias.IntegralHeight = false;
-            this.text_provincias.ItemHeight = 30;
-            this.text_provincias.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.text_provincias.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_provincias.Location = new System.Drawing.Point(355, 381);
-            this.text_provincias.Name = "text_provincias";
-            this.text_provincias.Size = new System.Drawing.Size(317, 36);
-            this.text_provincias.TabIndex = 130;
-            this.text_provincias.SelectedIndexChanged += new System.EventHandler(this.text_provincias_SelectedIndexChanged);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.ForeColor = System.Drawing.Color.Tomato;
-            this.label28.Location = new System.Drawing.Point(439, 357);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(16, 21);
-            this.label28.TabIndex = 129;
-            this.label28.Text = "*";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label36.Location = new System.Drawing.Point(356, 357);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(85, 21);
-            this.label36.TabIndex = 128;
-            this.label36.Text = "Província:";
-            // 
             // label33
             // 
             this.label33.AutoSize = true;
             this.label33.ForeColor = System.Drawing.Color.Tomato;
-            this.label33.Location = new System.Drawing.Point(474, 530);
+            this.label33.Location = new System.Drawing.Point(481, 279);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(16, 21);
             this.label33.TabIndex = 124;
@@ -438,7 +361,7 @@
             this.text_palavra_passe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_palavra_passe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_palavra_passe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_palavra_passe.Location = new System.Drawing.Point(355, 555);
+            this.text_palavra_passe.Location = new System.Drawing.Point(362, 304);
             this.text_palavra_passe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.text_palavra_passe.MaxLength = 30;
             this.text_palavra_passe.Name = "text_palavra_passe";
@@ -452,53 +375,11 @@
             // 
             this.label32.AutoSize = true;
             this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label32.Location = new System.Drawing.Point(356, 530);
+            this.label32.Location = new System.Drawing.Point(363, 279);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(123, 21);
             this.label32.TabIndex = 123;
             this.label32.Text = "Palavra-passe:";
-            // 
-            // text_municipio
-            // 
-            this.text_municipio.BackColor = System.Drawing.Color.Transparent;
-            this.text_municipio.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_municipio.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.text_municipio.DropDownHeight = 250;
-            this.text_municipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.text_municipio.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_municipio.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_municipio.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_municipio.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.text_municipio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_municipio.IntegralHeight = false;
-            this.text_municipio.ItemHeight = 30;
-            this.text_municipio.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.text_municipio.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_municipio.Location = new System.Drawing.Point(19, 470);
-            this.text_municipio.Name = "text_municipio";
-            this.text_municipio.Size = new System.Drawing.Size(311, 36);
-            this.text_municipio.TabIndex = 121;
-            this.text_municipio.SelectedIndexChanged += new System.EventHandler(this.text_municipio_SelectedIndexChanged);
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.ForeColor = System.Drawing.Color.Tomato;
-            this.label30.Location = new System.Drawing.Point(101, 446);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(16, 21);
-            this.label30.TabIndex = 120;
-            this.label30.Text = "*";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label31.Location = new System.Drawing.Point(15, 444);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(89, 21);
-            this.label31.TabIndex = 119;
-            this.label31.Text = "Município:";
             // 
             // text_e_mail
             // 
@@ -516,7 +397,7 @@
             this.text_e_mail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_e_mail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_e_mail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_e_mail.Location = new System.Drawing.Point(355, 126);
+            this.text_e_mail.Location = new System.Drawing.Point(362, 126);
             this.text_e_mail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.text_e_mail.MaxLength = 100;
             this.text_e_mail.Name = "text_e_mail";
@@ -531,7 +412,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label29.Location = new System.Drawing.Point(351, 102);
+            this.label29.Location = new System.Drawing.Point(358, 102);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(60, 21);
             this.label29.TabIndex = 117;
@@ -556,43 +437,11 @@
             "F"});
             this.text_sexo.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.text_sexo.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_sexo.Location = new System.Drawing.Point(22, 303);
+            this.text_sexo.Location = new System.Drawing.Point(362, 213);
             this.text_sexo.Name = "text_sexo";
             this.text_sexo.Size = new System.Drawing.Size(314, 36);
             this.text_sexo.StartIndex = 0;
             this.text_sexo.TabIndex = 115;
-            // 
-            // text_pais
-            // 
-            this.text_pais.BackColor = System.Drawing.Color.Transparent;
-            this.text_pais.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_pais.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.text_pais.DropDownHeight = 250;
-            this.text_pais.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.text_pais.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_pais.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_pais.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_pais.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.text_pais.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_pais.IntegralHeight = false;
-            this.text_pais.ItemHeight = 30;
-            this.text_pais.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.text_pais.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_pais.Location = new System.Drawing.Point(19, 381);
-            this.text_pais.Name = "text_pais";
-            this.text_pais.Size = new System.Drawing.Size(317, 36);
-            this.text_pais.TabIndex = 111;
-            this.text_pais.SelectedIndexChanged += new System.EventHandler(this.text_pais_SelectedIndexChanged);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.Tomato;
-            this.label25.Location = new System.Drawing.Point(59, 357);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(16, 21);
-            this.label25.TabIndex = 110;
-            this.label25.Text = "*";
             // 
             // text_tipo_usuario
             // 
@@ -615,9 +464,9 @@
             "Investigador"});
             this.text_tipo_usuario.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.text_tipo_usuario.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_tipo_usuario.Location = new System.Drawing.Point(18, 555);
+            this.text_tipo_usuario.Location = new System.Drawing.Point(23, 304);
             this.text_tipo_usuario.Name = "text_tipo_usuario";
-            this.text_tipo_usuario.Size = new System.Drawing.Size(312, 36);
+            this.text_tipo_usuario.Size = new System.Drawing.Size(320, 36);
             this.text_tipo_usuario.StartIndex = 0;
             this.text_tipo_usuario.TabIndex = 111;
             // 
@@ -625,141 +474,21 @@
             // 
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.Color.Tomato;
-            this.label27.Location = new System.Drawing.Point(141, 531);
+            this.label27.Location = new System.Drawing.Point(146, 280);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(16, 21);
             this.label27.TabIndex = 110;
             this.label27.Text = "*";
             // 
-            // text_bairro_rua
-            // 
-            this.text_bairro_rua.BackColor = System.Drawing.Color.Transparent;
-            this.text_bairro_rua.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_bairro_rua.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.text_bairro_rua.DropDownHeight = 250;
-            this.text_bairro_rua.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.text_bairro_rua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_bairro_rua.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_bairro_rua.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_bairro_rua.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.text_bairro_rua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_bairro_rua.IntegralHeight = false;
-            this.text_bairro_rua.ItemHeight = 30;
-            this.text_bairro_rua.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.text_bairro_rua.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_bairro_rua.Location = new System.Drawing.Point(355, 470);
-            this.text_bairro_rua.Name = "text_bairro_rua";
-            this.text_bairro_rua.Size = new System.Drawing.Size(317, 36);
-            this.text_bairro_rua.TabIndex = 111;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.ForeColor = System.Drawing.Color.Tomato;
-            this.label23.Location = new System.Drawing.Point(443, 446);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(16, 21);
-            this.label23.TabIndex = 110;
-            this.label23.Text = "*";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label24.Location = new System.Drawing.Point(20, 356);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(43, 21);
-            this.label24.TabIndex = 109;
-            this.label24.Text = "País:";
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label26.Location = new System.Drawing.Point(14, 529);
+            this.label26.Location = new System.Drawing.Point(19, 278);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(130, 21);
             this.label26.TabIndex = 109;
             this.label26.Text = "Tipo de usuário:";
-            // 
-            // text_continente
-            // 
-            this.text_continente.BackColor = System.Drawing.Color.Transparent;
-            this.text_continente.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_continente.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.text_continente.DropDownHeight = 250;
-            this.text_continente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.text_continente.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_continente.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_continente.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_continente.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.text_continente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_continente.IntegralHeight = false;
-            this.text_continente.ItemHeight = 30;
-            this.text_continente.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
-            this.text_continente.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_continente.Location = new System.Drawing.Point(355, 303);
-            this.text_continente.Name = "text_continente";
-            this.text_continente.Size = new System.Drawing.Size(317, 36);
-            this.text_continente.TabIndex = 111;
-            this.text_continente.SelectedIndexChanged += new System.EventHandler(this.text_continente_SelectedIndexChanged);
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label22.Location = new System.Drawing.Point(356, 444);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(90, 21);
-            this.label22.TabIndex = 109;
-            this.label22.Text = "Bairro/rua:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Tomato;
-            this.label10.Location = new System.Drawing.Point(458, 277);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(16, 21);
-            this.label10.TabIndex = 110;
-            this.label10.Text = "*";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label9.Location = new System.Drawing.Point(356, 276);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 21);
-            this.label9.TabIndex = 109;
-            this.label9.Text = "Continente:";
-            // 
-            // text_segundo_numero_telefone
-            // 
-            this.text_segundo_numero_telefone.AcceptsReturn = true;
-            this.text_segundo_numero_telefone.Animated = true;
-            this.text_segundo_numero_telefone.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_segundo_numero_telefone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.text_segundo_numero_telefone.DefaultText = "";
-            this.text_segundo_numero_telefone.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.text_segundo_numero_telefone.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.text_segundo_numero_telefone.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.text_segundo_numero_telefone.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.text_segundo_numero_telefone.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_segundo_numero_telefone.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_segundo_numero_telefone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_segundo_numero_telefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_segundo_numero_telefone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_segundo_numero_telefone.Location = new System.Drawing.Point(355, 214);
-            this.text_segundo_numero_telefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.text_segundo_numero_telefone.MaxLength = 9;
-            this.text_segundo_numero_telefone.Name = "text_segundo_numero_telefone";
-            this.text_segundo_numero_telefone.PasswordChar = '\0';
-            this.text_segundo_numero_telefone.PlaceholderText = "";
-            this.text_segundo_numero_telefone.SelectedText = "";
-            this.text_segundo_numero_telefone.Size = new System.Drawing.Size(317, 36);
-            this.text_segundo_numero_telefone.TabIndex = 105;
-            this.text_segundo_numero_telefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_segundo_numero_telefone_KeyPress);
             // 
             // text_primerio_numero_telefone
             // 
@@ -777,7 +506,7 @@
             this.text_primerio_numero_telefone.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_primerio_numero_telefone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_primerio_numero_telefone.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_primerio_numero_telefone.Location = new System.Drawing.Point(19, 214);
+            this.text_primerio_numero_telefone.Location = new System.Drawing.Point(26, 214);
             this.text_primerio_numero_telefone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.text_primerio_numero_telefone.MaxLength = 9;
             this.text_primerio_numero_telefone.Name = "text_primerio_numero_telefone";
@@ -792,7 +521,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.Tomato;
-            this.label19.Location = new System.Drawing.Point(143, 189);
+            this.label19.Location = new System.Drawing.Point(150, 189);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(16, 21);
             this.label19.TabIndex = 107;
@@ -802,7 +531,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.Tomato;
-            this.label17.Location = new System.Drawing.Point(69, 279);
+            this.label17.Location = new System.Drawing.Point(409, 189);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(16, 21);
             this.label17.TabIndex = 107;
@@ -824,7 +553,7 @@
             this.text_numero_bi.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_numero_bi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_numero_bi.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_numero_bi.Location = new System.Drawing.Point(19, 126);
+            this.text_numero_bi.Location = new System.Drawing.Point(26, 126);
             this.text_numero_bi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.text_numero_bi.MaxLength = 14;
             this.text_numero_bi.Name = "text_numero_bi";
@@ -839,21 +568,11 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.Tomato;
-            this.label15.Location = new System.Drawing.Point(249, 102);
+            this.label15.Location = new System.Drawing.Point(256, 102);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(16, 21);
             this.label15.TabIndex = 107;
             this.label15.Text = "*";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label20.Location = new System.Drawing.Point(356, 189);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(217, 21);
-            this.label20.TabIndex = 106;
-            this.label20.Text = "Nº de telefone alternativo:";
             // 
             // text_ultimo_nome
             // 
@@ -871,7 +590,7 @@
             this.text_ultimo_nome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_ultimo_nome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_ultimo_nome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_ultimo_nome.Location = new System.Drawing.Point(470, 40);
+            this.text_ultimo_nome.Location = new System.Drawing.Point(477, 40);
             this.text_ultimo_nome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.text_ultimo_nome.MaxLength = 20;
             this.text_ultimo_nome.Name = "text_ultimo_nome";
@@ -886,7 +605,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label18.Location = new System.Drawing.Point(20, 190);
+            this.label18.Location = new System.Drawing.Point(27, 190);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(126, 21);
             this.label18.TabIndex = 106;
@@ -896,7 +615,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.Tomato;
-            this.label14.Location = new System.Drawing.Point(638, 15);
+            this.label14.Location = new System.Drawing.Point(645, 15);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(16, 21);
             this.label14.TabIndex = 107;
@@ -906,7 +625,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label16.Location = new System.Drawing.Point(18, 276);
+            this.label16.Location = new System.Drawing.Point(358, 186);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(50, 21);
             this.label16.TabIndex = 106;
@@ -928,7 +647,7 @@
             this.text_nome_meio.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_nome_meio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_nome_meio.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_nome_meio.Location = new System.Drawing.Point(229, 40);
+            this.text_nome_meio.Location = new System.Drawing.Point(236, 40);
             this.text_nome_meio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.text_nome_meio.MaxLength = 20;
             this.text_nome_meio.Name = "text_nome_meio";
@@ -943,7 +662,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label12.Location = new System.Drawing.Point(20, 101);
+            this.label12.Location = new System.Drawing.Point(27, 101);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(231, 21);
             this.label12.TabIndex = 106;
@@ -965,7 +684,7 @@
             this.text_primeiro_nome.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_primeiro_nome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_primeiro_nome.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_primeiro_nome.Location = new System.Drawing.Point(19, 40);
+            this.text_primeiro_nome.Location = new System.Drawing.Point(26, 40);
             this.text_primeiro_nome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.text_primeiro_nome.MaxLength = 20;
             this.text_primeiro_nome.Name = "text_primeiro_nome";
@@ -980,7 +699,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label13.Location = new System.Drawing.Point(466, 15);
+            this.label13.Location = new System.Drawing.Point(473, 15);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(175, 21);
             this.label13.TabIndex = 106;
@@ -990,7 +709,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Tomato;
-            this.label2.Location = new System.Drawing.Point(205, 15);
+            this.label2.Location = new System.Drawing.Point(212, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(16, 21);
             this.label2.TabIndex = 107;
@@ -1000,7 +719,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label11.Location = new System.Drawing.Point(225, 15);
+            this.label11.Location = new System.Drawing.Point(232, 15);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(194, 21);
             this.label11.TabIndex = 106;
@@ -1010,7 +729,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(15, 15);
+            this.label1.Location = new System.Drawing.Point(22, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(193, 21);
             this.label1.TabIndex = 106;
@@ -1020,7 +739,7 @@
             // 
             this.label_id.AutoSize = true;
             this.label_id.ForeColor = System.Drawing.Color.Red;
-            this.label_id.Location = new System.Drawing.Point(445, 7);
+            this.label_id.Location = new System.Drawing.Point(445, 0);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(24, 21);
             this.label_id.TabIndex = 108;
@@ -1030,11 +749,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(12, 5);
+            this.label5.Location = new System.Drawing.Point(12, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 19);
+            this.label5.Size = new System.Drawing.Size(117, 17);
             this.label5.TabIndex = 88;
             this.label5.Text = "Registrar usuário";
             // 
@@ -1049,10 +768,10 @@
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
             this.btn_Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Fechar.IconSize = 30;
-            this.btn_Fechar.Location = new System.Drawing.Point(679, 2);
+            this.btn_Fechar.IconSize = 20;
+            this.btn_Fechar.Location = new System.Drawing.Point(688, 1);
             this.btn_Fechar.Name = "btn_Fechar";
-            this.btn_Fechar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Fechar.Size = new System.Drawing.Size(15, 15);
             this.btn_Fechar.TabIndex = 0;
             this.btn_Fechar.UseVisualStyleBackColor = false;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
@@ -1066,7 +785,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(705, 28);
+            this.panel1.Size = new System.Drawing.Size(705, 20);
             this.panel1.TabIndex = 114;
             // 
             // MessageDialog_Error
@@ -1105,29 +824,12 @@
             this.guna2MessageDialog_Inform.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.guna2MessageDialog_Inform.Text = null;
             // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.panel_formulario;
-            this.guna2VScrollBar1.BorderRadius = 4;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 467;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(687, 28);
-            this.guna2VScrollBar1.Maximum = 590;
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 467);
-            this.guna2VScrollBar1.SmallChange = 5;
-            this.guna2VScrollBar1.TabIndex = 122;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2VScrollBar1.Value = 124;
-            // 
             // Form_Modulo_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            this.ClientSize = new System.Drawing.Size(705, 582);
-            this.Controls.Add(this.guna2VScrollBar1);
+            this.ClientSize = new System.Drawing.Size(705, 460);
             this.Controls.Add(this.panel_formulario);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -1157,17 +859,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel_formulario;
         public Guna.UI2.WinForms.Guna2ComboBox text_sexo;
-        public Guna.UI2.WinForms.Guna2ComboBox text_continente;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
         public System.Windows.Forms.Label label_id;
-        public Guna.UI2.WinForms.Guna2TextBox text_segundo_numero_telefone;
         public Guna.UI2.WinForms.Guna2TextBox text_primerio_numero_telefone;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label17;
         public Guna.UI2.WinForms.Guna2TextBox text_numero_bi;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label20;
         public Guna.UI2.WinForms.Guna2TextBox text_ultimo_nome;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label14;
@@ -1181,24 +878,12 @@
         private System.Windows.Forms.Label label1;
         public Guna.UI2.WinForms.Guna2TextBox text_e_mail;
         private System.Windows.Forms.Label label29;
-        public Guna.UI2.WinForms.Guna2ComboBox text_pais;
-        private System.Windows.Forms.Label label25;
         public Guna.UI2.WinForms.Guna2ComboBox text_tipo_usuario;
         private System.Windows.Forms.Label label27;
-        public Guna.UI2.WinForms.Guna2ComboBox text_bairro_rua;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label33;
         public Guna.UI2.WinForms.Guna2TextBox text_palavra_passe;
         private System.Windows.Forms.Label label32;
-        public Guna.UI2.WinForms.Guna2ComboBox text_municipio;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        public Guna.UI2.WinForms.Guna2ComboBox text_provincias;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label36;
         private FontAwesome.Sharp.IconButton btn_Fechar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label_msg_telefone1;
@@ -1214,7 +899,6 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog_Confirm;
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog_Inform;
-        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         public Guna.UI2.WinForms.Guna2Button btn_Atualizar;
         private System.Windows.Forms.Label label7;
     }

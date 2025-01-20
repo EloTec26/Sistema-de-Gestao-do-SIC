@@ -129,7 +129,7 @@
             this.btn_eliminar.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
             this.btn_eliminar.IconColor = System.Drawing.Color.Tomato;
             this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_eliminar.IconSize = 30;
+            this.btn_eliminar.IconSize = 20;
             this.btn_eliminar.Location = new System.Drawing.Point(196, 4);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(46, 31);
@@ -150,7 +150,7 @@
             this.btn_atualizar.IconChar = FontAwesome.Sharp.IconChar.PenClip;
             this.btn_atualizar.IconColor = System.Drawing.Color.SeaGreen;
             this.btn_atualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_atualizar.IconSize = 30;
+            this.btn_atualizar.IconSize = 20;
             this.btn_atualizar.Location = new System.Drawing.Point(139, 5);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(51, 31);
@@ -169,7 +169,7 @@
             this.btn_cadastrar.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.btn_cadastrar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btn_cadastrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_cadastrar.IconSize = 30;
+            this.btn_cadastrar.IconSize = 20;
             this.btn_cadastrar.Location = new System.Drawing.Point(82, 6);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(51, 31);

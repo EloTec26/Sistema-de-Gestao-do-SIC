@@ -12,6 +12,7 @@ using Capa_Comum.Entidades;
 using Capa_Comum.Comum_Permissoes.Cache;
 using Capa_Dominio;
 using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
+using Capa_Apresentacao.Formularios.Lista_Formularios;
 
 namespace Capa_Apresentacao.Formularios.Modulos
 {
@@ -20,10 +21,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
         dominio_investigadores d_Investigador = new dominio_investigadores();
         dominio_horas_extras d_Horas_Extras = new dominio_horas_extras();
         e_comum_horas_extras c_Horas_Extras = new e_comum_horas_extras();
-        public Form_Modulo_Horas_Extras()
+        Form_Lista_Horas_Extras horas_Extras;
+        public Form_Modulo_Horas_Extras(Form_Lista_Horas_Extras horas_Extras)
         {
             InitializeComponent();
-
+            this.horas_Extras = horas_Extras;
             carregar_Investigadores_Combo_Box();
         }
         private void carregar_Investigadores_Combo_Box()
@@ -76,6 +78,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     {
                         d_Horas_Extras.inserir_horas_extras(c_Horas_Extras);
                         guna2MessageDialog_Inform.Show("As horas-extras foram registrada com sucesso!", "Registro bem-sucedido");
+                        horas_Extras.selecionar_Horas_Extras();
                         limpar_Campos();
                     }
                 }
@@ -106,6 +109,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
 
                         guna2MessageDialog_Inform.Show("A falta foi atualizada com sucesso!", "Atualização bem-sucedida");
                         limpar_Campos();
+                        horas_Extras.selecionar_Horas_Extras();
                         this.Close();
                     }
                 }

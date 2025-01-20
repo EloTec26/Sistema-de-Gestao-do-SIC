@@ -122,6 +122,7 @@ namespace Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios
                     labelMsg.Visible = true;
                 }
             }
+          
             public static void ValidarTextoNumeroSimbolo(KeyPressEventArgs e, Guna2TextBox textBox, System.Windows.Forms.Label labelMsg, string mensagemErro)
             {
                 // Verifica se o caractere é letra, número, controle ou o símbolo "º" (código 186 em ASCII)
@@ -146,7 +147,55 @@ namespace Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios
                     e.Handled = true; // Bloqueia o caractere
                 }
             }
-
+        }
+        public static void ValidarTextoDescricao(KeyPressEventArgs e, Guna2TextBox textBox, System.Windows.Forms.Label labelMsg, string mensagemErro)
+        {
+            // Verifica se o caractere é letra, número, controle ou o símbolo "º" (código 186 em ASCII)
+            if (char.IsLetter(e.KeyChar)
+                || char.IsDigit(e.KeyChar) 
+                || char.IsControl(e.KeyChar) 
+                || e.KeyChar == 'º'
+                || e.KeyChar == '~'
+                || e.KeyChar == '.'
+                || e.KeyChar==','
+                || e.KeyChar == ';' 
+                || e.KeyChar == '0'
+                || e.KeyChar == '1' 
+                || e.KeyChar == '2' 
+                || e.KeyChar == '3'
+                || e.KeyChar == '4'
+                || e.KeyChar == '5'
+                || e.KeyChar == '6'
+                || e.KeyChar == '7'
+                || e.KeyChar == '8'
+                || e.KeyChar == '9'
+                || e.KeyChar == '-'
+                || e.KeyChar == '('
+                || e.KeyChar == ')'
+                || e.KeyChar == '@'
+                || e.KeyChar == '%'
+                || e.KeyChar == '!'
+                || e.KeyChar == '?'
+                || e.KeyChar == '/') 
+            {
+                e.Handled = false; // Permite o caractere
+                labelMsg.Visible = false; // Oculta a mensagem de erro
+                textBox.BorderColor = Color.FromArgb(23, 35, 49);
+                textBox.ForeColor = Color.FromArgb(68, 88, 100);
+                textBox.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+                textBox.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            }
+            else
+            {
+                // Exibe a mensagem de erro e impede a inserção do caractere inválido
+                labelMsg.Text = mensagemErro;
+                textBox.BorderColor = Color.Tomato;
+                textBox.ForeColor = Color.Tomato;
+                textBox.HoverState.BorderColor = Color.Tomato;
+                textBox.FocusedState.BorderColor = Color.Tomato;
+                labelMsg.Visible = true;
+                e.Handled = true; // Bloqueia o caractere
+            }
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Capa_Comum.Comum_Permissoes.Cache;
+﻿using Capa_Apresentacao.Formularios.Lista_Formularios;
+using Capa_Comum.Comum_Permissoes.Cache;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
@@ -12,9 +13,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
         e_comum_cargos c_Cargos = new e_comum_cargos();
         dominio_cargos d_Cargos = new dominio_cargos();
         #endregion
-        public Form_Modulo_Cargos()
+        Form_Lista_Cargos cargos;
+        public Form_Modulo_Cargos(Form_Lista_Cargos cargos)
         {
             InitializeComponent();
+            this.cargos = cargos;
         }
 
         private void btn_Fechar_Click(object sender, EventArgs e)
@@ -52,6 +55,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 {
                     d_Cargos.inserir_Cargos(c_Cargos);
                     guna2MessageDialog_Inform.Show($"O cargo {text_Cargo.Text} foi registrado com sucesso!", "Registro bem sucedido");
+                    cargos.selecionar_Cargos();
                     Limpar_Campos();
                 }
             }
@@ -63,7 +67,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
                 }
                 else
-                    MessageBox.Show("Não foi possível registrar este cargo!", ex.Message);
+                    MessageDialog_Error.Show("Não foi possível registrar este cargo!", ex.Message);
             }
         }
         private void btn_Atualizar_Click(object sender, EventArgs e)
@@ -90,6 +94,8 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     d_Cargos.atualizar_Cargos(c_Cargos);
                     guna2MessageDialog_Inform.Show($"O cargo {text_Cargo.Text} foi atualizado com sucesso!", "Atualização bem sucedida");
                     this.Close();
+                    cargos.selecionar_Cargos();
+
                     Limpar_Campos();
                 }
             }
@@ -101,7 +107,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
                 }
                 else
-                    MessageBox.Show("Não foi possível atualizar este cargo!", ex.Message);
+                    MessageDialog_Error.Show("Não foi possível atualizar este cargo!", ex.Message);
             }
         }
         private void btn_Limpar_Click(object sender, EventArgs e)

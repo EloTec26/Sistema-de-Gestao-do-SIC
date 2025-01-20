@@ -1,4 +1,5 @@
-﻿using Capa_Comum.Comum_Permissoes.Cache;
+﻿using Capa_Apresentacao.Formularios.Lista_Formularios;
+using Capa_Comum.Comum_Permissoes.Cache;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
@@ -12,10 +13,13 @@ namespace Capa_Apresentacao.Formularios.Modulos
         dominio_evidencias d_Evidencias = new dominio_evidencias();
         dominio_investigadores d_Investigadores = new dominio_investigadores();
         dominio_casos d_Casos = new dominio_casos();
-        public Form_Modulo_Evidencias()
+
+        Form_Lista_Evidencias evidencias;
+        public Form_Modulo_Evidencias(Form_Lista_Evidencias evidencias)
         {
             InitializeComponent();
             carregar_Dados_ComboBoxs();
+            this.evidencias = evidencias;
         }
         private void carregar_Dados_ComboBoxs()
         {
@@ -75,6 +79,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     {
                         d_Evidencias.inserir_evidencias(c_Evidencias);
                         guna2MessageDialog_Inform.Show($"A evidência do tipo {text_tipo.Text}, foi registrada com sucesso!", "Registro bem sucedido");
+                        evidencias.selecionar_Evidencias();
                         limpar_campos();
                     }
                 }
@@ -103,6 +108,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         d_Evidencias.atualizar_evidencias(c_Evidencias);
                         guna2MessageDialog_Inform.Show($"A evidência do tipo {text_tipo.Text}, foi atualizada com sucesso!", "Atualização bem sucedida");
                         limpar_campos();
+                        evidencias.selecionar_Evidencias();
                         this.Close();
                     }
                 }
@@ -173,6 +179,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
                 e.Handled = true;
                 label_msg_descricao.Visible = false; // Opcional: pode manter o Label oculto para outros caracteres
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

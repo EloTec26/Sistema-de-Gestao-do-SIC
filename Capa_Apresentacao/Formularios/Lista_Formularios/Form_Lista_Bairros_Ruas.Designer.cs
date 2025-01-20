@@ -72,11 +72,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 22);
+            this.label1.Size = new System.Drawing.Size(98, 19);
             this.label1.TabIndex = 38;
             this.label1.Text = "Bairros/ruas";
             // 
@@ -91,9 +91,8 @@
             this.btn_eliminar.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
             this.btn_eliminar.IconColor = System.Drawing.Color.Tomato;
             this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_eliminar.IconSize = 30;
-            this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_eliminar.Location = new System.Drawing.Point(243, 4);
+            this.btn_eliminar.IconSize = 20;
+            this.btn_eliminar.Location = new System.Drawing.Point(218, 4);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(46, 31);
             this.btn_eliminar.TabIndex = 34;
@@ -112,8 +111,8 @@
             this.btn_atualizar.IconChar = FontAwesome.Sharp.IconChar.PenClip;
             this.btn_atualizar.IconColor = System.Drawing.Color.SeaGreen;
             this.btn_atualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_atualizar.IconSize = 30;
-            this.btn_atualizar.Location = new System.Drawing.Point(186, 5);
+            this.btn_atualizar.IconSize = 20;
+            this.btn_atualizar.Location = new System.Drawing.Point(161, 5);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(51, 31);
             this.btn_atualizar.TabIndex = 33;
@@ -151,8 +150,8 @@
             this.btn_cadastrar.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.btn_cadastrar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btn_cadastrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_cadastrar.IconSize = 30;
-            this.btn_cadastrar.Location = new System.Drawing.Point(129, 6);
+            this.btn_cadastrar.IconSize = 20;
+            this.btn_cadastrar.Location = new System.Drawing.Point(104, 6);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(51, 31);
             this.btn_cadastrar.TabIndex = 32;

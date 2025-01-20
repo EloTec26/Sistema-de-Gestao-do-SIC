@@ -28,13 +28,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
-        private void selecionar_Cargos()
+        public void selecionar_Cargos()
         {
             dgv_cargos.DataSource = d_Cargos.selecionar_Cargos();
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Form_Modulo_Cargos form_Modulo_Cargos = new Form_Modulo_Cargos();
+            Form_Modulo_Cargos form_Modulo_Cargos = new Form_Modulo_Cargos(this);
             form_Modulo_Cargos.FormClosed += Form_Modulo_Cargos_FormClosed;
             form_Modulo_Cargos.ShowDialog();
         }
@@ -48,7 +48,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if(dgv_cargos.SelectedRows.Count > 0)
             {
-                Form_Modulo_Cargos form_Modulo_Cargos = new Form_Modulo_Cargos();
+                Form_Modulo_Cargos form_Modulo_Cargos = new Form_Modulo_Cargos(this);
                 form_Modulo_Cargos.FormClosed += Form_Modulo_Cargos_FormClosed;
 
                 form_Modulo_Cargos.label_id.Text = dgv_cargos.CurrentRow.Cells[0].Value.ToString();
@@ -69,7 +69,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_cargos.SelectedRows.Count > 0)
             {
-                Form_Modulo_Cargos form_Modulo_Cargos = new Form_Modulo_Cargos();
+                Form_Modulo_Cargos form_Modulo_Cargos = new Form_Modulo_Cargos(this);
                 form_Modulo_Cargos.FormClosed += Form_Modulo_Cargos_FormClosed;
 
                 form_Modulo_Cargos.label_id.Text = dgv_cargos.CurrentRow.Cells[0].Value.ToString();
@@ -91,13 +91,27 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_cargos.SelectedRows.Count > 0)
             {
-                if(guna2MessageDialog_Confirm.Show("Tens a certeza de excluir este cargo?", "Mensagem de confirmação") == DialogResult.Yes)
+                try
                 {
-                    int id_Cargo = Convert.ToInt32(dgv_cargos.CurrentRow.Cells[0].Value.ToString());
-                    c_Cargos.id_cargo = id_Cargo;
-                    d_Cargos.eliminar_Cargos(c_Cargos);
-                    guna2MessageDialog_Confirm.Show($"O cargo com a identificação {id_Cargo}, foi excluído com sucesso!", "Exclusão bem sucedida");
-                    selecionar_Cargos();
+                    if (guna2MessageDialog_Confirm.Show("Tens a certeza de excluir este cargo?", "Mensagem de confirmação") == DialogResult.Yes)
+                    {
+                        int id_Cargo = Convert.ToInt32(dgv_cargos.CurrentRow.Cells[0].Value.ToString());
+                        c_Cargos.id_cargo = id_Cargo;
+                        d_Cargos.eliminar_Cargos(c_Cargos);
+                        guna2MessageDialog_Confirm.Show($"O cargo com a identificação {id_Cargo}, foi excluído com sucesso!", "Exclusão bem sucedida");
+                        selecionar_Cargos();
+                    }
+                }
+                catch (System.Data.SqlClient.SqlException Ex)
+                {
+                    if (Ex.Number == 457)
+                    {
+                        MessageDialog_Error.Show("Não é possível eliminar este cargo, pois existem - no sistema-, dados que estão vinculados  à ela.", "Alerta");
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    MessageDialog_Error.Show("Não foi possível eliminar este cargo!", Ex.Message);
                 }
             }
             else

@@ -60,7 +60,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(511, 28);
+            this.panel1.Size = new System.Drawing.Size(511, 20);
             this.panel1.TabIndex = 115;
             // 
             // btn_Fechar
@@ -68,16 +68,17 @@
             this.btn_Fechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Fechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Fechar.FlatAppearance.BorderSize = 0;
-            this.btn_Fechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btn_Fechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_Fechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato;
+            this.btn_Fechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
             this.btn_Fechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Fechar.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
             this.btn_Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Fechar.IconSize = 30;
-            this.btn_Fechar.Location = new System.Drawing.Point(485, 2);
+            this.btn_Fechar.IconSize = 20;
+            this.btn_Fechar.Location = new System.Drawing.Point(492, 2);
             this.btn_Fechar.Name = "btn_Fechar";
-            this.btn_Fechar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Fechar.Size = new System.Drawing.Size(15, 15);
             this.btn_Fechar.TabIndex = 0;
             this.btn_Fechar.UseVisualStyleBackColor = false;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
@@ -85,11 +86,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(3, 5);
+            this.label5.Location = new System.Drawing.Point(3, -1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(216, 19);
+            this.label5.Size = new System.Drawing.Size(189, 17);
             this.label5.TabIndex = 88;
             this.label5.Text = "Registrar  nível acadêmico";
             // 

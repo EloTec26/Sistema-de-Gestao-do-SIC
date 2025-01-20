@@ -101,7 +101,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.text_data_nascimento = new CustomBox.RJControls.RJDatePicker();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_Conteudo.SuspendLayout();
@@ -110,21 +109,20 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            this.panel1.Controls.Add(this.label_id);
             this.panel1.Controls.Add(this.btn_Fechar);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(822, 34);
+            this.panel1.Size = new System.Drawing.Size(822, 18);
             this.panel1.TabIndex = 116;
             // 
             // label_id
             // 
             this.label_id.AutoSize = true;
             this.label_id.ForeColor = System.Drawing.Color.Red;
-            this.label_id.Location = new System.Drawing.Point(399, 7);
+            this.label_id.Location = new System.Drawing.Point(500, 68);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(24, 21);
             this.label_id.TabIndex = 109;
@@ -142,11 +140,11 @@
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
             this.btn_Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Fechar.IconSize = 30;
-            this.btn_Fechar.Location = new System.Drawing.Point(792, 2);
+            this.btn_Fechar.IconSize = 20;
+            this.btn_Fechar.Location = new System.Drawing.Point(807, 2);
             this.btn_Fechar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Fechar.Name = "btn_Fechar";
-            this.btn_Fechar.Size = new System.Drawing.Size(29, 31);
+            this.btn_Fechar.Size = new System.Drawing.Size(15, 15);
             this.btn_Fechar.TabIndex = 0;
             this.btn_Fechar.UseVisualStyleBackColor = false;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
@@ -154,12 +152,12 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(14, 6);
+            this.label5.Location = new System.Drawing.Point(14, 0);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 19);
+            this.label5.Size = new System.Drawing.Size(124, 17);
             this.label5.TabIndex = 88;
             this.label5.Text = "Registrar suspeito";
             // 
@@ -317,6 +315,7 @@
             // panel_Conteudo
             // 
             this.panel_Conteudo.AutoScroll = true;
+            this.panel_Conteudo.Controls.Add(this.label_id);
             this.panel_Conteudo.Controls.Add(this.label_msg_descricao);
             this.panel_Conteudo.Controls.Add(this.label_msg_email);
             this.panel_Conteudo.Controls.Add(this.label_msg_segundo_telefone);
@@ -373,9 +372,9 @@
             this.panel_Conteudo.Controls.Add(this.text_data_nascimento);
             this.panel_Conteudo.Controls.Add(this.label1);
             this.panel_Conteudo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Conteudo.Location = new System.Drawing.Point(0, 34);
+            this.panel_Conteudo.Location = new System.Drawing.Point(0, 18);
             this.panel_Conteudo.Name = "panel_Conteudo";
-            this.panel_Conteudo.Size = new System.Drawing.Size(822, 363);
+            this.panel_Conteudo.Size = new System.Drawing.Size(822, 379);
             this.panel_Conteudo.TabIndex = 118;
             // 
             // label_msg_descricao
@@ -641,7 +640,6 @@
             this.text_provincias.Name = "text_provincias";
             this.text_provincias.Size = new System.Drawing.Size(237, 36);
             this.text_provincias.TabIndex = 180;
-            this.text_provincias.SelectedIndexChanged += new System.EventHandler(this.text_provincias_SelectedIndexChanged);
             // 
             // label28
             // 
@@ -693,7 +691,6 @@
             this.text_municipio.Name = "text_municipio";
             this.text_municipio.Size = new System.Drawing.Size(245, 36);
             this.text_municipio.TabIndex = 174;
-            this.text_municipio.SelectedIndexChanged += new System.EventHandler(this.text_municipio_SelectedIndexChanged);
             // 
             // label30
             // 
@@ -816,7 +813,6 @@
             this.text_pais.Name = "text_pais";
             this.text_pais.Size = new System.Drawing.Size(245, 36);
             this.text_pais.TabIndex = 163;
-            this.text_pais.SelectedIndexChanged += new System.EventHandler(this.text_pais_SelectedIndexChanged);
             // 
             // label25
             // 
@@ -889,7 +885,6 @@
             this.text_continente.Name = "text_continente";
             this.text_continente.Size = new System.Drawing.Size(245, 36);
             this.text_continente.TabIndex = 164;
-            this.text_continente.SelectedIndexChanged += new System.EventHandler(this.text_continente_SelectedIndexChanged);
             // 
             // label22
             // 
@@ -1167,28 +1162,12 @@
             this.label1.TabIndex = 147;
             this.label1.Text = "Digite o primeiro  nome:";
             // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.panel_Conteudo;
-            this.guna2VScrollBar1.BorderRadius = 4;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 363;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(804, 34);
-            this.guna2VScrollBar1.Maximum = 557;
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 363);
-            this.guna2VScrollBar1.SmallChange = 5;
-            this.guna2VScrollBar1.TabIndex = 199;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            // 
             // Form_Modulo_Suspeitos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(822, 503);
-            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.panel_Conteudo);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -1282,6 +1261,5 @@
         private System.Windows.Forms.Label label_msg_nome_meio;
         private System.Windows.Forms.Label label_msg_primeiro_nome;
         public Guna.UI2.WinForms.Guna2Button btn_Atualizar;
-        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
     }
 }

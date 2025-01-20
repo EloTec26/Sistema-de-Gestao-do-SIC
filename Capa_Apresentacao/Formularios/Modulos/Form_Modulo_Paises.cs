@@ -1,4 +1,5 @@
-﻿using Capa_Comum.Entidades;
+﻿using Capa_Apresentacao.Formularios.Lista_Formularios;
+using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
 using System.Windows.Forms;
@@ -11,11 +12,14 @@ namespace Capa_Apresentacao.Formularios.Modulos
         dominio_continentes selecionar_continentes = new dominio_continentes();
         dominio_paises d_paises = new dominio_paises();
         e_comum_paises c_paises = new e_comum_paises();
+
+        Form_Lista_Paises paises;
         #endregion
-        public Form_Modulo_Paises()
+        public Form_Modulo_Paises(Form_Lista_Paises paises)
         {
             InitializeComponent();
             carregar_continentes_combo_box();
+            this.paises = paises;
         }
         private void Form_Modulo_Paises_Load(object sender, EventArgs e)
         {
@@ -71,7 +75,9 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         d_paises.registrar_paises(c_paises);
                         guna2MessageDialog_Inform.Show($"O país foi registrado com sucesso!", "Registro bem sucedida");
                         // Fecha o formulário depois da atualização.
+                        paises.listar_paises();
                         this.Close();
+                        limpar_campos();
                     }
                 }
                 catch (Exception ex)
@@ -107,7 +113,8 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         d_paises.atualizar_paises(c_paises);
                         guna2MessageDialog_Inform.Show($"O país foi atualizado com sucesso!", "Atualização bem sucedida");
                         // Fecha o formulário depois da atualização.
-                        this.Close();
+                        paises.listar_paises();
+                        limpar_campos();
                     }
                 }
                 catch (Exception ex)

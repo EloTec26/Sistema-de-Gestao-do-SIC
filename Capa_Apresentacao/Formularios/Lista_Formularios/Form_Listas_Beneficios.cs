@@ -105,6 +105,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                         listar_Beneficios();
                     }
                 }
+                catch (System.Data.SqlClient.SqlException Ex)
+                {
+                    if (Ex.Number == 457)
+                    {
+                        guna2MessageDialog1_Error.Show("Não é possível eliminar este benefício, pois existem - no sistema-, dados que estão vinculados  à ela.", "Alerta");
+                    }
+                }
                 catch (Exception Ex)
                 {
                     guna2MessageDialog1_Error.Show("Não foi possível eliminar este benefício!", Ex.Message);

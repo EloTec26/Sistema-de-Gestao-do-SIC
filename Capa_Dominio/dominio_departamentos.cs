@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-//------------------------------
+﻿//------------------------------
 using Capa_Comum.Entidades;
 using Capa_Dados;
-using System.Data;
 using Capa_Dominio.Dominio_Validacoes;
-
+using System;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Capa_Dominio
 {
@@ -31,13 +27,44 @@ namespace Capa_Dominio
         }
         public void inserir_Departamentos(e_comum_departamentos departamentos)
         {
-            validacacoes(departamentos);
-            d_Departamentos.inserir_departamentos(departamentos);
+            try
+            {
+                validacacoes(departamentos);
+                d_Departamentos.inserir_departamentos(departamentos);
+            }
+            catch (SqlException ex) when (ex.Number == 2627)
+            {
+                string erro_Duplicacao = ex.Message;
+                if (erro_Duplicacao.Contains("nome"))
+                {
+                    throw new ArgumentException("Este 'Departamento' já existe´no sistema.!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação" + ex.Message);
+                }
+
+                {
+                    throw new ArgumentException("Ocorreu um erro de duplicação de dados.\nVerifique os dados inseridos e tente novamente!", "Erro de duplicação" + ex.Message);
+                }
+            }
+
         }
         public void atualizar_Departamentos(e_comum_departamentos departamentos)
         {
-            validacacoes(departamentos);
-            d_Departamentos.atualizar_departamentos(departamentos);
+            try
+            {
+                validacacoes(departamentos);
+                d_Departamentos.atualizar_departamentos(departamentos);
+            }
+            catch (SqlException ex) when (ex.Number == 2627)
+            {
+                string erro_Duplicacao = ex.Message;
+                if (erro_Duplicacao.Contains("nome"))
+                {
+                    throw new ArgumentException("Este 'Departamento' já existe´no sistema.!\nPor favor, insira um outro 'Nº de telefone' e tente novamente!", "Erro de duplicação" + ex.Message);
+                }
+
+                {
+                    throw new ArgumentException("Ocorreu um erro de duplicação de dados.\nVerifique os dados inseridos e tente novamente!", "Erro de duplicação" + ex.Message);
+                }
+            }
         }
         public void eliminar_Departamentos(e_comum_departamentos departamentos)
         {

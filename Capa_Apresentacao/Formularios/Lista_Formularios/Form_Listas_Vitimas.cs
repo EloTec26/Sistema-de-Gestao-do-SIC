@@ -28,13 +28,20 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
-        private void selecionar_Vitimas()
+        public void selecionar_Vitimas()
         {
-            dgv_vitimas.DataSource = d_Vitimas.selecionar_vitimas();
+            try
+            {
+                dgv_vitimas.DataSource = d_Vitimas.selecionar_vitimas();
+            }
+            catch (Exception ex) 
+            {
+                MessageDialog_Error.Show(ex.Message);
+            }
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Modulos.Form_Modulo_Vitimas modulo_Vitimas = new Modulos.Form_Modulo_Vitimas();
+            Modulos.Form_Modulo_Vitimas modulo_Vitimas = new Modulos.Form_Modulo_Vitimas(this);
             modulo_Vitimas.FormClosed += Modulo_Vitimas_FormClosed;
             modulo_Vitimas.ShowDialog();
         }
@@ -47,7 +54,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_vitimas.SelectedCells.Count > 0)
             {
-                Modulos.Form_Modulo_Vitimas modulo_Vitimas = new Modulos.Form_Modulo_Vitimas();
+                Modulos.Form_Modulo_Vitimas modulo_Vitimas = new Modulos.Form_Modulo_Vitimas(this);
                 modulo_Vitimas.FormClosed += Modulo_Vitimas_FormClosed;
 
                 modulo_Vitimas.label_id.Text = dgv_vitimas.CurrentRow.Cells[0].Value.ToString();
@@ -75,14 +82,50 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
 
                 modulo_Vitimas.ShowDialog();
                 selecionar_Vitimas();
-
             }
             else
             {
                 MessageDialog_Error.Show("Por favor, selecione a testemunha que pretende atualizar e tente novamente!", "Falha");
             }
         }
+        private void dgv_vitimas_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dgv_vitimas.SelectedCells.Count > 0)
+            {
+                Modulos.Form_Modulo_Vitimas modulo_Vitimas = new Modulos.Form_Modulo_Vitimas(this);
+                modulo_Vitimas.FormClosed += Modulo_Vitimas_FormClosed;
 
+                modulo_Vitimas.label_id.Text = dgv_vitimas.CurrentRow.Cells[0].Value.ToString();
+                modulo_Vitimas.text_primeiro_nome.Text = dgv_vitimas.CurrentRow.Cells[1].Value.ToString();
+                modulo_Vitimas.text_nome_meio.Text = dgv_vitimas.CurrentRow.Cells[2].Value.ToString();
+                modulo_Vitimas.text_ultimo_nome.Text = dgv_vitimas.CurrentRow.Cells[3].Value.ToString();
+                modulo_Vitimas.text_data_nascimento.Text = dgv_vitimas.CurrentRow.Cells[4].Value.ToString();
+                modulo_Vitimas.text_sexo.Text = dgv_vitimas.CurrentRow.Cells[6].Value.ToString();
+                modulo_Vitimas.text_primerio_numero_telefone.Text = dgv_vitimas.CurrentRow.Cells[7].Value.ToString();
+                modulo_Vitimas.text_segundo_numero_telefone.Text = dgv_vitimas.CurrentRow.Cells[8].Value.ToString();
+                modulo_Vitimas.text_e_mail.Text = dgv_vitimas.CurrentRow.Cells[9].Value.ToString();
+                modulo_Vitimas.text_curso.Text = dgv_vitimas.CurrentRow.Cells[10].Value.ToString();
+                modulo_Vitimas.text_nivel_academico.Text = dgv_vitimas.CurrentRow.Cells[11].Value.ToString();
+                modulo_Vitimas.text_caso.Text = dgv_vitimas.CurrentRow.Cells[12].Value.ToString();
+                modulo_Vitimas.text_declaracao.Text = dgv_vitimas.CurrentRow.Cells[13].Value.ToString();
+                modulo_Vitimas.text_continente.Text = dgv_vitimas.CurrentRow.Cells[14].Value.ToString();
+                modulo_Vitimas.text_pais.Text = dgv_vitimas.CurrentRow.Cells[15].Value.ToString();
+                modulo_Vitimas.text_provincias.Text = dgv_vitimas.CurrentRow.Cells[16].Value.ToString();
+                modulo_Vitimas.text_municipio.Text = dgv_vitimas.CurrentRow.Cells[17].Value.ToString();
+                modulo_Vitimas.text_bairro_rua.Text = dgv_vitimas.CurrentRow.Cells[18].Value.ToString();
+
+                modulo_Vitimas.label5.Text = "Atualizar vítima";
+                modulo_Vitimas.btn_salvar.Text = "Atualizar";
+                modulo_Vitimas.btn_salvar.FillColor = Color.SeaGreen;
+
+                modulo_Vitimas.ShowDialog();
+                selecionar_Vitimas();
+            }
+            else
+            {
+                MessageDialog_Error.Show("Por favor, selecione a testemunha que pretende atualizar e tente novamente!", "Falha");
+            }
+        }
         private void btn_eliminar_Click(object sender, EventArgs e)
         {
             if (dgv_vitimas.SelectedRows.Count > 0)
@@ -99,11 +142,10 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                         selecionar_Vitimas();
                     }
                 }
-                catch (System.Data.SqlClient.SqlException Ex)
-                {
-                    if (Ex.Number == 547)
-                        MessageDialog_Error.Show("Não é possível eliminar esta vítima, pois existem - no sistema - dados que estão vinculados à ele!", "Erro de exclusão");
-                }
+                //catch (System.Data.SqlClient.SqlException Ex)
+                //{
+                //    MessageDialog_Error.Show(Ex.Message);
+                //}
                 catch (Exception Ex)
                 {
                     MessageDialog_Error.Show("Não foi possível eliminar esta vítima!", Ex.Message);
@@ -114,7 +156,6 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 MessageDialog_Error.Show("Por favor, selecione a vítima que pretende eliminar e tente novamente!", "Falha");
             }
         }
-
         private void text_pesquisar_TextChanged(object sender, EventArgs e)
         {
             pesquisar_Vitimas();

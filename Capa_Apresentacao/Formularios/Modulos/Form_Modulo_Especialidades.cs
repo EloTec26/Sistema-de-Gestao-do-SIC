@@ -1,4 +1,5 @@
-﻿using Capa_Comum.Entidades;
+﻿using Capa_Apresentacao.Formularios.Lista_Formularios;
+using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
 using System.Drawing;
@@ -13,10 +14,12 @@ namespace Capa_Apresentacao.Formularios.Modulos
         dominio_especialidades d_Especialidades = new dominio_especialidades();
         dominio_cursos d_Cursos = new dominio_cursos();
         #endregion
-        public Form_Modulo_Especialidades()
+        Form_Lista_Especialidades especialidades;
+        public Form_Modulo_Especialidades(Form_Lista_Especialidades especialidades)
         {
             InitializeComponent();
 
+            this.especialidades = especialidades;
             selecionar_Cursos_Exbir_Combo_Box();
         }
         private void selecionar_Cursos_Exbir_Combo_Box()
@@ -65,13 +68,14 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     {
                         d_Especialidades.inserir_Especialidades(c_Especialidades);
                         guna2MessageDialog_Inform.Show($"A especialidade {text_Especialidades.Text}, foi registrada com sucesso!", "Registro bem sucedido");
+                        especialidades.listar_Especialidades();
                         limpar_Campos();
                     }
                 }
                 catch (Exception ex)
                 {
                     // capturar a mensagem de exceção personalizada da camada de domínio
-                    if (ex.Message.Contains("O nome do curso já está registrado"))
+                    if (ex.Message.Contains("O nome da especialidade já está registrado"))
                     {
                         MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
                     }
@@ -101,12 +105,14 @@ namespace Capa_Apresentacao.Formularios.Modulos
 
                         guna2MessageDialog_Inform.Show($"A especialidade {text_Especialidades.Text}, foi atualizada com sucesso!", "Atualização bem sucedida");
                         limpar_Campos();
+                        especialidades.listar_Especialidades();
+                        this.Close();
                     }
                 }
 
                 catch (Exception ex)
                 {
-                    if (ex.Message.Contains("O nome do curso já está registrado"))
+                    if (ex.Message.Contains("O nome da especialidade já está registrado"))
                     {
                         MessageDialog_Error.Show(ex.Message, "Erro de duplicidade");
                     }

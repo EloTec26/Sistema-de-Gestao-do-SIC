@@ -9,18 +9,12 @@ namespace Capa_Comum.Entidades
     public class e_comum_usuarios
     {
         public int id_usuario { get; set; }
-        public int id_continente { get; set; }
-        public int id_pais { get; set; }
-        public int id_provincia { get; set; }
-        public int id_municipio { get; set; }
-        public int id_bairro_rua { get; set; }
         public string primeiro_nome { get; set; }
         public string nome_meio { get; set; }
         public string ultimo_nome { get; set; }
         public string bi { get; set; }
         public string sexo { get; set; }
         public string telefone1 { get; set; }
-        public string telefone2 { get; set; }
         public string e_mail { get; set; }
         public string tipo_usuario { get; set; }
         public string palavra_passe { get; set; }	 

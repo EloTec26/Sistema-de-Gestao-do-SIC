@@ -42,13 +42,13 @@
             this.btn_cadastrar = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
             this.dgv_departamentos = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.MessageDialog_Error = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.guna2HScrollBar1 = new Guna.UI2.WinForms.Guna2HScrollBar();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_departamentos)).BeginInit();
@@ -126,9 +126,8 @@
             this.btn_eliminar.IconChar = FontAwesome.Sharp.IconChar.TimesRectangle;
             this.btn_eliminar.IconColor = System.Drawing.Color.Tomato;
             this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_eliminar.IconSize = 30;
-            this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_eliminar.Location = new System.Drawing.Point(279, 4);
+            this.btn_eliminar.IconSize = 20;
+            this.btn_eliminar.Location = new System.Drawing.Point(251, 2);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(46, 31);
             this.btn_eliminar.TabIndex = 50;
@@ -147,8 +146,8 @@
             this.btn_atualizar.IconChar = FontAwesome.Sharp.IconChar.PenClip;
             this.btn_atualizar.IconColor = System.Drawing.Color.SeaGreen;
             this.btn_atualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_atualizar.IconSize = 30;
-            this.btn_atualizar.Location = new System.Drawing.Point(222, 5);
+            this.btn_atualizar.IconSize = 20;
+            this.btn_atualizar.Location = new System.Drawing.Point(194, 3);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(51, 31);
             this.btn_atualizar.TabIndex = 49;
@@ -165,8 +164,8 @@
             this.btn_cadastrar.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.btn_cadastrar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btn_cadastrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_cadastrar.IconSize = 30;
-            this.btn_cadastrar.Location = new System.Drawing.Point(165, 6);
+            this.btn_cadastrar.IconSize = 20;
+            this.btn_cadastrar.Location = new System.Drawing.Point(137, 4);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(51, 31);
             this.btn_cadastrar.TabIndex = 48;
@@ -177,11 +176,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(3, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 22);
+            this.label1.Size = new System.Drawing.Size(128, 19);
             this.label1.TabIndex = 38;
             this.label1.Text = "Departamentos";
             // 
@@ -195,6 +194,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(713, 243);
             this.panel2.TabIndex = 16;
+            // 
+            // guna2HScrollBar1
+            // 
+            this.guna2HScrollBar1.BindingContainer = this.dgv_departamentos;
+            this.guna2HScrollBar1.BorderRadius = 4;
+            this.guna2HScrollBar1.InUpdate = false;
+            this.guna2HScrollBar1.LargeChange = 1;
+            this.guna2HScrollBar1.Location = new System.Drawing.Point(0, 225);
+            this.guna2HScrollBar1.Maximum = 1;
+            this.guna2HScrollBar1.Name = "guna2HScrollBar1";
+            this.guna2HScrollBar1.ScrollbarSize = 18;
+            this.guna2HScrollBar1.Size = new System.Drawing.Size(713, 18);
+            this.guna2HScrollBar1.TabIndex = 35;
+            this.guna2HScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             // 
             // dgv_departamentos
             // 
@@ -269,6 +282,21 @@
             this.dgv_departamentos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgv_departamentos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.dgv_departamentos;
+            this.guna2VScrollBar1.BorderRadius = 4;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(695, 0);
+            this.guna2VScrollBar1.Minimum = 1;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 243);
+            this.guna2VScrollBar1.TabIndex = 34;
+            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2VScrollBar1.Value = 1;
+            // 
             // guna2MessageDialog_Confirm
             // 
             this.guna2MessageDialog_Confirm.Buttons = Guna.UI2.WinForms.MessageDialogButtons.YesNo;
@@ -295,35 +323,6 @@
             this.MessageDialog_Error.Parent = null;
             this.MessageDialog_Error.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.MessageDialog_Error.Text = null;
-            // 
-            // guna2VScrollBar1
-            // 
-            this.guna2VScrollBar1.BindingContainer = this.dgv_departamentos;
-            this.guna2VScrollBar1.BorderRadius = 4;
-            this.guna2VScrollBar1.InUpdate = false;
-            this.guna2VScrollBar1.LargeChange = 10;
-            this.guna2VScrollBar1.Location = new System.Drawing.Point(695, 0);
-            this.guna2VScrollBar1.Minimum = 1;
-            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
-            this.guna2VScrollBar1.ScrollbarSize = 18;
-            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 243);
-            this.guna2VScrollBar1.TabIndex = 34;
-            this.guna2VScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2VScrollBar1.Value = 1;
-            // 
-            // guna2HScrollBar1
-            // 
-            this.guna2HScrollBar1.BindingContainer = this.dgv_departamentos;
-            this.guna2HScrollBar1.BorderRadius = 4;
-            this.guna2HScrollBar1.InUpdate = false;
-            this.guna2HScrollBar1.LargeChange = 1;
-            this.guna2HScrollBar1.Location = new System.Drawing.Point(0, 225);
-            this.guna2HScrollBar1.Maximum = 1;
-            this.guna2HScrollBar1.Name = "guna2HScrollBar1";
-            this.guna2HScrollBar1.ScrollbarSize = 18;
-            this.guna2HScrollBar1.Size = new System.Drawing.Size(713, 18);
-            this.guna2HScrollBar1.TabIndex = 35;
-            this.guna2HScrollBar1.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             // 
             // Form_Lista_Departamentos
             // 

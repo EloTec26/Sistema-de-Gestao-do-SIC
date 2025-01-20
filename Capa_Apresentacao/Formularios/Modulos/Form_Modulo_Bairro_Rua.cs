@@ -1,6 +1,8 @@
-﻿using Capa_Comum.Entidades;
+﻿using Capa_Apresentacao.Formularios.Lista_Formularios;
+using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Capa_Apresentacao.Formularios.Modulos
@@ -11,10 +13,12 @@ namespace Capa_Apresentacao.Formularios.Modulos
         e_comum_bairro_rua c_Bairro_Rua = new e_comum_bairro_rua();
         dominio_bairro_rua d_Bairro_Rua = new dominio_bairro_rua();
         dominio_municipios d_Municipios = new dominio_municipios();
-        public Form_Modulo_Bairro_Rua()
+        Form_Lista_Bairros_Ruas bairro_rua;
+        public Form_Modulo_Bairro_Rua(Form_Lista_Bairros_Ruas bairro_rua)
         {
             InitializeComponent();
             carregar_Dados_No_Combo_Box_Municipios();
+            this.bairro_rua = bairro_rua;
         }
         private void carregar_Dados_No_Combo_Box_Municipios()
         {
@@ -60,10 +64,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     {
                         d_Bairro_Rua.registrar_bairros_ruas(c_Bairro_Rua);
                         guna2MessageDialog_Inform.Show($"O bairro/rua {text_bairro_rua.Text}, foi registrado com sucesso!", "Registro bem sucedido");
+                        bairro_rua.lista_Bairros_Ruas();
                         limpar_Campos();
                     }
                 }
-                catch (Exception ex)
+                catch (SqlException ex)
                 {
                     // capturar a mensagem de exceção personalizada da camada de domínio
                     if (ex.Message.Contains("O nome do bairro/rua já está registrado"))
@@ -97,11 +102,12 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         d_Bairro_Rua.atualizar_bairros_ruas(c_Bairro_Rua);
 
                         guna2MessageDialog_Inform.Show($"O bairro/rua {text_municipio.Text}, foi atualizado com sucesso!", "Atualização bem sucedida");
+                        bairro_rua.lista_Bairros_Ruas();
                         this.Close();
                         limpar_Campos();
                     }
                 }
-                catch (Exception ex)
+                catch (SqlException ex)
                 {
                     // capturar a mensagem de exceção personalizada da camada de domínio
                     if (ex.Message.Contains("O nome do bairro/rua já está registrado"))

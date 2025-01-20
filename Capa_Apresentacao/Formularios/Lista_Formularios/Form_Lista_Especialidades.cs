@@ -23,14 +23,14 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             InitializeComponent();
             listar_Especialidades();
         }
-        private void listar_Especialidades()
+        public void listar_Especialidades()
         {
             dgv_especialidades.DataSource = d_Especialidades.selecionar_Especialidades();
         }
         private void btn_cadastrar_Click_1(object sender, EventArgs e)
         {
 
-            Formularios.Modulos.Form_Modulo_Especialidades especialidades = new Modulos.Form_Modulo_Especialidades();
+            Formularios.Modulos.Form_Modulo_Especialidades especialidades = new Modulos.Form_Modulo_Especialidades(this);
             especialidades.FormClosed += Especialidades_FormClosed;
             especialidades.ShowDialog();
         }
@@ -43,7 +43,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if(dgv_especialidades.SelectedRows.Count > 0)
             {
-                Formularios.Modulos.Form_Modulo_Especialidades especialidades = new Modulos.Form_Modulo_Especialidades();
+                Formularios.Modulos.Form_Modulo_Especialidades especialidades = new Modulos.Form_Modulo_Especialidades(this);
                 especialidades.FormClosed += Especialidades_FormClosed;
                 especialidades.label_id.Text = dgv_especialidades.CurrentRow.Cells[0].Value.ToString();
                 especialidades.text_curso.Text = dgv_especialidades.CurrentRow.Cells[1].Value.ToString();

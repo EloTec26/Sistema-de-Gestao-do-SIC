@@ -27,13 +27,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
-        private void selecionar_Faltas()
+        public void selecionar_Faltas()
         {
             dgv_faltas.DataSource = d_Faltas.selecionar_Faltas();
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Form_Modulo_Faltas form_Modulo_Faltas = new Form_Modulo_Faltas();
+            Form_Modulo_Faltas form_Modulo_Faltas = new Form_Modulo_Faltas(this);
             form_Modulo_Faltas.FormClosed += Form_Modulo_Faltas_FormClosed;
             form_Modulo_Faltas.ShowDialog();
         }
@@ -47,7 +47,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if(dgv_faltas.SelectedRows.Count > 0)
             {
-                Form_Modulo_Faltas form_Modulo_Faltas = new Form_Modulo_Faltas();
+                Form_Modulo_Faltas form_Modulo_Faltas = new Form_Modulo_Faltas(this);
                 form_Modulo_Faltas.FormClosed += Form_Modulo_Faltas_FormClosed;
 
                 form_Modulo_Faltas.label_id.Text = dgv_faltas.CurrentRow.Cells[0].Value.ToString();
@@ -70,7 +70,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_faltas.SelectedRows.Count > 0)
             {
-                Form_Modulo_Faltas form_Modulo_Faltas = new Form_Modulo_Faltas();
+                Form_Modulo_Faltas form_Modulo_Faltas = new Form_Modulo_Faltas(this);
                 form_Modulo_Faltas.FormClosed += Form_Modulo_Faltas_FormClosed;
 
                 form_Modulo_Faltas.label_id.Text = dgv_faltas.CurrentRow.Cells[0].Value.ToString();

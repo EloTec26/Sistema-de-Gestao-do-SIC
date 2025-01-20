@@ -3,6 +3,7 @@ using Capa_Comum.Entidades;
 using Capa_Dominio;
 using Capa_Dominio.Dominio_Pesquisas;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Capa_Apresentacao.Formularios.Lista_Formularios
@@ -31,28 +32,33 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             }
         }
         #endregion
-        private void listar_Investigadores()
+        public void listar_Investigadores()
         {
-            dgv_investigadores.DataSource = d_Investigadores.selecionar_investigadores();
+            try
+            {
+                dgv_investigadores.DataSource = d_Investigadores.selecionar_investigadores();
+            }
+            catch (Exception ex)
+            {
+                guna2MessageDialog1_Error.Show("Erro ao exibir a lista de funcionários!", "Ups" + ex.Message);
+            }
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Modulos.Form_Modulo_Investigadores investigadores = new Modulos.Form_Modulo_Investigadores();
+            Modulos.Form_Modulo_Investigadores investigadores = new Modulos.Form_Modulo_Investigadores(this);
             investigadores.FormClosed += Investigadores_FormClosed;
             investigadores.ShowDialog();
             listar_Investigadores();
         }
-
         private void Investigadores_FormClosed(object sender, FormClosedEventArgs e)
         {
             listar_Investigadores();
         }
-
         private void btn_atualizar_Click(object sender, EventArgs e)
         {
             if (dgv_investigadores.SelectedRows.Count > 0)
             {
-                Modulos.Form_Modulo_Investigadores investigadores = new Modulos.Form_Modulo_Investigadores();
+                Modulos.Form_Modulo_Investigadores investigadores = new Modulos.Form_Modulo_Investigadores(this);
                 investigadores.FormClosed += Investigadores_FormClosed;
 
                 investigadores.label_id.Text = dgv_investigadores.CurrentRow.Cells[0].Value.ToString();
@@ -99,9 +105,8 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             {
                 if (dgv_investigadores.SelectedRows.Count > 0)
                 {
-                    Modulos.Form_Modulo_Investigadores investigadores = new Modulos.Form_Modulo_Investigadores();
+                    Modulos.Form_Modulo_Investigadores investigadores = new Modulos.Form_Modulo_Investigadores(this);
                     investigadores.FormClosed += Investigadores_FormClosed;
-
 
                     investigadores.label_id.Text = dgv_investigadores.CurrentRow.Cells[0].Value.ToString();
                     investigadores.text_primeiro_nome.Text = dgv_investigadores.CurrentRow.Cells[1].Value.ToString();
@@ -155,6 +160,10 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                         listar_Investigadores();
                     }
                 }
+                //catch (SqlException ex)
+                //{
+                //    guna2MessageDialog1_Error.Show(ex.Message);
+                //}
                 catch (Exception Ex)
                 {
                     guna2MessageDialog1_Error.Show("Não foi possível eliminar este funcionário!", Ex.Message);
@@ -172,7 +181,14 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         }
         private void pesquisar_Investigadores()
         {
-            dgv_investigadores.DataSource = p_Investigadores.pesquisar_Investigadores(text_pesquisar.Text);
+            try
+            {
+                dgv_investigadores.DataSource = p_Investigadores.pesquisar_Investigadores(text_pesquisar.Text);
+            }
+            catch (Exception ex)
+            {
+                guna2MessageDialog1_Error.Show("Erro de pesquisa!", "Ups!" + ex.Message);
+            }
         }
     }
 }

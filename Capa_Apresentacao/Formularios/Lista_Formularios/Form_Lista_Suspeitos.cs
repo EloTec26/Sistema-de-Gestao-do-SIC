@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-//-----------------------------------------
+﻿//-----------------------------------------
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using Capa_Dominio.Dominio_Pesquisas;
+using System;
+using System.Windows.Forms;
 
 namespace Capa_Apresentacao.Formularios.Lista_Formularios
 {
@@ -28,27 +21,32 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
-        private void selecionar_Suspeitos()
+        public void selecionar_Suspeitos()
         {
-            dgv_suspeitos.DataSource = d_Suspeito.selecionar_suspeitos();
+            try
+            {
+                dgv_suspeitos.DataSource = d_Suspeito.selecionar_suspeitos();
+            }
+            catch (Exception ex)
+            {
+                MessageDialog_Error.Show(ex.Message);
+            }
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Modulos.Form_Modulo_Suspeitos modulo_Suspeitos = new Modulos.Form_Modulo_Suspeitos();
+            Modulos.Form_Modulo_Suspeitos modulo_Suspeitos = new Modulos.Form_Modulo_Suspeitos(this);
             modulo_Suspeitos.FormClosed += Modulo_Suspeitos_FormClosed;
             modulo_Suspeitos.ShowDialog();
         }
-
         private void Modulo_Suspeitos_FormClosed(object sender, FormClosedEventArgs e)
         {
             selecionar_Suspeitos();
         }
-
         private void btn_atualizar_Click(object sender, EventArgs e)
         {
             if (dgv_suspeitos.SelectedCells.Count > 0)
             {
-                Modulos.Form_Modulo_Suspeitos modulo_Suspeitos = new Modulos.Form_Modulo_Suspeitos();
+                Modulos.Form_Modulo_Suspeitos modulo_Suspeitos = new Modulos.Form_Modulo_Suspeitos(this);
                 modulo_Suspeitos.FormClosed += Modulo_Suspeitos_FormClosed;
 
                 modulo_Suspeitos.label_id.Text = dgv_suspeitos.CurrentRow.Cells[0].Value.ToString();
@@ -69,7 +67,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                 modulo_Suspeitos.text_provincias.Text = dgv_suspeitos.CurrentRow.Cells[16].Value.ToString();
                 modulo_Suspeitos.text_municipio.Text = dgv_suspeitos.CurrentRow.Cells[17].Value.ToString();
                 modulo_Suspeitos.text_bairro_rua.Text = dgv_suspeitos.CurrentRow.Cells[18].Value.ToString();
-            
+
                 modulo_Suspeitos.label5.Text = "Atualizar suspeito";
                 modulo_Suspeitos.btn_salvar.Visible = false;
                 modulo_Suspeitos.btn_Atualizar.Visible = true;
@@ -98,11 +96,10 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                         selecionar_Suspeitos();
                     }
                 }
-                catch (System.Data.SqlClient.SqlException Ex)
-                {
-                    if (Ex.Number == 547)
-                        MessageDialog_Error.Show("Não é possível eliminar este suspeito, pois existem - no sistema - dados que estão vinculados à ele!", "Erro de exclusão");
-                }
+                //catch (System.Data.SqlClient.SqlException Ex)
+                //{
+                //    MessageDialog_Error.Show(Ex.Message);
+                //}
                 catch (Exception Ex)
                 {
                     MessageDialog_Error.Show("Não foi possível eliminar este suspeito!", Ex.Message);
@@ -120,7 +117,14 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         }
         public void pesqusar_Suspeitos()
         {
-            dgv_suspeitos.DataSource = p_Supeitos.pesquisar_Suspeito(text_pesquisar.Text);
+            try
+            {
+                dgv_suspeitos.DataSource = p_Supeitos.pesquisar_Suspeito(text_pesquisar.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageDialog_Error.Show("Erro de pesquisar", "Ups" + ex.Message);
+            }
         }
     }
 }

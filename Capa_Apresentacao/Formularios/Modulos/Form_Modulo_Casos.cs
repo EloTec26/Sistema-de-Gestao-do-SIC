@@ -1,4 +1,5 @@
-﻿using Capa_Comum.Comum_Permissoes.Cache;
+﻿using Capa_Apresentacao.Formularios.Lista_Formularios;
+using Capa_Comum.Comum_Permissoes.Cache;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
@@ -13,10 +14,13 @@ namespace Capa_Apresentacao.Formularios.Modulos
         dominio_departamentos d_Departamentos = new dominio_departamentos();
         e_comum_casos c_Casos = new e_comum_casos();
         dominio_casos d_Casos = new dominio_casos();
-        public Form_Modulo_Casos()
+
+        Form_Lista_Casos casos;
+        public Form_Modulo_Casos(Form_Lista_Casos casos)
         {
             InitializeComponent();
             carregar_Dados_ComboBoxs();
+            this.casos = casos;
         }
         private void carregar_Dados_ComboBoxs()
         {
@@ -90,6 +94,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     {
                         d_Casos.inserir_Casos(c_Casos);
                         guna2MessageDialog_Inform.Show("O caso foi registrado com sucesso!", "Registro bem sucedido");
+                        casos.selecionar_Casos();
                         limpar_Campos();
                     }
                 }
@@ -121,6 +126,8 @@ namespace Capa_Apresentacao.Formularios.Modulos
                         d_Casos.atualizar_Casos(c_Casos);
                         guna2MessageDialog_Inform.Show($"O caso com o título {text_titulo.Text} foi atualizado com sucesso!", "Atualização bem sucedida");
                         limpar_Campos();
+                        
+                        casos.selecionar_Casos();
                         this.Close();
                     }
                 }

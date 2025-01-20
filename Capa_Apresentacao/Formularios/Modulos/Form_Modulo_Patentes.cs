@@ -5,6 +5,7 @@ using System;
 using System.Windows.Forms;
 using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
 using System.Data.SqlClient;
+using Capa_Apresentacao.Formularios.Lista_Formularios;
 
 namespace Capa_Apresentacao.Formularios.Modulos
 {
@@ -12,9 +13,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
     {
         e_comum_patentes c_Patentes = new e_comum_patentes();
         dominio_patentes d_Patentes = new dominio_patentes();
-        public Form_Modulo_Patentes()
+        Form_Lista_Patentes Patentes;
+        public Form_Modulo_Patentes(Form_Lista_Patentes Patentes)
         {
             InitializeComponent();
+            this.Patentes = Patentes;
         }
 
         private void btn_Fechar_Click(object sender, EventArgs e)
@@ -58,6 +61,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     d_Patentes.inserir_patentes(c_Patentes);
                     guna2MessageDialog_Inform.Show($"A patente foi registrada com sucesso!", "Registro bem sucedido");
                     // Limpa todos os campos depois do registro.
+                    Patentes.listar_Patentes();
                     limpar_Campos();
                 }
                 catch (SqlException ex) when (ex.Number == 2627)
@@ -89,7 +93,9 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     d_Patentes.atualizar_patentes(c_Patentes);
                     guna2MessageDialog_Inform.Show($"A patente foi atualizada com sucesso!", "Atualização bem sucedida");
                     // Limpa todos os campos depois do registro.
+                    Patentes.listar_Patentes();
                     limpar_Campos();
+                    this.Close();
                 }
                 catch (SqlException ex) when (ex.Number == 2627)
                 {
@@ -111,12 +117,10 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_patentes.Clear();
             text_descricao.Clear();
         }
-
         private void btn_Limpar_Click(object sender, EventArgs e)
         {
             limpar_Campos();
         }
-
         private void text_patentes_KeyPress(object sender, KeyPressEventArgs e)
         {
             validacao_campos_formularios.ValidadorCampos.ValidarTextoNumeroSimbolo(e, text_patentes, label_msg_patente, "Apenas letras e os símbolos (º e -), são permitidos!");
@@ -124,7 +128,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
 
         private void text_descricao_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_descricao, label_msg_descricao, "Apenas letras são permitidas!");
+            validacao_campos_formularios.ValidarTextoDescricao(e, text_descricao, label_msg_descricao, "Apenas letras e alguns caracteres são permitidos!");
         }
     }
 }

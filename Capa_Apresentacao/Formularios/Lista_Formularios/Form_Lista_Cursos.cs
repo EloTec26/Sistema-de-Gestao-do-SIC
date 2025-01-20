@@ -19,13 +19,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
-        private void listar_Cursos()
+        public void listar_Cursos()
         {
             dgv_cursos.DataSource = d_Cursos.selecionar_Cursos();
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Modulos.Form_Modulo_Cursos cursos = new Modulos.Form_Modulo_Cursos();
+            Modulos.Form_Modulo_Cursos cursos = new Modulos.Form_Modulo_Cursos(this);
             cursos.FormClosed += Cursos_FormClosed;
             cursos.ShowDialog();
             listar_Cursos();
@@ -40,13 +40,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_cursos.SelectedRows.Count > 0)
             {
-                Modulos.Form_Modulo_Cursos cursos = new Modulos.Form_Modulo_Cursos();
+                Modulos.Form_Modulo_Cursos cursos = new Modulos.Form_Modulo_Cursos(this);
                 cursos.FormClosed += Cursos_FormClosed;
 
                 cursos.label_id.Text = dgv_cursos.CurrentRow.Cells[0].Value.ToString();
                 cursos.text_Curso.Text = dgv_cursos.CurrentRow.Cells[1].Value.ToString();
 
-                cursos.label5.Text = "Atualizar curso";
+                cursos.label5.Text = "Atualizar curso profissional";
                 cursos.btn_salvar.Visible = false;
                 cursos.btn_Atualizar.Visible = true;
                 cursos.ShowDialog();

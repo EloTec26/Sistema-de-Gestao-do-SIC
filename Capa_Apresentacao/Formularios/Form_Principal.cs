@@ -4,6 +4,8 @@ using System;
 using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using Capa_Apresentacao.Formularios.Lista_Formularios.Alterar_perfil_usuario;
+using Capa_Dominio.Dominio_Permissoes;
 
 namespace Capa_Apresentacao
 {
@@ -28,7 +30,8 @@ namespace Capa_Apresentacao
             toolTip1.SetToolTip(btn_perfil_baixo, "Mostrar perfil");
             toolTip1.SetToolTip(btn_perfil_usuario, "Dados completos do usuaário");
 
-        }
+            btn_perfil_baixo.Visible = true;
+        }      
         private void Form_Principal_Load(object sender, EventArgs e)
         {
             btn_Logo_Click(e, null);
@@ -49,8 +52,8 @@ namespace Capa_Apresentacao
                 benefícosToolStripMenuItem.Enabled = false;
                 benefícosInvestigadoresToolStripMenuItem.Enabled = false;
                 toolStripMenuItem2_afastamentos.Enabled = false;
-                especialidadesToolStripMenuItem.Enabled = false;
-                cursosToolStripMenuItem.Enabled = false;
+                CursosProfissonaisToolStripMenuItem.Enabled = false;
+                EspecialidadesToolStripMenuItem.Enabled = false;
                 nívelAcadêmicosToolStripMenuItem.Enabled = false;
                 btn_Evidencias.Enabled = false;
                 btn_submenu_investigadores.Enabled = false;
@@ -88,10 +91,10 @@ namespace Capa_Apresentacao
                 benefícosInvestigadoresToolStripMenuItem.Enabled = false;
                 cargosToolStripMenuItem.Enabled = false;
                 cargosInvestigadoresToolStripMenuItem.Enabled = false;
-                cursosToolStripMenuItem.Enabled = false;
+                EspecialidadesToolStripMenuItem.Enabled = false;
                 departamentosToolStripMenuItem.Enabled = false;
                 departamentosInvestigadoresToolStripMenuItem.Enabled = false;
-                especialidadesToolStripMenuItem.Enabled = false;
+                CursosProfissonaisToolStripMenuItem.Enabled = false;
                 faltasToolStripMenuItem1.Enabled = false;
                 fériasToolStripMenuItem1.Enabled = false;
                 horasExtrasToolStripMenuItem1.Enabled = false;
@@ -130,7 +133,6 @@ namespace Capa_Apresentacao
         }
         #endregion
 
-
         // Métodos privados para mover o formulário
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -138,6 +140,7 @@ namespace Capa_Apresentacao
         private extern static void SendMessage(System.IntPtr hwmd, int wmsg, int wparam, int lparam);
         // fim dos métodos
         int LX, LY, SW, SH;
+
         private void btn_Maximizar_Click(object sender, EventArgs e)
         {
             //this.WindowState = FormWindowState.Maximized;
@@ -193,6 +196,9 @@ namespace Capa_Apresentacao
             label_cargo.Text = comum_cache_permissoes_usuarios.cache_inicio_sessao.tipo_usuario;
             label_email.Text = comum_cache_permissoes_usuarios.cache_inicio_sessao.e_mail;
             label_telefone.Text = comum_cache_permissoes_usuarios.cache_inicio_sessao.telefone1;
+            //alterarPerfil.carregar_Dados_Usuarios_Objectos();
+            dominio_permissoes_usuario dominio = new dominio_permissoes_usuario();
+            dominio.UpdateProfile();
         }
         #endregion
         private void btn_butao_menu_Click(object sender, EventArgs e)
@@ -202,14 +208,14 @@ namespace Capa_Apresentacao
             else
                 panel_menu.Width = 52;
         }
-        private void btn_butao_menu_MouseEnter(object sender, EventArgs e)
-        {
-            btn_butao_menu.IconColor = Color.DeepSkyBlue;
-        }
-        private void btn_butao_menu_MouseLeave(object sender, EventArgs e)
-        {
-            btn_butao_menu.IconColor = Color.Blue;
-        }
+        //private void btn_butao_menu_MouseEnter(object sender, EventArgs e)
+        //{
+        //    btn_butao_menu.IconColor = Color.DeepSkyBlue;
+        //}
+        //private void btn_butao_menu_MouseLeave(object sender, EventArgs e)
+        //{
+        //    btn_butao_menu.IconColor = Color.Blue;
+        //}
        
 
         private void btn_painel_adimistrativo_Click(object sender, EventArgs e)
@@ -299,10 +305,6 @@ namespace Capa_Apresentacao
         {
             AbrirPainelConteudo(new Formularios.Lista_Formularios.Form_Lista_Niveis_Academicos());
         }
-        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            AbrirPainelConteudo(new Formularios.Lista_Formularios.Form_Lista_Cursos());
-        }
         private void especialidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AbrirPainelConteudo(new Formularios.Lista_Formularios.Form_Lista_Especialidades());
@@ -381,7 +383,7 @@ namespace Capa_Apresentacao
         }
         private void btn_perfil_baixo_Click(object sender, EventArgs e)
         {
-            if (panel_panel_perfil.Height == 5)
+            if (panel_panel_perfil.Height == 3)
                 panel_panel_perfil.Height = 119;
             btn_perfil_baixo.Visible = false;
             btn_perfil_cima.Visible = true;
@@ -390,7 +392,7 @@ namespace Capa_Apresentacao
         private void btn_perfil_cima_Click(object sender, EventArgs e)
         {
             if (panel_panel_perfil.Height == 119)
-                panel_panel_perfil.Height = 5;
+                panel_panel_perfil.Height = 3;
             btn_perfil_cima.Visible = false;
             btn_perfil_baixo.Visible = true;
         }
@@ -426,6 +428,16 @@ namespace Capa_Apresentacao
         {
             Abrir_Sub_Menu(rjDropdownMenu_escolaridades, sender);
         }
+        private void EspecialidadesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            AbrirPainelConteudo(new Formularios.Lista_Formularios.Form_Lista_Especialidades());
+        }
+
+        private void CursosProfissonaisToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirPainelConteudo(new Formularios.Lista_Formularios.Form_Lista_Cursos());
+        }
+
         private void btn_casos_Click(object sender, EventArgs e)
         {
             Abrir_Sub_Menu(rjDropdownMenu_eventos_casos, sender);

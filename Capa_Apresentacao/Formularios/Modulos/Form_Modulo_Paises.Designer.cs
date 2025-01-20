@@ -69,7 +69,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(487, 28);
+            this.panel1.Size = new System.Drawing.Size(487, 18);
             this.panel1.TabIndex = 51;
             // 
             // btn_Fechar
@@ -83,10 +83,10 @@
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
             this.btn_Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Fechar.IconSize = 30;
-            this.btn_Fechar.Location = new System.Drawing.Point(462, 1);
+            this.btn_Fechar.IconSize = 20;
+            this.btn_Fechar.Location = new System.Drawing.Point(471, 1);
             this.btn_Fechar.Name = "btn_Fechar";
-            this.btn_Fechar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Fechar.Size = new System.Drawing.Size(15, 15);
             this.btn_Fechar.TabIndex = 0;
             this.btn_Fechar.UseVisualStyleBackColor = false;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
@@ -94,11 +94,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(4, 4);
+            this.label5.Location = new System.Drawing.Point(4, -1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 19);
+            this.label5.Size = new System.Drawing.Size(96, 17);
             this.label5.TabIndex = 52;
             this.label5.Text = "Registrar país";
             // 
@@ -106,7 +106,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Location = new System.Drawing.Point(22, 135);
+            this.label1.Location = new System.Drawing.Point(22, 111);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 21);
             this.label1.TabIndex = 55;
@@ -116,7 +116,7 @@
             // 
             this.label_id.AutoSize = true;
             this.label_id.ForeColor = System.Drawing.Color.Red;
-            this.label_id.Location = new System.Drawing.Point(379, 48);
+            this.label_id.Location = new System.Drawing.Point(379, 24);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(24, 21);
             this.label_id.TabIndex = 61;
@@ -138,7 +138,7 @@
             this.text_pais.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.text_pais.ForeColor = System.Drawing.Color.Gainsboro;
             this.text_pais.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
-            this.text_pais.Location = new System.Drawing.Point(23, 160);
+            this.text_pais.Location = new System.Drawing.Point(23, 136);
             this.text_pais.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.text_pais.Name = "text_pais";
             this.text_pais.PasswordChar = '\0';
@@ -152,7 +152,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label9.Location = new System.Drawing.Point(19, 55);
+            this.label9.Location = new System.Drawing.Point(19, 31);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(193, 21);
             this.label9.TabIndex = 55;
@@ -170,7 +170,7 @@
             this.text_continentes.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.text_continentes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_continentes.ItemHeight = 30;
-            this.text_continentes.Location = new System.Drawing.Point(23, 79);
+            this.text_continentes.Location = new System.Drawing.Point(23, 55);
             this.text_continentes.Name = "text_continentes";
             this.text_continentes.Size = new System.Drawing.Size(450, 36);
             this.text_continentes.TabIndex = 62;
@@ -179,7 +179,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Tomato;
-            this.label3.Location = new System.Drawing.Point(210, 56);
+            this.label3.Location = new System.Drawing.Point(210, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(16, 21);
             this.label3.TabIndex = 67;
@@ -189,7 +189,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.Tomato;
-            this.label4.Location = new System.Drawing.Point(124, 135);
+            this.label4.Location = new System.Drawing.Point(124, 111);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(16, 21);
             this.label4.TabIndex = 68;
@@ -208,7 +208,7 @@
             this.btn_Limpar.FillColor = System.Drawing.Color.Tomato;
             this.btn_Limpar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Limpar.ForeColor = System.Drawing.Color.White;
-            this.btn_Limpar.Location = new System.Drawing.Point(177, 271);
+            this.btn_Limpar.Location = new System.Drawing.Point(177, 250);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(146, 45);
             this.btn_Limpar.TabIndex = 133;
@@ -227,7 +227,7 @@
             this.btn_salvar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btn_salvar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_salvar.ForeColor = System.Drawing.Color.White;
-            this.btn_salvar.Location = new System.Drawing.Point(25, 272);
+            this.btn_salvar.Location = new System.Drawing.Point(23, 250);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(146, 45);
             this.btn_salvar.TabIndex = 132;
@@ -239,7 +239,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label11.ForeColor = System.Drawing.Color.Tomato;
-            this.label11.Location = new System.Drawing.Point(23, 232);
+            this.label11.Location = new System.Drawing.Point(23, 208);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(143, 19);
             this.label11.TabIndex = 128;
@@ -247,7 +247,7 @@
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(23, 256);
+            this.guna2Separator1.Location = new System.Drawing.Point(23, 235);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(451, 10);
             this.guna2Separator1.TabIndex = 131;
@@ -257,7 +257,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.label12.ForeColor = System.Drawing.Color.Tomato;
-            this.label12.Location = new System.Drawing.Point(162, 235);
+            this.label12.Location = new System.Drawing.Point(162, 208);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(16, 21);
             this.label12.TabIndex = 129;
@@ -268,7 +268,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label13.ForeColor = System.Drawing.Color.Tomato;
-            this.label13.Location = new System.Drawing.Point(173, 232);
+            this.label13.Location = new System.Drawing.Point(173, 208);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(259, 19);
             this.label13.TabIndex = 130;
@@ -306,7 +306,7 @@
             this.label_msg_pais.AutoSize = true;
             this.label_msg_pais.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.label_msg_pais.ForeColor = System.Drawing.Color.Tomato;
-            this.label_msg_pais.Location = new System.Drawing.Point(23, 202);
+            this.label_msg_pais.Location = new System.Drawing.Point(23, 178);
             this.label_msg_pais.Name = "label_msg_pais";
             this.label_msg_pais.Size = new System.Drawing.Size(120, 17);
             this.label_msg_pais.TabIndex = 193;
@@ -326,7 +326,7 @@
             this.btn_Atualizar.FillColor = System.Drawing.Color.SeaGreen;
             this.btn_Atualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Atualizar.ForeColor = System.Drawing.Color.White;
-            this.btn_Atualizar.Location = new System.Drawing.Point(23, 271);
+            this.btn_Atualizar.Location = new System.Drawing.Point(23, 250);
             this.btn_Atualizar.Name = "btn_Atualizar";
             this.btn_Atualizar.Size = new System.Drawing.Size(146, 45);
             this.btn_Atualizar.TabIndex = 194;
@@ -339,7 +339,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
-            this.ClientSize = new System.Drawing.Size(487, 334);
+            this.ClientSize = new System.Drawing.Size(487, 317);
             this.Controls.Add(this.label_msg_pais);
             this.Controls.Add(this.btn_Limpar);
             this.Controls.Add(this.label11);

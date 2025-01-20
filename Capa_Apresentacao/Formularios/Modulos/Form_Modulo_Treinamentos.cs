@@ -139,7 +139,7 @@ namespace Capa_Apresentacao.Formularios.Modulos
         }
         private void text_descricao_KeyPress(object sender, KeyPressEventArgs e)
         {
-            validacao_campos_formularios.ValidadorCampos.ValidarTexto(e, text_descricao, label_msg_descricao, "Apenas letras são permitidas!");
+            validacao_campos_formularios.ValidarTextoDescricao(e, text_descricao, label_msg_descricao, "Apenas letras e alguns caracteres são permitioas!");
         }
     }
 }

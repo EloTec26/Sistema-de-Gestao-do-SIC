@@ -1,4 +1,5 @@
-﻿using Capa_Comum.Comum_Permissoes.Cache;
+﻿using Capa_Apresentacao.Formularios.Lista_Formularios;
+using Capa_Comum.Comum_Permissoes.Cache;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
@@ -12,10 +13,13 @@ namespace Capa_Apresentacao.Formularios.Modulos
         dominio_departamentos_investigadores d_departamentos_Investigadores = new dominio_departamentos_investigadores();
         dominio_investigadores d_Investigadores = new dominio_investigadores();
         dominio_departamentos d_Departamentos = new dominio_departamentos();
-        public Form_Modulo_Departamento_Investigadores()
+
+        Form_Lista_Departamentos_Investigadores departamentos_Investigadores;
+        public Form_Modulo_Departamento_Investigadores(Form_Lista_Departamentos_Investigadores departamentos_Investigadores)
         {
             InitializeComponent();
             carregar_Dados_ComboBoxs();
+            this.departamentos_Investigadores = departamentos_Investigadores;
         }
         private void carregar_Dados_ComboBoxs()
         {
@@ -70,12 +74,13 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     {
                         d_departamentos_Investigadores.inserir_Departamentos_Investigadores(c_departamentos_Investigadores);
                         guna2MessageDialog_Inform.Show("As informações foram registradas com sucesso!", "Registro bem sucedido");
+                        departamentos_Investigadores.selecionar_Departamentos_Investigadores();
                         limpar_Campos();
                     }
                 }
                 catch (Exception Ex)
                 {
-                    MessageBox.Show("Não foi possível salvar os dados!", Ex.Message);
+                    MessageDialog_Error.Show("Não foi possível salvar os dados!", Ex.Message);
                 }
             }
         }
@@ -95,6 +100,8 @@ namespace Capa_Apresentacao.Formularios.Modulos
                     {
                         d_departamentos_Investigadores.atualizar_Departamentos_Investigadores(c_departamentos_Investigadores);
                         guna2MessageDialog_Inform.Show("As informações foram atualizadas com sucesso!", "Atualização bem sucedida");
+                        departamentos_Investigadores.selecionar_Departamentos_Investigadores();
+
                         limpar_Campos();
                         this.Close();
                     }

@@ -22,18 +22,24 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
 
-        private void lista_Bairros_Ruas()
+        public void lista_Bairros_Ruas()
         {
-            dgv_bairros_ruas.DataSource = d_Bairro_Rua.selecionar_bairros_ruas();
+            try
+            {
+                dgv_bairros_ruas.DataSource = d_Bairro_Rua.selecionar_bairros_ruas();
+            }
+            catch (Exception ex)
+            {
+                MessageDialog_Error.Show(ex.Message);
+            }
         }
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Form_Modulo_Bairro_Rua formulario = new Form_Modulo_Bairro_Rua();
+            Form_Modulo_Bairro_Rua formulario = new Form_Modulo_Bairro_Rua(this);
             formulario.FormClosed += Formulario_FormClosed;
             formulario.Show();
         }
-
         private void Formulario_FormClosed(object sender, FormClosedEventArgs e)
         {
             lista_Bairros_Ruas();
@@ -43,7 +49,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_bairros_ruas.SelectedRows.Count > 0)
             {
-                Form_Modulo_Bairro_Rua formulario = new Form_Modulo_Bairro_Rua();
+                Form_Modulo_Bairro_Rua formulario = new Form_Modulo_Bairro_Rua(this);
 
                 formulario.label_id.Text = dgv_bairros_ruas.CurrentRow.Cells[0].Value.ToString();
                 formulario.text_municipio.Text = dgv_bairros_ruas.CurrentRow.Cells[1].Value.ToString();
@@ -69,7 +75,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_bairros_ruas.SelectedRows.Count > 0)
             {
-                Form_Modulo_Bairro_Rua formulario = new Form_Modulo_Bairro_Rua();
+                Form_Modulo_Bairro_Rua formulario = new Form_Modulo_Bairro_Rua(this);
 
                 formulario.label_id.Text = dgv_bairros_ruas.CurrentRow.Cells[0].Value.ToString();
                 formulario.text_municipio.Text = dgv_bairros_ruas.CurrentRow.Cells[1].Value.ToString();
@@ -105,28 +111,30 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
                         lista_Bairros_Ruas();
                     }
                 }
-                catch (System.Data.SqlClient.SqlException Ex)
-                {
-                    if (Ex.Number == 457)
-                    {
-                        MessageDialog_Error.Show("Não é possível eliminar este bairro/rua, pois existem - no sistema-, dados que estão vinculados à ele", "Alerta");
-                    }
-                }
+                //catch (System.Data.SqlClient.SqlException Ex)
+                //{
+                //    MessageDialog_Error.Show(Ex.Message);
+                //}
                 catch (Exception Ex)
                 {
                     MessageDialog_Error.Show("Não foi possível eliminar este bairro/rua", Ex.Message);
                 }
             }
         }
-
         private void text_pesquisar_TextChanged(object sender, EventArgs e)
         {
             pesquisar_Bairro_Ruas();
         }
         private void pesquisar_Bairro_Ruas()
         {
-            dgv_bairros_ruas.DataSource = p_Bairro_Rua.pesquisar_bairro_ruas(text_pesquisar.Text);
+            try
+            {
+                dgv_bairros_ruas.DataSource = p_Bairro_Rua.pesquisar_bairro_ruas(text_pesquisar.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageDialog_Error.Show("Erro de pesquisa!", ex.Message);
+            }
         }
-
     }
 }

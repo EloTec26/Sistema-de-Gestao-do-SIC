@@ -29,13 +29,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
-        private void selecionar_afastamentos()
+        public void selecionar_afastamentos()
         {
             dgv_Afastamentos.DataSource = d_Afastamentos.selecionar_Afastamentos();
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Form_Modulo_Afastamentos afastamentos = new Form_Modulo_Afastamentos();
+            Form_Modulo_Afastamentos afastamentos = new Form_Modulo_Afastamentos(this);
             afastamentos.FormClosed += Afastamentos_FormClosed;
             afastamentos.ShowDialog();
         }
@@ -49,7 +49,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if(dgv_Afastamentos.SelectedRows.Count > 0)
             {
-                Form_Modulo_Afastamentos afastamentos = new Form_Modulo_Afastamentos();
+                Form_Modulo_Afastamentos afastamentos = new Form_Modulo_Afastamentos(this);
                 afastamentos.FormClosed += Afastamentos_FormClosed;
 
                 afastamentos.label_id.Text = dgv_Afastamentos.CurrentRow.Cells[0].Value.ToString();
@@ -65,8 +65,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             }
             else
             {
-                MessageBox.Show("Por favor, selecione o afastamento que pretende atualizar e tente novamente!", "Erro de atualização",
-                   MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                MessageDialog_Error.Show("Por favor, selecione o afastamento que pretende atualizar e tente novamente!", "Erro de atualização");
             }
         }
 
@@ -85,11 +84,9 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             }
             else
             {
-                MessageBox.Show("Por favor, selecione o afastamento que pretende eliminar e tente novamente!", "Erro de exclusão",
-                   MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                MessageDialog_Error.Show("Por favor, selecione o afastamento que pretende eliminar e tente novamente!", "Erro de exclusão");
             }
         }
-
         private void text_pesquisar_TextChanged(object sender, EventArgs e)
         {
             p_Afastamentos();

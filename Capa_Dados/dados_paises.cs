@@ -15,26 +15,26 @@ namespace Capa_Dados
     public class dados_paises : conexao_sql
     {
         #region selecionar os países
-        public DataTable selecionar_paises_comboBox_filtro(int idContinente)
-        {
-            using (var connection = conectar())
-            {
-                connection.Open();
-                using (DataTable dt = new DataTable())
-                {
-                    using (SqlCommand cmd = new SqlCommand("SELECT id_pais, nome FROM Pais_tbl WHERE id_continente = @idContinente", connection))
-                    {
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Parameters.AddWithValue("@idContinente", idContinente);
-                        using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                        {
-                            sda.Fill(dt);
-                            return dt;
-                        }
-                    }
-                }
-            }
-        }
+        //public DataTable selecionar_paises_comboBox_filtro(int idContinente)
+        //{
+        //    using (var connection = conectar())
+        //    {
+        //        connection.Open();
+        //        using (DataTable dt = new DataTable())
+        //        {
+        //            using (SqlCommand cmd = new SqlCommand("SELECT id_pais, nome FROM Pais_tbl WHERE id_continente = @idContinente", connection))
+        //            {
+        //                cmd.CommandType = CommandType.Text;
+        //                cmd.Parameters.AddWithValue("@idContinente", idContinente);
+        //                using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+        //                {
+        //                    sda.Fill(dt);
+        //                    return dt;
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
 
         public DataTable selecionar_paises_comboBox()
         {

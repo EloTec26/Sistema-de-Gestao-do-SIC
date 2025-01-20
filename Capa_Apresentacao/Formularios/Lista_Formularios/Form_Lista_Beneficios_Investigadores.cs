@@ -21,13 +21,13 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
             toolTip1.SetToolTip(btn_atualizar, "Atualizar");
             toolTip1.SetToolTip(btn_eliminar, "Eliminar");
         }
-        private void listar_Beneficios_Investigadores()
+        public void listar_Beneficios_Investigadores()
         {
             dgv_beneficios_investigadores.DataSource = d_Beneficos_Investigadores.selecionar_Beneficios_Investigadores();
         }
         private void btn_cadastrar_Click(object sender, EventArgs e)
         {
-            Modulos.Form_Modulo_Beneficios_Investigadores beneficios_Investigadores = new Modulos.Form_Modulo_Beneficios_Investigadores();
+            Modulos.Form_Modulo_Beneficios_Investigadores beneficios_Investigadores = new Modulos.Form_Modulo_Beneficios_Investigadores(this);
             beneficios_Investigadores.FormClosed += Beneficios_Investigadores_FormClosed;
             beneficios_Investigadores.ShowDialog();
             listar_Beneficios_Investigadores();
@@ -42,7 +42,7 @@ namespace Capa_Apresentacao.Formularios.Lista_Formularios
         {
             if (dgv_beneficios_investigadores.SelectedRows.Count > 0)
             {
-                Modulos.Form_Modulo_Beneficios_Investigadores beneficios_Investigadores = new Modulos.Form_Modulo_Beneficios_Investigadores();
+                Modulos.Form_Modulo_Beneficios_Investigadores beneficios_Investigadores = new Modulos.Form_Modulo_Beneficios_Investigadores(this);
                 beneficios_Investigadores.FormClosed += Beneficios_Investigadores_FormClosed;
 
                 beneficios_Investigadores.label_id.Text = dgv_beneficios_investigadores.CurrentRow.Cells[0].Value.ToString();

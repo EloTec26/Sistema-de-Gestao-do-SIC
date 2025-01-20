@@ -55,11 +55,12 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.btn_Atualizar = new Guna.UI2.WinForms.Guna2Button();
             this.MessageDialog_Error = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2MessageDialog_Confirm = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2MessageDialog_Inform = new Guna.UI2.WinForms.Guna2MessageDialog();
-            this.btn_Atualizar = new Guna.UI2.WinForms.Guna2Button();
+            this.label_msg_descricao = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +73,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(522, 28);
+            this.panel1.Size = new System.Drawing.Size(522, 21);
             this.panel1.TabIndex = 171;
             // 
             // btn_Fechar
@@ -86,10 +87,10 @@
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
             this.btn_Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Fechar.IconSize = 30;
-            this.btn_Fechar.Location = new System.Drawing.Point(497, 1);
+            this.btn_Fechar.IconSize = 20;
+            this.btn_Fechar.Location = new System.Drawing.Point(504, 1);
             this.btn_Fechar.Name = "btn_Fechar";
-            this.btn_Fechar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Fechar.Size = new System.Drawing.Size(15, 15);
             this.btn_Fechar.TabIndex = 0;
             this.btn_Fechar.UseVisualStyleBackColor = false;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
@@ -97,11 +98,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label5.Location = new System.Drawing.Point(12, 4);
+            this.label5.Location = new System.Drawing.Point(9, -1);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 19);
+            this.label5.Size = new System.Drawing.Size(105, 17);
             this.label5.TabIndex = 70;
             this.label5.Text = "Registrar férias";
             // 
@@ -125,7 +126,7 @@
             "Cancelado"});
             this.text_estado_feria.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.text_estado_feria.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_estado_feria.Location = new System.Drawing.Point(18, 222);
+            this.text_estado_feria.Location = new System.Drawing.Point(18, 200);
             this.text_estado_feria.Name = "text_estado_feria";
             this.text_estado_feria.Size = new System.Drawing.Size(485, 36);
             this.text_estado_feria.StartIndex = 0;
@@ -135,7 +136,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.Tomato;
-            this.label11.Location = new System.Drawing.Point(145, 198);
+            this.label11.Location = new System.Drawing.Point(145, 176);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(16, 21);
             this.label11.TabIndex = 185;
@@ -145,7 +146,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label12.Location = new System.Drawing.Point(14, 198);
+            this.label12.Location = new System.Drawing.Point(14, 176);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(132, 21);
             this.label12.TabIndex = 184;
@@ -159,7 +160,7 @@
             this.text_data_inicial.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_data_inicial.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_data_inicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.text_data_inicial.Location = new System.Drawing.Point(18, 151);
+            this.text_data_inicial.Location = new System.Drawing.Point(18, 129);
             this.text_data_inicial.MinimumSize = new System.Drawing.Size(4, 35);
             this.text_data_inicial.Name = "text_data_inicial";
             this.text_data_inicial.Size = new System.Drawing.Size(231, 35);
@@ -171,7 +172,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Tomato;
-            this.label1.Location = new System.Drawing.Point(112, 127);
+            this.label1.Location = new System.Drawing.Point(112, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 21);
             this.label1.TabIndex = 183;
@@ -181,7 +182,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label2.Location = new System.Drawing.Point(12, 127);
+            this.label2.Location = new System.Drawing.Point(12, 105);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(102, 21);
             this.label2.TabIndex = 182;
@@ -203,7 +204,7 @@
             this.text_investigador.ItemHeight = 30;
             this.text_investigador.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.text_investigador.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_investigador.Location = new System.Drawing.Point(16, 76);
+            this.text_investigador.Location = new System.Drawing.Point(16, 54);
             this.text_investigador.Name = "text_investigador";
             this.text_investigador.Size = new System.Drawing.Size(487, 36);
             this.text_investigador.TabIndex = 180;
@@ -212,7 +213,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Tomato;
-            this.label10.Location = new System.Drawing.Point(205, 52);
+            this.label10.Location = new System.Drawing.Point(205, 30);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(16, 21);
             this.label10.TabIndex = 179;
@@ -222,7 +223,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label9.Location = new System.Drawing.Point(14, 52);
+            this.label9.Location = new System.Drawing.Point(14, 30);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(193, 21);
             this.label9.TabIndex = 178;
@@ -232,7 +233,7 @@
             // 
             this.label_id.AutoSize = true;
             this.label_id.ForeColor = System.Drawing.Color.Red;
-            this.label_id.Location = new System.Drawing.Point(404, 39);
+            this.label_id.Location = new System.Drawing.Point(404, 17);
             this.label_id.Name = "label_id";
             this.label_id.Size = new System.Drawing.Size(24, 21);
             this.label_id.TabIndex = 177;
@@ -247,7 +248,7 @@
             this.text_data_final.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_data_final.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_data_final.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.text_data_final.Location = new System.Drawing.Point(272, 151);
+            this.text_data_final.Location = new System.Drawing.Point(272, 129);
             this.text_data_final.MinimumSize = new System.Drawing.Size(4, 35);
             this.text_data_final.Name = "text_data_final";
             this.text_data_final.Size = new System.Drawing.Size(231, 35);
@@ -259,7 +260,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Tomato;
-            this.label3.Location = new System.Drawing.Point(356, 127);
+            this.label3.Location = new System.Drawing.Point(356, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(16, 21);
             this.label3.TabIndex = 189;
@@ -269,7 +270,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label4.Location = new System.Drawing.Point(268, 127);
+            this.label4.Location = new System.Drawing.Point(268, 105);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 21);
             this.label4.TabIndex = 188;
@@ -279,7 +280,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.Tomato;
-            this.label13.Location = new System.Drawing.Point(100, 264);
+            this.label13.Location = new System.Drawing.Point(100, 242);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(16, 21);
             this.label13.TabIndex = 195;
@@ -289,7 +290,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label14.Location = new System.Drawing.Point(12, 264);
+            this.label14.Location = new System.Drawing.Point(12, 242);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(91, 21);
             this.label14.TabIndex = 194;
@@ -309,7 +310,7 @@
             this.text_descricao.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(102)))), ((int)(((byte)(223)))));
             this.text_descricao.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.text_descricao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
-            this.text_descricao.Location = new System.Drawing.Point(16, 289);
+            this.text_descricao.Location = new System.Drawing.Point(16, 267);
             this.text_descricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.text_descricao.MaxLength = 1000;
             this.text_descricao.Multiline = true;
@@ -319,6 +320,7 @@
             this.text_descricao.SelectedText = "";
             this.text_descricao.Size = new System.Drawing.Size(487, 82);
             this.text_descricao.TabIndex = 193;
+            this.text_descricao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.text_descricao_KeyPress);
             // 
             // panel2
             // 
@@ -414,6 +416,27 @@
             this.label16.TabIndex = 142;
             this.label16.Text = ") são de preenchimento obrigatório.";
             // 
+            // btn_Atualizar
+            // 
+            this.btn_Atualizar.Animated = true;
+            this.btn_Atualizar.AnimatedGIF = true;
+            this.btn_Atualizar.BorderRadius = 4;
+            this.btn_Atualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Atualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Atualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Atualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Atualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Atualizar.FillColor = System.Drawing.Color.SeaGreen;
+            this.btn_Atualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Atualizar.ForeColor = System.Drawing.Color.White;
+            this.btn_Atualizar.Location = new System.Drawing.Point(15, 42);
+            this.btn_Atualizar.Name = "btn_Atualizar";
+            this.btn_Atualizar.Size = new System.Drawing.Size(146, 45);
+            this.btn_Atualizar.TabIndex = 203;
+            this.btn_Atualizar.Text = "Atualizar";
+            this.btn_Atualizar.Visible = false;
+            this.btn_Atualizar.Click += new System.EventHandler(this.btn_Atualizar_Click);
+            // 
             // MessageDialog_Error
             // 
             this.MessageDialog_Error.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OKCancel;
@@ -450,26 +473,17 @@
             this.guna2MessageDialog_Inform.Style = Guna.UI2.WinForms.MessageDialogStyle.Dark;
             this.guna2MessageDialog_Inform.Text = null;
             // 
-            // btn_Atualizar
+            // label_msg_descricao
             // 
-            this.btn_Atualizar.Animated = true;
-            this.btn_Atualizar.AnimatedGIF = true;
-            this.btn_Atualizar.BorderRadius = 4;
-            this.btn_Atualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Atualizar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Atualizar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Atualizar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Atualizar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Atualizar.FillColor = System.Drawing.Color.SeaGreen;
-            this.btn_Atualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Atualizar.ForeColor = System.Drawing.Color.White;
-            this.btn_Atualizar.Location = new System.Drawing.Point(15, 42);
-            this.btn_Atualizar.Name = "btn_Atualizar";
-            this.btn_Atualizar.Size = new System.Drawing.Size(146, 45);
-            this.btn_Atualizar.TabIndex = 203;
-            this.btn_Atualizar.Text = "Atualizar";
-            this.btn_Atualizar.Visible = false;
-            this.btn_Atualizar.Click += new System.EventHandler(this.btn_Atualizar_Click);
+            this.label_msg_descricao.AutoSize = true;
+            this.label_msg_descricao.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.label_msg_descricao.ForeColor = System.Drawing.Color.Tomato;
+            this.label_msg_descricao.Location = new System.Drawing.Point(15, 355);
+            this.label_msg_descricao.Name = "label_msg_descricao";
+            this.label_msg_descricao.Size = new System.Drawing.Size(120, 17);
+            this.label_msg_descricao.TabIndex = 197;
+            this.label_msg_descricao.Text = "mensagem de erro";
+            this.label_msg_descricao.Visible = false;
             // 
             // Form_Modulo_Ferias
             // 
@@ -477,6 +491,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(24)))), ((int)(((byte)(53)))));
             this.ClientSize = new System.Drawing.Size(522, 474);
+            this.Controls.Add(this.label_msg_descricao);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label14);
@@ -543,5 +558,6 @@
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog_Confirm;
         private Guna.UI2.WinForms.Guna2MessageDialog guna2MessageDialog_Inform;
         public Guna.UI2.WinForms.Guna2Button btn_Atualizar;
+        private System.Windows.Forms.Label label_msg_descricao;
     }
 }

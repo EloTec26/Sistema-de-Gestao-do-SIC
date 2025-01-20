@@ -1,4 +1,5 @@
-﻿using Capa_Comum.Comum_Permissoes.Cache;
+﻿using Capa_Apresentacao.Formularios.Modulos.Validacao_Campos_Formularios;
+using Capa_Comum.Comum_Permissoes.Cache;
 using Capa_Comum.Entidades;
 using Capa_Dominio;
 using System;
@@ -130,6 +131,11 @@ namespace Capa_Apresentacao.Formularios.Modulos
             text_data_final.Value = DateTime.Now;
             text_estado_feria.SelectedIndex = -1;
             text_descricao.Text = "";
+        }
+
+        private void text_descricao_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            validacao_campos_formularios.ValidarTextoDescricao(e, text_descricao, label_msg_descricao, "Apenas letras e alguns caracteres são permitidos!");
         }
     }
 }

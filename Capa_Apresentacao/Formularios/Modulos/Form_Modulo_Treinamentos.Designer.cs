@@ -77,7 +77,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(509, 28);
+            this.panel1.Size = new System.Drawing.Size(509, 20);
             this.panel1.TabIndex = 72;
             // 
             // btn_Fechar
@@ -91,10 +91,10 @@
             this.btn_Fechar.IconChar = FontAwesome.Sharp.IconChar.Xmark;
             this.btn_Fechar.IconColor = System.Drawing.Color.White;
             this.btn_Fechar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Fechar.IconSize = 30;
-            this.btn_Fechar.Location = new System.Drawing.Point(484, 1);
+            this.btn_Fechar.IconSize = 20;
+            this.btn_Fechar.Location = new System.Drawing.Point(491, 2);
             this.btn_Fechar.Name = "btn_Fechar";
-            this.btn_Fechar.Size = new System.Drawing.Size(25, 25);
+            this.btn_Fechar.Size = new System.Drawing.Size(15, 15);
             this.btn_Fechar.TabIndex = 0;
             this.btn_Fechar.UseVisualStyleBackColor = false;
             this.btn_Fechar.Click += new System.EventHandler(this.btn_Fechar_Click);
@@ -102,11 +102,11 @@
             // label_info
             // 
             this.label_info.AutoSize = true;
-            this.label_info.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.label_info.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label_info.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label_info.Location = new System.Drawing.Point(4, 4);
+            this.label_info.Location = new System.Drawing.Point(4, 0);
             this.label_info.Name = "label_info";
-            this.label_info.Size = new System.Drawing.Size(172, 19);
+            this.label_info.Size = new System.Drawing.Size(151, 17);
             this.label_info.TabIndex = 70;
             this.label_info.Text = "Registrar treinamento";
             // 
@@ -418,7 +418,7 @@
             this.text_titulo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_titulo.Location = new System.Drawing.Point(26, 214);
             this.text_titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.text_titulo.MaxLength = 100;
+            this.text_titulo.MaxLength = 50;
             this.text_titulo.Name = "text_titulo";
             this.text_titulo.PasswordChar = '\0';
             this.text_titulo.PlaceholderText = "";
