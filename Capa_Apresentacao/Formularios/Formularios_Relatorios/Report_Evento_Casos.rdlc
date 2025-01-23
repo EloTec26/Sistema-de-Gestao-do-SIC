@@ -509,9 +509,8 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>5.72064cm</Top>
-        <Left>0cm</Left>
         <Height>1.2cm</Height>
-        <Width>16.62688cm</Width>
+        <Width>16.62687cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -522,8 +521,8 @@
         <Source>Embedded</Source>
         <Value>photo_20240613_200555</Value>
         <Sizing>FitProportional</Sizing>
-        <Top>0.07056cm</Top>
-        <Left>3.51354cm</Left>
+        <Top>0.49417cm</Top>
+        <Left>2.32292cm</Left>
         <Height>1.5cm</Height>
         <Width>1.5cm</Width>
         <ZIndex>1</ZIndex>
@@ -533,113 +532,6 @@
           </Border>
         </Style>
       </Image>
-      <Textbox Name="Textbox15">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>REPÚBLICA DE ANGOLA</Value>
-                <Style>
-                  <FontFamily>Calibri</FontFamily>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox15</rd:DefaultName>
-        <Top>1.60583cm</Top>
-        <Left>2.5cm</Left>
-        <Height>0.6cm</Height>
-        <Width>3.20146cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox16">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>MINISTÉRIO DO INTERIOR</Value>
-                <Style>
-                  <FontFamily>Calibri</FontFamily>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox15</rd:DefaultName>
-        <Top>2.20583cm</Top>
-        <Left>2.5cm</Left>
-        <Height>0.6cm</Height>
-        <Width>3.20146cm</Width>
-        <ZIndex>3</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox17">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>SERVIÇOS DE INVESTIGAÇÃO CRIMINAL DO MUNICÍPIO DE MENONGUE</Value>
-                <Style>
-                  <FontFamily>Calibri</FontFamily>
-                  <FontSize>8pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox15</rd:DefaultName>
-        <Top>2.80583cm</Top>
-        <Height>0.6cm</Height>
-        <Width>8.58417cm</Width>
-        <ZIndex>4</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
       <Textbox Name="Textbox18">
         <CanGrow>true</CanGrow>
         <KeepTogether>true</KeepTogether>
@@ -649,7 +541,8 @@
               <TextRun>
                 <Value>Email: sicmenongue@gmail.com</Value>
                 <Style>
-                  <FontFamily>Calibri</FontFamily>
+                  <FontFamily>arial</FontFamily>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -664,7 +557,7 @@
         <Left>10.42271cm</Left>
         <Height>0.6cm</Height>
         <Width>5.15875cm</Width>
-        <ZIndex>5</ZIndex>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -684,7 +577,8 @@
               <TextRun>
                 <Value>Tel: 934-123-000/923-000-332</Value>
                 <Style>
-                  <FontFamily>Calibri</FontFamily>
+                  <FontFamily>arial</FontFamily>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -699,7 +593,7 @@
         <Left>10.42271cm</Left>
         <Height>0.6cm</Height>
         <Width>5.15875cm</Width>
-        <ZIndex>6</ZIndex>
+        <ZIndex>3</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -719,14 +613,16 @@
               <TextRun>
                 <Value>Data &amp; hora de impressão:</Value>
                 <Style>
-                  <FontFamily>Calibri</FontFamily>
+                  <FontFamily>arial</FontFamily>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
               <TextRun>
                 <Value>=Globals!ExecutionTime</Value>
                 <Style>
-                  <FontFamily>Calibri</FontFamily>
+                  <FontFamily>arial</FontFamily>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -741,7 +637,7 @@
         <Left>8.91521cm</Left>
         <Height>0.63528cm</Height>
         <Width>7.68521cm</Width>
-        <ZIndex>7</ZIndex>
+        <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -761,8 +657,8 @@
               <TextRun>
                 <Value>RELATÓRIO DE EVENTOS</Value>
                 <Style>
-                  <FontFamily>Calibri</FontFamily>
-                  <FontSize>11pt</FontSize>
+                  <FontFamily>arial</FontFamily>
+                  <FontSize>9pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -776,7 +672,7 @@
         <Top>4.04467cm</Top>
         <Height>0.6cm</Height>
         <Width>4.41729cm</Width>
-        <ZIndex>8</ZIndex>
+        <ZIndex>5</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -789,10 +685,9 @@
       </Textbox>
       <Line Name="Line1">
         <Top>5.36787cm</Top>
-        <Left>0cm</Left>
         <Height>0cm</Height>
         <Width>16.62688cm</Width>
-        <ZIndex>9</ZIndex>
+        <ZIndex>6</ZIndex>
         <Style>
           <Border>
             <Color>LightGrey</Color>
@@ -833,7 +728,93 @@
         <Left>10.42271cm</Left>
         <Height>1.20854cm</Height>
         <Width>5.15875cm</Width>
-        <ZIndex>10</ZIndex>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>DEPARTAMENTO DE INVESTIGAÇÃO  </Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>SERVIÇO DE INVESTIGAÇÃO CRIMINAL  MENINGUE</Value>
+                <Style>
+                  <FontFamily>arial</FontFamily>
+                  <FontSize>9pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox15</rd:DefaultName>
+        <Top>2.77028cm</Top>
+        <Height>0.95278cm</Height>
+        <Width>6.33583cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>MINISTÉRIO DO INTERIOR</Value>
+                <Style>
+                  <FontFamily>Calibri</FontFamily>
+                  <FontSize>8pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox15</rd:DefaultName>
+        <Top>2.06445cm</Top>
+        <Left>1.26937cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.20146cm</Width>
+        <ZIndex>9</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -848,10 +829,10 @@
     <Height>2.73264in</Height>
     <Style />
   </Body>
-  <Width>6.54601in</Width>
+  <Width>6.54602in</Width>
   <Page>
     <PageFooter>
-      <Height>1.95319cm</Height>
+      <Height>1.9532cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -879,7 +860,6 @@
           </Paragraphs>
           <rd:DefaultName>TotalPages</rd:DefaultName>
           <Top>0.56472cm</Top>
-          <Left>0cm</Left>
           <Height>0.6cm</Height>
           <Width>5.01354cm</Width>
           <Style>
@@ -916,7 +896,6 @@
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
           <Top>0.10583cm</Top>
-          <Left>0cm</Left>
           <Height>0.6cm</Height>
           <Width>5.13292cm</Width>
           <ZIndex>1</ZIndex>
@@ -1065,7 +1044,6 @@
         </Rectangle>
         <Line Name="Line2">
           <Top>0.63528cm</Top>
-          <Left>0cm</Left>
           <Height>0cm</Height>
           <Width>5.01354cm</Width>
           <ZIndex>3</ZIndex>

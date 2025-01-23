@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Capa_Comum.Entidade_Relatorio;
-using Capa_Dados.Dados_Relatorios;
 
 namespace Capa_Dominio.Dominio_Relatorio
 {

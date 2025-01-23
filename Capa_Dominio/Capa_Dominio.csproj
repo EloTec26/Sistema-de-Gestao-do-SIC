@@ -97,7 +97,15 @@
     <Compile Include="Dominio_Pesquisas\dominio_pesquisar_vitimas.cs" />
     <Compile Include="Dominio_Pesquisas\dominio_pesquisar_continentes.cs" />
     <Compile Include="dominio_provincias.cs" />
+    <Compile Include="Dominio_Relatorio\Dominio_Relatorios_Afastamentos.cs" />
+    <Compile Include="Dominio_Relatorio\Dominio_Relatorio_Beneficios_Investigadores.cs" />
     <Compile Include="Dominio_Relatorio\Dominio_Relatorio_Evento_Casos.cs" />
+    <Compile Include="Dominio_Relatorio\Dominio_Relatorio_Evidencias.cs" />
+    <Compile Include="Dominio_Relatorio\Dominio_Relatorio_Faltas.cs" />
+    <Compile Include="Dominio_Relatorio\Dominio_Relatorio_Ferias.cs" />
+    <Compile Include="Dominio_Relatorio\Dominio_Relatorio_Piquete.cs" />
+    <Compile Include="Dominio_Relatorio\Dominio_Relatorio_Testemunhas.cs" />
+    <Compile Include="Dominio_Relatorio\Dominio_Relatorio_Vitimas.cs" />
     <Compile Include="dominio_suspeitos.cs" />
     <Compile Include="dominio_testemunhas.cs" />
     <Compile Include="dominio_treinamentos.cs" />
@@ -105,7 +113,6 @@
     <Compile Include="dominio_vitimas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Validacoes_campos\Validacoes.cs" />
-    <Compile Include="Validacoes_campos\Validacoes_Campos_Vazios.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Capa_Comum\Capa_Comum.csproj">
@@ -120,6 +127,7 @@
   <ItemGroup>
     <None Include="Properties\DataSources\Capa_Comum.Entidade_Relatorio.Entidade_Relatorio_Evento_Casos.datasource" />
     <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Evento_Casos.datasource" />
+    <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Ferias.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

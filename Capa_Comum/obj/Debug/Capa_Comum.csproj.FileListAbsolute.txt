@@ -9,4 +9,3 @@ D:\C#\SIC_MENONGUE\Capa_Comum\bin\Debug\Capa_Comum.pdb
 D:\C#\SIC_MENONGUE\Capa_Comum\obj\Debug\Capa_Comum.csproj.CoreCompileInputs.cache
 D:\C#\SIC_MENONGUE\Capa_Comum\obj\Debug\Capa_Comum.dll
 D:\C#\SIC_MENONGUE\Capa_Comum\obj\Debug\Capa_Comum.pdb
-D:\C#\SIC_MENONGUE\Capa_Comum\obj\Debug\Capa_Comum.csproj.AssemblyReference.cache

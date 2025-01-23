@@ -99,7 +99,15 @@
     <Compile Include="Dados_Pesquisas\dados_pesquisar_usuarios.cs" />
     <Compile Include="Dados_Pesquisas\dados_pesquisar_vitimas.cs" />
     <Compile Include="dados_provincias.cs" />
+    <Compile Include="Dados_Relatorios\dados_relatorios_afastamentos.cs" />
+    <Compile Include="Dados_Relatorios\dados_relatorios_beneficios_investigadores.cs" />
     <Compile Include="Dados_Relatorios\dados_relatorios_eventos_casos.cs" />
+    <Compile Include="Dados_Relatorios\dados_relatorios_evidencias.cs" />
+    <Compile Include="Dados_Relatorios\dados_relatorios_faltas.cs" />
+    <Compile Include="Dados_Relatorios\dados_relatorios_ferias.cs" />
+    <Compile Include="Dados_Relatorios\dados_relatorios_piquete.cs" />
+    <Compile Include="Dados_Relatorios\dados_relatorios_testemunhas.cs" />
+    <Compile Include="Dados_Relatorios\dados_relatorios_vitimas.cs" />
     <Compile Include="dados_suspeitos.cs" />
     <Compile Include="dados_testemunhas.cs" />
     <Compile Include="dados_treinamentos.cs" />

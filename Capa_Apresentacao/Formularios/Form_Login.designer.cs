@@ -59,6 +59,7 @@
             this.check_letra_minuscula = new Guna.UI2.WinForms.Guna2CheckBox();
             this.check_numero = new Guna.UI2.WinForms.Guna2CheckBox();
             this.check_oito_caracteres = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +70,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label2.Location = new System.Drawing.Point(74, 158);
+            this.label2.Location = new System.Drawing.Point(74, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(303, 19);
             this.label2.TabIndex = 5;
@@ -166,7 +167,7 @@
             this.guna2CirclePictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(146, 42);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(148, 27);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(162, 113);
@@ -180,7 +181,7 @@
             this.label_erro.AutoSize = true;
             this.label_erro.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label_erro.ForeColor = System.Drawing.Color.Tomato;
-            this.label_erro.Location = new System.Drawing.Point(12, 255);
+            this.label_erro.Location = new System.Drawing.Point(12, 261);
             this.label_erro.Name = "label_erro";
             this.label_erro.Size = new System.Drawing.Size(130, 19);
             this.label_erro.TabIndex = 15;
@@ -213,7 +214,7 @@
             this.btn_visualizar_palavra_passe.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_visualizar_palavra_passe.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_visualizar_palavra_passe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btn_visualizar_palavra_passe.Location = new System.Drawing.Point(14, 233);
+            this.btn_visualizar_palavra_passe.Location = new System.Drawing.Point(14, 239);
             this.btn_visualizar_palavra_passe.Name = "btn_visualizar_palavra_passe";
             this.btn_visualizar_palavra_passe.Size = new System.Drawing.Size(200, 23);
             this.btn_visualizar_palavra_passe.TabIndex = 19;
@@ -241,7 +242,7 @@
             this.text_palavra_passe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_palavra_passe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(100)))));
             this.text_palavra_passe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.text_palavra_passe.Location = new System.Drawing.Point(12, 193);
+            this.text_palavra_passe.Location = new System.Drawing.Point(12, 199);
             this.text_palavra_passe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.text_palavra_passe.MaxLength = 16;
             this.text_palavra_passe.Name = "text_palavra_passe";
@@ -265,7 +266,7 @@
             this.btn_Limpar.FillColor = System.Drawing.Color.Tomato;
             this.btn_Limpar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Limpar.ForeColor = System.Drawing.Color.White;
-            this.btn_Limpar.Location = new System.Drawing.Point(164, 516);
+            this.btn_Limpar.Location = new System.Drawing.Point(164, 364);
             this.btn_Limpar.Name = "btn_Limpar";
             this.btn_Limpar.Size = new System.Drawing.Size(146, 45);
             this.btn_Limpar.TabIndex = 130;
@@ -285,7 +286,7 @@
             this.btn_iniciar_sessao.DisabledState.ForeColor = System.Drawing.Color.White;
             this.btn_iniciar_sessao.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_iniciar_sessao.ForeColor = System.Drawing.Color.White;
-            this.btn_iniciar_sessao.Location = new System.Drawing.Point(12, 516);
+            this.btn_iniciar_sessao.Location = new System.Drawing.Point(12, 364);
             this.btn_iniciar_sessao.Name = "btn_iniciar_sessao";
             this.btn_iniciar_sessao.Size = new System.Drawing.Size(146, 45);
             this.btn_iniciar_sessao.TabIndex = 129;
@@ -295,7 +296,7 @@
             // guna2Separator1
             // 
             this.guna2Separator1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.guna2Separator1.Location = new System.Drawing.Point(13, 328);
+            this.guna2Separator1.Location = new System.Drawing.Point(13, 334);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(451, 10);
             this.guna2Separator1.TabIndex = 128;
@@ -306,7 +307,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(142, 591);
+            this.label7.Location = new System.Drawing.Point(142, 438);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(50, 19);
             this.label7.TabIndex = 134;
@@ -318,7 +319,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(12, 589);
+            this.label6.Location = new System.Drawing.Point(12, 436);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 19);
             this.label6.TabIndex = 133;
@@ -330,7 +331,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Gray;
-            this.label3.Location = new System.Drawing.Point(379, 589);
+            this.label3.Location = new System.Drawing.Point(379, 436);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 17);
             this.label3.TabIndex = 132;
@@ -342,7 +343,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(92, 591);
+            this.label4.Location = new System.Drawing.Point(92, 438);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 17);
             this.label4.TabIndex = 131;
@@ -354,7 +355,7 @@
             this.label_minutos.AutoSize = true;
             this.label_minutos.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.label_minutos.ForeColor = System.Drawing.Color.Tomato;
-            this.label_minutos.Location = new System.Drawing.Point(12, 296);
+            this.label_minutos.Location = new System.Drawing.Point(12, 302);
             this.label_minutos.Name = "label_minutos";
             this.label_minutos.Size = new System.Drawing.Size(130, 19);
             this.label_minutos.TabIndex = 135;
@@ -367,7 +368,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(13, 608);
+            this.label1.Location = new System.Drawing.Point(13, 455);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 17);
             this.label1.TabIndex = 136;
@@ -379,7 +380,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(405, 610);
+            this.label5.Location = new System.Drawing.Point(405, 457);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 16);
             this.label5.TabIndex = 137;
@@ -397,7 +398,7 @@
             this.check_caracter_especial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_caracter_especial.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.check_caracter_especial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.check_caracter_especial.Location = new System.Drawing.Point(16, 355);
+            this.check_caracter_especial.Location = new System.Drawing.Point(16, 412);
             this.check_caracter_especial.Name = "check_caracter_especial";
             this.check_caracter_especial.Size = new System.Drawing.Size(259, 23);
             this.check_caracter_especial.TabIndex = 138;
@@ -406,6 +407,7 @@
             this.check_caracter_especial.UncheckedState.BorderRadius = 0;
             this.check_caracter_especial.UncheckedState.BorderThickness = 0;
             this.check_caracter_especial.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.check_caracter_especial.Visible = false;
             // 
             // check_letra_maiuscula
             // 
@@ -419,7 +421,7 @@
             this.check_letra_maiuscula.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_letra_maiuscula.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.check_letra_maiuscula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.check_letra_maiuscula.Location = new System.Drawing.Point(16, 384);
+            this.check_letra_maiuscula.Location = new System.Drawing.Point(14, 412);
             this.check_letra_maiuscula.Name = "check_letra_maiuscula";
             this.check_letra_maiuscula.Size = new System.Drawing.Size(253, 23);
             this.check_letra_maiuscula.TabIndex = 138;
@@ -428,6 +430,7 @@
             this.check_letra_maiuscula.UncheckedState.BorderRadius = 0;
             this.check_letra_maiuscula.UncheckedState.BorderThickness = 0;
             this.check_letra_maiuscula.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.check_letra_maiuscula.Visible = false;
             // 
             // check_letra_minuscula
             // 
@@ -441,7 +444,7 @@
             this.check_letra_minuscula.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_letra_minuscula.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.check_letra_minuscula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.check_letra_minuscula.Location = new System.Drawing.Point(16, 413);
+            this.check_letra_minuscula.Location = new System.Drawing.Point(14, 412);
             this.check_letra_minuscula.Name = "check_letra_minuscula";
             this.check_letra_minuscula.Size = new System.Drawing.Size(252, 23);
             this.check_letra_minuscula.TabIndex = 138;
@@ -450,6 +453,7 @@
             this.check_letra_minuscula.UncheckedState.BorderRadius = 0;
             this.check_letra_minuscula.UncheckedState.BorderThickness = 0;
             this.check_letra_minuscula.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.check_letra_minuscula.Visible = false;
             // 
             // check_numero
             // 
@@ -463,7 +467,7 @@
             this.check_numero.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_numero.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.check_numero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.check_numero.Location = new System.Drawing.Point(16, 442);
+            this.check_numero.Location = new System.Drawing.Point(14, 412);
             this.check_numero.Name = "check_numero";
             this.check_numero.Size = new System.Drawing.Size(190, 23);
             this.check_numero.TabIndex = 138;
@@ -472,6 +476,7 @@
             this.check_numero.UncheckedState.BorderRadius = 0;
             this.check_numero.UncheckedState.BorderThickness = 0;
             this.check_numero.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.check_numero.Visible = false;
             // 
             // check_oito_caracteres
             // 
@@ -485,7 +490,7 @@
             this.check_oito_caracteres.Cursor = System.Windows.Forms.Cursors.Hand;
             this.check_oito_caracteres.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.check_oito_caracteres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.check_oito_caracteres.Location = new System.Drawing.Point(16, 471);
+            this.check_oito_caracteres.Location = new System.Drawing.Point(16, 412);
             this.check_oito_caracteres.Name = "check_oito_caracteres";
             this.check_oito_caracteres.Size = new System.Drawing.Size(230, 23);
             this.check_oito_caracteres.TabIndex = 138;
@@ -494,13 +499,27 @@
             this.check_oito_caracteres.UncheckedState.BorderRadius = 0;
             this.check_oito_caracteres.UncheckedState.BorderThickness = 0;
             this.check_oito_caracteres.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.check_oito_caracteres.Visible = false;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label8.Location = new System.Drawing.Point(178, 167);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(88, 17);
+            this.label8.TabIndex = 139;
+            this.label8.Text = "MENONGUE";
             // 
             // Form_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(26)))), ((int)(((byte)(41)))));
-            this.ClientSize = new System.Drawing.Size(476, 635);
+            this.ClientSize = new System.Drawing.Size(476, 482);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.check_oito_caracteres);
             this.Controls.Add(this.check_numero);
             this.Controls.Add(this.check_letra_minuscula);
@@ -566,6 +585,7 @@
         private Guna.UI2.WinForms.Guna2CheckBox check_letra_minuscula;
         private Guna.UI2.WinForms.Guna2CheckBox check_letra_maiuscula;
         private Guna.UI2.WinForms.Guna2CheckBox check_caracter_especial;
+        private System.Windows.Forms.Label label8;
     }
 }
 

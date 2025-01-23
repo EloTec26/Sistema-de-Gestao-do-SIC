@@ -102,6 +102,9 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.rjDropdownMenu_Rel_Evento_Caso = new CustomBox.RJControls.RJDropdownMenu(this.components);
             this.relatórioDeEventosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeEvidênciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeFaltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Logo)).BeginInit();
             this.panel_menu.SuspendLayout();
@@ -935,7 +938,7 @@
             this.horasExtrasToolStripMenuItem1.Name = "horasExtrasToolStripMenuItem1";
             this.horasExtrasToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
             this.horasExtrasToolStripMenuItem1.Size = new System.Drawing.Size(306, 26);
-            this.horasExtrasToolStripMenuItem1.Text = "Horas extras";
+            this.horasExtrasToolStripMenuItem1.Text = "Piquete";
             this.horasExtrasToolStripMenuItem1.Click += new System.EventHandler(this.horasExtrasToolStripMenuItem1_Click);
             // 
             // patentesToolStripMenuItem1
@@ -986,7 +989,7 @@
             // 
             this.CursosProfissonaisToolStripMenuItem.Name = "CursosProfissonaisToolStripMenuItem";
             this.CursosProfissonaisToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.CursosProfissonaisToolStripMenuItem.Text = "Cursos profissonais";
+            this.CursosProfissonaisToolStripMenuItem.Text = "Cursos";
             this.CursosProfissonaisToolStripMenuItem.Click += new System.EventHandler(this.CursosProfissonaisToolStripMenuItem_Click);
             // 
             // rjDropdownMenu_eventos_casos
@@ -1021,20 +1024,44 @@
             this.rjDropdownMenu_Rel_Evento_Caso.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rjDropdownMenu_Rel_Evento_Caso.IsMainMenu = false;
             this.rjDropdownMenu_Rel_Evento_Caso.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.relatórioDeEventosToolStripMenuItem});
+            this.relatórioDeEventosToolStripMenuItem,
+            this.relatórioDeEvidênciasToolStripMenuItem,
+            this.relatórioDeFaltasToolStripMenuItem,
+            this.relatórioDeFériasToolStripMenuItem});
             this.rjDropdownMenu_Rel_Evento_Caso.MenuItemHeight = 25;
             this.rjDropdownMenu_Rel_Evento_Caso.MenuItemTextColor = System.Drawing.Color.Empty;
             this.rjDropdownMenu_Rel_Evento_Caso.Name = "rjDropdownMenu_Rel_Evento_Caso";
             this.rjDropdownMenu_Rel_Evento_Caso.PrimaryColor = System.Drawing.Color.Empty;
-            this.rjDropdownMenu_Rel_Evento_Caso.Size = new System.Drawing.Size(242, 30);
+            this.rjDropdownMenu_Rel_Evento_Caso.Size = new System.Drawing.Size(263, 130);
             // 
             // relatórioDeEventosToolStripMenuItem
             // 
             this.relatórioDeEventosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.relatórioDeEventosToolStripMenuItem.Name = "relatórioDeEventosToolStripMenuItem";
-            this.relatórioDeEventosToolStripMenuItem.Size = new System.Drawing.Size(241, 26);
+            this.relatórioDeEventosToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
             this.relatórioDeEventosToolStripMenuItem.Text = "Relatório de eventos";
             this.relatórioDeEventosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeEventosToolStripMenuItem_Click);
+            // 
+            // relatórioDeEvidênciasToolStripMenuItem
+            // 
+            this.relatórioDeEvidênciasToolStripMenuItem.Name = "relatórioDeEvidênciasToolStripMenuItem";
+            this.relatórioDeEvidênciasToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.relatórioDeEvidênciasToolStripMenuItem.Text = "Relatório de evidências";
+            this.relatórioDeEvidênciasToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeEvidênciasToolStripMenuItem_Click);
+            // 
+            // relatórioDeFaltasToolStripMenuItem
+            // 
+            this.relatórioDeFaltasToolStripMenuItem.Name = "relatórioDeFaltasToolStripMenuItem";
+            this.relatórioDeFaltasToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.relatórioDeFaltasToolStripMenuItem.Text = "Relatório de faltas";
+            this.relatórioDeFaltasToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeFaltasToolStripMenuItem_Click);
+            // 
+            // relatórioDeFériasToolStripMenuItem
+            // 
+            this.relatórioDeFériasToolStripMenuItem.Name = "relatórioDeFériasToolStripMenuItem";
+            this.relatórioDeFériasToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
+            this.relatórioDeFériasToolStripMenuItem.Text = "Relatório de férias";
+            this.relatórioDeFériasToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeFériasToolStripMenuItem_Click);
             // 
             // Form_Principal
             // 
@@ -1147,5 +1174,8 @@
         private System.Windows.Forms.Label label2;
         private CustomBox.RJControls.RJDropdownMenu rjDropdownMenu_Rel_Evento_Caso;
         private System.Windows.Forms.ToolStripMenuItem relatórioDeEventosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioDeEvidênciasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioDeFaltasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioDeFériasToolStripMenuItem;
     }
 }

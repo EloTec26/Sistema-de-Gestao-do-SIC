@@ -90,6 +90,24 @@
     <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Evento_Casos.Designer.cs">
       <DependentUpon>Form_Relatorio_Evento_Casos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Evidencias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Evidencias.Designer.cs">
+      <DependentUpon>Form_Relatorio_Evidencias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Faltas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Faltas.Designer.cs">
+      <DependentUpon>Form_Relatorio_Faltas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Ferias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Ferias.Designer.cs">
+      <DependentUpon>Form_Relatorio_Ferias.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Formulario_Dashboard\Form_Painel_Administrativo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -462,7 +480,19 @@
     <EmbeddedResource Include="Formularios\Formularios_Relatorios\Form_Relatorio_Evento_Casos.resx">
       <DependentUpon>Form_Relatorio_Evento_Casos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Form_Relatorio_Evidencias.resx">
+      <DependentUpon>Form_Relatorio_Evidencias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Form_Relatorio_Faltas.resx">
+      <DependentUpon>Form_Relatorio_Faltas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Form_Relatorio_Ferias.resx">
+      <DependentUpon>Form_Relatorio_Ferias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report1_Faltas.rdlc" />
     <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report_Evento_Casos.rdlc" />
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report_Evidencias.rdlc" />
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report_Ferias.rdlc" />
     <EmbeddedResource Include="Formularios\Formulario_Dashboard\Form_Painel_Administrativo.resx">
       <DependentUpon>Form_Painel_Administrativo.cs</DependentUpon>
     </EmbeddedResource>
@@ -657,6 +687,9 @@
     </Compile>
     <None Include="Capa_Apresentacao_TemporaryKey.pfx" />
     <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Evento_Casos.datasource" />
+    <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Evidencias.datasource" />
+    <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Faltas.datasource" />
+    <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Ferias.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

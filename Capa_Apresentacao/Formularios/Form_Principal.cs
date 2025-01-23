@@ -437,6 +437,20 @@ namespace Capa_Apresentacao
         {
             AbrirPainelConteudo(new Formularios.Lista_Formularios.Form_Lista_Cursos());
         }
+        private void relatórioDeEvidênciasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirPainelConteudo(new Formularios.Formularios_Relatorios.Form_Relatorio_Evidencias());
+        }
+
+        private void relatórioDeFaltasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirPainelConteudo(new Formularios.Formularios_Relatorios.Form_Relatorio_Faltas());
+        }
+
+        private void relatórioDeFériasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirPainelConteudo(new Formularios.Formularios_Relatorios.Form_Relatorio_Ferias());
+        }
 
         private void btn_casos_Click(object sender, EventArgs e)
         {

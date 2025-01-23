@@ -129,7 +129,7 @@
             this.btn_eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_eliminar.IconSize = 20;
             this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_eliminar.Location = new System.Drawing.Point(218, 3);
+            this.btn_eliminar.Location = new System.Drawing.Point(188, 3);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(46, 31);
             this.btn_eliminar.TabIndex = 56;
@@ -149,7 +149,7 @@
             this.btn_atualizar.IconColor = System.Drawing.Color.SeaGreen;
             this.btn_atualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_atualizar.IconSize = 20;
-            this.btn_atualizar.Location = new System.Drawing.Point(161, 3);
+            this.btn_atualizar.Location = new System.Drawing.Point(131, 3);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(51, 31);
             this.btn_atualizar.TabIndex = 55;
@@ -167,7 +167,7 @@
             this.btn_cadastrar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.btn_cadastrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btn_cadastrar.IconSize = 20;
-            this.btn_cadastrar.Location = new System.Drawing.Point(104, 4);
+            this.btn_cadastrar.Location = new System.Drawing.Point(74, 4);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(51, 31);
             this.btn_cadastrar.TabIndex = 54;
@@ -182,9 +182,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label1.Location = new System.Drawing.Point(3, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 18);
+            this.label1.Size = new System.Drawing.Size(63, 18);
             this.label1.TabIndex = 38;
-            this.label1.Text = "Horas extras";
+            this.label1.Text = "Piquete";
             // 
             // panel2
             // 
