@@ -28,7 +28,7 @@
     <PublisherName>SIC</PublisherName>
     <SuiteName>SCI</SuiteName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>7</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -84,6 +84,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Afastamentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Afastamentos.Designer.cs">
+      <DependentUpon>Form_Relatorio_Afastamentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Beneficios_Investigadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Beneficios_Investigadores.Designer.cs">
+      <DependentUpon>Form_Relatorio_Beneficios_Investigadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Evento_Casos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,24 @@
     </Compile>
     <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Ferias.Designer.cs">
       <DependentUpon>Form_Relatorio_Ferias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Piquete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Piquete.Designer.cs">
+      <DependentUpon>Form_Relatorio_Piquete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Testemunhas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Testemunhas.Designer.cs">
+      <DependentUpon>Form_Relatorio_Testemunhas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Vitimas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Formularios_Relatorios\Form_Relatorio_Vitimas.Designer.cs">
+      <DependentUpon>Form_Relatorio_Vitimas.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Formulario_Dashboard\Form_Painel_Administrativo.cs">
       <SubType>Form</SubType>
@@ -477,6 +507,12 @@
     <Compile Include="Formularios\Modulos\Validacao_Campos_Formularios\validacao_campos_formularios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Form_Relatorio_Afastamentos.resx">
+      <DependentUpon>Form_Relatorio_Afastamentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Form_Relatorio_Beneficios_Investigadores.resx">
+      <DependentUpon>Form_Relatorio_Beneficios_Investigadores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Formularios_Relatorios\Form_Relatorio_Evento_Casos.resx">
       <DependentUpon>Form_Relatorio_Evento_Casos.cs</DependentUpon>
     </EmbeddedResource>
@@ -489,10 +525,24 @@
     <EmbeddedResource Include="Formularios\Formularios_Relatorios\Form_Relatorio_Ferias.resx">
       <DependentUpon>Form_Relatorio_Ferias.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Form_Relatorio_Piquete.resx">
+      <DependentUpon>Form_Relatorio_Piquete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Form_Relatorio_Testemunhas.resx">
+      <DependentUpon>Form_Relatorio_Testemunhas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Form_Relatorio_Vitimas.resx">
+      <DependentUpon>Form_Relatorio_Vitimas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report1_Faltas.rdlc" />
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report_Afastamentos.rdlc" />
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report_Benefios_Investigadores.rdlc" />
     <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report_Evento_Casos.rdlc" />
     <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report_Evidencias.rdlc" />
     <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report_Ferias.rdlc" />
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report_Piquete.rdlc" />
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report_Testemunhas.rdlc" />
+    <EmbeddedResource Include="Formularios\Formularios_Relatorios\Report_Vitimas.rdlc" />
     <EmbeddedResource Include="Formularios\Formulario_Dashboard\Form_Painel_Administrativo.resx">
       <DependentUpon>Form_Painel_Administrativo.cs</DependentUpon>
     </EmbeddedResource>
@@ -686,10 +736,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="Capa_Apresentacao_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorios_Afastamentos.datasource" />
+    <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Beneficios_Investigadores.datasource" />
     <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Evento_Casos.datasource" />
     <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Evidencias.datasource" />
     <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Faltas.datasource" />
     <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Ferias.datasource" />
+    <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Piquete.datasource" />
+    <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Testemunhas.datasource" />
+    <None Include="Properties\DataSources\Capa_Dominio.Dominio_Relatorio.Dominio_Relatorio_Vitimas.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

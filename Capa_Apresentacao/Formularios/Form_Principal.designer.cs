@@ -105,6 +105,11 @@
             this.relatórioDeEvidênciasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeFaltasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioDeFériasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeAfastamentosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeBenefíciosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeTestemunhasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDeVítimasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatórioDePiquetesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Logo)).BeginInit();
             this.panel_menu.SuspendLayout();
@@ -1027,41 +1032,81 @@
             this.relatórioDeEventosToolStripMenuItem,
             this.relatórioDeEvidênciasToolStripMenuItem,
             this.relatórioDeFaltasToolStripMenuItem,
-            this.relatórioDeFériasToolStripMenuItem});
+            this.relatórioDeFériasToolStripMenuItem,
+            this.relatórioDeAfastamentosToolStripMenuItem,
+            this.relatórioDeBenefíciosToolStripMenuItem,
+            this.relatórioDeTestemunhasToolStripMenuItem,
+            this.relatórioDeVítimasToolStripMenuItem,
+            this.relatórioDePiquetesToolStripMenuItem});
             this.rjDropdownMenu_Rel_Evento_Caso.MenuItemHeight = 25;
             this.rjDropdownMenu_Rel_Evento_Caso.MenuItemTextColor = System.Drawing.Color.Empty;
             this.rjDropdownMenu_Rel_Evento_Caso.Name = "rjDropdownMenu_Rel_Evento_Caso";
             this.rjDropdownMenu_Rel_Evento_Caso.PrimaryColor = System.Drawing.Color.Empty;
-            this.rjDropdownMenu_Rel_Evento_Caso.Size = new System.Drawing.Size(263, 130);
+            this.rjDropdownMenu_Rel_Evento_Caso.Size = new System.Drawing.Size(290, 260);
             // 
             // relatórioDeEventosToolStripMenuItem
             // 
             this.relatórioDeEventosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.relatórioDeEventosToolStripMenuItem.Name = "relatórioDeEventosToolStripMenuItem";
-            this.relatórioDeEventosToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
-            this.relatórioDeEventosToolStripMenuItem.Text = "Relatório de eventos";
+            this.relatórioDeEventosToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.relatórioDeEventosToolStripMenuItem.Text = "Relatório de Eventos";
             this.relatórioDeEventosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeEventosToolStripMenuItem_Click);
             // 
             // relatórioDeEvidênciasToolStripMenuItem
             // 
             this.relatórioDeEvidênciasToolStripMenuItem.Name = "relatórioDeEvidênciasToolStripMenuItem";
-            this.relatórioDeEvidênciasToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
-            this.relatórioDeEvidênciasToolStripMenuItem.Text = "Relatório de evidências";
+            this.relatórioDeEvidênciasToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.relatórioDeEvidênciasToolStripMenuItem.Text = "Relatório de Evidências";
             this.relatórioDeEvidênciasToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeEvidênciasToolStripMenuItem_Click);
             // 
             // relatórioDeFaltasToolStripMenuItem
             // 
             this.relatórioDeFaltasToolStripMenuItem.Name = "relatórioDeFaltasToolStripMenuItem";
-            this.relatórioDeFaltasToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
-            this.relatórioDeFaltasToolStripMenuItem.Text = "Relatório de faltas";
+            this.relatórioDeFaltasToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.relatórioDeFaltasToolStripMenuItem.Text = "Relatório de Faltas";
             this.relatórioDeFaltasToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeFaltasToolStripMenuItem_Click);
             // 
             // relatórioDeFériasToolStripMenuItem
             // 
             this.relatórioDeFériasToolStripMenuItem.Name = "relatórioDeFériasToolStripMenuItem";
-            this.relatórioDeFériasToolStripMenuItem.Size = new System.Drawing.Size(262, 26);
-            this.relatórioDeFériasToolStripMenuItem.Text = "Relatório de férias";
+            this.relatórioDeFériasToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.relatórioDeFériasToolStripMenuItem.Text = "Relatório de Férias";
             this.relatórioDeFériasToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeFériasToolStripMenuItem_Click);
+            // 
+            // relatórioDeAfastamentosToolStripMenuItem
+            // 
+            this.relatórioDeAfastamentosToolStripMenuItem.Name = "relatórioDeAfastamentosToolStripMenuItem";
+            this.relatórioDeAfastamentosToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.relatórioDeAfastamentosToolStripMenuItem.Text = "Relatório de Afastamentos";
+            this.relatórioDeAfastamentosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeAfastamentosToolStripMenuItem_Click);
+            // 
+            // relatórioDeBenefíciosToolStripMenuItem
+            // 
+            this.relatórioDeBenefíciosToolStripMenuItem.Name = "relatórioDeBenefíciosToolStripMenuItem";
+            this.relatórioDeBenefíciosToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.relatórioDeBenefíciosToolStripMenuItem.Text = "Relatório de Benefícios";
+            this.relatórioDeBenefíciosToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeBenefíciosToolStripMenuItem_Click);
+            // 
+            // relatórioDeTestemunhasToolStripMenuItem
+            // 
+            this.relatórioDeTestemunhasToolStripMenuItem.Name = "relatórioDeTestemunhasToolStripMenuItem";
+            this.relatórioDeTestemunhasToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.relatórioDeTestemunhasToolStripMenuItem.Text = "Relatório de Testemunhas";
+            this.relatórioDeTestemunhasToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeTestemunhasToolStripMenuItem_Click);
+            // 
+            // relatórioDeVítimasToolStripMenuItem
+            // 
+            this.relatórioDeVítimasToolStripMenuItem.Name = "relatórioDeVítimasToolStripMenuItem";
+            this.relatórioDeVítimasToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.relatórioDeVítimasToolStripMenuItem.Text = "Relatório de Vítimas";
+            this.relatórioDeVítimasToolStripMenuItem.Click += new System.EventHandler(this.relatórioDeVítimasToolStripMenuItem_Click);
+            // 
+            // relatórioDePiquetesToolStripMenuItem
+            // 
+            this.relatórioDePiquetesToolStripMenuItem.Name = "relatórioDePiquetesToolStripMenuItem";
+            this.relatórioDePiquetesToolStripMenuItem.Size = new System.Drawing.Size(289, 26);
+            this.relatórioDePiquetesToolStripMenuItem.Text = "Relatório de Piquetes";
+            this.relatórioDePiquetesToolStripMenuItem.Click += new System.EventHandler(this.relatórioDePiquetesToolStripMenuItem_Click);
             // 
             // Form_Principal
             // 
@@ -1177,5 +1222,10 @@
         private System.Windows.Forms.ToolStripMenuItem relatórioDeEvidênciasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioDeFaltasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatórioDeFériasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioDeAfastamentosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioDeBenefíciosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioDeTestemunhasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioDeVítimasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatórioDePiquetesToolStripMenuItem;
     }
 }

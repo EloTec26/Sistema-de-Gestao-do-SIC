@@ -452,6 +452,31 @@ namespace Capa_Apresentacao
             AbrirPainelConteudo(new Formularios.Formularios_Relatorios.Form_Relatorio_Ferias());
         }
 
+        private void relatórioDeAfastamentosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirPainelConteudo(new Formularios.Formularios_Relatorios.Form_Relatorio_Afastamentos());
+        }
+
+        private void relatórioDeBenefíciosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirPainelConteudo(new Formularios.Formularios_Relatorios.Form_Relatorio_Beneficios_Investigadores());
+        }
+
+        private void relatórioDeTestemunhasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirPainelConteudo(new Formularios.Formularios_Relatorios.Form_Relatorio_Testemunhas());
+        }
+
+        private void relatórioDeVítimasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirPainelConteudo(new Formularios.Formularios_Relatorios.Form_Relatorio_Vitimas());
+        }
+
+        private void relatórioDePiquetesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AbrirPainelConteudo(new Formularios.Formularios_Relatorios.Form_Relatorio_Piquete());
+        }
+
         private void btn_casos_Click(object sender, EventArgs e)
         {
             Abrir_Sub_Menu(rjDropdownMenu_eventos_casos, sender);

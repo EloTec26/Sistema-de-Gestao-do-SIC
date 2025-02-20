@@ -385,9 +385,9 @@
             this.text_tipo_horas.IntegralHeight = false;
             this.text_tipo_horas.ItemHeight = 30;
             this.text_tipo_horas.Items.AddRange(new object[] {
-            "Matinais",
-            "Vespertinas",
-            "Nortunas"});
+            "Manhã",
+            "Tarde",
+            "Noite"});
             this.text_tipo_horas.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(200)))), ((int)(((byte)(207)))));
             this.text_tipo_horas.ItemsAppearance.SelectedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.text_tipo_horas.Location = new System.Drawing.Point(19, 205);

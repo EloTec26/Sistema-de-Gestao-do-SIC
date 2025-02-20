@@ -12,7 +12,15 @@ namespace Capa_Dados.Conexao
     {
         protected SqlConnection conectar()
         {
-            return new SqlConnection("Data Source=SERAFIIM;Initial Catalog=sic_menongue;Integrated Security=True;") ;
+            //try
+            //{
+                return new SqlConnection("Data Source=SERAFIIM;Initial Catalog=sic_menongue;Integrated Security=True;");
+            //}
+            //catch (Exception ex)
+            //{
+
+            //    throw new ArgumentException ("Erro ao conectar-se!\nParece que o servidor não foi encontrado\nou está indisponível." +ex.Message);
+            //}
         }
     }
 }

@@ -255,3 +255,8 @@ D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.For
 D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Formularios_Relatorios.Form_Relatorio_Evidencias.resources
 D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Formularios_Relatorios.Form_Relatorio_Faltas.resources
 D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Formularios_Relatorios.Form_Relatorio_Ferias.resources
+D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Formularios_Relatorios.Form_Relatorio_Afastamentos.resources
+D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Formularios_Relatorios.Form_Relatorio_Beneficios_Investigadores.resources
+D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Formularios_Relatorios.Form_Relatorio_Testemunhas.resources
+D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Formularios_Relatorios.Form_Relatorio_Vitimas.resources
+D:\C#\SIC_MENONGUE\Capa_Apresentacao\obj\Debug\Capa_Apresentacao.Formularios.Formularios_Relatorios.Form_Relatorio_Piquete.resources
